@@ -213,8 +213,10 @@ finalized_psbt_hex=$(./bitcoin-cli finalizepsbt $psbt_6 | jq -r '.hex')
 
 TODO insert PSBT export/import to node here
 
+TODO rewrite broadcast transaction to use psbt file from ~/Desktop
+
 ## broadcast transaction
-./bitcoin-cli sendrawtransaction $finalized_psbt_hex
+`./bitcoin-cli sendrawtransaction $finalized_psbt_hex`
 
 
 # Backup keys
