@@ -249,7 +249,7 @@ start Bitcoin Core again
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
 
-Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). ALternatively, you can generate a QR code for this address if you use Bitcoin-QT.
+Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT, which is Bitcoin Core's graphical user interface (GUI). Simply double click on "Bitcoin-QT" inside of Bitcoin-31.1/bin, then load "multisig_watch_wallet" in the GUI and generate a receive address for a QR code.
 
 
 ## [online computer] Check the balance of the wallet
@@ -289,6 +289,8 @@ After copying a key run the following command, replace `key_#` with the name of 
 `./bitcoin-cli loadwallet "key_#"`
 
 ### [offline computer] Sign your PSBT
+
+After loading all 3 of your keys, sign the PSBT with this script
 
 ```
 psbt=$(cat ~/Desktop/unsigned.psbt)
