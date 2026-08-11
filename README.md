@@ -237,7 +237,7 @@ Use brasero to create 7 mdisc backups. These files can be found in your ~/.bitco
 7 = key_7 & multisig_watch_wallet
 
 ## Test your backups
-Delete your ~/.bitcoin/walelts folder
+Delete your ~/.bitcoin/wallets folder
 
 perform another full send/receive test using your backups
 
