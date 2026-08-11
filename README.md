@@ -215,6 +215,8 @@ multisig_desc="[{\"desc\": \"${desc}#${checksum}\", \"active\": true, \"timestam
 
 Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the offline computer. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the offline computer.
 
+NOTE: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
+
 Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder. When Bitcoin Core is finished syncing you can now load this wallet on the online computer with the following terminal command.
 
 `./bitcoin-cli loadwallet "multisig_watch_wallet"`
