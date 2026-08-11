@@ -23,7 +23,9 @@ This multisig vault is reccomended for storing between $10k-$5M in Bitcoin.
 estimated total cost (using amazon for reference):
 ~$450
 
-## Step 1. [online computer] Install Ubuntu
+# A. Initial Set Up
+
+## Step A1. [online computer] Install Ubuntu
 
 Pick one laptop to be the online computer, this will be your Bitcoin node. We need to install Ubuntu on this computer.
 
@@ -42,7 +44,7 @@ After the Ubuntu splash screen select `Install Ubuntu`.
 During installation, simply proceed with all of the default settings, when you reach the "Encryption and File System" screen select "Encrypt with a passphrase" choose a password for your node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but your bitcoin wallet will not be affected)
 
 
-## Step 2. [online computer] Install security updates
+## Step A2. [online computer] Install security updates
 
 Once you've finished installing Linux, you need to install security updates. First connect to WIFI or LAN.
 
@@ -57,7 +59,7 @@ Press enter, then press Y if prompted and press enter again, wait for it to fini
 press enter, then press Y if prompted and press enter again, wait for it to finish
 
 
-## Step 3. [online computer] Download the latest version of Bitcoin Core
+## Step A3. [online computer] Download the latest version of Bitcoin Core
 
 Do NOT go to bitcoin.org (that website is unfortunately owned by scammers)
 
@@ -67,7 +69,7 @@ Click the big blue "Download Bitcoin Core" button.
 
 Unpack the Tarball, you can go into the `~/Downloads` folder and right click on the bitcoin core file and click "Extract" then drag the new folder it creates into the HOME directory.
 
-## Step 4. [online computer] Start Bitcoin Core
+## Step A4. [online computer] Start Bitcoin Core
 
 Open the folder in the Home directory and then click on Bitcoin-31.1
 
@@ -94,7 +96,7 @@ It is important to always properly shut down bitcoin core before turning off thi
 `./bitcoin-cli stop`
 
 
-## Step 5: Switch to offline computer
+## Step A5: Switch to offline computer
 
 Now switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
 
@@ -103,7 +105,7 @@ Insert the Linux USB (the one with tape) and turn the computer on. From this poi
 After the Ubuntu splash screen select `Try Ubuntu`.
 
 
-## Step 6: [offline computer] Install Updates and Software
+## Step A6: [offline computer] Install Updates and Software
 
 ### [offline computer] Download this guide
 
@@ -150,13 +152,15 @@ Click the big blue "Download Bitcoin Core" button.
 Unpack the Tarball, you can go into the `~/Downloads` folder and right click on the bitcoin core file and click "Extract" then drag the new folder it creates into the HOME directory.
 
 
-## Step 7: [offline computer] Disable networking on the offline computer
+## Step A7: [offline computer] Disable networking on the offline computer
 
 Open the terminal and run the following command:
 `nmcli networking off`
 
 
-## [offline computer] Creating a Multi Signature Cold Wallet on Bitcoin Core
+# B. Creating a Multi Signature Cold Wallet on Bitcoin Core
+
+## Step B1: [offline computer] Start Bitcoin Core
 
 On the offline computer start by opening a terminal and navigating into the `~/Bitcoin-31.1/bin` folder
 
@@ -165,7 +169,7 @@ start the Bitcoin Daemon
 `./bitcoind -daemon`
 
 
-## [offline computer] create 7 wallets
+## Step B2: [offline computer] create 7 wallets
 
 Within `~/Bitcoin-31.1/bin` in the terminal copy and paste the following...
 
@@ -179,7 +183,7 @@ done
 Press Enter
 
 
-## [offline computer] capture Extended Public Keys (XPUBs) from each wallet 
+## Step B3: [offline computer] capture Extended Public Keys (XPUBs) from each wallet 
 
 ```
 declare -A xpubs
@@ -191,7 +195,7 @@ done
 
 ```
 
-## [offline computer] create the multisig wallet descriptor
+## Step B4: [offline computer] create the multisig wallet descriptor
 
 ```
 desc="wsh(sortedmulti(3,${xpubs["xpub_1"]},${xpubs["xpub_2"]},${xpubs["xpub_3"]},${xpubs["xpub_4"]},${xpubs["xpub_5"]},${xpubs["xpub_6"]},${xpubs["xpub_7"]}))"
@@ -207,7 +211,7 @@ multisig_desc="[{\"desc\": \"${desc}#${checksum}\", \"active\": true, \"timestam
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getwalletinfo
 ```
 
-## [offline computer] Export the watch only wallet descriptor
+## Step B5: [offline computer] Export the watch only wallet descriptor
 
 Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the offline computer. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the offline computer.
 
@@ -218,7 +222,7 @@ Insert the transfer USB into the online computer. Copy the multisig_watch_wallet
 With this wallet loaded on the online computer, can now use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to see the transaction history, check the balance of the wallet, generate receive addresses, generate PSBTs for export, and broadcast fully signed Bitcoin Transactions.
 
 
-# [offline computer] Backup keys
+# Step B6: [offline computer] Backup keys
 Now back up each of the 7 keys and the wallet descriptor.
 
 Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M disc and write the number 1 on it with a permenant marker, insert disc 1 into the USB connected disc drive. Then use brasero create an .ISO of key_1 & the multisig_watch_wallet from `/.bitcoin/wallets`. Burn this .ISO to disc 1. Repeat for all 7 keys.
@@ -237,7 +241,7 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 
 7 = key_7 & multisig_watch_wallet
 
-# [offline computer] Test your wallet backups
+# C. [offline computer] Test your wallet backups
 
 Stop Bitcoin Core
 
@@ -252,7 +256,7 @@ start Bitcoin Core again
 `./bitcoind`
 
 
-## [online computer] create a receive address
+## C1. [online computer] create a receive address
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
@@ -261,7 +265,7 @@ start Bitcoin Core again
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT, which is Bitcoin Core's graphical user interface (GUI). Simply double click on "Bitcoin-QT" inside of `~/Bitcoin-31.1/bin`, then load "multisig_watch_wallet" in the GUI and generate a receive address for a QR code.
 
 
-## [online computer] Check the balance of the wallet
+## C2. [online computer] Check the balance of the wallet
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
@@ -269,7 +273,7 @@ Test the wallet by sending a very small amount of Bitcoin to this address (this 
 ```
 
 
-## [online computer] Create a transaction (replace $amount and $destination_addr with the right values, make sure these are correct!)
+## C3. [online computer] Create a transaction (replace $amount and $destination_addr with the right values, make sure these are correct!)
 
 ```
 funded_psbt=$(./bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
@@ -284,7 +288,7 @@ echo "$funded_psbt" > ~/Desktop/unsigned.psbt
 Insert the transfer USB (no tape) into the online computer, copy the unsigned.psbt from the Desktop onto the transfer USB. Remove the transfer USB containing the PSBT from the online computer.
 
 
-## [offline computer] Sign the transaction
+## C4. [offline computer] Sign the transaction
 
 ### [offline computer] Transfer the unsigned PSBT
 
@@ -324,7 +328,7 @@ Copy `signed.psbt` from the Desktop onto the transfer USB. Remove the transfer U
 
 Insert the transfer USB into the online computer. Copy signed.psbt from the transfer USB onto the Desktop.
 
-## [online computer] broadcast transaction
+## C5. [online computer] broadcast transaction
 
 ```
 psbt=$(cat ~/Desktop/signed.psbt)
@@ -335,7 +339,7 @@ hex=$(./bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
 
 Repeat this process util you've tested all of your key backups. You now have a secure Bitcoin multisig vault.
 
-# How to use your wallet normally
+# D. How to use your wallet normally
 
 By this point you should already have a good understanding of how this works. The offline computer does not have any persistence. This is for your security, so no keys are ever written to the computers storage, they can never be recovered without your backup discs. Each time you wish to sign a psbt with the offline computer follow these steps carefully...
 
@@ -350,14 +354,14 @@ Connect to WIFI or LAN, Download latest version of Bitcoin Core, unpack the tarb
 From here the process for spending from your multisig is the same as above.
 
 Next time you want to spend Bitcoin from the multisig:
-1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB
+1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (see step C3)
 2. [offline computer] insert transfer USB into the offline computer, drag the unsigned PSBT onto the desktop
-3. [offline computer] collect any 3 of your key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder
+3. [offline computer] collect any 3 of your key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (see step C4)
 4. [offline computer] load the wallets from the terminal
 5. [offline computer] sign the PSBT
 6. [offline computer] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer
 7. [online computer] drag the signed PSBT from the transfer USB onto the desktop
-7. [online computer] broadcast the signed PSBT
+7. [online computer] broadcast the signed PSBT (see step C5)
 
 
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
