@@ -6,14 +6,16 @@
 
 -2 Fresh USB sticks (16GB minimum) (try kingston datatravelers 64GB)
 
--8 pack of Mielleniata brand M-disc DVDs (do not buy any other brand than millenniata)
+-8 pack of Milleniata brand M-disc DVDs 4.7GB (do not buy any other brand than millenniata)
 
--A usb powered disc drive capable of read/write DVDs (try ASUS zendrive)
+-A usb powered disc drive capable of writing M-Disc DVDs (try ASUS zendrive)
 
 estimated total cost (using amazon for reference):
 ~$450
 
 
+<!-- 
+TODO break this out into a seperate subguide
 ### Optional:
 
 -a 2 TB SATA SSD if you want a full archival node(ensure its the right size for your laptop, 2.5 inch SATA is what you should look for) (try crucial BX500)
@@ -21,10 +23,12 @@ estimated total cost (using amazon for reference):
 estimated additional cost (using amazon for reference):
 ~$255
 
-Pick one laptop to be your primary computer. Place a sticker or a small piece of tape on this laptop to mark it. This will be your full node. If you've opted for a full archival node you must replace the SATA SSD by first taking the computer apart. You will only need a small phillips screwdriver to do this in most cases. Unplug the computer, remove the screws the bottom cover, and swap out the drives. 
+This will be your full node. If you've opted for a full archival node you must replace the SATA SSD by first taking the computer apart. You will only need a small phillips screwdriver to do this in most cases. Unplug the computer, remove the screws the bottom cover, and swap out the drives.  -->
 
 
 ## Step 1. [primary computer] Install Ubuntu
+
+Pick one laptop to be your primary computer. Place a sticker or a small piece of tape on this laptop to mark it. 
 
 Go to ubuntu.com/download/desktop
 
@@ -74,7 +78,7 @@ Unpack the Tarball, you can go into your ~/Downloads folder and right click on t
 
 Open the folder in your Home directory and then click on Bitcoin-31.1
 
-### IMPORTANT: If you opted not to upgrade your storage drive to atleast 2TB you need to set your node to pruned mode. In this case it will still do fully validate all historical bitcoin blocks, but it will not store a full copy of the bitcoin blockchain on your computer.
+### IMPORTANT: If you opted not to upgrade your primary computer's storage drive to atleast 2TB you need to set your node to pruned mode. In this case it will still do fully validate all historical bitcoin blocks, but it will not store a full copy of the bitcoin blockchain on your computer.
 
 Inside of Bitcoin-31.1 double click on the file named "Bitcoin.conf". 
 
