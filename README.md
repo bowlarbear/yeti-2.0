@@ -23,19 +23,6 @@ This multisig vault is reccomended for storing between $10k-$5M in Bitcoin.
 estimated total cost (using amazon for reference):
 ~$450
 
-
-<!-- 
-TODO break this out into a seperate subguide
-### Optional:
-
--a 2 TB SATA SSD if you want a full archival node(ensure its the right size for your laptop, 2.5 inch SATA is what you should look for) (try crucial BX500)
-
-estimated additional cost (using amazon for reference):
-~$255
-
-This will be your full node. If you've opted for a full archival node you must replace the SATA SSD by first taking the computer apart. You will only need a small phillips screwdriver to do this in most cases. Unplug the computer, remove the screws the bottom cover, and swap out the drives.  -->
-
-
 ## Step 1. [primary computer] Install Ubuntu
 
 Pick one laptop to be your primary computer. Place a sticker or a small piece of tape on this laptop to mark it.
@@ -122,11 +109,23 @@ After the splash screen select `Try Ubuntu`.
 
 ## Step 6: [offline computer] Install Updates and Software
 
-### [offline computer] Install updates
+### [offline computer] Download this guide
 
 Once you are on the desktop connect to WIFI or LAN.
 
-Open a terminal and copy and paste the following commands.
+Open this guide in your browser. You will first want download this guide so you still have access to it after we disable networking.
+
+Open a terminal and copy and paste the following command and press enter.
+
+`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
+
+You should now have this guide in your Home directory. 
+
+You can run `nano -v README.md` to open this guide in the terminal window.
+
+### [offline computer] Install updates
+
+Open a new terminal window and copy and paste the following commands.
 
 `sudo apt update`
 
@@ -320,25 +319,6 @@ psbt_3=$(./bitcoin-cli -rpcwallet="$wallet3" walletprocesspsbt "$psbt_2" | jq -r
 echo "$psbt_3" > ~/Desktop/signed.psbt
 
 ```
-
-<!--reference script ```
-psbt_1=$(./bitcoin-cli -rpcwallet="key_1" walletprocesspsbt $funded_psbt | jq -r '.psbt')
-
-psbt_2=$(./bitcoin-cli -rpcwallet="key_2" walletprocesspsbt $psbt_1 | jq -r '.psbt')
-
-psbt_3=$(./bitcoin-cli -rpcwallet="key_3" walletprocesspsbt $psbt_2 | jq -r '.psbt')
-
-psbt_4=$(./bitcoin-cli -rpcwallet="key_4" walletprocesspsbt $psbt_3 | jq -r '.psbt')
-
-psbt_5=$(./bitcoin-cli -rpcwallet="key_5" walletprocesspsbt $psbt_4 | jq -r '.psbt')
-
-psbt_6=$(./bitcoin-cli -rpcwallet="key_6" walletprocesspsbt $psbt_5 | jq -r '.psbt')
-
-psbt_7=$(./bitcoin-cli -rpcwallet="key_7" walletprocesspsbt $psbt_6 | jq -r '.psbt')
-
-finalized_psbt_hex=$(./bitcoin-cli finalizepsbt $psbt_6 | jq -r '.hex')
-
-``` -->
 
 ### [offline computer] Export signed PSBT to USB
 
