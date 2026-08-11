@@ -1,5 +1,17 @@
 # How to set up secure bitcoin storage
 
+## Note
+
+This guide was created using Bitcoin Core's official multisig-tutorial as a reference. 
+
+https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md
+
+Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
+
+This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device.
+
+This multisig vault is reccomended for storing $10,000+ in Bitcoin.
+
 ## You will need:
 
 -2 Dedicated Laptops (8GB RAM minimum, 64GB storage minimum) (try refurbished thinkpads) (Chromebooks will not work)
