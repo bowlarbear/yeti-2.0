@@ -223,11 +223,17 @@ Now that you've successfully tested your multisig wallet we must back up each of
 Use brasero to create 7 mdisc backups. These files can be found in your ~/.bitcoin/wallets folder
 
 1 = key_1 & multisig_watch_wallet
+
 2 = key_2 & multisig_watch_wallet
+
 3 = key_3 & multisig_watch_wallet
+
 4 = key_4 & multisig_watch_wallet
+
 5 = key_5 & multisig_watch_wallet
+
 6 = key_6 & multisig_watch_wallet
+
 7 = key_7 & multisig_watch_wallet
 
 ## Test your backups
