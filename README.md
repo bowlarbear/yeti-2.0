@@ -371,7 +371,7 @@ Connect to WIFI or LAN, Download latest version of Bitcoin Core, unpack the tarb
 
 `nmcli networking off`
 
-From here the proces for spending from your multisig is the same as above.
+From here the process for spending from your multisig is the same as above.
 
 Next time you want to spend your Bitcoin from the multisig:
 1. [online computer] Create the unsigned PSBT on your online computer, drag the unsigned PSBT into your USB stick
