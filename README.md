@@ -8,7 +8,7 @@ Users can verify the scripts found here by comparing them to the scripts provide
 
 This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device.
 
-This multisig vault is reccomended for storing $10,000+ in Bitcoin.
+This multisig vault is reccomended for storing between $10k-$10M in Bitcoin.
 
 ## You will need:
 
