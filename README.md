@@ -117,9 +117,9 @@ Open a terminal and copy and paste the following command and press enter.
 
 `wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
 
-You should now have this guide in the Home directory. 
+You should now have this guide in the Home directory.
 
-You can run `less README.md` to open this guide in a terminal window.
+You can run `less README.md` to open this guide in a terminal window. You can always download this guide again but it might be helpful to keep a copy on your transfer USB and on your backups discs that we will do later.
 
 ### [offline computer] Install updates
 
@@ -225,7 +225,7 @@ With this wallet loaded on the online computer, can now use either bitcoin-cli o
 # Step B6: [offline computer] Backup keys
 Now back up each of the 7 keys and the wallet descriptor.
 
-Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M disc and write the number 1 on it with a permenant marker, insert disc 1 into the USB connected disc drive. Then use brasero create an .ISO of key_1 & the multisig_watch_wallet from `/.bitcoin/wallets`. Burn this .ISO to disc 1. Repeat for all 7 keys.
+Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M disc and write the number 1 on it with a permenant marker, insert disc 1 into the USB connected disc drive. Then use brasero create an .ISO of key_1 & the multisig_watch_wallet from `/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this .ISO to disc 1. Repeat for all 7 keys.
 
 1 = key_1 & multisig_watch_wallet
 
