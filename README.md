@@ -2,9 +2,7 @@
 
 ## Note
 
-This guide was created using Bitcoin Core's official multisig-tutorial as a reference. 
-
-https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md
+This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
 Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
 
@@ -40,9 +38,9 @@ This will be your full node. If you've opted for a full archival node you must r
 
 ## Step 1. [primary computer] Install Ubuntu
 
-Pick one laptop to be your primary computer. Place a sticker or a small piece of tape on this laptop to mark it. 
+Pick one laptop to be your primary computer. Place a sticker or a small piece of tape on this laptop to mark it.
 
-Go to ubuntu.com/download/desktop
+[Download the latest version of Ubuntu here](https://ubuntu.com/download/desktop)
 
 You will most likely need the Intel or AMD 64-bit architecture, download the latest version (26.04 as of this post).
 
@@ -80,7 +78,7 @@ press enter, then press Y if prompted and press enter again, wait for it to fini
 
 Do NOT go to bitcoin.org (that website is unfortunately owned by scammers)
 
-Go to https://bitcoincore.org/en/download
+[Download the latest version of Bitcoin Core here](https://bitcoincore.org/en/download)
 
 Click the big blue "Download Bitcoin Core" button.
 
