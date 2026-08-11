@@ -1,4 +1,4 @@
-# How to set up secure bitcoin storage
+# How to set up secure, airgapped Bitcoin multisig with Bitcoin Core
 
 ## Note
 
