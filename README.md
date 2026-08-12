@@ -54,11 +54,11 @@ Once you've finished installing Linux, you need to install security updates. Fir
 
 Open a terminal with `Ctrl + Alt + T`. Then type or copy and paste the following commands into the terminal.
 
-`sudo apt update`
+`sudo apt -y update`
 
 Press enter, then press Y if prompted and press enter again, wait for it to finish
 
-`sudo apt full-upgrade`
+`sudo apt -y full-upgrade`
 
 press enter, then press Y if prompted and press enter again, wait for it to finish
 
@@ -183,9 +183,9 @@ You can now run You can run `less README.md` inside the home directory to open t
 
 ### [offline computer] Install Brasero
 
-Open a terminal and navigate to the home directory. Run the following command (change the command to match the name of your brasero file if needed)
+Open a terminal and navigate to the home directory. Run the following command (change the command to match the name & path of your brasero file if needed)
 
-`sudo apt install brasero_3.12.3-8_amd64.deb`
+`sudo apt -y install /home/ubuntu/brasero_3.12.3-8_amd64.deb`
 
 press enter and wait for it to finish.
 
