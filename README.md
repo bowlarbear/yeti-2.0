@@ -6,7 +6,7 @@ This guide was created using [Bitcoin Core's official multisig-tutorial](https:/
 
 Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
 
-This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and atlernative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually and verify every step of the process.
+This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually and verify every step of the process.
 
 This multisig vault is reccomended for storing between $10k-$5M in Bitcoin.
 
@@ -33,11 +33,11 @@ Pick one laptop to be the online computer, this will be your Bitcoin node. We ne
 
 You will most likely need the Intel or AMD 64-bit architecture, download the latest version (26.04 as of this post).
 
+You should [verify the Ubuntu download](verify_ubuntu.md) before creating your installer.
+
 Grab one of the fresh USB sticks and mark it with a sticker or a piece of tape. This will be the Linux USB, and it needs to be flashed with the ubuntu installer.
 
 If you are on Windows you can download an app called [Rufus](https://rufus.ie) and use that to create the live installer. MacOS users can download an app called [balenaEtcher](https://github.com/balena-io/etcher/releases). 
-
-It is highly reccomended, but not required that you [verify the Ubuntu download](verify_ubuntu.md) before creating your installer.
 
 If you know how to use dd and you already have access to a terminal this is best way because it does not rely on a third party dependency. Be careful you flash the correct drive if you use dd, its colloquially called "disk destroyer" for a reason.
 
@@ -256,7 +256,7 @@ Insert the transfer USB into the online computer. Copy the multisig_watch_wallet
 With this wallet loaded on the online computer, can now use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to see the transaction history, check the balance of the wallet, generate receive addresses, generate PSBTs for export, and broadcast fully signed Bitcoin Transactions.
 
 
-# Step B6: [offline computer] Backup keys
+## Step B6: [offline computer] Backup keys
 Now back up each of the 7 keys and the wallet descriptor.
 
 Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M disc and write the number 1 on it with a permenant marker, insert disc 1 into the USB connected disc drive. Then use brasero create an .ISO of key_1 & the multisig_watch_wallet from `/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this .ISO to disc 1. Repeat for all 7 keys.
@@ -381,11 +381,11 @@ Repeat this process until you've tested all 7 of your key backups. This will req
 
 ## C6. Geographically Distribute Backups
 
-The next step is to place each of your 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Last will and testment of <your_name>. Pass this onto to next of kin."
+The next step is to place each of your 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Last will and testament of <your_name>. Pass this onto to next of kin."
 
 The 7 envelopes must be geographically distributed to 7 different locations. 
 
-You now have a secure, Bitcoin multisig vault that can only accessed by gathering 3 geographically distributed keys. 
+You now have a secure, Bitcoin multisig vault that can only be accessed by gathering 3 geographically distributed keys. 
 
 
 # D. How to use your wallet normally
@@ -410,7 +410,7 @@ Next time you want to spend Bitcoin from the multisig:
 5. [offline computer] sign the PSBT
 6. [offline computer] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer
 7. [online computer] drag the signed PSBT from the transfer USB onto the desktop
-7. [online computer] broadcast the signed PSBT (see step C5)
+8. [online computer] broadcast the signed PSBT (see step C5)
 
 
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
