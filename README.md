@@ -67,8 +67,6 @@ Do NOT go to bitcoin.org (that website is unfortunately owned by scammers)
 
 Click the big blue "Download Bitcoin Core" button.
 
-Unpack the Tarball, you can go into the `~/Downloads` folder and right click on the bitcoin core file and click "Extract" then drag the new folder it creates into the HOME directory.
-
 ### [online computer] Verify Bitcoin Core
 
 After you've finished downloading Bitcoin core open a terminal, navigate into the `~/Downloads` folder and copy and paste the following command to verify the hash on Bitcoin Core.
@@ -104,15 +102,15 @@ Bitcoin Core now exists within your home directory inside of the `~/bitcoin-31.1
 
 ## Step A4. [online computer] Start Bitcoin Core
 
-Open the folder in the Home directory and then click on Bitcoin-31.1
+Open the folder in the Home directory and then click on bitcoin-31.1
 
 ### Enable Pruning
 
-Inside of Bitcoin-31.1 double click on the file named "Bitcoin.conf". 
+Inside of bitcoin-31.1 double click on the file named "Bitcoin.conf". 
 
-Add the following line anywhere in the file\
+Add the following line anywhere in the file
 
-`prune=550`
+`prune=5500`
 
 Then click save and close the bitcoin.conf file.
 
