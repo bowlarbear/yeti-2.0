@@ -275,7 +275,9 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 
 7 = key_7 & multisig_watch_wallet
 
-# C. [offline computer] Test the wallet backups
+# C.  Testing wallet backups
+
+### Delete wallets on the computer
 
 Stop Bitcoin Core
 
@@ -392,7 +394,7 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 By this point you should already have a good understanding of how this works. The offline computer does not have any persistence. This is for your security, so no keys are ever written to the computers storage, they can never be recovered without the backup discs. Each time you wish to sign a psbt with the offline computer follow these steps carefully...
 
-Insert Linux USB into offline computer, click try ubuntu
+Insert Linux USB into the powered off, offline computer, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
 Connect to WIFI or LAN, Download latest version of Bitcoin Core, verify the software, unpack the tarball (see step A3)
 
