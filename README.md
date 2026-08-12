@@ -150,7 +150,7 @@ You will temporarily connect to either WIFI or LAN.
 
 Open a terminal and copy and paste the following command in the home directory and press enter.
 
-`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
+`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)`
 
 You should now have this guide in the Home directory.
 
