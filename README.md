@@ -341,7 +341,13 @@ hex=$(./bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
 
 ```
 
-Repeat this process util you've tested all of your key backups. 
+Repeat this process until you've tested all 7 of your key backups. This will require 3 test transactions total 
+
+1st transasction: key1, key2, key3 
+
+2nd transaction: key4, key5, key6
+
+3rd transaction key7, + any 2 other keys
 
 ## C6. Geographically Distribute Backups
 
@@ -379,5 +385,5 @@ Next time you want to spend Bitcoin from the multisig:
 
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
 
-These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software. 
+These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 
