@@ -10,7 +10,7 @@ By relying on highly trusted, highly reviewed software like Bitcoin Core to do a
 
 A: This guide strives to minimize outside dependencies wherever possible. It is in the professional opinion of the authors that any outside dependencies introduced to a self custody solution significantly increases the attack surface of that self custody solution. 
 
-Thus, while it might not make for the most convenient or pretty experience compared to some other apps, we quite confident that it is considerably more secure.
+Thus, while it might make for a more convenient or pretty user experience to introduce other software apps, we are quite confident that it is considerably more secure to avoid them.
 
 ## Q: Why not use hardware wallets?
 
