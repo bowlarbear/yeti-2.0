@@ -236,6 +236,8 @@ Grab the second USB stick (with no tape), this will be the transfer USB, Insert 
 
 NOTE: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
 
+Note: It is wise to always run the `sync` command in the terminal and wait for it to finish before removing a USB.
+
 Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder. When Bitcoin Core is finished syncing you can now load this wallet on the online computer with the following terminal command.
 
 `./bitcoin-cli loadwallet "multisig_watch_wallet"`
