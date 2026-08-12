@@ -69,21 +69,56 @@ Click the big blue "Download Bitcoin Core" button.
 
 Unpack the Tarball, you can go into the `~/Downloads` folder and right click on the bitcoin core file and click "Extract" then drag the new folder it creates into the HOME directory.
 
+### [online computer] Verify Bitcoin Core
+
+After you've finished downloading Bitcoin core open a terminal, navigate into the `~/Downloads` folder and copy and paste the following command to verify the hash on Bitcoin Core.
+
+```
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
+sha256sum --ignore-missing --check SHA256SUMS
+```
+
+Press Enter and ensure you get an "OK" result in the terminal. If you do not see an "OK" message STOP AND DO NOT PROCEED.
+
+Again within the `~/Downloads` folder copy and paste the following command to verify the signatures on the Bitcoin Core Software.
+
+```
+wget -O guix.sigs.tar.gz https://github.com/bitcoin-core/guix.sigs/archive/refs/heads/main.tar.gz
+tar -xzf guix.sigs.tar.gz
+gpg --import guix.sigs-main/builder-keys/*
+gpg --verify SHA256SUMS.asc
+```
+
+Look for `gpg: Good signature from...` on atleast a few recognizable Bitcoin Core contributors.
+
+### [online computer] Unpack Bitcoin Core from Tarball
+
+Again within the `~/Downloads` folder copy and paste the following command to unpack the Bitcoin Core tar.gz now that we have verified it is legitimate.
+
+```
+tar -xzf bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
+```
+
+Bitcoin Core now exists within your home directory inside of the `~/bitcoin-31.1` folder.
+
 ## Step A4. [online computer] Start Bitcoin Core
 
 Open the folder in the Home directory and then click on Bitcoin-31.1
 
-### IMPORTANT: If you opted not to upgrade the online computer's storage drive to atleast 2TB you need to set your node to pruned mode. In this case it will still do fully validate all historical bitcoin blocks, but it will not store a full copy of the bitcoin blockchain on the node.
+### Enable Pruning
 
 Inside of Bitcoin-31.1 double click on the file named "Bitcoin.conf". 
 
-Add the following line anywhere in the file
-`prune=5500`
+Add the following line anywhere in the file\
+
+`prune=550`
+
 Then click save and close the bitcoin.conf file.
 
 Open a terminal with `Ctrl + Alt + T`. Navigate into the Bitcoin folder we extracted in step 3 using the change directory command `cd`. We need to be inside of the `/bin` folder. 
 
-Once inside the `~/Bitcoin-31.1/bin` folder, copy and paste the following command in the terminal.
+Once inside the `~/bitcoin-31.1/bin` folder, copy and paste the following command in the terminal.
 
 `./bitcoind`
 
@@ -91,7 +126,7 @@ Press enter
 
 This computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks), if you like to speed it up you can use assumeutxo.
 
-It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this navigate into the `~/Bitcoin-31.1/bin` folder and run this command.
+It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this navigate into the `~/bitcoin-31.1/bin` folder and run this command.
 
 `./bitcoin-cli stop`
 
@@ -145,42 +180,7 @@ press enter and wait for it to finish.
 
 ### [offline computer] Install Bitcoin Core
 
-Do NOT go to bitcoin.org (that website is unfortunately owned by scammers)
-
-Go to https://bitcoincore.org/en/download
-
-Click the big blue "Download Bitcoin Core" button.
-
-### [offline computer] Verify Bitcoin Core
-
-After you've finished downloading Bitcoin core open a terminal, navigate into the `~/Downloads` folder and copy and paste the following command to verify the hash on Bitcoin Core.
-
-```
-wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
-wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
-sha256sum --ignore-missing --check SHA256SUMS
-```
-
-Press Enter and ensure you get an "OK" result in the terminal. If you do not see an "OK" message STOP AND DO NOT PROCEED.
-
-Again within the `~/Downloads` folder copy and paste the following command to verify the signatures on the Bitcoin Core Software.
-
-```
-wget -O guix.sigs.tar.gz https://github.com/bitcoin-core/guix.sigs/archive/refs/heads/main.tar.gz
-tar -xzf guix.sigs.tar.gz
-gpg --import guix.sigs-main/builder-keys/*
-gpg --verify SHA256SUMS.asc
-```
-
-Look for `gpg: Good signature from...` on atleast a few recognizable Bitcoin Core contributors.
-
-Again within the `~/Downloads` folder copy and paste the following command to unpack the Bitcoin Core tar.gz now that we have verified it is legitimate.
-
-```
-tar -xzf bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
-```
-
-Bitcoin Core now exists within your home directory inside of the `~/Bitcoin-31.1` folder.
+Repeat step A3 from above on your offline computer
 
 ## Step A7: [offline computer] Disable networking on the offline computer
 
@@ -192,7 +192,7 @@ Within the terminal copy and run the following command:
 
 ## Step B1: [offline computer] Start Bitcoin Core
 
-On the offline computer start by opening a terminal and navigating into the `~/Bitcoin-31.1/bin` folder
+On the offline computer start by opening a terminal and navigating into the `~/bitcoin-31.1/bin` folder
 
 start the Bitcoin Daemon
 
@@ -201,7 +201,7 @@ start the Bitcoin Daemon
 
 ## Step B2: [offline computer] create 7 wallets
 
-Within `~/Bitcoin-31.1/bin` in the terminal copy and paste the following...
+Within `~/bitcoin-31.1/bin` in the terminal copy and paste the following...
 
 ```
 for ((n=1;n<=7;n++))
@@ -294,7 +294,7 @@ start Bitcoin Core again
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
 
-Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT, which is Bitcoin Core's graphical user interface (GUI). Simply double click on "Bitcoin-QT" inside of `~/Bitcoin-31.1/bin`, then load "multisig_watch_wallet" in the GUI and generate a receive address for a QR code.
+Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT, which is Bitcoin Core's graphical user interface (GUI). Simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin`, then load "multisig_watch_wallet" in the GUI and generate a receive address for a QR code.
 
 
 ## C2. [online computer] Check the balance of the wallet
@@ -392,7 +392,7 @@ By this point you should already have a good understanding of how this works. Th
 
 Insert Linux USB into offline computer, click try ubuntu
 
-Connect to WIFI or LAN, Download latest version of Bitcoin Core, unpack the tarball
+Connect to WIFI or LAN, Download latest version of Bitcoin Core, verify the software, unpack the tarball (see step A3)
 
 ### IMPORTANT: ALWAYS Disable networking before inserting any key material
 
