@@ -132,23 +132,7 @@ Note: It is important to always properly shut down bitcoin core before turning o
 
 `./bitcoin-cli stop`
 
-## Step A5: [online computer] Prepare Transfer USB
-
-Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the online computer.
-
-### [offline computer] Download This Guide
-
-In the terminal and copy and paste the following command and press enter.
-
-`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
-
-You should now have this guide in the Home directory. Copy the `README.md` file onto the transfer USB.
-
-### [offline computer] Copy Bitcoin Core
-
-Copy the entire `~/Bitcoin-31.1` folder onto the transfer USB.
-
-## Step A6: Switch to Offline Computer
+## Step A5: Switch to Offline Computer
 
 Now remove the transfer USB from the online computer and switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
 
@@ -158,15 +142,23 @@ After you've removed all internal storage drives, put the computer back together
 
 After the Ubuntu splash screen select `Try Ubuntu`.
 
-You will need to temporarily connect to either WIFI or LAN.
+You will temporarily connect to either WIFI or LAN.
 
-## Step A7: [offline computer] Install Updates and Software
+## Step A6: [offline computer] Install Updates and Software
 
-### [offline computer] Copy Files
+## [offline computer] Download this guide
 
-Once you have reached the desktop screen, insert the transfer USB into the offline computer. Copy the `Bitcoin-31.1` folder and the `README.md` file from the transfer USB into the home directory.
+Open a terminal and copy and paste the following command in the home directory and press enter.
+
+`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
+
+You should now have this guide in the Home directory.
 
 You can now run You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
+
+### [offline computer] Install Updates & Bitcoin Core
+
+Repeat Steps A2 and A3 on the OFFLINE computer
 
 ### [offline computer] Install Brasero
 
@@ -176,9 +168,9 @@ Open a terminal and run the following command
 
 press enter and wait for it to finish.
 
-Note: We do not need to verify the authenticity of the brasero download because it is automatically verified by apt which is part of Ubuntu.
+Note: We do not need to verify the authenticity of the brasero download because it is automatically verified by apt which is part of Ubuntu. Brasero is needed so we can make backups of our keys and burn them to M-discs. Ubuntu does not come out of the box with software that enables us to do this.
 
-## Step A8: [offline computer] Disable Networking
+## Step A7: [offline computer] Disable Networking
 
 Within the terminal copy and run the following command:
 `nmcli networking off`
@@ -395,7 +387,7 @@ By this point you should already have a good understanding of how this works. Th
 
 Insert Linux USB into the powered off, offline computer, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
-Copy over the necessary files from the transfer USB (see step A7 & step A8). You do not need to conect to WIFI or LAN. You do not need to reinstall brasero.
+Temporarily connect to the network, install updates, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7).
 
 ### IMPORTANT: Do not forget to disable networking before inserting any key material
 
