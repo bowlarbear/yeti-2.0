@@ -153,7 +153,7 @@ Click the big blue "Download Bitcoin Core" button.
 
 ### [offline computer] Verify Bitcoin Core
 
-Verify the hash on Bitcoin Core, open a terminal and copy and paste the following command.
+After you've finished downloading Bitcoin core open a terminal, navigate into the `~/Downloads` folder and copy and paste the following command to verify the hash on Bitcoin Core.
 
 ```
 wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
@@ -161,16 +161,30 @@ wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
 sha256sum --ignore-missing --check SHA256SUMS
 ```
 
-Press Enter and ensure you get an "OK" result in the terminal. IF YOU DO NOT GET AN "OK" message stop and do not proceed.
+Press Enter and ensure you get an "OK" result in the terminal. If you do not see an "OK" message STOP AND DO NOT PROCEED.
 
+Again within the `~/Downloads` folder copy and paste the following command to verify the signatures on the Bitcoin Core Software.
 
+```
+wget -0 guix.sigs.tar.gz https://github.com/bitcoin-core/guix.sigs/archive/refs/heads/main.tar.gz
+tar -xzf guix.sigs.tar.gz
+gpg --import guix.sigs-main/builder-keys/*
+gpg --verify SHASUMS.asc
+```
 
-Unpack the Tarball, you can go into the `~/Downloads` folder and right click on the bitcoin core file and click "Extract" then drag the new folder it creates into the HOME directory.
+Look for `gpg: Good signature from...` on atleast a few recognizable Bitcoin Core contributors.
 
+Again within the `~/Downloads` folder copy and paste the following command to unpack the Bitcoin Core tar.gz now that we have verified it is legitimate.
+
+```
+tar -xzf bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
+```
+
+Bitcoin Core now exists within your home directory inside of the `~/Bitcoin-31.1` folder.
 
 ## Step A7: [offline computer] Disable networking on the offline computer
 
-Open the terminal and run the following command:
+Within the terminal copy and run the following command:
 `nmcli networking off`
 
 
