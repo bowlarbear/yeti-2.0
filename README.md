@@ -339,7 +339,16 @@ hex=$(./bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
 
 ```
 
-Repeat this process util you've tested all of your key backups. You now have a secure Bitcoin multisig vault.
+Repeat this process util you've tested all of your key backups. 
+
+## C6. Geographically Distribute Backups
+
+The next step is to place each of your 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Last will and testment of <your_name>. Pass this onto to next of kin."
+
+The 7 envelopes must be geographically distributed to 7 different locations. 
+
+You now have a secure, Bitcoin multisig vault that can only accessed by gathering 3 geographically distributed keys. 
+
 
 # D. How to use your wallet normally
 
