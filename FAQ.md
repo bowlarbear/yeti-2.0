@@ -4,7 +4,7 @@
 
 A: Bitcoin Core is one of the most conservative and highly scrutinized pieces of software in the world. Linux is also one of the most conservative and highly scrutinized pieces of software in the world. By using self installed Linux + Bitcoin Core as our foundation we are striving to create the smallest possible attack surface for secure Bitcoin Storage.
 
-By relying on highly trusted, highly reviewed software like Bitcoin Core to do all of our security critical functions we can avoid introducing bugs (or attacks) that might slip through less conservative change review processes for wallets that rewrite critical core functions of a Bitcoin wallet.
+By relying on highly trusted & highly scrutinized software like Bitcoin Core to perform all security critical functions, we can avoid introducing bugs (or attacks) that might slip through less conservative change review processes for software that rewrites critical core functions of a Bitcoin wallet.
 
 ## Q: why not use electrum or `<insert software stack>`
 
