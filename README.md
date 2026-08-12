@@ -12,28 +12,28 @@ This multisig vault is reccomended for storing between $10k-$5M in Bitcoin.
 
 ## You will need:
 
--2 Dedicated Laptops (8GB RAM minimum, 64GB storage minimum) (try refurbished thinkpads) (Chromebooks will not work)
+- 2 Dedicated Laptops (8GB RAM minimum, 64GB storage minimum) (try refurbished thinkpads) (Chromebooks will not work)
 
--2 Fresh USB sticks (16GB minimum) (try kingston datatravelers 64GB)
+- 2 Fresh USB sticks (16GB minimum) (try kingston datatravelers 64GB)
 
--8 pack of Milleniata brand M-disc DVDs 4.7GB (do not buy any other brand than millenniata)
+- 7 Milleniata brand M-disc DVDs 4.7GB (do not buy any other brand than millenniata)
 
--A USB powered disc drive capable of writing M-Disc DVDs (try ASUS zendrive)
+- 1 USB powered disc drive capable of writing M-Disc DVDs (try ASUS zendrive)
 
-estimated total cost (using amazon for reference):
-~$450
+estimated total cost (using amazon for reference as of 11 Aug 2026):
+~$500
 
 # A. Initial Set Up
 
 ## Step A1. [online computer] Install Ubuntu
 
-Pick one laptop to be the online computer, this will be your Bitcoin node. We need to install Ubuntu on this computer.
+Pick one laptop to be the online computer, this will be the Bitcoin node. We need to install Ubuntu on this computer.
 
 [Download the latest version of Ubuntu here](https://ubuntu.com/download/desktop)
 
 You will most likely need the Intel or AMD 64-bit architecture, download the latest version (26.04 as of this post).
 
-You should [verify the Ubuntu download](verify_ubuntu.md) before creating your installer.
+You should [verify the Ubuntu download](verify_ubuntu.md) before creating the installer.
 
 Grab one of the fresh USB sticks and mark it with a sticker or a piece of tape. This will be the Linux USB, and it needs to be flashed with the ubuntu installer.
 
@@ -45,7 +45,7 @@ Once you have the Linux USB ready, the next step will be to install Linux on the
 
 After the Ubuntu splash screen select `Install Ubuntu`.
 
-During installation, simply proceed with all of the default settings, when you reach the "Encryption and File System" screen select "Encrypt with a passphrase" choose a password for your node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but your bitcoin wallet will not be affected)
+During installation, simply proceed with all of the default settings, when you reach the "Encryption and File System" screen select "Encrypt with a passphrase" choose a password for the node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but the bitcoin wallet will not be affected)
 
 
 ## Step A2. [online computer] Install security updates
@@ -102,7 +102,7 @@ Again within the `~/Downloads` folder copy and paste the following command to un
 tar -xzf bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
 ```
 
-Bitcoin Core now exists within your home directory inside of the `~/bitcoin-31.1` folder.
+Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1` folder.
 
 ## Step A4. [online computer] Start Bitcoin Core
 
@@ -158,7 +158,7 @@ Open a terminal and copy and paste the following command and press enter.
 
 You should now have this guide in the Home directory.
 
-You can run `less README.md` to open this guide in a terminal window. You can always download this guide again but it might be helpful to keep a copy on your transfer USB and on your backups discs that we will do later.
+You can run `less README.md` to open this guide in a terminal window. You can always download this guide again but it might be helpful to keep a copy on the transfer USB and on the backups discs that we will do later.
 
 ### [offline computer] Install updates
 
@@ -182,7 +182,7 @@ press enter and wait for it to finish.
 
 ### [offline computer] Install Bitcoin Core
 
-Repeat step A3 from above on your offline computer
+Repeat step A3 from above on the OFFLINE computer
 
 ## Step A7: [offline computer] Disable networking on the offline computer
 
@@ -275,7 +275,7 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 
 7 = key_7 & multisig_watch_wallet
 
-# C. [offline computer] Test your wallet backups
+# C. [offline computer] Test the wallet backups
 
 Stop Bitcoin Core
 
@@ -371,7 +371,7 @@ hex=$(./bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
 
 ```
 
-Repeat this process until you've tested all 7 of your key backups. This will require 3 test transactions total 
+Repeat this process until you've tested all 7 of the key backups. This will require 3 test transactions total 
 
 1st transasction: key1, key2, key3 
 
@@ -381,16 +381,16 @@ Repeat this process until you've tested all 7 of your key backups. This will req
 
 ## C6. Geographically Distribute Backups
 
-The next step is to place each of your 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Last will and testament of <your_name>. Pass this onto to next of kin."
+The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Last will and testament of <your_name>. Pass this onto to next of kin."
 
 The 7 envelopes must be geographically distributed to 7 different locations. 
 
 You now have a secure, Bitcoin multisig vault that can only be accessed by gathering 3 geographically distributed keys. 
 
 
-# D. How to use your wallet normally
+# D. How to use the wallet normally
 
-By this point you should already have a good understanding of how this works. The offline computer does not have any persistence. This is for your security, so no keys are ever written to the computers storage, they can never be recovered without your backup discs. Each time you wish to sign a psbt with the offline computer follow these steps carefully...
+By this point you should already have a good understanding of how this works. The offline computer does not have any persistence. This is for your security, so no keys are ever written to the computers storage, they can never be recovered without the backup discs. Each time you wish to sign a psbt with the offline computer follow these steps carefully...
 
 Insert Linux USB into offline computer, click try ubuntu
 
@@ -400,12 +400,12 @@ Connect to WIFI or LAN, Download latest version of Bitcoin Core, verify the soft
 
 `nmcli networking off`
 
-From here the process for spending from your multisig is the same as above.
+From here the process for spending from the multisig is the same as above.
 
 Next time you want to spend Bitcoin from the multisig:
 1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (see step C3)
 2. [offline computer] insert transfer USB into the offline computer, drag the unsigned PSBT onto the desktop
-3. [offline computer] collect any 3 of your key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (see step C4)
+3. [offline computer] collect any 3 of the key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (see step C4)
 4. [offline computer] load the wallets from the terminal
 5. [offline computer] sign the PSBT
 6. [offline computer] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer
