@@ -364,7 +364,7 @@ hex=$(./bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
 
 ```
 
-Note: Delete old signed.psbt and unsigned.psbt files off of the Desktop on the online computer and the offline computer and the transfer USB after finishing each transaction.
+Note: Delete old signed.psbt and unsigned.psbt files off of the transfer USB after finishing each transaction. PSBT files on the desktop will be overwritten automatically by the speding scripts.
 
 Repeat this process (step C4, C5, and C6) until you've tested all 7 of the key backups. This will require 3 test transactions total 
 
