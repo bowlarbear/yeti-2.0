@@ -166,7 +166,7 @@ Press Enter and ensure you get an "OK" result in the terminal. If you do not see
 Again within the `~/Downloads` folder copy and paste the following command to verify the signatures on the Bitcoin Core Software.
 
 ```
-wget -0 guix.sigs.tar.gz https://github.com/bitcoin-core/guix.sigs/archive/refs/heads/main.tar.gz
+wget -O guix.sigs.tar.gz https://github.com/bitcoin-core/guix.sigs/archive/refs/heads/main.tar.gz
 tar -xzf guix.sigs.tar.gz
 gpg --import guix.sigs-main/builder-keys/*
 gpg --verify SHA256SUMS.asc
