@@ -6,7 +6,7 @@ This guide was created using [Bitcoin Core's official multisig-tutorial](https:/
 
 Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
 
-This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device.
+This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and atlernative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually and verify every step of the process.
 
 This multisig vault is reccomended for storing between $10k-$5M in Bitcoin.
 
@@ -35,7 +35,11 @@ You will most likely need the Intel or AMD 64-bit architecture, download the lat
 
 Grab one of the fresh USB sticks and mark it with a sticker or a piece of tape. This will be the Linux USB, and it needs to be flashed with the ubuntu installer.
 
-If you are on Windows you can download an app called Rufus and use that to create the live installer. MacOS users can download an app called balenaEtcher. If you know how to use dd and you already have access to a terminal this is best way.
+If you are on Windows you can download an app called [Rufus](https://rufus.ie) and use that to create the live installer. MacOS users can download an app called [balenaEtcher](https://github.com/balena-io/etcher/releases). 
+
+It is highly reccomended, but not required that you [verify the Ubuntu download](verify_ubuntu.md) before creating your installer.
+
+If you know how to use dd and you already have access to a terminal this is best way because it does not rely on a third party dependency. Be careful you flash the correct drive if you use dd, its colloquially called "disk destroyer" for a reason.
 
 Once you have the Linux USB ready, the next step will be to install Linux on the online computer. Doing this requires turning off the computer, inserting the Linux USB (USB with tape) into the online computer and turning the power back on. If this doesn't work on the first try, you might need to change the boot order within the BIOS.
 
