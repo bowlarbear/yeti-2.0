@@ -389,7 +389,7 @@ By this point you should already have a good understanding of how this works. Th
 
 Insert Linux USB into the powered off, offline computer, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
-Temporarily connect to the network, install updates, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7).
+Temporarily connect to the network, install updates, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
 
 ### IMPORTANT: Do not forget to disable networking before inserting any key material
 
