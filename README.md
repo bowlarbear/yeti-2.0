@@ -381,7 +381,7 @@ Repeat this process until you've tested all 7 of the key backups. This will requ
 
 ## C6. Geographically Distribute Backups
 
-The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Last will and testament of <your_name>. Pass this onto to next of kin."
+The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Property of <your_name>. Pass this onto to next of kin." What you write on these envelopes will ultimately be up to you, but it should be relatively non descript. 
 
 The 7 envelopes must be geographically distributed to 7 different locations. 
 
