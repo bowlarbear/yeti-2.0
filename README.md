@@ -128,14 +128,37 @@ Press enter
 
 This computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks), if you like to speed it up you can use assumeutxo.
 
-It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this navigate into the `~/bitcoin-31.1/bin` folder and run this command.
+Note: It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this navigate into the `~/bitcoin-31.1/bin` folder and run this command.
 
 `./bitcoin-cli stop`
 
+## Step A5: [online computer] Prepare transfer USB
 
-## Step A5: Switch to offline computer
+Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the online computer.
 
-Now switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
+### Download brasero
+
+Open a terminal and navigate into the home directory. Run this command in the terminal.
+
+`apt download brasero`
+
+copy the brasero file onto the transfer USB, it should have a name similar to: `brasero_3.12.3-8_amd64.deb`
+
+### [offline computer] Download this guide
+
+In the terminal and copy and paste the following command and press enter.
+
+`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
+
+You should now have this guide in the Home directory. Copy the README.md file onto the transfer USB.
+
+### [offline computer] Copy Bitcoin Core
+
+Copy the entire `~/Bitcoin-31.1` folder onto the transfer USB.
+
+## Step A6: Switch to offline computer
+
+Now remove the transfer USB from the online computer and switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
 
 The first thing to do is to remove any internal storage drives from the offline computer. This will vary depending on the model, but you should remove both the internal SATA drive and the NVME drive (some computers will only come with one or the other, some will come with both).
 
@@ -143,58 +166,43 @@ After you've removed all internal storage drives, put the computer back together
 
 After the Ubuntu splash screen select `Try Ubuntu`.
 
+DO not connect to WIFI.
 
-## Step A6: [offline computer] Install Updates and Software
+## Step A7: [offline computer] Install Updates and Software
 
-### [offline computer] Download this guide
+### [offline computer] Copy Files
 
-Once you are on the desktop connect to WIFI or LAN.
+Once you have reached the desktop screen, insert the transfer USB into the offline computer. Copy the Bitcoin-31.1 folder from the transfer USB into the home directory.
 
-Open this guide in firefox. You can just leave the browser window open on the guide, but you should also download this guide so you will still have access to it after we disable networking.
+Also copy the `brasero_3.12.3-8_amd64.deb` and the `README.md` file into the home directory.
 
-Open a terminal and copy and paste the following command and press enter.
+You can now run You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
 
-`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md`
-
-You should now have this guide in the Home directory.
-
-You can run `less README.md` to open this guide in a terminal window. You can always download this guide again but it might be helpful to keep a copy on the transfer USB and on the backups discs that we will do later.
-
-### [offline computer] Install updates
-
-Open a new terminal window and copy and paste the following commands.
-
-`sudo apt update`
-
-Press enter, then press Y if prompted and press enter again, wait for it to finish
-
-`sudo apt full-upgrade`
-
-press enter, then press Y if prompted and press enter again, wait for it to finish
 
 ### [offline computer] Install Brasero
 
-Download Brasero with the following command.
+Open a terminal and navigate to the home directory. Run the following command (change the command to match the name of your brasero file if needed)
 
-`sudo apt install brasero`
+`sudo apt install brasero_3.12.3-8_amd64.deb`
 
 press enter and wait for it to finish.
 
 ### [offline computer] Install Bitcoin Core
 
-Repeat step A3 from above on the OFFLINE computer
+Copy bitcoin-31.1 from the transfer USB to the home directory
 
-## Step A7: [offline computer] Disable networking on the offline computer
+## Step A8: [offline computer] Disable networking on the offline computer
 
 Within the terminal copy and run the following command:
 `nmcli networking off`
 
+This command is an extra safeguard to disable all networking functionality (WIFI, LAN, and Bluetooth)
 
 # B. Creating a Multi Signature Cold Wallet on Bitcoin Core
 
 ## Step B1: [offline computer] Start Bitcoin Core
 
-On the offline computer start by opening a terminal and navigating into the `~/bitcoin-31.1/bin` folder
+Open a terminal and navigating into the `~/bitcoin-31.1/bin` folder
 
 start the Bitcoin Daemon
 
@@ -396,9 +404,9 @@ By this point you should already have a good understanding of how this works. Th
 
 Insert Linux USB into the powered off, offline computer, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
-Connect to WIFI or LAN, Download latest version of Bitcoin Core, verify the software, unpack the tarball (see step A3)
+Copy over the necessary files from the transfer USB (see step A7 & step A8)
 
-### IMPORTANT: ALWAYS Disable networking before inserting any key material
+### IMPORTANT: Do not forget to disable networking before inserting any key material
 
 `nmcli networking off`
 
