@@ -37,3 +37,13 @@ Although you should still check your backups periodically and redo them probably
 ## Q: What should I do if I need to store more than $5M in Bitcoin?
 
 A: As the amount of value you are securing in a Bitcoin multisig wallet grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
+
+## Q: How can I be sure that all keys were deleted off of the offline computer?
+
+A: The offline computer runs off the Ubuntu Live System on the Linux USB, this process lives entirely within RAM.
+
+If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups.
+
+If you would prefer to avoid destroying the computer, then before beginnin step A5, first remove any internal storage drives from the offline computer. This will vary depending on the model, but you should remove both the internal SATA drive and the NVME drive (some computers will only come with one or the other, some will come with both).
+
+After you've removed all internal storage drives, put the computer back together and then continue with step A5. 

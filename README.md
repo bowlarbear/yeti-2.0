@@ -136,9 +136,7 @@ Note: It is important to always properly shut down bitcoin core before turning o
 
 Now remove the transfer USB from the online computer and switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
 
-The first thing to do is to remove any internal storage drives from the offline computer. This will vary depending on the model, but you should remove both the internal SATA drive and the NVME drive (some computers will only come with one or the other, some will come with both).
-
-After you've removed all internal storage drives, put the computer back together, insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the offline computer (remember both are marked with tape).
+Insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the offline computer (remember both are marked with tape).
 
 After the Ubuntu splash screen select `Try Ubuntu`.
 
@@ -170,12 +168,20 @@ press enter and wait for it to finish.
 
 Note: We do not need to verify the authenticity of the brasero download because it is automatically verified by apt which is part of Ubuntu. Brasero is needed so we can make backups of our keys and burn them to M-discs. Ubuntu does not come out of the box with software that enables us to do this.
 
-## Step A7: [offline computer] Disable Networking
+## Step A7: [offline computer] Disable Networking 
 
 Within the terminal copy and run the following command:
 `nmcli networking off`
 
 This command will disable all networking functionality (WIFI, LAN, and Bluetooth)
+
+### [offline computer] Disable any swap space
+
+Swap space is virtual RAM that is borrowed from the internal storage drive. Open a terminal and run this command to verify that there is no swap space enabled on the offline computer.
+
+`sudo swapoff -a`
+
+See the [FAQ](FAQ.md) for more information on this step. 
 
 # B. Creating a Multi Signature Cold Wallet on Bitcoin Core
 
@@ -391,9 +397,15 @@ Insert Linux USB into the powered off, offline computer, turn the computer on, a
 
 Temporarily connect to the network, install updates, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
 
-### IMPORTANT: Do not forget to disable networking before inserting any key material
+### IMPORTANT: Before Inserting any Key Material
+
+### Disable Networing
 
 `nmcli networking off`
+
+### Disable Swap Space
+
+`sudo swapoff -a`
 
 From here the process for spending from the multisig is the same as above.
 
