@@ -24,11 +24,13 @@ A: You are likely thinking of human readable 12 or 24 word seed phrases (AKA BIP
 
 We do not use these seed phrases because Bitcoin Core does not support them.
 
-## Q: If you don't write down seed words, how can you ensure seed backups are safe?
+## Q: If you don't write down seed words, how can you ensure key backups are safe?
 
-A: This is one of the main reasons why we reccomend multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case.
+A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case.
 
-Additionally all of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term data archival storage, and under proper storage conditions they are rated by the manufacturer to last up to 1,000 years.
+## Why M-discs specifically?
+
+All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term data archival storage, and under proper storage conditions they are rated by the manufacturer to last up to 1,000 years.
 
 Although you should still check your backups periodically and redo them probably atleast once every 10 years or so to be safe. 
 
