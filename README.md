@@ -325,7 +325,17 @@ Insert the transfer USB (no tape) into the online computer, copy the unsigned.ps
 
 ### [offline computer] Transfer the Unsigned PSBT
 
-Insert the transfer USB (no tape) into the offline computer. Copy or drag and drop unsigned.psbt from the transfer USB onto the Desktop.
+Insert the transfer USB (no tape) into the offline computer. Copy or drag and drop `unsigned.psbt` from the transfer USB onto the Desktop.
+
+### [offline computer] Verify the PSBT
+
+Open a terminal and run this command.
+
+`./bitcoin-cli decodepsbt "$(cat ~/Desktop/unsigned.psbt)"`
+
+Verify the contents of the output, make sure that the `destination_address` and `amount` within `tx.vout` matches what you expect.
+
+If the transaction does not match what you expect STOP and reevaluate.
 
 ### [offline computer] Load the Keys
 Choose 3 of the M-discs, insert them one at a time into the offline computer's USB connected disc drive, and copy the key_# directory into `~/.bitcoin/wallets`.
@@ -336,7 +346,7 @@ After copying a key run the following command, replace `key_#` with the name of 
 
 ### [offline computer] Sign the PSBT
 
-After loading all 3 of the keys, sign the PSBT with this script
+After loading all 3 of the keys, sign the PSBT with this script in the terminal
 
 ```
 psbt=$(cat ~/Desktop/unsigned.psbt)
@@ -361,6 +371,16 @@ Copy `signed.psbt` from the Desktop onto the transfer USB. Remove the transfer U
 
 Insert the transfer USB into the online computer. Copy signed.psbt from the transfer USB onto the Desktop.
 
+### [online computer] Verify the PSBT
+
+Open a terminal and run this command.
+
+`./bitcoin-cli decodepsbt "$(cat ~/Desktop/signed.psbt)"`
+
+Verify the contents of the output, make sure that the `destination_address` and `amount` within `tx.vout` matches what you expect.
+
+If the transaction does not match what you expect STOP and reevaluate.
+
 ## C6. [online computer] Broadcast Transaction
 
 ```
@@ -370,7 +390,7 @@ hex=$(./bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
 
 ```
 
-Note: Delete old signed.psbt and unsigned.psbt files off of the transfer USB after finishing each transaction. PSBT files on the desktop will be overwritten automatically by the speding scripts.
+Note: Delete old signed.psbt and unsigned.psbt files off of the transfer USB and offline and online desktops after finishing each transaction.
 
 Repeat this process (step C4, C5, and C6) until you've tested all 7 of the key backups. This will require 3 test transactions total 
 
