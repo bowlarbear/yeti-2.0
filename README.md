@@ -8,7 +8,7 @@ Users can verify the scripts found here by comparing them to the scripts provide
 
 This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & wallet, wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually and verify every step of the process.
 
-This multisig vault is reccomended for storing between $10k-$5M in Bitcoin.
+This multisig vault is only appropriate for storing between $10k-$5M in Bitcoin.
 
 ## You will need:
 
