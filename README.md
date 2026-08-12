@@ -151,6 +151,20 @@ Go to https://bitcoincore.org/en/download
 
 Click the big blue "Download Bitcoin Core" button.
 
+### [offline computer] Verify Bitcoin Core
+
+Verify the hash on Bitcoin Core, open a terminal and copy and paste the following command.
+
+```
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
+sha256sum --ignore-missing --check SHA256SUMS
+```
+
+Press Enter and ensure you get an "OK" result in the terminal. IF YOU DO NOT GET AN "OK" message stop and do not proceed.
+
+
+
 Unpack the Tarball, you can go into the `~/Downloads` folder and right click on the bitcoin core file and click "Extract" then drag the new folder it creates into the HOME directory.
 
 
