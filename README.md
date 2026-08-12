@@ -277,7 +277,7 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 
 # C.  Testing wallet backups
 
-### [offline computer] Delete wallet folders
+### C1. [offline computer] Delete wallet folders
 
 Stop Bitcoin Core
 
@@ -292,7 +292,7 @@ start Bitcoin Core again
 `./bitcoind`
 
 
-## C1. [online computer] create a receive address
+## C2. [online computer] create a receive address
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
@@ -301,7 +301,7 @@ start Bitcoin Core again
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT, which is Bitcoin Core's graphical user interface (GUI). Simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin`, then load "multisig_watch_wallet" in the GUI and generate a receive address for a QR code.
 
 
-## C2. [online computer] Check the balance of the wallet
+## C3. [online computer] Check the balance of the wallet
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
@@ -309,7 +309,7 @@ Test the wallet by sending a very small amount of Bitcoin to this address (this 
 ```
 
 
-## C3. [online computer] Create a transaction (replace $amount and $destination_addr with the right values, make sure these are correct!)
+## C4. [online computer] Create a transaction (replace $amount and $destination_addr with the right values, make sure these are correct!)
 
 ```
 funded_psbt=$(./bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
@@ -324,7 +324,7 @@ echo "$funded_psbt" > ~/Desktop/unsigned.psbt
 Insert the transfer USB (no tape) into the online computer, copy the unsigned.psbt from the Desktop onto the transfer USB. Remove the transfer USB containing the PSBT from the online computer.
 
 
-## C4. [offline computer] Sign the transaction
+## C5. [offline computer] Sign the transaction
 
 ### [offline computer] Transfer the unsigned PSBT
 
@@ -364,7 +364,7 @@ Copy `signed.psbt` from the Desktop onto the transfer USB. Remove the transfer U
 
 Insert the transfer USB into the online computer. Copy signed.psbt from the transfer USB onto the Desktop.
 
-## C5. [online computer] broadcast transaction
+## C6. [online computer] broadcast transaction
 
 ```
 psbt=$(cat ~/Desktop/signed.psbt)
@@ -381,7 +381,7 @@ Repeat this process until you've tested all 7 of the key backups. This will requ
 
 3rd transaction key7, + any 2 other keys
 
-## C6. Geographically Distribute Backups
+## C7. Geographically Distribute Backups
 
 The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Property of <your_name>. Pass this onto to next of kin." What you write on these envelopes will ultimately be up to you, but it should be relatively non descript. 
 
@@ -405,14 +405,14 @@ Connect to WIFI or LAN, Download latest version of Bitcoin Core, verify the soft
 From here the process for spending from the multisig is the same as above.
 
 Next time you want to spend Bitcoin from the multisig:
-1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (see step C3)
+1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (see step C4)
 2. [offline computer] insert transfer USB into the offline computer, drag the unsigned PSBT onto the desktop
 3. [offline computer] collect any 3 of the key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (see step C4)
 4. [offline computer] load the wallets from the terminal
 5. [offline computer] sign the PSBT
 6. [offline computer] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer
 7. [online computer] drag the signed PSBT from the transfer USB onto the desktop
-8. [online computer] broadcast the signed PSBT (see step C5)
+8. [online computer] broadcast the signed PSBT (see step C6)
 
 
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
