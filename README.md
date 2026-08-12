@@ -89,7 +89,7 @@ Once inside the `~/Bitcoin-31.1/bin` folder, copy and paste the following comman
 
 Press enter
 
-THis computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks), if you like to speed it up you can use assumeutxo.
+This computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks), if you like to speed it up you can use assumeutxo.
 
 It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this navigate into the `~/Bitcoin-31.1/bin` folder and run this command.
 
@@ -100,7 +100,9 @@ It is important to always properly shut down bitcoin core before turning off thi
 
 Now switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
 
-Insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the offline computer (remember both are marked with tape).
+The first thing to do is to remove any internal storage drives from the offline computer. This will vary depending on the model, but you should remove both the internal SATA drive and the NVME drive (some computers will only come with one or the other, some will come with both).
+
+After you've removed all internal storage drives, put the computer back together, insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the offline computer (remember both are marked with tape).
 
 After the Ubuntu splash screen select `Try Ubuntu`.
 
@@ -378,7 +380,4 @@ Next time you want to spend Bitcoin from the multisig:
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
 
 These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software. 
-
-TODO pruning is fine? Verify this is true
-
 
