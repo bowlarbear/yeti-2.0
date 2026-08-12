@@ -169,7 +169,7 @@ Again within the `~/Downloads` folder copy and paste the following command to ve
 wget -0 guix.sigs.tar.gz https://github.com/bitcoin-core/guix.sigs/archive/refs/heads/main.tar.gz
 tar -xzf guix.sigs.tar.gz
 gpg --import guix.sigs-main/builder-keys/*
-gpg --verify SHASUMS.asc
+gpg --verify SHA256SUMS.asc
 ```
 
 Look for `gpg: Good signature from...` on atleast a few recognizable Bitcoin Core contributors.
