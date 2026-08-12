@@ -277,7 +277,7 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 
 # C.  Testing wallet backups
 
-### Delete wallets on the computer
+### [offline computer] Delete wallet folders
 
 Stop Bitcoin Core
 
