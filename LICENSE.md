@@ -1,0 +1,1 @@
+Free/libre/Open Source Software. We do not support the concept of "intellectual property." This software is free to copy, download, change, steal, and commercial application.
