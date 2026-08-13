@@ -140,7 +140,7 @@ Note: It is important to always properly shut down bitcoin core before turning o
 
 Now remove the transfer USB from the online computer and switch to the second computer, this will be the offline computer. Place a piece of tape on this computer to mark it.
 
-Insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the offline computer (remember both are marked with tape).
+Insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the \*offline computer\* (remember both are marked with tape).
 
 After the Ubuntu splash screen select `Try Ubuntu`.
 
@@ -415,7 +415,7 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 # D. How to use the Wallet Normally
 
-By this point you should already have a good understanding of how this works. The offline computer does not have any persistence. This is for your security, so no keys are ever written to the computers storage, they can never be recovered without the backup discs. Each time you wish to sign a psbt with the offline computer follow these steps carefully...
+By this point you should already have a good understanding of how this works. The \*offline computer\* does not have any persistence. This is for your security, so no keys are ever written to the computers storage, they can never be recovered without the backup discs. Each time you wish to sign a psbt with the \*offline computer\* follow these steps carefully...
 
 Insert Linux USB into the powered off, offline computer, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
@@ -446,7 +446,7 @@ Next time you want to spend Bitcoin from the multisig:
 10. [online computer] broadcast the signed PSBT (step C6)
 
 
-For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
+For security you should always turn off the \*offline computer\* after you finish signing and exporting a PSBT.
 
 Remember: These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 
