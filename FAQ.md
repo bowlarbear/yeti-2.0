@@ -57,11 +57,11 @@ A: As the amount of value you are securing in a Bitcoin multisig wallet grows, i
 
 A: The offline computer runs off the Ubuntu Live System on the Linux USB, this process lives entirely within RAM. Additionally the guide ensures we disable any swap partitions.
 
-If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups.
+If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups, but this is unncessary.
 
 If you would prefer to avoid destroying the computer but still want more assurance, then before beginning step A5, first remove any internal storage drives from the offline computer. This process will vary depending on the model, but you should remove both the internal SATA drive and the NVMe drive (some computers will only come with one or the other, some will come with both).
 
-After you've removed all internal storage drives, put the computer back together and then continue with step A5. 
+After you've removed all internal storage drives, put the computer back together and then continue with step A5, but this is also unncessary. 
 
 ## Q: Can I set this up just to test it and then set it up a second time to use it for real?
 
@@ -82,3 +82,7 @@ To load this watch only wallet descriptor back into your node, boot into your of
 A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include TOR as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an ubuntu live system which meets our needs sufficiently. 
 
 These would be potential subguide ideas if you are interested in contributing. Obviously any reccomendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
+
+## Q: What is the biggest weakness of Yeti-2.0?
+
+A: We believe the biggest weakness of this guide is that the wallet descriptors are not encrypted. T
