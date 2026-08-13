@@ -96,7 +96,7 @@ gpg --import guix.sigs-main/builder-keys/*
 gpg --verify SHA256SUMS.asc
 ```
 
-Look for `gpg: Good signature from...` on atleast a few Bitcoin Core contributors.
+Look for `gpg: Good signature from...` on atleast a few Bitcoin Core contributors. 
 
 ### [online computer] Unpack Bitcoin Core from Tarball
 
@@ -116,7 +116,7 @@ Open the folder in the Home directory and then click on bitcoin-31.1
 
 Inside of bitcoin-31.1 double click on the file named "Bitcoin.conf". 
 
-Add the following line anywhere in the file
+Add the following line anywhere in the file, make sure its not on a line with `##`
 
 `prune=5500`
 
