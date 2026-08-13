@@ -55,3 +55,9 @@ A: Yes, if you follow this guide carefully there is no reason why you couldn't j
 We reccomend testing with CD-R instead of M-disc if you are playing around because M-discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
 
 After you complete your test run, simply delete your "multisig_watch_wallet" from `/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
+
+## Q: What happens if I lost my node or if I need to set up a new one
+
+A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch only wallet descriptor is backed up on each of the 7 M-discs.
+
+To load this watch only wallet descriptor back into your node, boot into your offline machine like you normally would, insert one of your key backup M-discs and copy the "multisig_watch_wallet" onto your transer USB, then transfer this wallet onto your node and load it into Bitcoin Core as explained in step B5. 
