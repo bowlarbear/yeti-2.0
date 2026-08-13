@@ -25,7 +25,7 @@ estimated total cost (using amazon for reference as of 11 Aug 2026):
 
 # A. Initial Set Up
 
-These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software than what is described in this guide. 
+These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software than what is described in this guide. 
 
 ## Step A1. [online computer] Install Ubuntu
 
