@@ -1,5 +1,11 @@
 # Frequently Asked Questions
 
+## Q: What is the purpose of this guide?
+
+A: The main purpose of this guide is to provide users with a complete, opinionted and well reasoned start to finish process on setting up a secure Bitcoin Multisig vault that is easy for users with little experience to follow. 
+
+The second purpose of this guide is to educate users on what a secure & well designed key management system looks like and how all of the design tradeoffs were made. 
+
 ## Q: Why Bitcoin Core?
 
 A: Bitcoin Core is one of the most conservative and highly scrutinized pieces of software in the world. Linux is also one of the most conservative and highly scrutinized pieces of software in the world. By using self installed Linux + Bitcoin Core as our foundation we are striving to create the smallest possible attack surface for secure Bitcoin Storage.
@@ -12,6 +18,11 @@ A: This guide strives to minimize outside dependencies wherever possible. It is 
 
 Thus, while it might make for a more convenient or pretty user experience to introduce other software apps, we are quite confident that it is considerably more secure to avoid them.
 
+## Q: Is it possible for Bitcoin Core or Linux to have vulnerabilities?
+
+A: Yes, of course. Software is written by humans and humans are prone to make mistakes. Some humans even do bad things on purpose. This is the entire premise behind our design philosophy. Minimize trusted third parties, minimize dependecies, lean heavily on the most trusted and heavily scrutinized software with the best change control processes. Keep it lean and keep it tight.
+
+
 ## Q: Why not use hardware wallets?
 
 A: The answer to this question is largely the same as above. We do not support hardware wallets when making self custody recommendations because they introduce a significant software & hardware supply chain attack surface when compared to self installed Linux + Bitcoin Core.
@@ -23,6 +34,10 @@ The fewer trusted 3rd parties you put between yourself and your Bitcoin, the bet
 A: You are likely thinking of human readable 12 or 24 word seed phrases (AKA BIP 39 seed phrases). Many Bitcoin wallets use these and instruct people to write down the words on paper or even steel. 
 
 We do not use these seed phrases because Bitcoin Core does not support them.
+
+Bitcoin native multisig on Bitcoin Core makes use of Bitcoin script embedded in the wallet descriptors and WIF keys. The logic embedded in wallet descriptors for a multsig vault is insperable from the keys and not compatible with something like the non standard BIP 39 seed phrase stamped into steel.
+
+Beyond this we believe that from a risk analysis perspective, considering the lindy and network effects of systems, CD/DVD form factor (on the proper medium which for us is Milleniata M-disc) and wallet backups in the standardized Bitcoin Core WIF & wallet descriptor format is far less likely to become deprecated over the coming decades than something like BIP 39 seeds etched into steel.
 
 ## Q: If you don't write down seed words, how can you ensure key backups are safe?
 
