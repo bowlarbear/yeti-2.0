@@ -2,6 +2,8 @@
 
 ## Note
 
+Guide Version: 1.0
+
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
 Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
