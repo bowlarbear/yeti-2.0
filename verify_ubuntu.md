@@ -28,7 +28,7 @@ shasum -a 256 -c SHA256SUMS 2>&1 | grep OK
 
 ## Windows users
 
-install [gpg4win](https://gpg4win.org)
+Install [gpg4win](https://gpg4win.org)
 
 ```
 curl.exe -O https://releases.ubuntu.com/26.04/SHA256SUMS
@@ -38,7 +38,7 @@ gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
 certUtil -hashfile ubuntu-26.04-desktop-amd64.iso SHA256
 ```
 
-eyeball that hash against the matching line in SHA256SUMS...open it with
+Eyeball that hash against the matching line in SHA256SUMS...open it with
 
 `type SHA256SUMS`
 

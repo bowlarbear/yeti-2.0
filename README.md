@@ -43,13 +43,13 @@ Grab one of the fresh USB sticks and mark it with a sticker or a piece of tape. 
 
 If you are on Windows you can download an app called [Rufus](https://rufus.ie) and use that to create the live installer. MacOS users can download an app called [balenaEtcher](https://github.com/balena-io/etcher/releases). 
 
-If you know how to use dd and you already have access to a terminal this is best way because it does not rely on a third party dependency. Be careful you flash the correct drive if you use dd, its colloquially called "disk destroyer" for a reason.
+If you know how to use dd and you already have access to a terminal this is best way because it does not rely on a third party dependency. Be careful you flash the correct drive if you use dd, it's colloquially called "disk destroyer" for a reason.
 
 Once you have the Linux USB ready, the next step will be to install Linux on the online computer. Doing this requires turning off the computer, inserting the Linux USB (USB with tape) into the online computer and turning the power back on. If this doesn't work on the first try, you might need to change the boot order within the BIOS.
 
 After the Ubuntu splash screen select `Install Ubuntu`.
 
-During installation, simply proceed with all of the default settings, when you reach "Disk Setup" screen select "Erase disk and install Ubuntu. When you reach the "Encryption and File System" screen select "Encrypt with a passphrase". Choose a password for the node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but the bitcoin wallet will not be affected).
+During installation, simply proceed with all of the default settings, when you reach "Disk Setup" screen select "Erase disk and install Ubuntu". When you reach the "Encryption and File System" screen select "Encrypt with a passphrase". Choose a password for the node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but the bitcoin wallet will not be affected).
 
 
 ## Step A2. [online computer] Install Security Updates
@@ -98,7 +98,7 @@ gpg --import guix.sigs-main/builder-keys/*
 gpg --verify SHA256SUMS.asc
 ```
 
-Look for `gpg: Good signature from...` on atleast a few Bitcoin Core contributors. 
+Look for `gpg: Good signature from...` on at least a few Bitcoin Core contributors. 
 
 ### [online computer] Unpack Bitcoin Core from Tarball
 
@@ -118,7 +118,7 @@ Open the folder in the Home directory and then click on bitcoin-31.1
 
 Inside of bitcoin-31.1 double click on the file named "Bitcoin.conf". 
 
-Add the following line anywhere in the file, make sure its not on a line with `##`
+Add the following line anywhere in the file, make sure it's not on a line with `##`
 
 `prune=5500`
 
@@ -158,11 +158,11 @@ Open a terminal and copy and paste the following command in the home directory a
 
 You should now have this guide in the Home directory.
 
-You can now run You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
+You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
 
 ### [\*offline computer\*] Install Updates & Bitcoin Core
 
-Repeat Steps A2 and A3 on the \*offline computer\*
+Repeat Steps A2 and A3 on the \*offline computer\*.
 
 ### [\*offline computer\*] Install Brasero
 
@@ -260,7 +260,7 @@ With this wallet loaded on the online computer, can now use either bitcoin-cli o
 ## Step B6: [\*offline computer\*] Backup Keys
 Now back up each of the 7 keys and the wallet descriptor.
 
-Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M disc and write the number 1 on it with a permenant marker, insert disc 1 into the USB connected disc drive. Then use brasero create an .ISO of key_1 & the multisig_watch_wallet from `/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this .ISO to disc 1. Repeat for all 7 keys.
+Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M disc and write the number 1 on it with a permenent marker, insert disc 1 into the USB connected disc drive. Then use brasero create an .ISO of key_1 & the multisig_watch_wallet from `/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this .ISO to disc 1. Repeat for all 7 keys.
 
 1 = key_1 & multisig_watch_wallet
 
@@ -400,7 +400,7 @@ Note: Delete old signed.psbt and unsigned.psbt files off of the transfer USB and
 
 Repeat this process (step C4, C5, and C6) until you've tested all 7 of the key backups. This will require 3 test transactions total 
 
-1st transasction: key1, key2, key3 
+1st transaction: key1, key2, key3 
 
 2nd transaction: key4, key5, key6
 
@@ -408,7 +408,7 @@ Repeat this process (step C4, C5, and C6) until you've tested all 7 of the key b
 
 ## C7. Geographically Distribute Backups
 
-The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something nondescript like "Do not open. Property of <your_name>. Pass this onto to next of kin." What you write on these envelopes will ultimately be up to you, but it should be relatively non descript. 
+The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something non-descript like "Do not open. Property of <your_name>. Pass this on to to next of kin." What you write on these envelopes will ultimately be up to you, but it should be relatively non-descript. 
 
 The 7 envelopes must be geographically distributed to 7 different locations. 
 
@@ -450,5 +450,5 @@ Next time you want to spend Bitcoin from the multisig:
 
 For security you should always turn off the \*offline computer\* after you finish signing and exporting a PSBT.
 
-Remember: These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
+Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 

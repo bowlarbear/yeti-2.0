@@ -32,7 +32,7 @@ A: This is one of the main reasons why we use multisig. Multisig provides all of
 
 A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term data archival storage, and under proper storage conditions they are rated by the manufacturer to last up to 1,000 years.
 
-Although you should still check your backups periodically and redo them probably atleast once every 10 years or so to be safe. 
+Although you should still check your backups periodically and redo them probably at least once every 10 years or so to be safe. 
 
 ## Q: What should I do if I need to store more than $5M in Bitcoin?
 
@@ -44,7 +44,7 @@ A: The offline computer runs off the Ubuntu Live System on the Linux USB, this p
 
 If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups.
 
-If you would prefer to avoid destroying the computer but still want more assurance, then before beginnin step A5, first remove any internal storage drives from the offline computer. This process will vary depending on the model, but you should remove both the internal SATA drive and the NVME drive (some computers will only come with one or the other, some will come with both).
+If you would prefer to avoid destroying the computer but still want more assurance, then before beginning step A5, first remove any internal storage drives from the offline computer. This process will vary depending on the model, but you should remove both the internal SATA drive and the NVMe drive (some computers will only come with one or the other, some will come with both).
 
 After you've removed all internal storage drives, put the computer back together and then continue with step A5. 
 
@@ -52,7 +52,7 @@ After you've removed all internal storage drives, put the computer back together
 
 A: Yes, if you follow this guide carefully there is no reason why you couldn't just run through the setup twice, the first time as a test and then the second time for real. The advantage to doing this is not having to set up the computer infrastructure a second time, so it will be shorter and easier.
 
-We reccomend testing with CD-R instead of M-disc if you are playing around because M-discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
+We recommend testing with CD-R instead of M-disc if you are playing around because M-discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
 
 After you complete your test run, simply delete your "multisig_watch_wallet" from `/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
 
