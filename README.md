@@ -45,7 +45,7 @@ Once you have the Linux USB ready, the next step will be to install Linux on the
 
 After the Ubuntu splash screen select `Install Ubuntu`.
 
-During installation, simply proceed with all of the default settings, when you reach the "Encryption and File System" screen select "Encrypt with a passphrase" choose a password for the node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but the bitcoin wallet will not be affected)
+During installation, simply proceed with all of the default settings, when you reach "Disk Setup" screen select "Erase disk and install Ubuntu. When you reach the "Encryption and File System" screen select "Encrypt with a passphrase". Choose a password for the node, remember to write down this password (if you lose password you will have to reinstall ubuntu and resync the node, but the bitcoin wallet will not be affected).
 
 
 ## Step A2. [online computer] Install Security Updates
