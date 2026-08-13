@@ -96,7 +96,7 @@ gpg --import guix.sigs-main/builder-keys/*
 gpg --verify SHA256SUMS.asc
 ```
 
-Look for `gpg: Good signature from...` on atleast a few recognizable Bitcoin Core contributors.
+Look for `gpg: Good signature from...` on atleast a few Bitcoin Core contributors.
 
 ### [online computer] Unpack Bitcoin Core from Tarball
 

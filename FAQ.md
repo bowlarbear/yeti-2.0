@@ -47,3 +47,11 @@ If you want to ensure beyond reasonable doubt that everything on the offline com
 If you would prefer to avoid destroying the computer but still want more assurance, then before beginnin step A5, first remove any internal storage drives from the offline computer. This process will vary depending on the model, but you should remove both the internal SATA drive and the NVME drive (some computers will only come with one or the other, some will come with both).
 
 After you've removed all internal storage drives, put the computer back together and then continue with step A5. 
+
+## Q: Can I set this up just to test it and then set it up a second time to use it for real?
+
+A: Yes, if you follow this guide carefully there is no reason why you couldn't just run through the setup twice, the first time as a test and then the second time for real. The advantage to doing this is not having to set up the computer infrastructure a second time, so it will be shorter and easier.
+
+We reccomend testing with CD-R instead of M-disc if you are playing around because M-discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
+
+After you complete your test run, simply delete your "multisig_watch_wallet" from `/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
