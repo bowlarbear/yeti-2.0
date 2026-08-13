@@ -436,12 +436,14 @@ From here the process for spending from the multisig is the same as above.
 Next time you want to spend Bitcoin from the multisig:
 1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (step C4)
 2. [offline computer] insert transfer USB into the offline computer, drag the unsigned PSBT onto the desktop (step C4)
-3. [offline computer] collect any 3 of the key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (see step C5)
-4. [offline computer] load the wallets from the terminal (step C5)
-5. [offline computer] sign the PSBT (step C5)
-6. [offline computer] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer (step C5)
-7. [online computer] drag the signed PSBT from the transfer USB onto the desktop (step C5)
-8. [online computer] broadcast the signed PSBT (step C6)
+3. [offline computer] verify the psbt contents (step C5)
+4. [offline computer] collect any 3 of the key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (step C5)
+5. [offline computer] load the wallets from the terminal (step C5)
+6. [offline computer] sign the PSBT (step C5)
+7. [offline computer] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer (step C5)
+8. [online computer] drag the signed PSBT from the transfer USB onto the desktop (step C5)
+9. [online computer] verify the psbt contents (step C5)
+10. [online computer] broadcast the signed PSBT (step C6)
 
 
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
