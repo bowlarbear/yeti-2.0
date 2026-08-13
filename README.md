@@ -25,6 +25,8 @@ estimated total cost (using amazon for reference as of 11 Aug 2026):
 
 # A. Initial Set Up
 
+These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software than what is described in this guide. 
+
 ## Step A1. [online computer] Install Ubuntu
 
 Pick one laptop to be the online computer, this will be the Bitcoin node. We need to install Ubuntu on this computer.
@@ -417,13 +419,13 @@ Insert Linux USB into the powered off, offline computer, turn the computer on, a
 
 Temporarily connect to the network, install updates, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
 
-### IMPORTANT: Before Inserting any Key Material
+### IMPORTANT: [offline computer] Before Inserting any Key Material
 
-### Disable Networing
+### [offline computer] Disable Networing
 
 `nmcli networking off`
 
-### Disable Swap Space
+### [offline computer] Disable Swap Space
 
 `sudo swapoff -a`
 
@@ -442,5 +444,5 @@ Next time you want to spend Bitcoin from the multisig:
 
 For security you should always turn off the offline computer after you finish signing and exporting a PSBT.
 
-These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
+Remember: These two laptops should be deidcated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 
