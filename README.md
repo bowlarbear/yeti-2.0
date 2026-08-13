@@ -56,6 +56,8 @@ Once you've finished installing Linux, you need to install security updates. Fir
 
 Open a terminal with `Ctrl + Alt + T`. Then type or copy and paste the following commands into the terminal.
 
+Note: To copy and paste within a terminal on Linux you must use `Ctrl + Shift + C` to copy and `Ctrl + Shift + V` to paste.
+
 `sudo apt update`
 
 Press enter, then press Y if prompted and press enter again, wait for it to finish
