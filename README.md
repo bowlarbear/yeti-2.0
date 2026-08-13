@@ -423,7 +423,7 @@ Temporarily connect to the network, install updates, download and verify Bitcoin
 
 ### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
 
-### [\*offline computer\*] Disable Networing
+### [\*offline computer\*] Disable Networking
 
 `nmcli networking off`
 
