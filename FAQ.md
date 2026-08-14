@@ -49,7 +49,7 @@ You CAN write down your wallet descriptor and all of your xprivs and xpubs by ha
 
 A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under proper storage conditions they are rated by the manufacturer to last up to 1,000 years.
 
-Although you should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack. 
+Although you should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack.
 
 ## Q: Why is the vault a 3 of 7? Why not a 2 of 5 or an M of N?
 
@@ -86,6 +86,10 @@ The proper way to encrypt backup discs such that no snoop could ever get ahold o
 A: You absolutely can do this too, although its also outside the scope of this guide. Generating each key on a different computer would make the vault more secure, but it adds considerably to the complexity of setup and to the time and hardware requirement. Doing this would require the user have 6 additional computers, and constructing the multisig vault and then properly backing up the wallet descriptor would require atleast 15 data transfers across all of these devices. There is a middle ground where you can just use 1 or 2 additional computers but it still adds logistic complexities.
 
 This would be more appropriate in very high security scenarios (vaults designed for storing >$5M), but we think generating all 7 keys on one machine is good enough for the purposes of this guide, because all of modern computing is built upon the assumption that computers can generate sufficiently random (and private) secret keys with the use of good cryptography, which we get with the dedicated laptop + Linux + Bitcoin Core.
+
+## Q: Are there any other ways to improve this that are out of scope?
+
+A: There is always room for improvement. The biggest one that comes to mind outside of the two optimizations discussed above would be, when signing a PSBT, only loading 1 key per boot session, and transerring the PSBT to a new boot session after signing. This would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. 
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
