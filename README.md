@@ -2,7 +2,7 @@
 
 ## Note
 
-Guide Version: 1.02
+Guide Version: 1.03
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -69,25 +69,29 @@ Press enter, then press Y if prompted and press enter again, wait for it to fini
 press enter, then press Y if prompted and press enter again, wait for it to finish
 
 
-## Step A3. [online computer] Download the Latest Version of Bitcoin Core
+## Step A3. [online computer] Install the Latest Version of Bitcoin Core
 
-Do NOT go to bitcoin.org (that website is unfortunately owned by scammers)
+## [online computer] Download Bitcoin Core
 
-[Download the latest version of Bitcoin Core here](https://bitcoincore.org/en/download)
+open a terminal, navigate into the `~/Downloads` folder and then copy and paste the following command into the terminal and press enter to download Bitcoin Core and its signed hash.
 
-Click the big blue "Download Bitcoin Core" button.
+
+```
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/bitcoin-31.1-x86_64-linux-gnu.tar.gz
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
+wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
+
+```
 
 ### [online computer] Verify Bitcoin Core
 
-After you've finished downloading Bitcoin core open a terminal, navigate into the `~/Downloads` folder and copy and paste the following command to verify the hash on Bitcoin Core.
+After you've finished downloading Bitcoin core verify the hash by running this command in the terminal.
 
 ```
-wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
-wget https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
 sha256sum --ignore-missing --check SHA256SUMS
 ```
 
-Press Enter and ensure you get an "OK" result in the terminal. If you do not see an "OK" message STOP AND DO NOT PROCEED.
+Press Enter and ensure you get an "OK" result. If you do not see an "OK" message STOP AND DO NOT PROCEED.
 
 Again within the `~/Downloads` folder copy and paste the following command to verify the signatures on the Bitcoin Core Software.
 
@@ -98,7 +102,7 @@ gpg --import guix.sigs-main/builder-keys/*
 gpg --verify SHA256SUMS.asc
 ```
 
-Look for `gpg: Good signature from...` on at least a few Bitcoin Core contributors. 
+Look for `gpg: Good signature from...` on at least a few Bitcoin Core contributors. If you do not see any good signatures STOP AND DO NOT PROCEED.
 
 ### [online computer] Unpack Bitcoin Core from Tarball
 
