@@ -1,4 +1,4 @@
-# How to set up secure, airgapped Bitcoin multisig with Bitcoin Core
+# How to Set up Secure, Airgapped Bitcoin Multisig with Bitcoin Core
 
 ## Note
 
