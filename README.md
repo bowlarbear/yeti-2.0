@@ -8,7 +8,7 @@ This guide was created using [Bitcoin Core's official multisig-tutorial](https:/
 
 Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
 
-This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & 3 of 7 multisig vault, full wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually and verify every step of the process.
+This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & 3 of 7 multisig vault, full wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually, verify every step of the process, and minimize dependencies.
 
 See the [FAQ](FAQ.md) for answers to common questions about the design.
 
