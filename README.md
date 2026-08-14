@@ -1,6 +1,6 @@
 # How to Set up Secure, Airgapped Bitcoin Multisig with Bitcoin Core
 
-## Note
+## Introduction
 
 Guide Version: 1.03
 
