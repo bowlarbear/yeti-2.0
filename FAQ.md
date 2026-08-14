@@ -57,15 +57,15 @@ We also feel that 3 is an appropriate signer threshold because an attacker could
 
 ## Q: Can I set up this vault with my own M of N scheme?
 
-A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations will likely remain as they are, because our goal was an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. 
+A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. 
 
 ## Q: What should I do if I need to store more than $5M in Bitcoin?
 
-A: As the amount of value you are securing in a Bitcoin multisig wallet grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
+A: As the amount of value you are securing in a Bitcoin multisig vault grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
 
 ## Q: How can I be sure that all keys were deleted off of the offline computer?
 
-A: The offline computer runs off the Ubuntu Live System on the Linux USB, this process lives entirely within RAM. Additionally the guide ensures we disable any swap partitions.
+A: The offline computer runs off the Ubuntu Live System on the Linux USB, this process happens entirely within RAM which is volatile memory. Additionally the guide ensures we disable any swap partitions.
 
 If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups, but this is unncessary.
 
@@ -99,14 +99,14 @@ A: We believe the biggest weakness of this guide is that the wallet descriptors 
 
 ## Q: So why not just encrypt the backup discs?
 
-A: You absolutely CAN do this but its tricky because when you encrypt private keys you've basically just recreated the key management problem for yourself. There is a proper way to do this and it requires careful execution. It is outside the scope of this guide. 
+A: You absolutely CAN do this but it's tricky because when you encrypt private keys you've effectively recreated the key management problem for yourself. There is a proper way to do this and it requires careful execution. It is outside the scope of this guide. 
 
-The proper way to encrypt backup discs such that no snoop could ever get ahold of just one of your backups and learn your entire wallet history, would be to use layered multisig, where the wallet itself lives behind another 3 of 7 encryption wall. However setting this up introduces a lot more complexity and careful design considerations, so its out of scope.  
+The proper way to encrypt backup discs such that no snoop could ever get ahold of just one of your backups and learn your entire wallet history, would be to use layered multisig, where the wallet itself lives behind another 3 of 7 key encryption scheme. However setting this up introduces a lot more complexity and careful design consideration, thus it's out of scope.  
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
-A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move any funds into that new vault, just be very cautious that you do not mix up old keys with new keys when doing this. The best thing to do would be to mark all of the old keys in some way before setting up the new ones.
+A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move all funds into the new vault. Be very cautious that you do not mix up old keys with new keys when doing this. It would be best to mark all of the old keys in some way first, before setting up the new ones.
 
-If you have reason to believe that one of your backups has been tampered with, you should avoid using that particular backup disc to sweep the funds into a new multisig vault unless there are no other options.
+If you have reason to believe that one of your backups has been tampered with, you should avoid using that particular backup disc when sweeping the funds into a new multisig vault unless there are no other options.
 
-One option to help protect backups from physical damage is to keep each one in its own CD jewel case and padded envelope, for most people this is likely unnecesary.
+One optional measure to help protect backups from physical damage is to keep each one in it's own CD jewel case, and keeping each case inside of a padded envelope, for most situations this is likely unncessary.
