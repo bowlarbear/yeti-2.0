@@ -41,7 +41,7 @@ Beyond this we believe that from a risk analysis perspective, considering the li
 
 ## Q: If you don't write down seed words, how can you ensure key backups are safe?
 
-A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case. All key backups create with this guide are backed up on M-discs, which are sufficient given inehrent redundancy of the multisig vault. 
+A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case. All key backups create with this guide are backed up on M-discs, which are sufficient given the inherent redundancy of a proper multisig vault. 
 
 You CAN write down your wallet descriptor and all of your xprivs and xpubs by hand if you really want to, but we don't reccomend it in the guide becuase it's painful and prone to human error and entirely unecessary if you follow the guide as written.
 
