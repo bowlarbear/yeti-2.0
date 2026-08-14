@@ -14,11 +14,11 @@ By relying on highly trusted & highly scrutinized software like Bitcoin Core to 
 
 ## Q: why not use electrum or `<insert software stack>`
 
-A: This guide strives to minimize outside dependencies wherever possible. It is in the professional opinion of the authors that any outside dependencies introduced to a self custody solution significantly increases the attack surface of that self custody solution. 
+A: This guide strives to minimize outside dependencies wherever possible. It is in the professional opinion of the authors that every new outside dependency introduced to a Bitcoin self custody stack significantly increases the attack surface of that solution. 
 
-Thus, while it might make for a more convenient or pretty user experience to introduce other software apps, we are quite confident that it is considerably more secure to avoid them.
+Thus, while it might make for a more convenient or pretty user experience to introduce other software apps or hardware devices, we are quite confident that it is considerably more secure to avoid them whenever possible. Less is more in this case. 
 
-## Q: Is it possible for Bitcoin Core or Linux to have vulnerabilities?
+## Q: Is it possible for Bitcoin Core or Linux to have unknown vulnerabilities?
 
 A: Yes, of course. Software is written by humans and humans are prone to make mistakes. Some humans even do bad things on purpose. This is the entire premise behind our design philosophy. Minimize trusted third parties, minimize dependecies, lean heavily on the most trusted and heavily scrutinized software with the best change control processes. Keep it lean and keep it tight.
 
@@ -89,6 +89,8 @@ A: We believe the biggest weakness of this guide is that the wallet descriptors 
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
-A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move the funds to that new vault, just be very cautious that you do not mix up old keys with new keys when doing this. The best thing to do would be to mark all of the old keys before setting up the new one.
+A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move any funds into that new vault, just be very cautious that you do not mix up old keys with new keys when doing this. The best thing to do would be to mark all of the old keys in some way before setting up the new ones.
 
 If you have reason to believe that one of your backups has been tampered with, you should avoid using that particular backup disc to sweep the funds into a new multisig vault unless there are no other options.
+
+One option to help protect backups from physical damage is to keep each one in its own CD jewel case and padded envelope, for most people this is likely unnecesary.
