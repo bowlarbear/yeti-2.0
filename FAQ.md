@@ -85,4 +85,10 @@ These would be potential subguide ideas if you are interested in contributing. O
 
 ## Q: What is the biggest weakness of Yeti-2.0?
 
-A: We believe the biggest weakness of this guide is that the wallet descriptors are not encrypted. T
+A: We believe the biggest weakness of this guide is that the wallet descriptors are not encrypted. This means that anyone who gets access to one of your wallet backups and knows how to load a descriptor, will be able to see your wallet balance. There are ways to mitigate this risk, but it is outside the scope of this guide. The privacy & security that you get from this set up is still an order of magnitude better than what you get from most competing bitcoin self custody stacks.
+
+## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
+
+A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move the funds to that new vault, just be very cautious that you do not mix up old keys with new keys when doing this. The best thing to do would be to mark all of the old keys before setting up the new one.
+
+If you have reason to believe that one of your backups has been tampered with, you should avoid using that particular backup disc to sweep the funds into a new multisig vault unless there are no other options.
