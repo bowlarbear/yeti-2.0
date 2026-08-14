@@ -103,6 +103,12 @@ A: You absolutely CAN do this but it's tricky because when you encrypt private k
 
 The proper way to encrypt backup discs such that no snoop could ever get ahold of just one of your backups and learn your entire wallet history, would be to use layered multisig, where the wallet itself lives behind another 3 of 7 key encryption scheme. However setting this up introduces a lot more complexity and careful design consideration, thus it's out of scope.  
 
+## Q: Why not generate all of the keys on different computers?
+
+A: You absolutely can do this too, although its also outside the scope of this guide. Generating each key on a different computer would make the vault more secure, but it adds considerably to the complexity of setup and to the time and hardware requirement. Doing this would require the user have 6 additional computers, and constructing the multisig vault and then properly backing up the wallet descriptor would require atleast 15 data transfers across all of these devices. There is a middle ground where you can just use 1 or 2 additional computers but it still adds logistic complexities.
+
+This would be more appropriate in very high security scenarios (vaults designed for storing >$5M), but we think generating all 7 keys on one machine is good enough for the purposes of this guide, because all of modern computing is built upon the assumption that computers can generate sufficiently random (and private) secret keys with the use of good cryptography, which we get with the dedicated laptop + Linux + Bitcoin Core.
+
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
 A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move all funds into the new vault. Be very cautious that you do not mix up old keys with new keys when doing this. It would be best to mark all of the old keys in some way first, before setting up the new ones.
