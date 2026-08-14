@@ -134,7 +134,7 @@ Open a terminal with `Ctrl + Alt + T`. Navigate into the Bitcoin folder we extra
 
 Once inside the `~/bitcoin-31.1/bin` folder, copy and paste the following command in the terminal.
 
-`./bitcoind`
+`./bitcoind -daemon`
 
 Press enter
 
@@ -157,6 +157,8 @@ You will now temporarily connect to either WIFI or LAN.
 ## Step A6: [\*offline computer\*] Install Updates and Software
 
 ## [\*offline computer\*] Download this guide
+
+You can open this guide in your browser on the offline machine for now and leave it open, we will disable networking shortly and it will no longer be accessible if you accidentally close it. So we will download a copy just in case.
 
 Open a terminal and copy and paste the following command in the home directory and press enter.
 
@@ -186,6 +188,7 @@ Note: The authenticity of the Brasero software is automatically checked by Ubunt
 ## Step A7: [\*offline computer\*] Disable Networking 
 
 Within the terminal copy and run the following command:
+
 `nmcli networking off`
 
 This command will disable all networking functionality (WIFI, LAN, and Bluetooth)
@@ -253,7 +256,7 @@ multisig_desc="[{\"desc\": \"${desc}#${checksum}\", \"active\": true, \"timestam
 
 Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the \*offline computer\*. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
 
-NOTE: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
+Note: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
 
 Note: It is wise to always run the `sync` command in the terminal and wait for it to finish before removing a USB.
 
@@ -297,7 +300,7 @@ Delete the entire `~/.bitcoin/wallets` folder
 
 start Bitcoin Core again
 
-`./bitcoind`
+`./bitcoind -daemon`
 
 
 ## C2. [online computer] Create a Receive Address
