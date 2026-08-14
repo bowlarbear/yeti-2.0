@@ -126,3 +126,9 @@ To load this watch only wallet descriptor back into your node, boot into your of
 A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include TOR as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an ubuntu live system which meets our needs sufficiently. 
 
 These would be potential subguide ideas if you are interested in contributing. Obviously any reccomendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
+
+## Q: Can I use assumeutxo to speed up the IBD on the full node?
+
+A: Yes you can do this, however, if you follow the guide as written this will not actually help you. The reason for this is because even with assumeutxo you cannot actually use the loadwallet command until the full background validation completes, which is the equivalent to full IBD anyway. We create our multisig descriptor on the offline machine in order to avoid making the experience more cumbersome, this means you need a fully synced node in order to import that descriptor. 
+
+In the mean time you could export the xpubs on the transfer USB, and reconstruct the multisig wallet on the offline machine using the createwallet command to benefit from the speed up of assumeutxo if you wanted to, but that's out of scope for this guide.

@@ -138,7 +138,7 @@ Once inside the `~/bitcoin-31.1/bin` folder, copy and paste the following comman
 
 Press enter
 
-This computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks), if you like to speed it up you can use assumeutxo.
+This computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks). You will need this process to completely finish before you can test your wallet.
 
 Note: It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this navigate into the `~/bitcoin-31.1/bin` folder and run this command.
 
@@ -260,11 +260,11 @@ Note: If you are using the file explorer to drag & drop to copy files you will n
 
 Note: It is wise to always run the `sync` command in the terminal and wait for it to finish before removing a USB.
 
-Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder. When Bitcoin Core is finished syncing you can now load this wallet on the online computer with the following terminal command.
+Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder. When Bitcoin Core is finished syncing the blockchain, you will be able to load this wallet on the online computer with the following terminal command from within `~/bitcoin-31.1/bin`
 
 `./bitcoin-cli loadwallet "multisig_watch_wallet"`
 
-With this wallet loaded on the online computer, can now use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to see the transaction history, check the balance of the wallet, generate receive addresses, generate PSBTs for export, and broadcast fully signed Bitcoin Transactions.
+You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to load this wallet, see the transaction history, check the balance of the wallet, generate receive addresses, generate PSBTs (Partially Signed Bitcoin Transactions) for export to your offline machine, and broadcast fully signed Bitcoin Transactions.
 
 
 ## Step B6: [\*offline computer\*] Backup Keys
@@ -305,14 +305,20 @@ start Bitcoin Core again
 
 ## C2. [online computer] Create a Receive Address
 
+Note: You can generate addresses on either your online machine or your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder and the wallet is loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin`, then load "multisig_watch_wallet" and generate a receive address for a QR code.
+
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
 
-Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT, which is Bitcoin Core's graphical user interface (GUI). Simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin`, then load "multisig_watch_wallet" in the GUI and generate a receive address for a QR code.
+Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). 
+
+Note: Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT.
 
 
 ## C3. [online computer] Check the Balance of the Wallet
+
+Note: You can only check the balance of your wallet and create a transaction on the online computer.
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
