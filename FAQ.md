@@ -87,6 +87,12 @@ These would be potential subguide ideas if you are interested in contributing. O
 
 A: We believe the biggest weakness of this guide is that the wallet descriptors are not encrypted. This means that anyone who gets access to one of your wallet backups and knows how to load a descriptor, will be able to see your wallet balance. There are ways to mitigate this risk, but it is outside the scope of this guide. The privacy & security that you get from this set up is still an order of magnitude better than what you get from most competing bitcoin self custody stacks.
 
+## Q: So why not just encrypt the backup discs?
+
+A: You absolutely CAN do this but its tricky because when you encrypt private keys you've basically just recreated the key management problem for yourself. There is a proper way to do this and it requires careful execution. It is outside the scope of this guide. 
+
+The proper way to encrypt backup discs such that no snoop could ever get ahold of just one of your backups and learn your entire wallet history, would be to use layered multisig, where the wallet itself lives behind another 3 of 7 encryption wall. However setting this up introduces a lot more complexity and careful design considerations, so its out of scope.  
+
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
 A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move any funds into that new vault, just be very cautious that you do not mix up old keys with new keys when doing this. The best thing to do would be to mark all of the old keys in some way before setting up the new ones.
