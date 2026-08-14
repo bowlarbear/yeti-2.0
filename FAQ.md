@@ -57,14 +57,6 @@ A: We feel that 7 backups is a good number. It's enough to provide plenty of red
 
 We also feel that 3 is an appropriate signer threshold because an attacker could theoretically get access to 1 key, perhaps with concerted effort even 2, but 3 is going to be considerably more difficult. 3 of 7 feels like the right place to be.
 
-## Q: Can I set up this vault with my own M of N scheme?
-
-A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. 
-
-## Q: What should I do if I need to store more than $5M in Bitcoin?
-
-A: As the amount of value you are securing in a Bitcoin multisig vault grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
-
 ## Q: How can I be sure that all keys were deleted off of the offline computer?
 
 A: The offline computer runs off the Ubuntu Live System on the Linux USB, this process happens entirely within RAM which is volatile memory. Additionally the guide ensures we disable any swap partitions.
@@ -73,27 +65,11 @@ If you want to ensure beyond reasonable doubt that everything on the offline com
 
 If you would prefer to avoid destroying the computer but still want more assurance, then before beginning step A5, first remove any internal storage drives from the offline computer. This process will vary depending on the model, but you should remove both the internal SATA drive and the NVMe drive (some computers will only come with one or the other, some will come with both).
 
-After you've removed all internal storage drives, put the computer back together and then continue with step A5, but this is also unncessary. 
+After you've removed all internal storage drives, put the computer back together and then continue with step A5, but this is also unncessary.
 
-## Q: Can I set this up just to test it and then set it up a second time to use it for real?
+## Q: What should I do if I need to store more than $5M in Bitcoin?
 
-A: Yes, if you follow this guide carefully there is no reason why you couldn't just run through the setup twice, the first time as a test and then the second time for real. The advantage to doing this is not having to set up the computer infrastructure a second time, so it will be shorter and easier.
-
-We recommend testing with CD-R instead of M-disc if you are playing around because M-discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
-
-After you complete your test run, simply delete your "multisig_watch_wallet" from `/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
-
-## Q: What happens if I lost my node or if I need to set up a new one
-
-A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch only wallet descriptor is backed up on each of the 7 M-discs.
-
-To load this watch only wallet descriptor back into your node, boot into your offline machine like you normally would, insert one of your key backup M-discs and copy the "multisig_watch_wallet" onto your transer USB, then transfer this wallet onto your node and load it into Bitcoin Core as explained in step B5. 
-
-## Q: Can I use Tor for this? Can I use TAILS for the offline signer OS?
-
-A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include TOR as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an ubuntu live system which meets our needs sufficiently. 
-
-These would be potential subguide ideas if you are interested in contributing. Obviously any reccomendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
+A: As the amount of value you are securing in a Bitcoin multisig vault grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
 
 ## Q: What is the biggest weakness of Yeti-2.0?
 
@@ -118,3 +94,27 @@ A: If you suspect that someone has tampered with one of your backups or if one o
 If you have reason to believe that one of your backups has been tampered with, you should avoid using that particular backup disc when sweeping the funds into a new multisig vault unless there are no other options.
 
 One optional measure to help protect backups from physical damage is to keep each one in it's own CD jewel case, and keeping each case inside of a padded envelope, for most situations this is likely unncessary.
+
+## Q: Can I set up this vault with my own M of N scheme?
+
+A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. 
+
+## Q: Can I set this up just to test it and then set it up a second time to use it for real?
+
+A: Yes, if you follow this guide carefully there is no reason why you couldn't just run through the setup twice, the first time as a test and then the second time for real. The advantage to doing this is not having to set up the computer infrastructure a second time, so it will be shorter and easier.
+
+We recommend testing with CD-R instead of M-disc if you are playing around because M-discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
+
+After you complete your test run, simply delete your "multisig_watch_wallet" from `/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
+
+## Q: What happens if I lost my node or if I need to set up a new one
+
+A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch only wallet descriptor is backed up on each of the 7 M-discs.
+
+To load this watch only wallet descriptor back into your node, boot into your offline machine like you normally would, insert one of your key backup M-discs and copy the "multisig_watch_wallet" onto your transer USB, then transfer this wallet onto your node and load it into Bitcoin Core as explained in step B5. 
+
+## Q: Can I use Tor for this? Can I use TAILS for the offline signer OS?
+
+A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include TOR as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an ubuntu live system which meets our needs sufficiently. 
+
+These would be potential subguide ideas if you are interested in contributing. Obviously any reccomendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
