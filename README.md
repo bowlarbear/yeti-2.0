@@ -10,6 +10,8 @@ Users can verify the scripts found here by comparing them to the scripts provide
 
 This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & 3 of 7 multisig vault, full wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually and verify every step of the process.
 
+See the [FAQ](FAQ.md) for answers to common questions about the design.
+
 This multisig vault is only appropriate for storing between $10k-$5M in Bitcoin.
 
 ## You will need:
@@ -190,8 +192,6 @@ This command will disable all networking functionality (WIFI, LAN, and Bluetooth
 Swap space is virtual RAM that is borrowed from the internal storage drive. Open a terminal and run this command to verify that there is no swap space enabled on the \*offline computer\*.
 
 `sudo swapoff -a`
-
-See the [FAQ](FAQ.md) for more information on this step. 
 
 # B. Creating a Multi Signature Cold Wallet on Bitcoin Core
 
