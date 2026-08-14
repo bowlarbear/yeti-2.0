@@ -49,6 +49,16 @@ A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, w
 
 Although you should still check your backups periodically and redo them probably at least once every 10 years or so to be safe. 
 
+## Q: Why is the vault a 3 of 7? Why not a 2 of 5 or an M of N?
+
+A: We feel that 7 backups is a good number. It's enough to provide plenty of redundancy in most conceivable SHTF scenarios. With 7 keys in the multisig you can lose 4 and still retain access to your money. We have more than double the amount of keys in the qourum than are required to reach signing threshold, that's a lot of idiot proofing. 
+
+We also feel that 3 is an appropriate signer threshold because an attacker could theoretically get access to 1 key, perhaps with concerted effort even 2, but 3 is going to be considerably more difficult. 3 of 7 feels like the right place to be.
+
+## Q: Can I set up this vault with my own M of N scheme?
+
+A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations will likely remain as they are, because our goal was an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. 
+
 ## Q: What should I do if I need to store more than $5M in Bitcoin?
 
 A: As the amount of value you are securing in a Bitcoin multisig wallet grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
