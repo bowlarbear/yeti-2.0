@@ -103,7 +103,7 @@ One optional measure to help protect backups from physical damage is to keep eac
 
 ## Q: Can I set up this vault with my own M of N scheme?
 
-A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. 
+A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. As written, the guide instructs the user explicitly how to create and use a 3 of 7 scheme only.
 
 ## Q: Can I set this up just to test it and then set it up a second time to use it for real?
 
