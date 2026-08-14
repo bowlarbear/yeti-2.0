@@ -410,6 +410,10 @@ Repeat this process (step C4, C5, and C6) until you've tested all 7 of the key b
 
 3rd transaction key7, + any 2 other keys
 
+Note: If any of your transactions fail during this process, the best thing to do is to go back to step C4 and try again. If it still doesn't work then something is wrong and you should stop. Delete all psbts on both computer's `~/Desktop`. Delete the multisig_watch_wallet on the transfer usb. Delete both of the `.bitcoin/wallets` folders on both computers, and start over at step A5 with fresh m-dsics.
+
+Only after you have successfully completed all 3 test transactions with all 7 keys as described above will you have confirmed that your wallet is working properly.
+
 ## C7. Geographically Distribute Backups
 
 The next step is to place each of the 7 back up discs into 7 different envelopes. Mark them with something non-descript like "Do not open. Property of <your_name>. Pass this on to to next of kin." What you write on these envelopes will ultimately be up to you, but it should be relatively non-descript. 
