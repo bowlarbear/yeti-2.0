@@ -305,7 +305,11 @@ start Bitcoin Core again
 
 ## C2. [online computer] Create a Receive Address
 
-Note: You can generate addresses on either your online machine or your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder and the wallet is loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin`, then load "multisig_watch_wallet" and generate a receive address for a QR code.
+Note: You can generate addresses on either your online machine or your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder.
+
+Note: In order to check balances and generate new addresses the "multisig_watch_wallet" wallet must loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin`, then load "multisig_watch_wallet" and generate a receive address for a QR code.
+
+The use the cli, load the wallet like in step B5 and then run:
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
@@ -318,7 +322,7 @@ Note: Alternatively, you can also generate a QR code for this address if you use
 
 ## C3. [online computer] Check the Balance of the Wallet
 
-Note: You can only check the balance of your wallet and create a transaction on the online computer.
+Note: You can only check the balance of your wallet from the online computer, with the wallet properly loaded as shown in step B5.
 
 ```
 ./bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
@@ -327,6 +331,8 @@ Note: You can only check the balance of your wallet and create a transaction on 
 
 
 ## C4. [online computer] Create a Transaction 
+
+ Note: You can only create a transaction from the online computer with the wallet properly loaded as shown in step B5.
 
 ### Important: Replace $amount and $destination_address with the right values, make sure these are correct before running
 
