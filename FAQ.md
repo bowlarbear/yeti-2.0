@@ -91,7 +91,7 @@ This would be more appropriate in very high security scenarios (vaults designed 
 
 A: There is always room for improvement. The biggest one that comes to mind outside of the two optimizations discussed above would be, when signing a PSBT, only loading 1 key per boot session, and transerring the PSBT to a new boot session after signing with 1 key. This would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. 
 
-However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers.
+However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
