@@ -93,6 +93,8 @@ A: There is always room for improvement. The biggest one that comes to mind outs
 
 However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
 
+Another idea that comes to mind would be improving the privacy of the onchain footprint with tools like tapscript.
+
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
 A: If you suspect that someone has tampered with one of your backups or if one of your backups get damaged or stops working the best course of action would be to set up a new multisig vault and move all funds into the new vault. Be very cautious that you do not mix up old keys with new keys when doing this. It would be best to mark all of the old keys in some way first, before setting up the new ones.
