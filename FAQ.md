@@ -10,7 +10,7 @@ The second purpose of this guide is to educate users on what a secure & well des
 
 A: Bitcoin Core is the reference implementation for Bitcoin. It is one of the most conservative and highly scrutinized pieces of software in the world. It is the foundational pillar upon which the entire network rests. Linux is also one of the most conservative and highly scrutinized pieces of software in the world. It is the foundational pillar of safe and reliable Open Source Software. By using self installed Linux + Bitcoin Core as our foundation we are striving to create the smallest possible attack surface for secure Bitcoin Storage.
 
-By relying on highly trusted & highly scrutinized software like Bitcoin Core to perform all security critical functions, we can avoid introducing bugs (or attacks) that might slip through less conservative change review processes for software that rewrites critical core functions of a Bitcoin wallet.
+By relying on highly trusted & highly scrutinized software like Bitcoin Core to perform all security critical functions, we can avoid introducing bugs (or attacks) that might slip through less conservative change review processes for software that rewrites critical core functions of a Bitcoin wallet or potentially brings in other unvetted 3rd party libraries and dependencies. 
 
 ## Q: why not use electrum or `<insert software stack>`
 
