@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.03
+Guide Version: 1.04
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -66,7 +66,7 @@ Note: To copy and paste within a terminal on Linux you must use `Ctrl + Shift + 
 
 Press enter, then press Y if prompted and press enter again, wait for it to finish
 
-`sudo apt full-upgrade`
+`sudo apt -y full-upgrade`
 
 press enter, then press Y if prompted and press enter again, wait for it to finish
 
@@ -146,13 +146,13 @@ Note: It is important to always properly shut down bitcoin core before turning o
 
 ## Step A5: Switch to \*offline computer\*
 
-Now remove the transfer USB from the online computer and switch to the second computer, this will be the \*offline computer\*. Place a piece of tape on this computer to mark it.
+Now switch to the second computer, this will be the \*offline computer\*. Place a piece of tape on this computer to mark it.
 
-Insert the Linux USB (the one with tape) and turn the computer on. From this point forward the Linux USB will remain plugged into the \*offline computer\* (remember both are marked with tape).
+Insert the Linux USB (the one with tape) and turn the computer on. Remember if are not greeted by the Ubuntu installer, you may need to adjust the boot order in the BIOS. From this point forward the Linux USB will remain plugged into the \*offline computer\* (remember both the offline computer and the Linux USB are marked with tape).
 
 After the Ubuntu splash screen select `Try Ubuntu`.
 
-You will temporarily connect to either WIFI or LAN.
+You will now temporarily connect to either WIFI or LAN.
 
 ## Step A6: [\*offline computer\*] Install Updates and Software
 
@@ -160,25 +160,28 @@ You will temporarily connect to either WIFI or LAN.
 
 Open a terminal and copy and paste the following command in the home directory and press enter.
 
-`wget https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)`
+`wget -O README.md https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)`
 
 You should now have this guide in the Home directory.
 
 You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
 
-### [\*offline computer\*] Install Updates & Bitcoin Core
+### [\*offline computer\*] Install Bitcoin Core
 
-Repeat Steps A2 and A3 on the \*offline computer\*.
+Repeat Step A3 on the \*offline computer\*.
 
 ### [\*offline computer\*] Install Brasero
 
 Open a terminal and run the following command
 
-`sudo apt -y install brasero`
+```
+sudo apt update
+sudo apt -y install brasero
+```
 
-press enter and wait for it to finish.
+Press enter and wait for it to finish. You may see a dkpg error in the terminal after installing brasero but this can safely be ignored.
 
-Note: We do not need to verify the authenticity of the brasero download because it is automatically verified by apt which is part of Ubuntu. Brasero is needed so we can make backups of our keys and burn them to M-discs. Ubuntu does not come out of the box with software that enables us to do this.
+Note: The authenticity of the Brasero software is automatically checked by Ubuntu's apt package manager. Brasero is needed so we can make backups of our keys and burn them to M-discs.
 
 ## Step A7: [\*offline computer\*] Disable Networking 
 
@@ -429,7 +432,7 @@ By this point you should already have a good understanding of how this works. Th
 
 Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
-Temporarily connect to the network, install updates, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
+Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
 
 ### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
 
