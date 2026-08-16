@@ -45,11 +45,15 @@ A: This is one of the main reasons why we use multisig. Multisig provides all of
 
 You CAN write down your wallet descriptor and all of your xprivs and xpubs by hand if you really want to, but we don't reccomend it in the guide becuase it's painful and prone to human error and entirely unecessary if you follow the guide as written.
 
+A much better way to add redundancy rather than hand writing wallet descriptors would be to pick up 7 Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB. These are on a similar tier of archival grade storage quality as M-disc, then you could make two backups of each of your keys. For example, key_1 & multisig watch wallet  would get backed up on 1 M-disc and 1 Gold DVD, both would be marked with the number 1, and both would then be placed into the same envelope.
+
 ## Q: Why M-discs specifically?
 
 A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under proper storage conditions they are rated by the manufacturer to last up to 1,000 years.
 
-Although you should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack.
+Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option as mentioned above.
+
+You should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack.
 
 ## Q: Why is the vault a 3 of 7? Why not a 2 of 5 or an M of N?
 
