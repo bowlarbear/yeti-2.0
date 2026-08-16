@@ -115,7 +115,7 @@ One optional measure to help protect backups from physical damage is to keep eac
 
 ## Q: Can I set up this vault with my own M of N scheme?
 
-A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our reccomendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. As written, the guide instructs the user explicitly how to create and use a 3 of 7 scheme only.
+A: This guide is free and open source. You can do whatever you want, and we can't stop you. Our recommendations are what they are, because our goal was to deliver an opinionated guide that doesn't shift the burden of considering key management design tradeoffs onto end users. As written, the guide instructs the user explicitly how to create and use a 3 of 7 scheme only.
 
 ## Q: Can I set this up just to test it and then set it up a second time to use it for real?
 
@@ -125,7 +125,7 @@ We recommend testing with CD-R instead of M-disc if you are playing around becau
 
 After you complete your test run, simply delete your "multisig_watch_wallet" from `/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
 
-## Q: What happens if I lost my node or if I need to set up a new one
+## Q: What happens if I lost my node or if I need to set up a new one?
 
 A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch only wallet descriptor is backed up on each of the 7 M-discs.
 
