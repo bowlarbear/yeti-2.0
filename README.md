@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.06
+Guide Version: 1.05
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -257,9 +257,7 @@ multisig_desc="[{\"desc\": \"${desc}#${checksum}\", \"active\": true, \"timestam
 
 ## Step B5: [\*offline computer\*] Export the Watch Only Wallet Descriptor
 
-Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the \*offline computer\*. 
-
-Copy `~/.bitcoin/wallets/multisig_watch_wallet`, the entire `~/Bitcoin-31.1` folder, & the `README.md` for this guide onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
+Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the \*offline computer\*. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
 
 Note: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
 
@@ -452,7 +450,7 @@ By this point you should already have a good understanding of how this works. Th
 
 Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `try ubuntu`
 
-Insert the transfer USB into the \*offline computer\*, copy the entire `Bitcoin-31.1` folder and `README.md` from the transfer USB into the HOME directory.
+Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
 
 ### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
 
