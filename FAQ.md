@@ -4,7 +4,7 @@
 
 A: The main purpose of this guide is to provide users with a complete, opinionted and well reasoned start to finish process on setting up a secure Bitcoin Multisig vault that is easy for users with little experience to follow. 
 
-The second purpose of this guide is to educate users on what a secure & well designed key management system looks like and how all of the design tradeoffs were made. 
+The second purpose of this guide is to educate users on what a secure & well-designed key management system looks like and how all of the design tradeoffs were made. 
 
 ## Q: Why Bitcoin Core?
 
@@ -57,7 +57,7 @@ A much better way to add redundancy rather than hand writing wallet descriptors 
 
 A: Because you don't need to do this, Linux + Bitcoin Core are much better at generating secure random entropy than humans. If you do not trust the software stack to do it properly, then you should also not trust the software stack to properly use the entropy you provide it. 
 
-Well designed free and open source software like Linux, Bitcoin Core, OpenSSH, OpenSSL, GPG/PGP etc. use OS level entropy from several independent sources including the Operating System CSPRNG, Hardware RNG from the CPU, and dynamic environment data and user activity. This is the sotware industry standard for creating secure private keys.
+Well-designed free and open source software like Linux, Bitcoin Core, OpenSSH, OpenSSL, GPG/PGP etc. use OS level entropy from several independent sources including the Operating System CSPRNG, Hardware RNG from the CPU, and dynamic environment data and user activity. This is the sotware industry standard for creating secure private keys.
 
 If you feel that you cannot trust these things then you should know you also cannot trust this guide, the website it is on, or any software you download via the internet. Web pages, signed software binaries like Bitcoin core, github commits all of these things and more are signed with computer generated private keys. 
 
