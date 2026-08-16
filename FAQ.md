@@ -39,21 +39,19 @@ Bitcoin native multisig on Bitcoin Core makes use of Bitcoin script embedded in 
 
 Beyond this we believe that from a risk analysis perspective, considering the lindy and network effects of systems, CD/DVD form factor (on the proper medium which for us is Milleniata M-disc) and wallet backups in the standardized Bitcoin Core WIF & wallet descriptor format is far less likely to become deprecated over the coming decades than something like BIP 39 seeds etched into steel.
 
+## Q: Why M-discs specifically?
+
+A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under the proper storage conditions they are rated by the manufacturer to last up to 1,000 years. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option.
+
+You should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack. If the storage conditions for some of your backups are less ideal (heat or direct sunlight or moisture) you should check those backups more frequently.
+
 ## Q: If you don't write down seed words, how can you ensure key backups are safe?
 
 A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case. All key backups create with this guide are backed up on M-discs, which are sufficient given the inherent redundancy of a proper multisig vault. 
 
 You CAN write down your wallet descriptor and all of your xprivs and xpubs by hand if you really want to, but we don't reccomend it in the guide becuase it's painful and prone to human error and entirely unecessary if you follow the guide as written.
 
-A much better way to add redundancy rather than hand writing wallet descriptors would be to pick up 7 Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB. These are on a similar tier of archival grade storage quality as M-disc, then you could make two backups of each of your keys. For example, key_1 & multisig watch wallet  would get backed up on 1 M-disc and 1 Gold DVD, both would be marked with the number 1, and both would then be placed into the same envelope.
-
-## Q: Why M-discs specifically?
-
-A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under proper storage conditions they are rated by the manufacturer to last up to 1,000 years.
-
-Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option as mentioned above.
-
-You should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack.
+A much better way to add redundancy rather than hand writing wallet descriptors would be to buy both Milleniata M-discs and verbatim gold DVDs. These are on a similar tier of archival grade storage quality as M-disc, then you could make two backups of each key. For example, key_1 & multisig watch wallet would get backed up on 1 M-disc and 1 Gold DVD, both would be marked with the number 1, and both would then be placed into the same envelope.
 
 ## Q: Why can't I provide my own entropy with dice rolls or coin flips?
 
