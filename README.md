@@ -20,7 +20,7 @@ This multisig vault is only appropriate for storing between $10k-$5M in Bitcoin.
 
 - 2 Fresh USB sticks (16GB minimum) (try kingston datatravelers 64GB)
 
-- 7 Milleniata brand M-disc DVDs 4.7GB (do not buy any other brand than millenniata)
+- 7 Milleniata brand M-disc DVDs 4.7GB or 7 Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB
 
 - 1 USB powered disc drive capable of writing M-Disc DVDs (try ASUS zendrive)
 
