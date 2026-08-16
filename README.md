@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.05
+Guide Version: 1.06
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -395,6 +395,10 @@ psbt_3=$(./bitcoin-cli -rpcwallet="$wallet3" walletprocesspsbt "$psbt_2" | jq -r
 echo "$psbt_3" > ~/Desktop/signed.psbt
 
 ```
+
+Note: There is a chance this process will fail if you attempt to run the signing script above with your "multisig_watch_wallet" loaded on the \*offline computer\*. To avoid this, only have 3 keys loaded when signing and nothing else. You can unload the watch wallet with the following command:
+
+`./bitcoin-cli unloadwallet multisig_watch_wallet`
 
 ### [\*offline computer\*] Export Signed PSBT to Transfer USB
 
