@@ -339,6 +339,8 @@ Note: You can only check the balance of your wallet from the online computer, wi
 
 ### Important: Replace $amount and $destination_address with the right values, make sure these are correct before running
 
+Note: The `amount` field is denominated in `0.00000000` BTC
+
 ```
 funded_psbt=$(./bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
  walletcreatefundedpsbt \
