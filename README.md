@@ -189,7 +189,10 @@ Note: The authenticity of the Brasero software is automatically checked by Ubunt
 
 Within the terminal copy and run the following command:
 
-`nmcli networking off`
+```
+nmcli networking off
+rfkill block bluetooth
+```
 
 This command will disable all networking functionality (WIFI, LAN, and Bluetooth)
 
@@ -453,7 +456,10 @@ Temporarily connect to your home network, download and verify Bitcoin Core. Down
 
 ### [\*offline computer\*] Disable Networking
 
-`nmcli networking off`
+```
+nmcli networking off
+rfkill block bluetooth
+```
 
 ### [\*offline computer\*] Disable Swap Space
 
