@@ -12,7 +12,7 @@ A: Bitcoin Core is the reference implementation for Bitcoin. It is one of the mo
 
 By relying on highly trusted & highly scrutinized software like Bitcoin Core to perform all security critical functions, we can avoid introducing bugs (or attacks) that might slip through less conservative change review processes for software that rewrites critical core functions of a Bitcoin wallet or potentially brings in other unvetted 3rd party libraries and dependencies. 
 
-## Q: why not use electrum or `<insert software stack>`
+## Q: Why not use electrum or `<insert software stack>`
 
 A: This guide strives to minimize outside dependencies wherever possible. It is in the professional opinion of the authors that every new outside dependency introduced to a Bitcoin self custody stack significantly increases the attack surface of that solution. 
 
@@ -85,7 +85,7 @@ A: As the amount of value you are securing in a Bitcoin multisig vault grows, it
 
 A: We believe the biggest weakness of this guide is that the wallet descriptors are not encrypted. This means that anyone who gets access to one of your wallet backups and knows how to load a descriptor, will be able to see your wallet balance. There are ways to mitigate this risk, but it is outside the scope of this guide. The privacy & security that you get from this set up is still an order of magnitude better than what you get from most competing bitcoin self custody stacks.
 
-## Q: So why not just encrypt the backup discs?
+## Q: Why not encrypt the backup discs?
 
 A: You absolutely CAN do this but it's tricky because when you encrypt private keys you've effectively recreated the key management problem for yourself. There is a proper way to do this and it requires careful execution. It is outside the scope of this guide. 
 
