@@ -342,7 +342,7 @@ Note: You can only check the balance of your wallet from the online computer, wi
 ```
 funded_psbt=$(./bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
  walletcreatefundedpsbt \
- outputs="{\"$destination_address\": $amount}" \
+ outputs="{"$destination_address": $amount}" \
  options='{"subtractFeeFromOutputs":[0]}' | jq -r '.psbt')
 
 echo "$funded_psbt" > ~/Desktop/unsigned.psbt
