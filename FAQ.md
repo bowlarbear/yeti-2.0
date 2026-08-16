@@ -59,7 +59,7 @@ A: Because you don't need to do this, Linux + Bitcoin Core are much better at ge
 
 Well-designed free and open source software like Linux, Bitcoin Core, OpenSSH, OpenSSL, GPG/PGP etc. use OS level entropy from several independent sources including the Operating System CSPRNG, Hardware RNG from the CPU, and dynamic environment data and user activity. This is the sotware industry standard for creating secure private keys.
 
-If you feel that you cannot trust these things then you should know you also cannot trust this guide, the website it is on, or any software you download via the internet. Web pages, signed software binaries like Bitcoin core, github commits all of these things and more are signed with computer generated private keys. 
+If you feel that you cannot trust these things then you should know you also cannot trust this guide, the website it is on, or any software you download via the internet. Web pages, signed software binaries like Bitcoin core, GitHub commits are all examples of things that are signed with computer generated private keys. 
 
 ## Q: Why is the vault a 3 of 7? Why not a 2 of 5 or an M of N?
 
