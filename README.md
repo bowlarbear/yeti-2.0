@@ -344,7 +344,7 @@ Note: The `amount` field is denominated in `0.00000000` BTC
 ```
 funded_psbt=$(./bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
  walletcreatefundedpsbt \
- outputs="{"$destination_address": $amount}" \
+ outputs="{\"$destination_address\": $amount}" \
  options='{"subtractFeeFromOutputs":[0]}' | jq -r '.psbt')
 
 echo "$funded_psbt" > ~/Desktop/unsigned.psbt
