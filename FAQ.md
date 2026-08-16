@@ -37,11 +37,11 @@ We do not use these seed phrases because Bitcoin Core does not support them.
 
 Bitcoin native multisig on Bitcoin Core makes use of Bitcoin script embedded in the wallet descriptors and WIF keys. The logic embedded in wallet descriptors for a multsig vault is insperable from the keys and not compatible with something like the non standard BIP 39 seed phrase stamped into steel.
 
-Beyond this we believe that from a risk analysis perspective, considering the lindy and network effects of systems, CD/DVD form factor (on the proper medium which for us is Milleniata M-disc) and wallet backups in the standardized Bitcoin Core WIF & wallet descriptor format is far less likely to become deprecated over the coming decades than something like BIP 39 seeds etched into steel.
+Beyond this we believe that from a risk analysis perspective, considering the lindy and network effects of systems, CD/DVD form factor (on the proper medium which for us is Millenniata M-disc) and wallet backups in the standardized Bitcoin Core WIF & wallet descriptor format is far less likely to become deprecated over the coming decades than something like BIP 39 seeds etched into steel.
 
 ## Q: Why M-discs specifically?
 
-A: All of the backups created with yeti-2.0 are written to Milleniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under the proper storage conditions they are rated by the manufacturer to last up to 1,000 years. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option.
+A: All of the backups created with yeti-2.0 are written to Millenniata M-discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under the proper storage conditions the manufacturer claims they will last up to 1,000 years. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option, Verbatim claims these discs will last up to 100 years under proper storage conditions. 
 
 You should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack. If the storage conditions for some of your backups are less ideal (heat or direct sunlight or moisture) you should check those backups more frequently.
 
@@ -51,7 +51,7 @@ A: This is one of the main reasons why we use multisig. Multisig provides all of
 
 You CAN write down your wallet descriptor and all of your xprivs and xpubs by hand if you really want to, but we don't reccomend it in the guide becuase it's painful and prone to human error and entirely unecessary if you follow the guide as written.
 
-A much better way to add redundancy rather than hand writing wallet descriptors would be to buy both Milleniata M-discs and verbatim gold DVDs. These are on a similar tier of archival grade storage quality as M-disc, then you could make two backups of each key. For example, key_1 & multisig watch wallet would get backed up on 1 M-disc and 1 Gold DVD, both would be marked with the number 1, and both would then be placed into the same envelope.
+A much better way to add redundancy rather than hand writing wallet descriptors would be to buy both Millenniata M-discs and Verbatim gold DVDs. These are on a similar tier of archival grade storage quality as M-disc, then you could make two backups of each key. For example, key_1 & multisig watch wallet would get backed up on 1 M-disc and 1 Gold DVD, both would be marked with the number 1, and both would then be placed into the same envelope.
 
 ## Q: Why can't I provide my own entropy with dice rolls or coin flips?
 
