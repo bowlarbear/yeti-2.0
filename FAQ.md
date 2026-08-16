@@ -55,6 +55,14 @@ Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option a
 
 You should still check your backups periodically and redo them probably at least once every 10 years or so to be safe, this would be a good strategy with any key management stack.
 
+## Q: Why can't I provide my own entropy with dice rolls or coin flips?
+
+A: Because you don't need to do this, Linux + Bitcoin Core are much better at generating secure random entropy than humans. If you do not trust the software stack to do it properly, then you should also not trust the software stack to properly use the entropy you provide it. 
+
+Well designed free and open source software like Linux, Bitcoin Core, OpenSSH, OpenSSL, GPG/PGP etc. use OS level entropy from several independent sources including the Operating System CSPRNG, Hardware RNG from the CPU, and dynamic environment data and user activity. This is the sotware industry standard for creating secure private keys.
+
+If you feel that you cannot trust these things then you should know you also cannot trust this guide, the website it is on, or any software you download via the internet. Web pages, signed software binaries like Bitcoin core, github commits all of these things and more are signed with computer generated private keys. 
+
 ## Q: Why is the vault a 3 of 7? Why not a 2 of 5 or an M of N?
 
 A: We feel that 7 backups is a good number. It's enough to provide plenty of redundancy in most conceivable SHTF scenarios. With 7 keys in the multisig you can lose 4 and still retain access to your money. We have more than double the amount of keys in the qourum than are required to reach signing threshold, that's a lot of idiot proofing. 
