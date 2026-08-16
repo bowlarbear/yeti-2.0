@@ -65,17 +65,17 @@ If you feel that you cannot trust these things then you should know you also can
 
 A: We feel that 7 backups is a good number. It's enough to provide plenty of redundancy in most conceivable SHTF scenarios. With 7 keys in the multisig you can lose 4 and still retain access to your money. We have more than double the amount of keys in the qourum than are required to reach signing threshold. 
 
-We also feel that 3 is an appropriate signer threshold because an attacker could theoretically get access to 1 key, perhaps with concerted effort even 2, but 3 is going to be considerably more difficult. 3 of 7 feels like the right place to be.
+We also feel that 3 is an appropriate signer threshold because an attacker could theoretically get access to 1 key, perhaps with concerted effort even 2, but 3 is going to be considerably more difficult. 3 of 7 is sufficiently difficult and expensive for a bad actor to retrieve.
 
 ## Q: How can I be sure that all keys were deleted off of the offline computer?
 
 A: The offline computer runs off the Ubuntu Live System on the Linux USB, this process happens entirely within RAM which is volatile memory. Additionally the guide ensures we disable any swap partitions.
 
-If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups, but this is unncessary.
+If you want to ensure beyond reasonable doubt that everything on the offline computer is destroyed, the best thing to do is destroy the computer after you test your backups, but this is unnecessary.
 
 If you would prefer to avoid destroying the computer but still want more assurance, then before beginning step A5, first remove any internal storage drives from the offline computer. This process will vary depending on the model, but you should remove both the internal SATA drive and the NVMe drive (some computers will only come with one or the other, some will come with both).
 
-After you've removed all internal storage drives, put the computer back together and then continue with step A5, but this is also unncessary.
+After you've removed all internal storage drives, put the computer back together and then continue with step A5, but this is also unnecessary.
 
 ## Q: What should I do if I need to store more than $5M in Bitcoin?
 
@@ -111,7 +111,7 @@ A: If you suspect that someone has tampered with one of your backups or if one o
 
 If you have reason to believe that one of your backups has been tampered with, you should avoid using that particular backup disc when sweeping the funds into a new multisig vault unless there are no other options.
 
-One optional measure to help protect backups from physical damage is to keep each one in it's own CD jewel case, and keeping each case inside of a padded envelope, for most situations this is likely unncessary.
+One optional measure to help protect backups from physical damage is to keep each one in it's own CD jewel case, and keeping each case inside of a padded envelope, for most situations this is likely unnecessary.
 
 ## Q: Can I set up this vault with my own M of N scheme?
 
