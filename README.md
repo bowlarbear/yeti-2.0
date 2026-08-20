@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.07
+Guide Version: 1.08
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -106,7 +106,7 @@ gpg --verify SHA256SUMS.asc
 
 Look for `gpg: Good signature from...` on at least a few Bitcoin Core contributors. If you do not see any good signatures STOP AND DO NOT PROCEED.
 
-If you see `WARNING: this key is not certified with a trusted signature! There is no indication that the signature belongs to the owner` this can safely be ignored.  
+If you see `WARNING: this key is not certified with a trusted signature! There is no indication that the signature belongs to the owner` [this can safely be ignored](gpg_warning.md).  
 
 ### [online computer] Unpack Bitcoin Core from Tarball
 
