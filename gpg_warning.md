@@ -47,7 +47,7 @@ If we wanted to do this in order to prove to ourselves this is not a concern, we
 
 `gpg --full-generate-key`
 
-Choose RSA (option 1), enter 2048, Choose key does not expire (option 0), provide a name and email (none of these things important for this exercise).
+Choose RSA (option 1), enter 2048, Choose key does not expire (option 0), provide a name and email (you can use a fake name and email if you like, none of these parameters are important for this exercise).
 
 After generaring a key, we can now designate a level of trust to specific fingerprint which we've imported to our keychain. So for example, if we knew Bob's fingerprint was `A123 456B C789 D012 3456 E789 0123 F456 789G 0123` we could sign his fingerprint on our keychain with the following command.
 
