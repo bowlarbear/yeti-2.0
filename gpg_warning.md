@@ -27,7 +27,7 @@ They then take their personal GPG key (for which fingerprints are published in t
 
 After we download the Bitcoin software in the guide, we take that [published list of fingerprints of Bitcoin Core Contributors](https://github.com/bitcoin-core/guix.sigs), import them to our local GPG keychain, and verify the signatures on the hash file.
 
-# But Why Can we ignore the warning?
+# Why Can we ignore the warning?
 
 `WARNING: this key is not certified with a trusted signature! There is no indication that the signature belongs to the owner`
 
