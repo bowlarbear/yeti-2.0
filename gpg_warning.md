@@ -29,8 +29,9 @@ After we download the Bitcoin software in the guide, we take that [published lis
 
 # Why Can we ignore the warning?
 
-`WARNING: this key is not certified with a trusted signature! There is no indication that the signature belongs to the owner`
+![Bitcoin Core GPG verify results with warning](./images/gpgwarning.JPG)
 
+`WARNING: this key is not certified with a trusted signature! There is no indication that the signature belongs to the owner`
 
 We can safely ignore this warning becuase it is not directly relevant to what we are attempting to verify. This key is not certified with a trusted signature FROM US. What this warning is telling us is that WE have not personally validated the identity of the persons associated with the key that produced this signature. WE have no personally validated that fingerprint `A123 456B C789 D012 3456 E789 0123 F456 789G 0123` actually belongs to a guy named Bob. 
 
