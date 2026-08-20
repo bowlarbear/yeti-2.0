@@ -21,7 +21,7 @@ Bitcoin Core contributors will each compile the same version of the Bitcoin soft
 
 After this binary gets created, it gets hashed. Hashing is a one way function that produces a unique output depending on the input. This means that if a binary is only very slightly different from another binary, the two will produce an entirely different hash. If each Bitcoin Core contributor that signs the release binary, first builds a copy of the release software on their machine, and verifies that it produces the same hash which they've signed, we can be confident that each of them has successfully reproduced the same binary from the same code. 
 
-Their signature is their way of saying "I have check that this binary we are releasing for users to download is the same source code which it claims to be."
+Their signature is their way of saying "I have checked that this binary we are releasing for users to download is the same as the source code from which it claims to be compiled."
 
 They then take their personal GPG key (for which fingerprints are published in the github repository we called in line 1 of our script) and sign the hash file. 
 
