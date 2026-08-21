@@ -151,7 +151,7 @@ If wish to avoid pruning, your full node (the online computer) must have atleast
 
 Upgrading your internal storage drive usually requires removing the screw on the bottom of the laptop, removing the old drive and then inserting the new one and then replacing the cover. This is not a particularly difficult process, however, the exact steps will depend upon your computer model.
 
-If you are upgrading the storage on an existing full node you will have to reinstall ubuntu and then resync the bitcoin blockchain from scratch (unless you have a way to copy the block data you've already downloaded to the new drive).
+If you are upgrading the storage on an existing full node you will have to reinstall ubuntu and then resync the bitcoin blockchain from scratch (unless you have a way to copy the block data you've already downloaded to the new drive). Ensure you do NOT add the `prune=5500` line to your `~/.bitcoin/bitcoin.conf` file.
 
 You can also use a 2TB NVME drive if you prefer this over SATA. The easiest thing to do, if your computer supports both form factors, would be to pick either SATA or NVME and ensure there is only 1 storage drive inside the computer. 
 
