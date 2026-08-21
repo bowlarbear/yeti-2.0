@@ -120,7 +120,7 @@ Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1`
 
 ## Step A4. [online computer] Start Bitcoin Core
 
-## Copy the Bitcoin.conf example into your .bitcoin folder
+### Enable Pruning
 
 Open a terminal with `Ctrl + Alt + T`. 
 
@@ -129,8 +129,6 @@ We need to create a `~/.bitcoin` folder and copy the bitcoin configuration file 
 You can do that by running this command in the terminal
 
 `mkdir -p ~/.bitcoin && cp ~/bitcoin-31.1/bitcoin.conf ~/.bitcoin/`
-
-### Enable Pruning
 
 Using your file explorer, navigate into `~/.bitcoin` double click on the file named "Bitcoin.conf". 
 
