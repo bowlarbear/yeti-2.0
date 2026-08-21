@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.08
+Guide Version: 1.09
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -120,11 +120,21 @@ Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1`
 
 ## Step A4. [online computer] Start Bitcoin Core
 
-Open the folder in the Home directory and then click on bitcoin-31.1
+## Copy the Bitcoin.conf example into your .bitcoin folder
+
+Open a terminal with `Ctrl + Alt + T`. 
+
+We need to create a `~/.bitcoin` folder and copy the bitcoin configuration file example at `~/bitcoin-31.1/bitcoin.conf` into the new `~/.bitcoin` folder.
+
+You can do that by running this command in the terminal
+
+`mkdir -p ~/.bitcoin && cp ~/bitcoin-31.1/bitcoin.conf ~/.bitcoin/`
 
 ### Enable Pruning
 
-Inside of bitcoin-31.1 double click on the file named "Bitcoin.conf". 
+Using your file explorer, navigate into `~/.bitcoin` double click on the file named "Bitcoin.conf". 
+
+Note: If you are using the file explorer you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
 
 Add the following line anywhere in the file, make sure it's not on a line with `##`
 
@@ -132,9 +142,9 @@ Add the following line anywhere in the file, make sure it's not on a line with `
 
 Then click save and close the bitcoin.conf file.
 
-Open a terminal with `Ctrl + Alt + T`. Navigate into the Bitcoin folder we extracted in step 3 using the change directory command `cd`. We need to be inside of the `/bin` folder. 
+## Start Bitcoin Daemon
 
-Once inside the `~/bitcoin-31.1/bin` folder, copy and paste the following command in the terminal.
+Within your terminal, navigate into the `~/bitcoin-31.1/bin` folder, copy and paste the following command in the terminal.
 
 `./bitcoind -daemon`
 
