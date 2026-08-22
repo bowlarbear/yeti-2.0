@@ -507,3 +507,13 @@ For security you should always turn off the \*offline computer\* after you finis
 
 Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 
+## Updating Bitcoin Core on the Full Node (online Computer)
+
+This guide will be updated to support the latest stable release of Bitcoin Core. That means the scripts provided in this guide will not work for you if you do not have the latest version installed. When this happens the version of Bitcoin on your computer `~/Bitcoin-31.1` will look different than the number in the scripts in this guide. 
+
+To upgrade the software on your node to the latest version, simply run this command in the terminal:
+
+`rm -r ~/bitcoin-31.1`
+
+Then repeat steps A2 through A4 on your online computer. You will NOT need to redownload the blockchain after updating the software to the latest version.
+
