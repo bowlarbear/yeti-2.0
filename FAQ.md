@@ -145,15 +145,15 @@ In the mean time you could export the xpubs on the transfer USB, and reconstruct
 
 ## Q: What if I do not want to use a pruned node?
 
-A: You do not need to use a pruned node. Pruning is included in the guide to keep equipment costs low for users, as a full archival node is necessary for our purposes.
+A: You do not need to use a pruned node. Pruning is included in the guide to keep equipment costs low for users, as a full archival node is unnecessary for our purposes.
 
-If wish to avoid pruning, your full node (the online computer) must have atleast 2TB of internal storage space. You can either buy a computer with sufficient storage included or you can purchase a 2TB 2.5 inch SATA SSD for around $250 (as of this post) and replace the internal storage drive on the full node computer. 2TB of internal storage will last about 10 years (as of this post) before it needs to be upgraded to acccomdate the size of the blockchain.
+If wish to avoid pruning, your full node (the online computer) must have atleast 2TB of internal storage space. You can either buy a computer with sufficient internal storage included, or you can purchase a 2TB 2.5 inch SATA SSD for around $250 (as of this post) and replace the internal storage drive on the full node computer. 2TB of internal storage will last about 10 years (as of this post) before it needs to be upgraded to acccomdate the size of the blockchain.
 
-Upgrading your internal storage drive usually requires removing the screw on the bottom of the laptop, removing the old drive and then inserting the new one and then replacing the cover. This is not a particularly difficult process, however, the exact steps will depend upon your computer model.
+Upgrading your internal storage drive usually requires removing the cover screws on the bottom of the laptop, removing the old drive and then inserting the new one and then replacing the cover. This is not a particularly difficult process, however, the exact steps will depend upon your computer model.
 
-If you are upgrading the storage on an existing full node you will have to reinstall ubuntu and then resync the bitcoin blockchain from scratch (unless you have a way to copy the block data you've already downloaded to the new drive). Ensure you do NOT add the `prune=5500` line to your `~/.bitcoin/bitcoin.conf` file.
+If you are upgrading the storage on an existing full node you will have to reinstall ubuntu and then resync the bitcoin blockchain from scratch (unless you have a way to copy the block data you've already downloaded to the new drive). Ensure you do NOT add the `prune=5500` line to your `~/.bitcoin/bitcoin.conf` file if you do not wish to prune.
 
-You can also use a 2TB NVME drive if you prefer this over SATA. The easiest thing to do, if your computer supports both form factors, would be to pick either SATA or NVME and ensure there is only 1 storage drive inside the computer. 
+You can also use a 2TB NVME drive if you prefer this over SATA. If your computer supports both form factors, best practice would be to pick either SATA or NVME, and then ensure there is only 1 storage drive inside the computer.
 
-If your online computer contains both a SATA drive and an NVME drive and if you install ubuntu on the drive you are not intending to use for storage, you may need to manually mount the second storage drive from within linux. You will then need to configure your data directory within either the `~.bitcoin/Bitcoin.conf` or using bitcoin-cli flags (`-datadir=/path/to/storage`) in order to use it for your block data. If you install Ubuntu on the same drive you intend to use for storage this should not be an issue.
+It is best to only have one internal drive because, if your online computer contains both a SATA drive and an NVME drive and if you install ubuntu on the drive you are not intending to use for storage, you will need to manually mount the second storage drive from within linux. You will then need to configure your data directory within either the `~.bitcoin/Bitcoin.conf` or using bitcoin-cli flags (`-datadir=/path/to/storage`) in order to use it for your block data. If you install Ubuntu on the same drive you intend to use for storage this should not be an issue.
 
