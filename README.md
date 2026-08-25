@@ -160,9 +160,9 @@ Now switch to the second computer, this will be the \*offline computer\*. Place 
 
 Insert the Linux USB (the one with tape) and turn the computer on. Remember if are not greeted by the Ubuntu installer, you may need to adjust the boot order in the BIOS. From this point forward the Linux USB will remain plugged into the \*offline computer\* (remember both the offline computer and the Linux USB are marked with tape).
 
-After the Ubuntu splash screen select `Try Ubuntu`.
+Within the Ubuntu installer wizard, choose the option to connect to either WIFI or LAN, this will be temporary.
 
-You will now temporarily connect to either WIFI or LAN.
+At the end of the Ubuntu installer wizard select `Try Ubuntu`.
 
 ## Step A6: [\*offline computer\*] Install Updates and Software
 
