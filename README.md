@@ -327,7 +327,7 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 7 = key_7 & multisig_watch_wallet
 
 
-Note: You will not be able to complete section C until your online computer has finished syncing the Bitcoin Blockchain. You can query this status by running the following command in the terminal within your online computer.
+Note: You will not be able to complete section C until your online computer has finished syncing the Bitcoin Blockchain. You can query the status of your node sync by running the following command in the terminal within your online computer.
 
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli getblockchaininfo
