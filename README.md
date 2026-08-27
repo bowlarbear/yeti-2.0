@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.10
+Guide Version: 1.11
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
