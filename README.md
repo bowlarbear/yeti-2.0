@@ -126,6 +126,8 @@ Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1`
 
 ### Enable Pruning
 
+Note: Pruning your node is perfectly safe, but it can lead to situations where you occasionally have to resync the blockchain from scratch. If you wish to avoid pruning at all, it will add slightly to the cost and setup difficulty. See the [FAQ](FAQ.md) for more information.
+
 We now need to create a `~/.bitcoin` folder and copy the bitcoin configuration file example at `~/bitcoin-31.1/bitcoin.conf` into the new `~/.bitcoin` folder.
 
 You can do that by running this command in the terminal
@@ -289,7 +291,7 @@ Press Enter
 
 ## Step B5: [\*offline computer\*] Export the Watch Only Wallet Descriptor
 
-Grab the second USB stick (with no tape), this will be the transfer USB, Insert it into the \*offline computer\*. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
+Grab the second USB stick (with no tape), this will be the transfer USB. Insert it into the \*offline computer\*. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
 
 Note: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
 

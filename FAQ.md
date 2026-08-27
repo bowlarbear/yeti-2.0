@@ -145,7 +145,7 @@ In the mean time you could export the xpubs on the transfer USB, and reconstruct
 
 ## Q: What if I do not want to use a pruned node?
 
-A: You do not need to use a pruned node. Pruning is included in the guide to keep equipment costs low for users, as a full archival node is unnecessary for our purposes.
+A: You do not need to use a pruned node. Pruning is included in the guide to keep equipment costs low for users, as a full archival node is not a requirement for our purposes. Pruning is perfectly safe from a security perspective, however it can lead to annoying circumstances where you have to occasionally resync the bitcoin blockchain from scratch. The authors of this guide prefer not to use pruned nodes for this reason.
 
 If wish to avoid pruning, your full node (the online computer) must have atleast 2TB of internal storage space. You can either buy a computer with sufficient internal storage included, or you can purchase a 2TB 2.5 inch SATA SSD for around $250 (as of this post) and replace the internal storage drive on the full node computer. 2TB of internal storage will last about 10 years (as of this post) before it needs to be upgraded to acccomdate the size of the blockchain.
 
