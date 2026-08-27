@@ -62,11 +62,15 @@ Open a terminal with `Ctrl + Alt + T`. Then type or copy and paste the following
 
 Note: To copy and paste within a terminal on Linux you must use `Ctrl + Shift + C` to copy and `Ctrl + Shift + V` to paste.
 
-`sudo apt update`
+```
+sudo apt update
+```
 
 Press enter, then press Y if prompted and press enter again, wait for it to finish
 
-`sudo apt -y full-upgrade`
+```
+sudo apt -y full-upgrade
+```
 
 press enter, then press Y if prompted and press enter again, wait for it to finish
 
@@ -126,7 +130,9 @@ We now need to create a `~/.bitcoin` folder and copy the bitcoin configuration f
 
 You can do that by running this command in the terminal
 
-`mkdir -p ~/.bitcoin && cp ~/bitcoin-31.1/bitcoin.conf ~/.bitcoin/`
+```
+mkdir -p ~/.bitcoin && cp ~/bitcoin-31.1/bitcoin.conf ~/.bitcoin/
+```
 
 Using your file explorer (called "Files" on the left hand tool bar), navigate into `~/.bitcoin` double click on the file named "Bitcoin.conf". 
 
@@ -134,7 +140,9 @@ Note: If you are using the file explorer you will need to click the drop down ar
 
 Add the following line anywhere in the file, make sure it's not on a line with `##`
 
-`prune=5500`
+```
+prune=5500
+```
 
 Then click save and close the bitcoin.conf file.
 
@@ -142,7 +150,9 @@ Then click save and close the bitcoin.conf file.
 
 Within your terminal, copy and paste the following command:
 
-`~/bitcoin-31.1/bin/bitcoind -daemon`
+```
+~/bitcoin-31.1/bin/bitcoind -daemon
+```
 
 Press enter, you should see a message that says "Bitcoin Core Starting"
 
@@ -150,7 +160,9 @@ This computer will now begin syncing the Bitcoin blockchain. This can take a whi
 
 Note: It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this run this command:
 
-`~/bitcoin-31.1/bin/bitcoin-cli stop`
+```
+~/bitcoin-31.1/bin/bitcoin-cli stop
+```
 
 You should see a message that says "Bitcoin Core Stopping"
 
@@ -172,7 +184,9 @@ You can open this guide in your browser on the offline machine for now and leave
 
 Open a terminal and copy and paste the following command in the home directory and press enter.
 
-`wget -O README.md https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)`
+```
+wget -O README.md https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)
+```
 
 You should now have this guide in the Home directory.
 
@@ -210,7 +224,9 @@ This command will disable all networking functionality (WIFI, LAN, and Bluetooth
 
 Swap space is virtual RAM that is borrowed from the internal storage drive. Open a terminal and run this command to verify that there is no swap space enabled on the \*offline computer\*.
 
-`sudo swapoff -a`
+```
+sudo swapoff -a
+```
 
 # B. Creating a Multi Signature Cold Wallet on Bitcoin Core
 
@@ -218,7 +234,9 @@ Swap space is virtual RAM that is borrowed from the internal storage drive. Open
 
 Open a terminal and start the Bitcoin Daemon
 
-`~/bitcoin-31.1/bin/bitcoind -daemon`
+```
+~/bitcoin-31.1/bin/bitcoind -daemon
+```
 
 You should see a message that says "Bitcoin Core Starting"
 
@@ -279,7 +297,9 @@ Note: It is wise to always run the `sync` command in the terminal and wait for i
 
 Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder. When Bitcoin Core is finished syncing the blockchain, you will be able to load this wallet on the online computer with the following terminal command.
 
-`~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"`
+```
+~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+```
 
 You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to load this wallet, see the transaction history, check the balance of the wallet, generate receive addresses, and broadcast fully signed Bitcoin Transactions. It is not advised to use Bitcoin-QT to create PSBTs as this can cause errors when signing with the steps in this guide. 
 
@@ -308,7 +328,9 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 
 Stop Bitcoin Core
 
-`~/bitcoin-31.1/bin/bitcoin-cli stop`
+```
+~/bitcoin-31.1/bin/bitcoin-cli stop
+```
 
 wait a moment for the daemon to finish shutting down
 
@@ -316,7 +338,9 @@ Delete the entire `~/.bitcoin/wallets` folder
 
 start Bitcoin Core again
 
-`~/bitcoin-31.1/bin/bitcoind -daemon`
+```
+~/bitcoin-31.1/bin/bitcoind -daemon
+```
 
 
 ## C2. [online computer] Create a Receive Address
@@ -377,7 +401,9 @@ Insert the transfer USB (no tape) into the \*offline computer\*. Copy or drag an
 
 Open a terminal and run this command.
 
-`~/bitcoin-31.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/unsigned.psbt)"`
+```
+~/bitcoin-31.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/unsigned.psbt)"
+```
 
 Verify the contents of the output, make sure that the `destination_address` and `amount` within `tx.vout` matches what you expect.
 
@@ -388,7 +414,9 @@ Choose 3 of the M-discs, insert them one at a time into the \*offline computer\*
 
 After copying a key run the following command, replace `key_#` with the name of the key you copied into `~/.bitcoin/wallets`
 
-`~/bitcoin-31.1/bin/bitcoin-cli loadwallet "key_#"`
+```
+~/bitcoin-31.1/bin/bitcoin-cli loadwallet "key_#"
+```
 
 ### [\*offline computer\*] Sign the PSBT
 
@@ -411,11 +439,15 @@ echo "$psbt_3" > ~/Desktop/signed.psbt
 
 Note: There is a chance this process will fail if you attempt to run the signing script above with your "multisig_watch_wallet" loaded on the \*offline computer\*. To avoid this, only have 3 keys loaded when signing and nothing else. You can unload the watch wallet with the following command:
 
-`~/bitcoin-31.1/bin/bitcoin-cli unloadwallet multisig_watch_wallet`
+```
+~/bitcoin-31.1/bin/bitcoin-cli unloadwallet multisig_watch_wallet
+```
 
 To check and see what wallets you currently have loaded run this command:
 
-`~/bitcoin-31.1/bin/bitcoin-cli listwallets`
+```
+~/bitcoin-31.1/bin/bitcoin-cli listwallets
+```
 
 ### [\*offline computer\*] Export Signed PSBT to Transfer USB
 
@@ -429,7 +461,9 @@ Insert the transfer USB into the online computer. Copy signed.psbt from the tran
 
 Open a terminal and run this command.
 
-`~/bitcoin-31.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/signed.psbt)"`
+```
+~/bitcoin-31.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/signed.psbt)"
+```
 
 Verify the contents of the output, make sure that the `destination_address` and `amount` within `tx.vout` matches what you expect.
 
@@ -486,7 +520,9 @@ rfkill block bluetooth
 
 ### [\*offline computer\*] Disable Swap Space
 
-`sudo swapoff -a`
+```
+sudo swapoff -a
+```
 
 From here the process for spending from the multisig is the same as above.
 
@@ -513,7 +549,9 @@ This guide will be updated to support the latest stable release of Bitcoin Core.
 
 To upgrade the software on your node to the latest version, simply run this command in the terminal:
 
-`rm -r ~/bitcoin-31.1`
+```
+rm -r ~/bitcoin-31.
+```
 
 Then repeat steps A2 through A4 on your online computer. You will NOT need to redownload the blockchain after updating the software to the latest version.
 
