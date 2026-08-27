@@ -1,6 +1,12 @@
 # Error: "Wallet Loading Failed. Prune: last wallet synchronization goes beyond pruned data"
 
-This is a common issue encountered when importing wallets to a pruned node, the reason this error occurs is because a pruned node does not keep the full blockchain history.
+If you encounter the above error after attempting to load your "multisig_watch_wallet" with:
+
+```
+~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+```
+
+...This is a common issue encountered when importing wallets to a pruned node, the reason this error occurs is because a pruned node does not keep the full blockchain history.
 
 The best way to avoid encountering this error is to use a full archival node. The second best way to avoid this error is to load your wallet into your online computer while it is still performing the initial sync of the Bitcoin blockchain, however, if you do encounter this error there is an easy solution...
 
