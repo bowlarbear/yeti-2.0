@@ -158,7 +158,7 @@ You can also use a 2TB NVME drive if you prefer this over SATA. If your computer
 It is best to only have one internal drive because, if your online computer contains both a SATA drive and an NVME drive and if you install ubuntu on the drive you are not intending to use for storage, you will need to manually mount the second storage drive from within linux. You will then need to configure your data directory within either the `~.bitcoin/Bitcoin.conf` or using bitcoin-cli flags (`-datadir=/path/to/storage`) in order to use it for your block data. If you install Ubuntu on the same drive you intend to use for storage this should not be an issue.
 
 ## Q: What to do about this error "wallet loading failed. Prune: last wallet synchronization goes beyond pruned data." when importing the "multisig_watch_wallet" in step B5?
-This is a common issue with pruned nodes, follow these instructions carefully:
+This is a common issue encountered when importing wallets to a pruned node, follow these instructions carefully to resolve:
 
 On the online computer...
 
