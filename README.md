@@ -126,7 +126,7 @@ Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1`
 
 ### Enable Pruning
 
-Note: Pruning your node is perfectly safe, but it can lead to situations where you occasionally have to resync the blockchain from scratch. If you wish to avoid pruning at all, it will add slightly to the cost and setup difficulty. See the [FAQ](FAQ.md) for more information.
+Note: Pruning your node is perfectly safe, but it can lead to situations where you occasionally have to resync the blockchain from scratch. If you wish to avoid pruning at all, it will add slightly to the cost and setup difficulty. See the [FAQ](https://github.com/bowlarbear/yeti-2.0/blob/main/FAQ.md#q-what-if-i-do-not-want-to-use-a-pruned-node) for more information.
 
 We now need to create a `~/.bitcoin` folder and copy the bitcoin configuration file example at `~/bitcoin-31.1/bitcoin.conf` into the new `~/.bitcoin` folder.
 

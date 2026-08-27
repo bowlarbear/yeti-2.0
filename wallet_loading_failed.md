@@ -8,7 +8,7 @@ If you encounter the above error after attempting to load your "multisig_watch_w
 
 ...This is a common issue encountered when importing wallets to a pruned node, the reason this error occurs is because a pruned node does not keep the full blockchain history.
 
-The best way to avoid encountering this error is to use a full archival node. The second best way to avoid this error is to load your wallet into your online computer while it is still performing the initial sync of the Bitcoin blockchain, however, if you do encounter this error there is an easy solution...
+The best way to avoid encountering this error is to use a [full archival node](https://github.com/bowlarbear/yeti-2.0/blob/main/FAQ.md#q-what-if-i-do-not-want-to-use-a-pruned-node). The second best way to avoid this error is to load your wallet into your online computer while it is still performing the initial sync of the Bitcoin blockchain, however, if you do encounter this error there is an easy solution...
 
 ## How to fix the problem
 
