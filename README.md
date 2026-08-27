@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Guide Version: 1.11
+Guide Version: 1.12
 
 This guide was created using [Bitcoin Core's official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) as a reference. 
 
@@ -156,7 +156,7 @@ Within your terminal, copy and paste the following command:
 
 Press enter, you should see a message that says "Bitcoin Core Starting"
 
-This computer will now begin syncing the Bitcoin blockchain. This can take a while (days or weeks). You will need this process to completely finish before you can test your wallet.
+This computer will now begin syncing the Bitcoin blockchain. This can take a while (multiple days). You will need this process to completely finish before you can perform any test transactions, but for now, continue with this guide.
 
 Note: It is important to always properly shut down bitcoin core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this run this command:
 
@@ -295,7 +295,7 @@ Note: If you are using the file explorer to drag & drop to copy files you will n
 
 Note: It is wise to always run the `sync` command in the terminal and wait for it to finish before removing a USB.
 
-Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder. When Bitcoin Core is finished syncing the blockchain, you will be able to load this wallet on the online computer with the following terminal command.
+Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder, then run the following terminal command.
 
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
@@ -321,6 +321,15 @@ Use brasero to create 7 mdisc backups. These files can be found in the `~/.bitco
 6 = key_6 & multisig_watch_wallet
 
 7 = key_7 & multisig_watch_wallet
+
+
+Note: You will not be able to complete section C until your online computer has finished syncing the Bitcoin Blockchain. You can query this status by running the following command in the terminal within your online computer.
+
+```
+~/bitcoin-31.1/bin/bitcoin-cli getblockchaininfo
+```
+
+Look for the line that says `verificationprogress`, this will be at `1` and `initialblockdownload` will be `false` when your node is finished syncing.
 
 # C.  Test Wallet Backups
 
