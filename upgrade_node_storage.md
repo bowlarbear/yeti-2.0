@@ -6,6 +6,8 @@ The reason we choose to upgrade our online computer to a full archival node inst
 
 If you are intimidated by this process, the best thing to do is to look up a teardown guide for your specific model laptop. The steps here will be for a Thinkpad T440, which will only provide you a more generalized overview if your model laptop is different.
 
+If you would, for some reason, prefer not to do this, [see here](FAQ.md#q-can-i-use-a-pruned-node) for a brief pruning guide. 
+
 ## Removing the Cover
 
 You will need a small phillips head screwdriver.
