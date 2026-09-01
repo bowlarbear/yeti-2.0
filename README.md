@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Guide Version: 1.13
+Guide Version: 1.2
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
 Users can verify the scripts found here by comparing them to the scripts provided in the official multisig tutorial.
 
-This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure node & 3 of 7 multisig vault, full wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually, verify every step of the process, and minimize dependencies.
+This guide aims to improve the usability of the official multisig guide, as well as provide setup instructions for a secure full archival node & 3 of 7 multisig vault, full wallet & key backups, and an easy to use airgapped signing device. This guide functions both as an educational tool and alternative to [YetiCold Level 3](https://github.com/jwweatherman/yeticold) for users who prefer to do things manually, verify every step of the process, and minimize dependencies.
 
 See the [FAQ](FAQ.md) for answers to common questions about the design.
 
@@ -16,7 +16,7 @@ This multisig vault is only appropriate for storing between $10k-$5M in Bitcoin.
 
 ## You will need:
 
-- 2 Dedicated Laptops (8GB RAM minimum, 64GB storage minimum) (try refurbished thinkpads) (Chromebooks will not work)
+- 2 Dedicated Laptops (8GB RAM minimum) (try refurbished thinkpads) (Chromebooks will not work)
 
 - 2 Fresh USB sticks (16GB minimum) (try kingston datatravelers 64GB)
 
@@ -24,16 +24,22 @@ This multisig vault is only appropriate for storing between $10k-$5M in Bitcoin.
 
 - 1 USB powered disc drive capable of writing M-Disc DVDs (try ASUS zendrive)
 
+- 1 2TB SATA SSD 2.5 inch internal Hard Drive (will last you for approximately 10 years of full archival node storage as of Aug 2026 before requiring an upgrade)
+
 estimated total cost (using amazon for reference as of 11 Aug 2026):
-~$500
+~$750
 
 # A. Initial Set Up
 
 These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software than what is described in this guide. 
 
+Pick one laptop to be the online computer, this will be the Bitcoin node. You will need to replace the internal SATA storage drive on this laptop with your 2TB SATA SSD. This process is not difficult, however it will usually require removing the screws on the bottom cover of the laptop. [The exact process will vary depending on the exact model of laptop you purchased](upgrade_node_storage.md).
+
+There should only be one internal storage drive inside of your online laptop. If the online laptop also contains an NVME drive, you should remove it while you are replacing the SATA drive. You may use a 2TB NVME drive if your laptop supports the form factor (these are more expensive than SATA drives), but in that case ensure you also remove the SATA drive if one is present.
+
 ## Step A1. [online computer] Install Ubuntu
 
-Pick one laptop to be the online computer, this will be the Bitcoin node. We need to install Ubuntu on this computer.
+After upgrading the internal storage, we need to install Ubuntu on this computer.
 
 [Download the latest version of Ubuntu here](https://ubuntu.com/download/desktop)
 
@@ -123,30 +129,6 @@ cd ~/Downloads && tar -xzf bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
 Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1` folder.
 
 ## Step A4. [online computer] Start Bitcoin Core
-
-### Enable Pruning
-
-Note: Pruning your node is perfectly safe, but it can lead to situations where you occasionally have to resync the blockchain from scratch. If you wish to avoid pruning at all, it will add slightly to the cost and setup difficulty. See the [FAQ](https://github.com/bowlarbear/yeti-2.0/blob/main/FAQ.md#q-what-if-i-do-not-want-to-use-a-pruned-node) for more information.
-
-We now need to create a `~/.bitcoin` folder and copy the bitcoin configuration file example at `~/bitcoin-31.1/bitcoin.conf` into the new `~/.bitcoin` folder.
-
-You can do that by running this command in the terminal
-
-```
-mkdir -p ~/.bitcoin && cp ~/bitcoin-31.1/bitcoin.conf ~/.bitcoin/
-```
-
-Using your file explorer (called "Files" on the left hand tool bar), navigate into `~/.bitcoin` double click on the file named "Bitcoin.conf". 
-
-Note: If you are using the file explorer you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
-
-Add the following line anywhere in the file, make sure it's not on a line with `##`
-
-```
-prune=10000
-```
-
-Then click save and close the bitcoin.conf file.
 
 ## Start Bitcoin Daemon
 
@@ -305,7 +287,7 @@ Insert the transfer USB into the online computer. Copy the multisig_watch_wallet
 
 You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to load this wallet, see the transaction history, check the balance of the wallet, generate receive addresses, and broadcast fully signed Bitcoin Transactions. It is not advised to use Bitcoin-QT to create PSBTs as this can cause errors when signing with the steps in this guide. 
 
-Note: If you encounter an error when loading the "multisig_watch_wallet" see [this solution](wallet_loading_failed.md).
+Note: If you encounter an error when loading the "multisig_watch_wallet" into a pruned node see [this solution](wallet_loading_failed.md).
 
 ## Step B6: [\*offline computer\*] Backup Keys
 Now back up each of the 7 keys and the wallet descriptor.
@@ -364,7 +346,7 @@ Note: In order to check balances and generate new addresses the "multisig_watch_
 
 To use the cli, load the wallet like in step B5. 
 
-Note: If you encounter an error when loading the "multisig_watch_wallet" see [this solution](wallet_loading_failed.md).
+Note: If you encounter an error when loading the "multisig_watch_wallet" into a pruned node see [this solution](wallet_loading_failed.md).
 
 After loading the wallet, run this command to generate a new address:
 

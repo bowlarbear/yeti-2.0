@@ -143,20 +143,24 @@ A: Yes you can do this, however, if you follow the guide as written this will no
 
 In the mean time you could export the xpubs on the transfer USB, and reconstruct the multisig wallet on the offline machine using the createwallet command to benefit from the speed up of assumeutxo if you wanted to, but that's out of scope for this guide.
 
-## Q: What if I do not want to use a pruned node?
+## Q: Can I use a pruned node?
 
-A: You do not need to use a pruned node. Pruning is included in the guide to keep equipment costs low for users, as a full archival node is not a requirement for our purposes. Pruning is perfectly safe from a security perspective, however it can lead to annoying circumstances where you have to occasionally resync the bitcoin blockchain from scratch. The authors of this guide prefer not to use pruned nodes for this reason.
+A: You can use a pruned node but it is not reccomended. Pruning will help lower equipment costs for this guide, and a full archival node is not technically a requirement for our purposes. Pruning is perfectly safe from a security perspective, however it can lead to annoying circumstances where you may have to resync the bitcoin blockchain from scratch when loading a wallet. The authors of this guide prefer not to use pruned nodes for this reason.
 
-If wish to avoid pruning, your full node (the online computer) must have atleast 2TB of internal storage space. You can either buy a computer with sufficient internal storage included, or you can purchase a 2TB 2.5 inch SATA SSD for around $250 (as of this post) and replace the internal storage drive on the full node computer. 2TB of internal storage will last about 10 years (as of this post) before it needs to be upgraded to acccomdate the size of the blockchain.
+If wish to use a pruned node you should first copy the `~/bitcoin-31.1/bitcoin.conf` into your `~/.bitcoin` folder. Then you will want to open the `bitcoin.conf` file for editing (use Text Editor unless you know vim or nano).
 
-Upgrading your internal storage drive usually requires removing the cover screws on the bottom of the laptop, removing the old drive and then inserting the new one and then replacing the cover. This is not a particularly difficult process, however, the exact steps will depend upon your computer model.
+On a new line (any line that does not start with a `##`) add the following `prune=5500`. This number corresponds to the size of your prune cache. The number provided here is 5.5GB. It is not reccomended that you exceed approximately 70% of your available storage space on your online computer for your prune cache, but a larger prunce cache is better.
 
-If you are upgrading the storage on an existing full node you will have to reinstall ubuntu and then resync the bitcoin blockchain from scratch (unless you have a way to copy the block data you've already downloaded to the new drive). Ensure you do NOT add the `prune=5500` line to your `~/.bitcoin/bitcoin.conf` file if you do not wish to prune.
+If you have 64GB of internal storage space use `prune=10000`.
 
-You can also use a 2TB NVME drive if you prefer this over SATA. If your computer supports both form factors, best practice would be to pick either SATA or NVME, and then ensure there is only 1 storage drive inside the computer.
+If you have 128GB of internal storage space use `prune=80000`.
 
-It is best to only have one internal drive because, if your online computer contains both a SATA drive and an NVME drive and if you install ubuntu on the drive you are not intending to use for storage, you will need to manually mount the second storage drive from within linux. You will then need to configure your data directory within either the `~.bitcoin/Bitcoin.conf` or using bitcoin-cli flags (`-datadir=/path/to/storage`) in order to use it for your block data. If you install Ubuntu on the same drive you intend to use for storage this should not be an issue.
+If you have 256GB of internal storage space use `prune=160000`
 
-## Q: What to do about this error "wallet loading failed. Prune: last wallet synchronization goes beyond pruned data." when importing the "multisig_watch_wallet" in step B5?
+If you have 512GB of internal storage space use `prune=350000`
 
-See [this explainer](wallet_loading_failed.md) and solution.
+If you have 1TB of internal storage space use `prune=750000`
+
+## Q: What to do about this error on my pruned node: "wallet loading failed. Prune: last wallet synchronization goes beyond pruned data." when importing the "multisig_watch_wallet" in step B5?
+
+A: See [this explainer](wallet_loading_failed.md) and solution.
