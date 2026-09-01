@@ -143,7 +143,7 @@ Note: If you are using the file explorer you will need to click the drop down ar
 Add the following line anywhere in the file, make sure it's not on a line with `##`
 
 ```
-prune=5500
+prune=10000
 ```
 
 Then click save and close the bitcoin.conf file.
