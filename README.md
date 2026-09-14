@@ -4,7 +4,7 @@
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.25
+Guide Version: 1.26
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -420,19 +420,23 @@ After copying a key run the following command, replace `key_#` with the name of 
 After loading all 3 of the keys, sign the PSBT with this script in the terminal
 
 ```
+set -euo pipefail
+
 psbt=$(cat ~/Desktop/unsigned.psbt)
 
-wallet1=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets |jq -r '.[0]')
-wallet2=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets |jq -r '.[1]')
-wallet3=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets |jq -r '.[2]')
+wallet1=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets | jq -e -r '.[0]')
+wallet2=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets | jq -e -r '.[1]')
+wallet3=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets | jq -e -r '.[2]')
 
-psbt_1=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet1" walletprocesspsbt "$psbt" | jq -r '.psbt')
-psbt_2=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet2" walletprocesspsbt "$psbt_1" | jq -r '.psbt')
-psbt_3=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet3" walletprocesspsbt "$psbt_2" | jq -r '.psbt')
-
-echo "$psbt_3" > ~/Desktop/signed.psbt
+psbt_1=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet1" walletprocesspsbt "$psbt" | jq -e -r '.psbt')
+psbt_2=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet2" walletprocesspsbt "$psbt_1" | jq -e -r '.psbt')
+out=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet3" walletprocesspsbt "$psbt_2")
+echo "$out" | jq -e '.complete == true' >/dev/null
+echo "$out" | jq -e -r '.psbt' > ~/Desktop/signed.psbt
 
 ```
+
+Note: If this script stops with an error, signing failed and `signed.psbt` was not written. Do not copy a leftover file onto the transfer USB.
 
 Note: There is a chance this process will fail if you attempt to run the signing script above with your "multisig_watch_wallet" loaded on the \*offline computer\*. To avoid this, only have 3 keys loaded when signing and nothing else. You can unload the watch wallet with the following command:
 
@@ -462,8 +466,12 @@ Note: Verifying the PSBT is not necessary for test transactions, but when moving
 ## C6. [online computer] Broadcast Transaction
 
 ```
+set -euo pipefail
+
 psbt=$(cat ~/Desktop/signed.psbt)
-hex=$(~/bitcoin-31.1/bin/bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
+out=$(~/bitcoin-31.1/bin/bitcoin-cli finalizepsbt "$psbt")
+echo "$out" | jq -e '.complete == true' >/dev/null
+hex=$(echo "$out" | jq -e -r '.hex')
 ~/bitcoin-31.1/bin/bitcoin-cli sendrawtransaction "$hex"
 
 ```
