@@ -133,7 +133,9 @@ However, this adds logistical complexity to the user experience because it requi
 
 Another idea that comes to mind would be improving the privacy of the onchain footprint with tools like tapscript or FROST. Presently the wallet script yeti-2.0 uses gets revealed on chain when you spend coins from the multisig wallet. Our script is unique enough that it does mean casual observers can track how much money moves out of yeti-2.0 wallets on chain. 
 
-We use what is called a wrapped script hash, each address has its own unique script hash, and a single spend only publishes the child keys at that one index. Nobody can derive other addresses for your wallet from one revealed script. In plain english that means someone can only see that you were using yeti scripts onchain after you spend. 
+Yeti uses native P2WSH (Pay-to-Witness-Script-Hash). When a coin is spent, the 3-of-7 witness script is revealed. Because 3-of-7 is uncommon, spent coins have a smaller anonymity set and can carry a recognizable Yeti-like fingerprint, especially when combined with outside information. One revealed script does not reveal every other address in the wallet.
+
+The 3-of-7 construction also has higher witness weight, and therefore higher transaction fees, than smaller multisig constructions.
 
 The first and most important step to protect your privacy under these constraints is to never re-use a Bitcoin address.
 
