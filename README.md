@@ -152,61 +152,70 @@ Note: It is important to always properly shut down Bitcoin Core before turning o
 
 You should see a message that says "Bitcoin Core Stopping"
 
+## Step A4.5: [online computer] Stage Software for the Offline Signer
+
+The second USB stick (the one without tape) will be the transfer USB. Insert it into the online computer.
+
+Create a folder named `yeti-offline` on the transfer USB and copy these already-verified files from `~/Downloads` into it:
+
+- `bitcoin-31.1-x86_64-linux-gnu.tar.gz`
+- `SHA256SUMS`
+- `SHA256SUMS.asc`
+- the `guix.sigs-main` folder
+
+Also download a copy of this guide into the same folder:
+
+```
+wget -O ~/Downloads/README.md https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)
+```
+
+Copy `~/Downloads/README.md` into `yeti-offline`, run `sync`, then remove the transfer USB.
+
+The offline signer will verify Bitcoin Core again before using it. The signer itself must never be connected to a network.
+
 ## Step A5: Switch to \*offline computer\*
 
 Now switch to the second computer, this will be the \*offline computer\*. Place a piece of tape on this computer to mark it.
 
-Insert the Linux USB (the one with tape) and turn the computer on. Remember if you are not greeted by the Ubuntu installer, you may need to adjust the boot order in the BIOS. From this point forward the Linux USB will remain plugged into the \*offline computer\* (remember both the \*offline computer\* and the Linux USB are marked with tape).
+Ensure no Ethernet cable is connected. Insert the Linux USB (the one with tape) and turn the computer on. Remember if you are not greeted by the Ubuntu installer, you may need to adjust the boot order in the BIOS. From this point forward the Linux USB will remain plugged into the \*offline computer\* (remember both the \*offline computer\* and the Linux USB are marked with tape).
 
-Within the Ubuntu installer wizard, choose the option to connect to either Wi-Fi or LAN, this will be temporary.
+Within the Ubuntu installer wizard, do not connect to Wi-Fi or LAN.
 
 At the end of the Ubuntu installer wizard select `Try Ubuntu`.
 
-## Step A6: [\*offline computer\*] Install Updates and Software
-
-## [\*offline computer\*] Download this guide
-
-You can open this guide in your browser on the offline machine for now and leave it open, we will disable networking shortly and it will no longer be accessible if you accidentally close it. So we will download a copy just in case.
-
-Open a terminal and copy and paste the following command in the home directory and press enter.
-
-```
-wget -O README.md https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/README.md?$(date +%s)
-```
-
-You should now have this guide in the Home directory.
-
-You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
-
-### [\*offline computer\*] Install Bitcoin Core
-
-Repeat Step A3 on the \*offline computer\*.
-
-### [\*offline computer\*] Install Brasero
-
-Open a terminal and run the following command
-
-```
-sudo apt update
-sudo apt -y install brasero
-```
-
-Press enter and wait for it to finish. You may see a dpkg error in the terminal after installing Brasero but this can safely be ignored.
-
-Note: The authenticity of the Brasero software is automatically checked by Ubuntu's apt package manager. Brasero is needed so we can make backups of our keys and burn them to M-Discs.
-
-## Step A7: [\*offline computer\*] Disable Networking 
-
-Within the terminal copy and run the following command:
+Immediately open a terminal and disable all networking functionality:
 
 ```
 nmcli networking off
 rfkill block bluetooth
 ```
 
-This command will disable all networking functionality (Wi-Fi, LAN, and Bluetooth)
+Do not enable networking at any point during this boot session.
 
-### [\*offline computer\*] Disable any swap space
+## Step A6: [\*offline computer\*] Install Bitcoin Core from the Transfer USB
+
+Insert the transfer USB and copy the `yeti-offline` folder into the Home directory.
+
+Copy `README.md` from `~/yeti-offline` into the Home directory. You can run `less README.md` to read this guide in a terminal.
+
+Verify the Bitcoin Core archive again on the offline signer:
+
+```
+cd ~/yeti-offline
+sha256sum --ignore-missing --check SHA256SUMS
+gpg --import guix.sigs-main/builder-keys/*
+gpg --verify SHA256SUMS.asc SHA256SUMS
+```
+
+Ensure the hash reports `OK` and that you see the expected good signatures, just as in Step A3. If verification fails, **STOP AND DO NOT PROCEED**.
+
+Unpack Bitcoin Core:
+
+```
+tar -xzf ~/yeti-offline/bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
+```
+
+## Step A7: [\*offline computer\*] Disable any swap space
 
 Swap space is virtual RAM that is borrowed from the internal storage drive. Open a terminal and run this command to verify that there is no swap space enabled on the \*offline computer\*.
 
@@ -277,7 +286,7 @@ Press Enter.
 
 ## Step B5: [\*offline computer\*] Export the Watch-Only Wallet Descriptor
 
-Grab the second USB stick (with no tape), this will be the transfer USB. Insert it into the \*offline computer\*. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
+Grab the transfer USB (the second USB stick, with no tape). Insert it into the \*offline computer\*. Copy `~/.bitcoin/wallets/multisig_watch_wallet` onto the transfer USB and then remove the transfer USB from the \*offline computer\*.
 
 Note: If you are using the file explorer to drag & drop to copy files you will need to click the drop down arrow in the top right corner of the window and click on "Show hidden files". The `~/.bitcoin` folder is hidden by default.
 
@@ -294,7 +303,18 @@ You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user inte
 ## Step B6: [\*offline computer\*] Backup Keys
 Now back up each of the 7 keys and the wallet descriptor.
 
-Use Brasero to create 7 M-Disc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M-Disc and write the number 1 on it with a permanent marker, insert disc 1 into the USB connected disc drive. Then use Brasero to create an ISO of key_1 & the multisig_watch_wallet from `~/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this ISO to disc 1. Repeat for all 7 keys.
+Ubuntu 26.04.1 includes `xorriso`, so the offline signer does not need to download optical-disc software. First run `xorriso -devices` and identify the USB optical drive (commonly `/dev/sr0`).
+
+Take an M-Disc and write the number 1 on it with a permanent marker, insert it into the USB optical drive, then burn `key_1`, `multisig_watch_wallet`, and `README.md` with:
+
+```
+xorriso -outdev /dev/sr0 -blank as_needed \
+  -map ~/.bitcoin/wallets/key_1 /key_1 \
+  -map ~/.bitcoin/wallets/multisig_watch_wallet /multisig_watch_wallet \
+  -map ~/README.md /README.md
+```
+
+Replace `/dev/sr0` if `xorriso -devices` reports a different device. Repeat for all 7 keys, changing `key_1` to the matching key number each time.
 
 1 = key_1 & multisig_watch_wallet
 
@@ -495,24 +515,9 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 By this point you should already have a good understanding of how this works. The \*offline computer\* does not have any persistence. This is for your security, so no keys are ever written to the computer's storage, they can never be recovered without the backup discs. Each time you wish to sign a PSBT with the \*offline computer\* follow these steps carefully...
 
-Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `Try Ubuntu`
+Before booting the signer, use the online computer to place the current Bitcoin Core archive, signed hashes, builder keys, and guide on the transfer USB as described in Step A4.5.
 
-Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
-
-### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
-
-### [\*offline computer\*] Disable Networking
-
-```
-nmcli networking off
-rfkill block bluetooth
-```
-
-### [\*offline computer\*] Disable Swap Space
-
-```
-sudo swapoff -a
-```
+Follow Steps A5 through A7: boot the fresh live signer without connecting it to any network, immediately disable networking, then verify and unpack Bitcoin Core from the transfer USB and disable swap before inserting any key material.
 
 From here the process for spending from the multisig is the same as above.
 
@@ -546,4 +551,3 @@ rm -r ~/bitcoin-31.1
 ```
 
 Then repeat steps A2 through A4 on your online computer. You will NOT need to redownload the blockchain after updating the software to the latest version.
-
