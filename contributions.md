@@ -9,3 +9,5 @@ The general idea is that we hyperlink concepts that come up in the main guide an
 We have one example of this already with the `verify_ubuntu.md` subguide. This is linked to from the main guide where appropriate, there are open issues for some other subguide ideas that would be nice to have, we are open to suggestions.
 
 We are open to the idea of some subguides for optional changes to the setup, although this will require more extensive review because we are targeting a very opinionated key management system. We do not believe that choose-your-own-adventure style key management is the best practice when making recomendations. 
+
+Perhaps one of the most important considerations still up for debate should be the upper bound $ value this system is appropriate for securing. We are confident that one could design a system to securely store $100M+, but that is not the design objective for yeti-2.0. Rather, the design objective is to provide reasonable and accessible security practices to capable but less technical users. 

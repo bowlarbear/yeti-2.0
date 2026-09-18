@@ -4,7 +4,7 @@
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.26
+Guide Version: 1.27
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -538,16 +538,12 @@ For security you should always turn off the \*offline computer\* after you finis
 
 Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 
-Remember: You should check your key backups periodically and refresh the backups once every 7-10 years. This would mean copying the contents of a backup disc onto a fresh M-Disc or archival grade DVD, then adding it to the envelope to be stored beside the original. If at any point one of your backups becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
-
-## Updating Bitcoin Core on the Full Node (online Computer)
-
-This guide will be updated to support the latest stable release of Bitcoin Core. That means the scripts provided in this guide will not work for you if you do not have the latest version installed. When this happens the version of Bitcoin on your computer `~/bitcoin-31.1` will look different than the number in the scripts in this guide. 
-
-To upgrade the software on your node to the latest version, simply run this command in the terminal:
+Remember: [Keep your software up to date](update_software.md).
 
 ```
 rm -r ~/bitcoin-31.1
 ```
 
 Then repeat steps A2 through A4 on your online computer. You will NOT need to redownload the blockchain after updating the software to the latest version.
+Remember: You should check your key backups periodically and refresh the backups once every 7-10 years. This would mean copying the contents of a backup disc onto a fresh M-Disc or archival grade DVD, then adding it to the envelope to be stored beside the original. If at any point one of your backups becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
+

@@ -11,7 +11,7 @@ wget https://releases.ubuntu.com/26.04.1/SHA256SUMS
 wget https://releases.ubuntu.com/26.04.1/SHA256SUMS.gpg
 gpg --keyid-format long --keyserver hkp://keyserver.ubuntu.com --recv-keys 0x46181433FBB75451 0xD94AA3F0EFE21092
 gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
-sha256sum -c SHA256SUMS 2>&1 | grep OK
+sha256sum -c SHA256SUMS
 ```
 
 ## MacOS users

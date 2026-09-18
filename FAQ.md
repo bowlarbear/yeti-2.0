@@ -6,6 +6,14 @@ A: The main purpose of this guide is to provide users with a complete, opinionat
 
 The second purpose of this guide is to educate users on what a secure & well-designed key management system looks like and how all of the design tradeoffs were made. 
 
+At a high level this system mitigates the main ways self custody results in lost Bitcoin. 
+
+We mitigate remote compromise by using Bitcoin Core, not extra wallet software or vendor firmware, on dedicated machines with a clean install of Linux.
+
+We mitigate physical theft by requiring three geographically distributed keys to spend.
+
+We mitigate key loss risk by backing up 7 keys, so up to four can be lost and the vault still works.
+
 ## Q: Why Bitcoin Core?
 
 A: Bitcoin Core is the reference implementation for Bitcoin. It is one of the most conservative and highly scrutinized pieces of software in the world. It is the foundational pillar upon which the entire network rests. Linux is also one of the most conservative and highly scrutinized pieces of software in the world. It is the foundational pillar of safe and reliable Open Source Software. By using self-installed Linux + Bitcoin Core as our foundation we are striving to create the smallest possible attack surface for secure Bitcoin Storage.
