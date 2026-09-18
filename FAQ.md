@@ -127,9 +127,7 @@ We accept one dedicated offline machine to generate our keys because of how we c
 
 ## Q: Are there any other ways to improve this that are out of scope?
 
-A: There is always room for improvement. The biggest one that comes to mind outside of the two optimizations discussed above would be, when signing a PSBT, only loading 1 key per boot session, and transferring the PSBT to a new boot session after signing with 1 key. This would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. 
-
-However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
+A: There is always room for improvement. The normal spending path now keeps the signing quorum geographically separated: sign with one key per boot session and move the partially signed PSBT to the next key location. Separate signer devices or independent people provide stronger isolation still.
 
 Another idea that comes to mind would be improving the privacy of the onchain footprint with tools like tapscript or FROST. Presently the wallet script yeti-2.0 uses gets revealed on chain when you spend coins from the multisig wallet. Our script is unique enough that it does mean casual observers can track how much money moves out of yeti-2.0 wallets on chain. 
 
