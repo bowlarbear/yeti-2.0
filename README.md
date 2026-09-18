@@ -358,6 +358,20 @@ After loading the wallet, run this command to generate a new address:
 ~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
 
+For any significant deposit, independently verify this address on the \*offline computer\* before sending funds to it. Do not rely on the online computer alone to tell you where to send Bitcoin.
+
+1. Write the proposed receive address to the transfer USB as a text file.
+2. On the \*offline computer\*, copy `multisig_watch_wallet` from any backup disc into `~/.bitcoin/wallets`, load it, and run:
+
+```
+~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "<receive_address>"
+```
+
+3. Confirm that the result contains `"ismine": true`. If it does not, **STOP! DO NOT SEND FUNDS TO THAT ADDRESS.**
+4. Before approving the deposit, compare the destination shown by the sending wallet or exchange with the address you verified on the offline computer.
+
+After verification, unload `multisig_watch_wallet` from the offline computer before continuing with the signing instructions.
+
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). 
 
 Note: Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT.
@@ -546,4 +560,3 @@ rm -r ~/bitcoin-31.1
 ```
 
 Then repeat steps A2 through A4 on your online computer. You will NOT need to redownload the blockchain after updating the software to the latest version.
-
