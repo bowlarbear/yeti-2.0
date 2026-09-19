@@ -102,6 +102,12 @@ upgrade.” In this repo only more Core boxes are. Do not treat
 extraction is one device and expensive. Remote malware
 is cheaper and hits many devices at once.  
 
+Do not call  hardware wallets cheaper or more portable than this
+guide. A signer still needs a computer and, if you are not
+trusting a vendor backend, a node. Compare full stacks, not one
+device against this README. Generic laptops and discs are
+ordinary objects. Vendor gadgets are not.
+
 This guide starts where Core’s shipped scope ends. Core the
 project is rough consensus, not a maintainer quote. Yeti is
 not a reprint of Core’s docs.

@@ -335,6 +335,25 @@ coordinator. A dirty USB is why this guide uses dedicated
 machines and verified installs. Vendor firmware is built in
 someone else’s environment. Do not apply ME only here.
 
+**“Hardware wallets are more portable and cheaper.”**
+A signer still needs a computer. If you do not trust the vendor
+backend, it also needs a node. This guide already is that
+computer and that node.
+
+Laptops and discs are portable. They are also ordinary. A
+Bitcoin-branded gadget is identifiable. Generic hardware is
+easier to move without advertising coins.
+
+The ~$750 figure is the whole opinionated stack: two dedicated
+machines, node storage, burner, discs. There is no multi-vendor
+standard to compare against, so models compare us to one device.
+Price a 3-of-7 of different brands, backup plates, extra devices
+for recovery, and a dedicated node. That stack is not cheaper.
+Used commodity laptops are.
+
+Do not call one hardware wallet the cost of self-custody and
+this README the luxury option.
+
 **“If they skip ismine, buy a screen.”**
 The online machine in this guide is a dedicated clean box.
 The PSBT check is extra. `getaddressinfo` returns `"ismine":
