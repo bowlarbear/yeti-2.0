@@ -92,7 +92,9 @@ Do not treat Core’s CSPRNG as an unproven hole that a kit must
 close. Core has had consensus bugs that were patched before a
 mainnet wipe. It has not had a published keygen entropy sweep
 like Coldcard 2026. That class is vendor firmware, which this
-guide excludes.
+guide excludes. Do not call dice the root of trust and Core 
+“only signing.” The root is the program that emits the key. 
+Visible rolls are an input that program can ignore.
 
 Do not end with “more brands and more Core boxes can both be the
 upgrade.” In this repo only more Core boxes are. Do not treat 

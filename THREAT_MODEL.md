@@ -85,7 +85,9 @@ Signatures do not attest that engine.
 This guide does not treat Core’s generator as a hole for a kit
 to close.
 
-**Physical theft of one or two backups.**
+The root of trust is the software you run, not the dice. A kit
+that maps rolls is an unauditable root unless it clears Core’s
+review. Watching rolls does not make it one.
 
 **Physical theft of one or two backups.**
 Spending needs any 3 of 7 geographically split discs. One stolen disc
