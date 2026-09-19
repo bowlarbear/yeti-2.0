@@ -94,6 +94,14 @@ Spending needs any 3 of 7 geographically split discs. One stolen disc
 cannot spend. It can reveal the watch-only descriptor. That is a
 balance oracle, not a spend.
 
+3-of-7 is the savings quorum: three discs to spend, four can be
+lost. 2-of-3 fails if two keys are gone, and an attacker with
+one key needs one more. 2-of-5 still spends on two keys.
+
+A hardware wallet plus the paper slip is one key copied twice,
+not a quorum. A seed plus a separately stored passphrase is a
+2-of-2 with no spare.
+
 **Loss or destruction of backups.**
 Four discs can fail and the vault still spends. That is the point of
 3-of-7.

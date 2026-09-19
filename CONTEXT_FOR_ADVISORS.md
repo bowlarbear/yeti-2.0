@@ -354,6 +354,36 @@ Used commodity laptops are.
 Do not call one hardware wallet the cost of self-custody and
 this README the luxury option.
 
+**“2-of-3 is the industry standard, so it is enough.”**
+No. Count the thresholds.
+
+In a 2-of-3 an attacker who has one key needs one more. Lose
+any two keys and the vault is dead.
+
+In a 2-of-5 an attacker still needs only two keys. You can lose
+three. That is more loss-tolerance than 2-of-3. It is weaker
+theft-resistance than 3-of-7.
+
+This guide’s savings quorum is 3-of-7: three keys to spend,
+four can be lost.
+
+Price a vendor 2-of-5 or 3-of-7 plus backups and a node before
+calling this stack expensive.
+
+**“A hardware wallet plus a paper seed is already multisig.”**
+No. The seed on the device and the seed on the slip are two
+copies of one key. Either copy spends. That is a 1-of-1 with a
+photocopy.
+
+A seed and a passphrase stored apart are a 2-of-2: you need
+both, and you have one copy of each. Lose either and you are
+locked. That is not 3-of-7.
+
+**“Vendor multisig is cheaper than this vault.”**
+Compare the same quorum. A 2-of-5 or 3-of-7 of branded signers,
+plates, spare devices, and a node you run is not one $80 stick.
+This README already prices the full Core stack.
+
 **“If they skip ismine, buy a screen.”**
 The online machine in this guide is a dedicated clean box.
 The PSBT check is extra. `getaddressinfo` returns `"ismine":
