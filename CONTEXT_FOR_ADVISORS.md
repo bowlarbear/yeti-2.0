@@ -185,6 +185,10 @@ firmware and non-Core coordinators as “good enough,” then hiding
 behind “it was a bug” when coins move. Plausible deniability is
 the product feature of that habit, not of this repo.
 
+Those same firms fund a lot of the explainers that start with
+“just buy a hardware wallet.” Treat that as advertising, not as
+an audit of the firmware.
+
 Do not end with “pick the failure you refuse to accept” as if
 vendor firmware and Bitcoin Core were two equal hobbies.
 

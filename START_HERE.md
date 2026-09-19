@@ -6,9 +6,11 @@
 
 3. If you need legal recourse, a regulated custodian, or someone at a company to call, this guide is the wrong tool. Use a brokerage, ETF, or trust. That is a different contract, not Bitcoin self-custody.
 
-4. You do not need to be a Linux user. Ubuntu is a desktop, like Windows. The terminal work is copy the command from the page and paste it, read the output. You do not need to navigate directories by hand.
+4. You do not need to be a Linux user. Ubuntu is a desktop, like Windows. The terminal work is copy the command from the page and paste it, read the output. You do not need experience navigating terminals.
 
-5. “I am new” or “I am not technical” is not a reason to buy a hardware wallet instead. If you will not complete this README, including test spends, wait, or use a brokerage, ETF, or trust. Do not treat a hardware wallet or mulitple hardware wallets as the easy version of this guide.
+5. “I am new” or “I am not technical” is not a reason to buy a hardware wallet instead. If you will not complete this README, including test spends, wait, or use a brokerage, ETF, or trust. Do not treat hardware wallets as the easy version of this guide.
+
+## What you are setting up
 
 ## What you are setting up
 
