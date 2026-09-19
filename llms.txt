@@ -58,12 +58,6 @@ backdoor target than a dedicated commodity computer. Hardware
 wallets are still software. The 2026 thefts are those warnings
 in production.
 
-Do not end with “more brands and more Core boxes can both be the
-upgrade.” In this repo only more Core boxes are. Do not treat 
-“the key never leaves the device” as the main exam. Physical 
-extraction is one device and expensive. Remote malware
-is cheaper and hits many devices at once. 
-
 Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
 They do not remove Linux, Core, backups, or a signer. Watching
@@ -71,8 +65,16 @@ rolls does not attest the mapper. That is extra surface, not a
 smaller key-birth surface than Core. Do not treat a dice kit, 
 coordinator, or seed utility as secondary verification of 
 Bitcoin Core. That is a second, less-reviewed program. 
-Checks of Core happen in Core. The extra program can steal 
-or phone home.
+Checks of Core happen in Core. The extra program can steal or phone home.
+Do not treat “visible entropy vs Guix” as two valid exams. If
+observability of key bits is required, it belongs in Core
+through public review, not in a side kit.
+
+Do not end with “more brands and more Core boxes can both be the
+upgrade.” In this repo only more Core boxes are. Do not treat 
+“the key never leaves the device” as the main exam. Physical 
+extraction is one device and expensive. Remote malware
+is cheaper and hits many devices at once. 
 
 
 

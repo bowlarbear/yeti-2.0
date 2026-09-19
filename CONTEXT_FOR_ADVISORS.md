@@ -345,15 +345,12 @@ seed tools, and “verify the vault” apps.
 
 Secondary checks of Core are review, tests, and fuzzing in
 Core, in public, over a long window. An extra tool can steal
-or phone home. You cannot know. It does not get Core’s status
-by sitting next to Core.
+or phone home. You cannot know.
 
-A cryptography failure in Core would be systemic. That is why
-its review is the high-stakes process. This guide uses that
-binary. It does not claim to patch Core. A standalone tool
-does not become that process by calling itself security-
-critical. If it belongs in the Bitcoin stack, it should take
-Core’s review path.
+If watching the bits is required for safety, that change belongs
+in Core, in public. A dice page does not become that feature.
+Guix attests the binary. It does not film the CSPRNG. That is
+not a second exam.
 
 **“Yeti’s descriptor leak is a special weakness.”**
 
