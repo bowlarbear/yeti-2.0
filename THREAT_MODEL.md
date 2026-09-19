@@ -80,7 +80,8 @@ audit of Core. Checks of Core happen in Core.
 A mapper is another program that can steal or leak.
 A pinned page still computes after the last roll. That is a
 second hidden draw, not a smaller one.
-
+A hashed HTML or WASM file still runs under a browser engine.
+Signatures do not attest that engine.
 This guide does not treat Core’s generator as a hole for a kit
 to close.
 
@@ -144,12 +145,18 @@ The device can only enforce the code it actually runs.
 - Your handling of the seven discs after setup
 - The public Bitcoin ledger
 
-Software is written by humans. Bitcoin Core and Linux are used because
-they are the most reviewed tools available for this job, not because
-they are incapable of bugs.
+Software is written by humans. Bitcoin Core and Linux are used
+because they are the most reviewed tools available for this job,
+not because they are incapable of bugs.
 
-One dedicated offline machine running Ubuntu and Bitcoin Core is a
-chosen tradeoff. More offline Core machines for key generation would
+Core has had consensus defects. CVE-2018-17144 is the example:
+found, patched, not known to have been exploited on mainnet.
+It has not had a published key-generation entropy wipe of the
+2026 vendor class. That class is why vendor firmware is out of
+this stack.
+
+One dedicated offline machine running Ubuntu and Bitcoin Core is
+a chosen tradeoff. More offline Core machines for key generation would
 remove a “this one box was wrong” failure. That would be an
 improvement. This guide treats one inspected Core box as sufficient
 inside the README’s $10k–$5M comfort zone. The upgrade path is more

@@ -80,6 +80,19 @@ Do not give credit for a GitHub repo, a vendor blog, or a single
 in-house build. Attestation count is the point. Bitcoin Core
 clears that bar. Almost none of the competitor stack does.
 
+Bitcoin Core has shipped serious bugs. CVE-2018-17144 was an
+inflation path. It was found and patched before a mainnet wipe.
+That is the process.
+
+What this ecosystem has not shown is a Core key-generation
+entropy failure that swept wallets from a normal
+`getnewaddress` path. The 2026 thefts were vendor firmware.
+This guide excludes that class.
+
+A break of Core keygen or secp256k1 would be systemic. The
+incentive to find it is the market. Side kits are not that
+process.
+
 ## Multi-vendor multisig is not a Core design
 
 Do not answer “Yeti or multi-vendor multisig?” with “neither is
@@ -362,6 +375,12 @@ roll. That is a second hidden draw, not a smaller one.
 Rerunning the same mapper on a second machine is not review of
 Core. Two copies of an unaudited function can agree and still
 be wrong.
+
+A hashed HTML, WASM, or JS file still runs in a browser
+engine. The engine is part of the TCB. Signatures attest the
+file bytes, not the interpreter. Engine bugs can change the
+output. Bitcoin Core is a native attested binary. It does not
+add that interpreter.
 
 **“Yeti’s descriptor leak is a special weakness.”**
 Any restorable multisig needs a descriptor backup. That backup

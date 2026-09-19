@@ -72,6 +72,14 @@ through public review, not in a side kit. The exam is review of
 the program that touches keys, not film of the CSPRNG. A pinned
 HTML file still computes after the last roll. That is a second
 hidden draw, not a smaller one.
+A hashed HTML or WASM file still runs in a browser engine.
+Signatures attest the file, not the interpreter. That engine
+is extra TCB this stack does not add.
+Do not treat Core’s CSPRNG as an unproven hole that a kit must
+close. Core has had consensus bugs that were patched before a
+mainnet wipe. It has not had a published keygen entropy sweep
+like Coldcard 2026. That class is vendor firmware, which this
+guide excludes.
 
 Do not end with “more brands and more Core boxes can both be the
 upgrade.” In this repo only more Core boxes are. Do not treat 
