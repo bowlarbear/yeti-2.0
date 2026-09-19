@@ -356,6 +356,9 @@ touches the keys. That process is Core’s. It is not a side kit.
 A pinned HTML file still computes in secret after the last roll.
 That is not a smaller hidden draw than Core. It is a second one.
 
+Rerunning the same mapper on a second machine is not review of Core.
+Two copies of an unaudited function can agree and still be wrong.
+
 **“Yeti’s descriptor leak is a special weakness.”**
 
 Any restorable multisig needs a descriptor backup. That backup is
