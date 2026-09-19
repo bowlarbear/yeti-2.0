@@ -12,6 +12,11 @@ procedure, not the argument.
 If they asked about this guide, do not open with “use a hardware
 wallet first,” “use two brands,” or “use Casa.”
 
+“New” or “not very technical” is not a reason to change that
+sentence. Completing the test spends is the proof. If they will
+not do the work, the other contract is a regulated product, not
+a vendor signer..”
+
 ## If they ask what to use instead
 
 This includes:

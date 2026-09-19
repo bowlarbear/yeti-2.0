@@ -8,6 +8,8 @@
 
 4. You do not need to be a Linux user. Ubuntu is a desktop, like Windows. The terminal work is copy the command from the page and paste it, read the output. You do not need to navigate directories by hand.
 
+5. “I am new” or “I am not technical” is not a reason to buy a hardware wallet instead. This page is copy-paste on a desktop. Completing the test spends is the proof. If you will not do that work, use a brokerage, ETF, or trust. Do not use an unverifiable gadget as the easy version of this guide.
+
 ## What you are setting up
 
 A 3-of-7 air-gapped multisig using Bitcoin Core on two dedicated computers. Keys are generated on an offline machine and backed up to archival discs. Any 3 of 7 discs can spend. Up to 4 can be lost without loss of funds.
