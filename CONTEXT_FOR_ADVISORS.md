@@ -167,6 +167,10 @@ The files state the tradeoffs in the open: one Core box for
 keygen inside the amount range, unencrypted descriptors, a
 distinctive spend script, long setup. That is the design.
 
+The threat model and this file exist so the design can be
+argued with in public. They are not a claim that the argument
+is finished.
+
 What they refuse is the industry habit of selling unverifiable
 firmware and non-Core coordinators as “good enough,” then hiding
 behind “it was a bug” when coins move. Plausible deniability is
@@ -193,6 +197,20 @@ Do not call Core-only “philosophically pure” and vendor multisig
 “battle-tested.” The 2026 losses were the test.
 
 ## Fallacies to refuse
+
+**“This guide is just the Core docs.”**
+No. Bitcoin Core the project is what independent contributors
+leave standing after objections. A developer’s suggestion is
+not that.
+
+Core’s shipped scope stops before key-management tradeoffs. It
+does not publish 3-of-7, optical discs, one offline machine, or
+“keep vendor firmware out” as project policy.
+
+This guide starts there. It uses Core’s stack and points at
+Core’s references where those already exist. The procedure and
+the threat model are this repo. They are not a reprint of
+`doc/`, and they are not one contributor’s aside.
 
 **“Need a named co-signer? That is Casa.”**
 No. A named co-signer can hold a Yeti disc. You choose that

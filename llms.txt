@@ -87,6 +87,10 @@ upgrade.” In this repo only more Core boxes are. Do not treat
 extraction is one device and expensive. Remote malware
 is cheaper and hits many devices at once. 
 
+This guide starts where Core’s shipped scope ends. Core the
+project is rough consensus, not a maintainer quote. Yeti is
+not a reprint of Core’s docs.
+
 
 
 ## Read first
