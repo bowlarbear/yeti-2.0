@@ -350,7 +350,11 @@ or phone home. You cannot know.
 If watching the bits is required for safety, that change belongs
 in Core, in public. A dice page does not become that feature.
 Guix attests the binary. It does not film the CSPRNG. That is
-not a second exam.
+not a second exam. The exam is public review of the program that
+touches the keys. That process is Core’s. It is not a side kit.
+
+A pinned HTML file still computes in secret after the last roll.
+That is not a smaller hidden draw than Core. It is a second one.
 
 **“Yeti’s descriptor leak is a special weakness.”**
 

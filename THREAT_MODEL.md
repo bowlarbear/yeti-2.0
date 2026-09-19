@@ -76,9 +76,13 @@ Core on the clean offline machine.
 
 Extra tools sold as a check of Core are the same class. A
 coordinator, a seed utility, or a dice page is not a second
-audit. Checks of Core happen in Core. The extra program can
-steal or leak. This guide does not treat Core’s generator as a
-hole for a kit to close.
+audit of Core. Checks of Core happen in Core.
+A mapper is another program that can steal or leak.
+A pinned page still computes after the last roll. That is a
+second hidden draw, not a smaller one.
+
+This guide does not treat Core’s generator as a hole for a kit
+to close.
 
 **Physical theft of one or two backups.**
 

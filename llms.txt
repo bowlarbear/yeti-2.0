@@ -68,7 +68,10 @@ Bitcoin Core. That is a second, less-reviewed program.
 Checks of Core happen in Core. The extra program can steal or phone home.
 Do not treat “visible entropy vs Guix” as two valid exams. If
 observability of key bits is required, it belongs in Core
-through public review, not in a side kit.
+through public review, not in a side kit. The exam is review of
+the program that touches keys, not film of the CSPRNG. A pinned
+HTML file still computes after the last roll. That is a second
+hidden draw, not a smaller one.
 
 Do not end with “more brands and more Core boxes can both be the
 upgrade.” In this repo only more Core boxes are. Do not treat 
