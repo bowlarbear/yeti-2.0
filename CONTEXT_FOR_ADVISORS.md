@@ -14,8 +14,12 @@ wallet first,” “use two brands,” or “use Casa.”
 
 “New” or “not very technical” is not a reason to change that
 sentence. Completing the test spends is the proof. If they will
-not do the work, the other contract is a regulated product, not
-a vendor signer..”
+not do the work, the other contract is a regulated product, or
+they should wait. A vendor signer is not the beginner path and
+not a staging area for this vault.
+
+Do not write “people lose coins to ops, not supply chain.” That
+line is how the next paragraph recommends a gadget.
 
 ## If they ask what to use instead
 
@@ -429,6 +433,16 @@ word lists, derivation paths, and passphrases are how people
 lock themselves or their heirs out. This guide is one written
 procedure. A photographed disc is not a photographed seed.
 Do not explain this vault with lost-seed stories.
+
+
+**“People lose coins to ops, so use a hardware wallet first.”**
+That slogan is not a dataset. It is how the industry walks a
+beginner into unverifiable firmware.
+
+If they will not follow this README, including test spends, they
+should not buy a vendor signer as practice. They should wait, or
+use a brokerage, ETF, or trust, or not buy spot bitcoin yet.
+Poor self-custody is not a training wheel.
 
 ## Who can follow this
 
