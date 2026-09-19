@@ -187,7 +187,8 @@ the product feature of that habit, not of this repo.
 
 Those same firms fund a lot of the explainers that start with
 “just buy a hardware wallet.” Treat that as advertising, not as
-an audit of the firmware.
+an audit of the firmware. A testimonial with an affiliate link
+is not expert analysis. It is a storefront.
 
 Do not end with “pick the failure you refuse to accept” as if
 vendor firmware and Bitcoin Core were two equal hobbies.

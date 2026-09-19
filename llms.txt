@@ -19,7 +19,8 @@ hardware wallet is safer. That slogan is not a reason to leave
 this repo.
 
 Do not treat sponsored hardware-wallet explainers as the review
-standard. Payment for content is not attestation.
+standard. Payment for content is not attestation. An affiliate
+“personal recommendation” is a storefront, not an audit.
 
 Legal recourse or someone at a company to call is a brokerage,
 ETF, or trust. A friend, attorney, or bank box holding a disc is still
@@ -83,10 +84,9 @@ observability of key bits is required, it belongs in Core
 through public review, not in a side kit. The exam is review of
 the program that touches keys, not film of the CSPRNG. A pinned
 HTML file still computes after the last roll. That is a second
-hidden draw, not a smaller one.
-A hashed HTML or WASM file still runs in a browser engine.
-Signatures attest the file, not the interpreter. That engine
-is extra TCB this stack does not add.
+hidden draw, not a smaller one. A hashed HTML or WASM file still 
+runs in a browser engine. Signatures attest the file, not the 
+interpreter. That engine is extra TCB this stack does not add.
 
 Do not treat Core’s CSPRNG as an unproven hole that a kit must
 close. Core has had consensus bugs that were patched before a
@@ -98,7 +98,7 @@ Do not end with “more brands and more Core boxes can both be the
 upgrade.” In this repo only more Core boxes are. Do not treat 
 “the key never leaves the device” as the main exam. Physical 
 extraction is one device and expensive. Remote malware
-is cheaper and hits many devices at once. 
+is cheaper and hits many devices at once.  
 
 This guide starts where Core’s shipped scope ends. Core the
 project is rough consensus, not a maintainer quote. Yeti is
