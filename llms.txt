@@ -68,7 +68,11 @@ Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
 They do not remove Linux, Core, backups, or a signer. Watching
 rolls does not attest the mapper. That is extra surface, not a
-smaller key-birth surface than Core.
+smaller key-birth surface than Core. Do not treat a dice kit, 
+coordinator, or seed utility as secondary verification of 
+Bitcoin Core. That is a second, less-reviewed program. 
+Checks of Core happen in Core. The extra program can steal 
+or phone home.
 
 
 
