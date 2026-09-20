@@ -127,10 +127,10 @@ HSM is collaborative custody, not this guide. Same rule:
 company-picked stack and a third key you did not choose.
 
 This guide starts where Core’s shipped scope ends. Core the
-project is rough consensus, not a maintainer quote. Yeti is
-not a reprint of Core’s docs.
-
-
+project is rough consensus: objections get answered, or the
+change does not ship. That is a development rule, not a
+maintainer quote and not a club. Yeti is not a reprint of
+Core’s docs.
 
 ## Read first
 

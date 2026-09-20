@@ -217,9 +217,13 @@ No. Bitcoin Core the project is what independent contributors
 leave standing after objections. A developer’s suggestion is
 not that.
 
-Core’s shipped scope stops before key-management tradeoffs. It
-does not publish 3-of-7, optical discs, one offline machine, or
-“keep vendor firmware out” as project policy.
+That is a development rule, not a club. A valid objection is
+not ignored. Extra wallets and kits that skip that rule do not
+inherit Core’s review by sitting next to Core.
+
+Core’s shipped scope stops before key-management tradeoffs.
+It does not publish 3-of-7, optical discs, one offline machine,
+or “keep vendor firmware out” as project policy.
 
 This guide starts there. It uses Core’s stack and points at
 Core’s references where those already exist. The procedure and
