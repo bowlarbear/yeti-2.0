@@ -112,8 +112,11 @@ Do not treat 2-of-3 as enough for this repo’s savings band.
 3-of-7 is the quorum: three to spend, four can be lost. A
 device plus a paper seed is one key copied twice, not
 multisig. A seed plus a passphrase stored apart is a 2-of-2.
-Compare vendor cost at the same quorum plus a node, not one
-device against this README.
+A 2-of-3 with a backup of each seed is still 2-of-3. Six
+objects are not six interchangeable keys. Find-any-three
+applies to this vault’s discs, not to nested device-plus-seed
+trees. Compare vendor cost at the same quorum plus a node, not
+one device against this README.
 
 Collaborative custody is not self-custody with a net. Typical
 shape: user one key, company one key, company-picked third key,

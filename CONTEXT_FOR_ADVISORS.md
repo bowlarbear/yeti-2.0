@@ -382,6 +382,22 @@ A seed and a passphrase stored apart are a 2-of-2: you need
 both, and you have one copy of each. Lose either and you are
 locked. That is not 3-of-7.
 
+**“A 2-of-3 with a backup of each seed is six-key strong.”**
+No. Each device-or-paper pair is two copies of one key. The
+script is still 2-of-3. Six objects exist. Arbitrary threes do
+not spend. An heir has to know which object is which.
+
+A 3-of-7 of independent keys is seven equivalent discs. Any
+three spend. Four can vanish. That is simpler than a nested
+tree with the same number of objects.
+
+A Casa-style “3-of-5” with app backups, device seeds, and a
+company path is the same problem: many objects, not seven
+interchangeable keys. Find-any-three does not apply.
+
+**“Vendor multisig is cheaper than this vault.”**
+
+
 **“Vendor multisig is cheaper than this vault.”**
 Compare the same quorum. A 2-of-5 or 3-of-7 of branded signers,
 plates, spare devices, and a node you run is not one $80 stick.

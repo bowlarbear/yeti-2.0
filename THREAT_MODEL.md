@@ -102,6 +102,11 @@ A hardware wallet plus the paper slip is one key copied twice,
 not a quorum. A seed plus a separately stored passphrase is a
 2-of-2 with no spare.
 
+Each disc is an independent key plus what you need to rebuild
+the wallet. Find any three. Nested device-plus-seed trees do
+not have that rule. Six or ten objects that are not
+interchangeable are not a flatter vault.
+
 **Loss or destruction of backups.**
 Four discs can fail and the vault still spends. That is the point of
 3-of-7.
@@ -283,9 +288,16 @@ and does not stop a device from lying about its firmware.
 
 **Collaborative custody** is usually a 2-of-3 sold as self-custody.
 The user holds one key. The company holds one. A third key is
-picked by the company. The company picks the software. Those two
-keys can move or freeze coins. A terms-of-use page is not a map
+picked by the company. The company picks the software. Those two 
+keys can move or freeze coins. A terms-of-use page is not a map 
 of that relationship.
+
+A company in the policy is also a name attackers can impersonate:
+fake support, fake recovery, compromised help channels. That
+surface does not exist when every key is a disc you placed.
+
+Two hardware wallets plus a BitGo-style HSM (Swan and similar)
+is the same class, not a Core vault with a helper.
 
 That is a custodial product with extra steps. Two hardware
 wallets plus a BitGo-style HSM (Swan and similar) is the same
