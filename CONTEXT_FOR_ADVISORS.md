@@ -473,6 +473,16 @@ Splitting “I generate elsewhere, I sign with Core” adds a second
 root. It does not remove Core from the stack if you still import.
 It does not make the kit Core’s review process.
 
+**“BYOE only adds visible dice.”**
+It also adds a ritual. A wrong roll or the wrong recipe is a
+different key. Filming the rolls leaks them. An “offline” HTML
+file in a browser that has been on the network is not an air
+gap. Importing BIP39 one place and a Core wallet another is two
+vaults.
+
+Those are new loss and leak paths. They are not a free audit of
+Core.
+
 **“This extra tool is secondary verification of Core.”**
 No. A less-reviewed program is not a second check of Bitcoin
 Core. That includes dice pages, entropy kits, coordinators,
