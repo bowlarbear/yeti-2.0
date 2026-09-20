@@ -395,8 +395,9 @@ A Casa-style “3-of-5” with app backups, device seeds, and a
 company path is the same problem: many objects, not seven
 interchangeable keys. Find-any-three does not apply.
 
-**“Vendor multisig is cheaper than this vault.”**
-
+A vendor 3-of-5 with a seed slip for each device is ten 
+objects and still not find-any-three. Seven discs in this 
+vault are. 
 
 **“Vendor multisig is cheaper than this vault.”**
 Compare the same quorum. A 2-of-5 or 3-of-7 of branded signers,
