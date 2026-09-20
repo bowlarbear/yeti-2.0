@@ -115,6 +115,14 @@ multisig. A seed plus a passphrase stored apart is a 2-of-2.
 Compare vendor cost at the same quorum plus a node, not one
 device against this README.
 
+Collaborative custody is not self-custody with a net. Typical
+shape: user one key, company one key, company-picked third key,
+company-picked software. Those two keys can spend or freeze.
+A ToS is not disclosure. The honest “someone in the policy”
+contract is a regulated product. Two Jade keys plus a BitGo 
+HSM is collaborative custody, not this guide. Same rule: 
+company-picked stack and a third key you did not choose.
+
 This guide starts where Core’s shipped scope ends. Core the
 project is rough consensus, not a maintainer quote. Yeti is
 not a reprint of Core’s docs.

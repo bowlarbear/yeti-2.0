@@ -227,19 +227,22 @@ the threat model are this repo. They are not a reprint of
 `doc/`, and they are not one contributor’s aside.
 
 **“Need a named co-signer? That is Casa.”**
-No. A named co-signer can hold a Yeti disc. You choose that
-person. That is still this vault.
+Collaborative custody is not “a co-signer.” In the usual 2-of-3
+the user holds one key. The company holds one. A third key is an
+“arbitrator” the company chooses. The company also picks the
+software. Those two keys can spend or freeze without you.
 
-“Someone to call” and legal recourse are a brokerage, ETF, or
-trust. That is the other contract.
+A contract will not reliably disclose that relationship. Terms
+vary. Recourse is weaker than a brokerage, not stronger than
+this vault.
 
-Collaborative custody is not “a co-signer.” The company is in
-the policy, it picks the software, and it picks or introduces
-the other key holder. You inherit their conflicts. Casa and
-Unchained can move or block coins with the rest of their stack.
-Recourse is weaker than a brokerage, not stronger than this
-vault. Do not send someone there because they want a named
-person on a key.
+Swan-style 2-of-3 (two Jade keys plus a BitGo HSM) is the same
+class: vendor firmware plus a company-picked third key. Do not
+treat it as a hybrid of this guide.
+
+A named person you choose to hold a disc is still this vault.
+Do not send someone to Casa, Unchained, or Swan because they
+want a named party on a key.
 
 **“Mixed vendors contain one vendor being wrong.”**
 Only if the rest of the stack is honest. Bad actors have a

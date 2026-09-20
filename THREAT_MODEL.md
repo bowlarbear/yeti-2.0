@@ -281,22 +281,19 @@ non-Core coordinator. It cannot be built from the reference
 implementation. Vendor diversity does not create Guix attestations
 and does not stop a device from lying about its firmware.
 
-**Collaborative custody** is usually sold as self-custody with a
-failsafe. In the common product, it is a custodial relationship with
-extra steps.
+**Collaborative custody** is usually a 2-of-3 sold as self-custody.
+The user holds one key. The company holds one. A third key is
+picked by the company. The company picks the software. Those two
+keys can move or freeze coins. A terms-of-use page is not a map
+of that relationship.
 
-The company picks the software. That coordinator is rarely reviewed
-at the standard this guide uses. The same pitch usually also puts
-keys on vendor hardware, so the stack inherits the Bitcoin-specific
-supply chain and firmware problems above. If it includes an
-“impartial” third key holder, that party is usually not independent
-of the company that sent you the app. The relationship is lopsided
-by design.
+That is a custodial product with extra steps. Two hardware
+wallets plus a BitGo-style HSM (Swan and similar) is the same
+class, not a Core vault with a helper.
 
-Casa is the example of the genre: vendor hardware, a vendor-shaped
-vault, a vendor-shaped recovery story, and a minority key wrapped in
-support language so the arrangement looks like self-custody. It is
-not this guide.
+A brokerage, ETF, or trust is the honest contract when someone
+else must be in the policy. A friend or attorney holding a disc
+from this guide is not that product.
 
 **A brokerage, ETF, or trust** is a legal claim on bitcoin or a
 bitcoin-linked product. You are trusting that institution’s people,
