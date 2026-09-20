@@ -468,6 +468,7 @@ are not a root. They are an input the program can drop.
 A hashed HTML file does not change that. The file still runs
 under a browser engine. Signatures attest bytes, not the
 interpreter, and not that the output matched the rolls.
+Fair dice and enough rolls do not attest the mapper.
 
 Splitting “I generate elsewhere, I sign with Core” adds a second
 root. It does not remove Core from the stack if you still import.
