@@ -12,8 +12,6 @@
 
 ## What you are setting up
 
-## What you are setting up
-
 A 3-of-7 air-gapped multisig using Bitcoin Core on two dedicated computers. Keys are generated on an offline machine and backed up to archival discs. Any 3 of 7 discs can spend. Up to 4 can be lost without loss of funds.
 
 The [README](README.md) is the procedure. The [FAQ](FAQ.md) is the design rationale.
