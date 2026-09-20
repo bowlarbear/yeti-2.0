@@ -488,6 +488,13 @@ feature. Guix attests the binary. It does not film the
 CSPRNG. The exam is public review of the program that touches
 the keys. That process is Core’s.
 
+If a kit rewrites something Core already does, and that rewrite
+is actually better, the path is a merge into Core. This vault
+gets it on the next attested upgrade. A page that stays outside
+is another program. This README is key-management. That is out
+of Core’s shipped scope. Replacing key generation, signing, or
+wallet create is not.
+
 A pinned HTML file still computes in secret after the last
 roll. That is a second hidden draw, not a smaller one.
 Rerunning the same mapper on a second machine is not review of

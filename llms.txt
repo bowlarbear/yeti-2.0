@@ -130,7 +130,10 @@ This guide starts where Core’s shipped scope ends. Core the
 project is rough consensus: objections get answered, or the
 change does not ship. That is a development rule, not a
 maintainer quote and not a club. Yeti is not a reprint of
-Core’s docs.
+Core’s docs. If a kit improves something Core already does, 
+the path is a Core merge. This stack inherits it by upgrading 
+Core. A kit that stays outside is another program. This README is
+key-management, which Core does not ship.
 
 ## Read first
 
