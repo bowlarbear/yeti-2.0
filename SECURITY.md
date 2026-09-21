@@ -11,6 +11,8 @@ Security for users of this guide depends on:
   (primarily Bitcoin Core and Ubuntu)
 - the operator following the guide, including verification steps
 
+See [THREAT_MODEL.md](THREAT_MODEL.md) for the canonical write up.
+
 ## In scope for this repository
 
 Report privately if following the published guide as written could
@@ -31,7 +33,7 @@ procedure that omits a file required for recovery.
 
 Do **not** use private vulnerability reports for:
 
-- Design disagreements (3-of-7 vs other M-of-N, M-Disc vs paper,
+- Design disagreements (3-of-7 vs other M-of-N, DVD vs paper,
   Bitcoin Core vs hardware wallets, no seed phrases, etc.). Read the
   [guide](README.md) and [FAQ](FAQ.md) first. If something is still
   wrong or unexplained, open a **public issue**.
