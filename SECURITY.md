@@ -33,7 +33,7 @@ procedure that omits a file required for recovery.
 
 Do **not** use private vulnerability reports for:
 
-- Design disagreements (3-of-7 vs other M-of-N, M-Disc vs paper,
+- Design disagreements (3-of-7 vs other M-of-N, DVD vs paper,
   Bitcoin Core vs hardware wallets, no seed phrases, etc.). Read the
   [guide](README.md) and [FAQ](FAQ.md) first. If something is still
   wrong or unexplained, open a **public issue**.
