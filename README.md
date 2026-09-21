@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.27
+Guide Version: 1.28
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -22,15 +22,17 @@ See the [FAQ](FAQ.md) for answers to common questions about the design.
 
 This multisig vault is only appropriate for storing between $10k-$5M in Bitcoin.
 
+Note: This guide previously recommended Milenniata M-discs but due to user complaints of difficulty sourcing authentic milleniata M-Discs, we've decided to recommend Verbatim brand Ultralife Gold Archival grade DVDs instead.
+
 ## You will need:
 
 - 2 Dedicated Laptops (8GB RAM minimum) (try refurbished ThinkPads) (Chromebooks will not work)
 
 - 2 Fresh USB sticks (16GB minimum) (try Kingston DataTravelers 64GB)
 
-- 7 Millenniata brand M-Disc DVDs 4.7GB or 7 Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB
+- 7 Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB
 
-- 1 USB powered disc drive capable of writing M-Disc DVDs (try ASUS ZenDrive)
+- 1 USB powered disc drive capable of writing DVDs (try ASUS ZenDrive)
 
 - 1 2TB SATA SSD 2.5 inch internal Hard Drive (will last you for approximately 10 years of full archival node storage as of Aug 2026 before requiring an upgrade)
 
@@ -199,7 +201,7 @@ sudo apt -y install brasero
 
 Press enter and wait for it to finish. You may see a dpkg error in the terminal after installing Brasero but this can safely be ignored.
 
-Note: The authenticity of the Brasero software is automatically checked by Ubuntu's apt package manager. Brasero is needed so we can make backups of our keys and burn them to M-Discs.
+Note: The authenticity of the Brasero software is automatically checked by Ubuntu's apt package manager. Brasero is needed so we can make backups of our keys and burn them to DVDs.
 
 ## Step A7: [\*offline computer\*] Disable Networking 
 
@@ -300,7 +302,7 @@ You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user inte
 ## Step B6: [\*offline computer\*] Backup Keys
 Now back up each of the 7 keys and the wallet descriptor.
 
-Use Brasero to create 7 M-Disc backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an M-Disc and write the number 1 on it with a permanent marker, insert disc 1 into the USB connected disc drive. Then use Brasero to create an ISO of key_1 & the multisig_watch_wallet from `~/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this ISO to disc 1. Repeat for all 7 keys.
+Use Brasero to create 7 DVD backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an DVD and write the number 1 on it with a permanent marker, insert disc 1 into the USB connected disc drive. Then use Brasero to create an ISO of key_1 & the multisig_watch_wallet from `~/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this ISO to disc 1. Repeat for all 7 keys.
 
 1 = key_1 & multisig_watch_wallet
 
@@ -413,7 +415,7 @@ Insert the transfer USB (no tape) into the \*offline computer\*. Copy or drag an
 Note: Verifying the PSBT is not necessary for test transactions, but when moving larger amounts you should always verify the contents before and after signing. It is worth practicing the process on at least 1 test transaction. 
 
 ### [\*offline computer\*] Load the Keys
-Choose 3 of the M-Discs, insert them one at a time into the \*offline computer\*'s USB connected disc drive, and copy the key_# directory into `~/.bitcoin/wallets`.
+Choose 3 of the DVDs, insert them one at a time into the \*offline computer\*'s USB connected disc drive, and copy the key_# directory into `~/.bitcoin/wallets`.
 
 After copying a key run the following command, replace `key_#` with the name of the key you copied into `~/.bitcoin/wallets`
 
@@ -484,7 +486,7 @@ Repeat this process (steps C1 through C6) until you've tested all 7 of the key b
 
 3rd transaction: key7, + any 2 other keys
 
-Warning: If any of the test transactions fail during this process, the best thing to do is to go back to step C4 and try again. If it still doesn't work then something is wrong and you should stop. Delete all PSBTs on both computers' `~/Desktop`. Delete the multisig_watch_wallet on the transfer USB. Delete both of the `.bitcoin/wallets` folders on both computers, and start over at step A5 with fresh M-Discs.
+Warning: If any of the test transactions fail during this process, the best thing to do is to go back to step C4 and try again. If it still doesn't work then something is wrong and you should stop. Delete all PSBTs on both computers' `~/Desktop`. Delete the multisig_watch_wallet on the transfer USB. Delete both of the `.bitcoin/wallets` folders on both computers, and start over at step A5 with fresh DVDs.
 
 Only after you have successfully completed all 3 test transactions, testing all 7 keys as described above, will you have confirmed that the wallet is working properly.
 
@@ -541,5 +543,5 @@ Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. 
 
 Remember: [Keep your software up to date](update_software.md).
 
-Remember: You should check your key backups periodically and refresh the backups once every 7-10 years. This would mean copying the contents of a backup disc onto a fresh M-Disc or archival grade DVD, then adding it to the envelope to be stored beside the original. If at any point one of your backups becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
+Remember: You should check your key backups periodically and refresh the backups approximately once every 7 years. Archival grade DVDs are rated to last for 100 years, but this refresh routine is a good practice to ensure that none of the keys in your vault have been lost. This would mean copying the contents of a backup disc onto a fresh archival grade DVD, then adding it to the envelope to be stored beside the original. If at any point one of your backups becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
 
