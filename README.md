@@ -496,7 +496,7 @@ The next step is to place each of the 7 backup discs into 7 different envelopes.
 
 The 7 envelopes must be geographically distributed to 7 different locations. 
 
-You now have a secure, Bitcoin multisig vault that can only be accessed by gathering 3 geographically distributed keys. 
+You now have a secure Bitcoin multisig vault that requires signatures from 3 geographically distributed keys.
 
 
 # D. How to use the Wallet Normally
@@ -525,16 +525,12 @@ sudo swapoff -a
 From here the process for spending from the multisig is the same as above.
 
 Next time you want to spend Bitcoin from the multisig:
-1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (step C4)
-2. [\*offline computer\*] insert transfer USB into the \*offline computer\*, drag the unsigned PSBT onto the desktop (step C4)
-3. [\*offline computer\*] [verify the PSBT contents](verify_psbt.md) (step C5)
-4. [\*offline computer\*] collect any 3 of the key discs, insert them 1 at a time and drag the key folders into the `~/.bitcoin/wallets` folder (step C5)
-5. [\*offline computer\*] load the keys from the terminal (step C5)
-6. [\*offline computer\*] sign the PSBT (step C5)
-7. [\*offline computer\*] drag the signed PSBT from the desktop onto the transfer USB, remove the transfer USB and insert it into the online computer (step C5)
-8. [online computer] drag the signed PSBT from the transfer USB onto the desktop (step C5)
-9. [online computer] [verify the PSBT contents](verify_psbt.md) (step C5)
-10. [online computer] broadcast the signed PSBT (step C6)
+
+1. [online computer] Create the unsigned PSBT and copy it to the transfer USB as `current.psbt` (step C4).
+2. [\*offline computer\*] Take the offline computer and `current.psbt` to the first key location. [Verify and sign with one key](geographic_signing.md).
+3. [\*offline computer\*] Power off the computer. Travel to the second key location and repeat step 2.
+4. [\*offline computer\*] Power off the computer. Travel to the third key location and repeat step 2.
+5. [online computer] Copy `current.psbt` to the Desktop as `signed.psbt`, verify it, and broadcast it (steps C5 and C6).
 
 
 For security you should always turn off the \*offline computer\* after you finish signing and exporting a PSBT.
@@ -544,4 +540,3 @@ Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. 
 Remember: [Keep your software up to date](update_software.md).
 
 Remember: You should check your key backups periodically and refresh the backups approximately once every 7 years. Archival grade DVDs are rated to last for 100 years, but this refresh routine is a good practice to ensure that none of the keys in your vault have been lost. This would mean copying the contents of a backup disc onto a fresh archival grade DVD, then adding it to the envelope to be stored beside the original. If at any point one of your backups becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
-
