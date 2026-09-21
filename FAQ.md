@@ -69,19 +69,19 @@ Bitcoin native multisig on Bitcoin Core makes use of Bitcoin script embedded in 
 
 Beyond this, we back up in Bitcoin Core's WIF and wallet descriptor formats so recovery does not depend on a mnemonic standard Core does not implement. We use archival grade optical discs and refresh them every 7-10 years so the copy itself does not rot. We use the CD/DVD form factor because it is a long-stable spec and is readable with cheap, generic drives. This means recovery does not depend on Bitcoin-specific hardware devices.
 
-## Q: Why M-Discs specifically?
+## Q: Why DVDs specifically?
 
-A: All of the backups created with yeti-2.0 are written to Millenniata M-Discs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under the proper storage conditions the manufacturer claims they will last up to 1,000 years. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option, Verbatim claims these discs will last up to 100 years under proper storage conditions. 
+A: All of the backups created with yeti-2.0 are written to archival grade DVDs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under the proper storage conditions the manufacturer claims they will last up to 1,000 years. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option, Verbatim claims these discs will last up to 100 years under proper storage conditions. 
 
 You should still check your backups periodically and refresh the backups at least once every 7-10 years to be safe, this would be a good strategy with any key management stack. If the storage conditions for some of your backups are less ideal (heat or direct sunlight or moisture) you should check those backups more frequently.
 
 ## Q: If you don't write down seed words, how can you ensure key backups are safe?
 
-A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case. All key backups created with this guide are backed up on M-Discs, which are sufficient given the inherent redundancy of a proper multisig vault. 
+A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case. All key backups created with this guide are backed up on DVDs, which are sufficient given the inherent redundancy of a proper multisig vault. 
 
 You CAN write down your wallet descriptor and all of your xprivs and xpubs by hand if you really want to, but we don't recommend it in the guide because it's painful and prone to human error and entirely unnecessary if you follow the guide as written.
 
-A much better way to add redundancy rather than hand writing wallet descriptors would be to buy both Millenniata M-Discs and Verbatim gold DVDs. These are on a similar tier of archival grade storage quality as M-Disc, then you could make two backups of each key. For example, key_1 & multisig watch wallet would get backed up on 1 M-Disc and 1 Gold DVD, both would be marked with the number 1, and both would then be placed into the same envelope.
+A much better way to add redundancy rather than hand writing wallet descriptors would be to buy extra Verbatim gold DVDs. Then you could make two backups of each key and both would then be placed into the same envelope.
 
 ## Q: Why can't I provide my own entropy with dice rolls or coin flips?
 
@@ -161,15 +161,15 @@ A: This guide is free and open source. You can do whatever you want, and we can'
 
 A: Yes, if you follow this guide carefully there is no reason why you couldn't just run through the setup twice, the first time as a test and then the second time for real. The advantage to doing this is not having to set up the computer infrastructure a second time, so it will be shorter and easier.
 
-We recommend testing with CD-R instead of M-Disc if you are playing around because M-Discs can be more expensive. DO NOT use CD-R for a serious attempt at storing money.
+We recommend testing with CD-R instead of archival grade DVDs if you are playing around because these can be more expensive. You should not use CD-R for a serious attempt at storing money as they are less reliable.
 
-After you complete your test run, simply delete your "multisig_watch_wallet" from `~/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with M-Discs. 
+After you complete your test run, simply delete your "multisig_watch_wallet" from `~/.bitcoin/wallets` folder on your online machine. Then reboot the offline machine to clear out its memory and run through the guide a second time but with DVDs. 
 
 ## Q: What happens if I lost my node or if I need to set up a new one?
 
-A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch-only wallet descriptor is backed up on each of the 7 M-Discs.
+A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch-only wallet descriptor is backed up on each of the 7 DVDs.
 
-To load this watch-only wallet descriptor back into your node, boot into your offline machine like you normally would, insert one of your key backup M-Discs and copy the "multisig_watch_wallet" onto your transfer USB, then transfer this wallet onto your node and load it into Bitcoin Core as explained in step B5. 
+To load this watch-only wallet descriptor back into your node, boot into your offline machine like you normally would, insert one of your key backup DVDs and copy the "multisig_watch_wallet" onto your transfer USB, then transfer this wallet onto your node and load it into Bitcoin Core as explained in step B5. 
 
 ## Q: What would happen to my Bitcoin if this guide disappears tomorrow?
 
