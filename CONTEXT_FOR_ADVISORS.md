@@ -267,7 +267,7 @@ vault does not ask for more of that than a multi-vendor setup.
 
 The coins are on the chain. Destroy the node and the vault is
 still there. The discs do not require a calendar to keep
-working. A 7–10 year M-Disc refresh is cheap caution, not a
+working. A 7–10 year DVD refresh is cheap caution, not a
 condition of the design. Heirs do not need two machines kept
 warm in advance. Run your own node. Do not treat a vendor
 backend as the high-security option.
