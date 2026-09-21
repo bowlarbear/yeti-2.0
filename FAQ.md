@@ -127,9 +127,7 @@ We accept one dedicated offline machine to generate our keys because of how we c
 
 ## Q: Are there any other ways to improve this that are out of scope?
 
-A: There is always room for improvement. The normal spending path now keeps the signing quorum geographically separated: sign with one key per boot session and move the partially signed PSBT to the next key location. Separate signer devices or independent people provide stronger isolation still.
-
-Another idea that comes to mind would be improving the privacy of the onchain footprint with tools like tapscript or FROST. Presently the wallet script yeti-2.0 uses gets revealed on chain when you spend coins from the multisig wallet. Our script is unique enough that it does mean casual observers can track how much money moves out of yeti-2.0 wallets on chain. 
+A: One idea would be improving the privacy of the onchain footprint with tools like tapscript or FROST. Presently the wallet script yeti-2.0 uses gets revealed on chain when you spend coins from the multisig wallet. Our script is unique enough that it does mean casual observers can track how much money moves out of yeti-2.0 wallets on chain.
 
 We use what is called a wrapped script hash, each address has its own unique script hash, and a single spend only publishes the child keys at that one index. Nobody can derive other addresses for your wallet from one revealed script. In plain english that means someone can only see that you were using yeti scripts onchain after you spend. 
 
