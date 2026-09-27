@@ -209,7 +209,7 @@ Within the terminal copy and run the following command:
 
 ```
 nmcli networking off
-rfkill block bluetooth
+rfkill block all
 ```
 
 This command will disable all networking functionality (Wi-Fi, LAN, and Bluetooth)
@@ -513,7 +513,7 @@ Temporarily connect to your home network, download and verify Bitcoin Core. Down
 
 ```
 nmcli networking off
-rfkill block bluetooth
+rfkill block all
 ```
 
 ### [\*offline computer\*] Disable Swap Space
