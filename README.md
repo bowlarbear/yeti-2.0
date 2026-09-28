@@ -297,7 +297,7 @@ Insert the transfer USB into the online computer. Copy the multisig_watch_wallet
 ~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 
-You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) with the online computer to load this wallet, see the transaction history, check the balance of the wallet, and broadcast fully signed Bitcoin Transactions. It is not advised to use Bitcoin-QT to create PSBTs as this can cause errors when signing with the steps in this guide. 
+You can use either bitcoin-cli or bitcoin-Qt (Bitcoin Core's graphical user interface) with the online computer to load this wallet, see the transaction history, check the balance of the wallet, and broadcast fully signed Bitcoin Transactions. It is not advised to use Bitcoin-Qt to create PSBTs as this can cause errors when signing with the steps in this guide. 
 
 ## Step B6: [\*offline computer\*] Backup Keys
 Now back up each of the 7 keys and the wallet descriptor.
@@ -356,7 +356,7 @@ start Bitcoin Core again
 
 Note: You can generate addresses on your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder.
 
-Note: In order to generate new addresses the "multisig_watch_wallet" must be loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" and generate a receive address for a QR code.
+Note: In order to generate new addresses the "multisig_watch_wallet" must be loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" and generate a receive address for a QR code.
 
 To use the cli, load the wallet like in step B5. 
 
@@ -368,7 +368,7 @@ After loading the wallet, run this command to generate a new address:
 
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). 
 
-Note: Alternatively, you can also generate a QR code for this address if you use Bitcoin-QT.
+Note: Alternatively, you can also generate a QR code for this address if you use Bitcoin-Qt.
 
 
 ## C3. [online computer] Check the Balance of the Wallet
