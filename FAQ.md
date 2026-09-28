@@ -135,9 +135,9 @@ A: There is always room for improvement. The biggest one that comes to mind outs
 
 However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
 
-## Q: Does using a 3-of-7 hurt your on chain privacy?
+## Q: Does using a 3-of-7 hurt your on-chain privacy?
 
-A: No, it does not hurt your on chain privacy. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. If you want on chain privacy and unlinkability use a reputable Coin Join implementation on the way in and out, and do not reuse Bitcoin addresses. This is true of every Bitcoin wallet, not just this one. 
+A: No, it does not hurt your on-chain privacy. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. If you want on-chain privacy and unlinkability use a reputable CoinJoin implementation on the way in and out, and do not reuse Bitcoin addresses. This is true of every Bitcoin wallet, not just this one. 
 
 Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. That is off-chain identity, not the script type. 
 
@@ -181,15 +181,15 @@ These would be potential subguide ideas if you are interested in contributing. O
 
 ## Q: Why destroy the offline signer, and recreate it again from scratch after each use? 
 
-A: There are several reasons we opted to do this. The first reason is because it is better for user security and privacy to keep the offline signer stateless, this ensures that the offline computer is not a privacy or a security leak and does not need to be kept secure when not in use. Key material never touches the device while it is network enabled. Creating your offline signer from scratch each time instead of keeping it for later reduces attack surface by ensuring key material never persists. It also reduces complexity by reducing the amount of materials users need to secure in between uses.
+A: There are several reasons we opted to do this. The first reason is that it is better for user security and privacy to keep the offline signer stateless. This ensures that the offline computer is not a privacy or a security leak and does not need to be kept secure when not in use. Key material never touches the device while it is network enabled. Creating your offline signer from scratch each time instead of keeping it for later reduces attack surface by ensuring key material never persists. It also reduces complexity by reducing the amount of materials users need to secure in between uses.
 
-The second reason is because it's good practice to always use the latest version of the Bitcoin software. If a user has an older version of the software in persistent storage, they may not update the software before using their signer. 
+The second reason is that it's good practice to always use the latest version of the Bitcoin software. If a user has an older version of the software in persistent storage, they may not update the software before using their signer. 
 
 The third reason is related to the first, in that the terminal commands provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-31.1 in their persistent storage and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why. 
 
-The fourth reason is because permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly, accounting for these potential permissions conflicts was deemed undesirable.
+The fourth reason is that permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly.
 
-You could avoid destroying and recreating your offline signer after each use by keeping a copy of Bitcoin Core and this guide on a USB stick or in a persistent storage partition, and import it to your offline machine after booting into the Live session. Be prepared to troubleshoot any issues that might arise with terminal command compatibility, file & directory permissions, or accidental persisting of key material.
+Accounting for these above potential conflicts was deemed undesirable. You could avoid destroying and recreating your offline signer after each use by keeping a copy of Bitcoin Core and this guide on a USB stick or in a persistent storage partition, and import it to your offline machine after booting into the Live session. Be prepared to troubleshoot any issues that might arise with terminal command compatibility, file and directory permissions, or accidental persisting of key material.
 
 ## Q: Can I use assumeutxo to speed up the IBD on the full node?
 
