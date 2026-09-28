@@ -1,5 +1,3 @@
-<img width="993" height="204" alt="image" src="https://github.com/user-attachments/assets/7be26af0-f6f4-4b20-9839-8c38ff3bbd05" /># Frequently Asked Questions
-
 Threat-model details live in [THREAT_MODEL.md](THREAT_MODEL.md)
 
 ## Q: What is the purpose of this guide?
