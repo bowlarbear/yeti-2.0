@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+<img width="993" height="204" alt="image" src="https://github.com/user-attachments/assets/7be26af0-f6f4-4b20-9839-8c38ff3bbd05" /># Frequently Asked Questions
 
 Threat-model details live in [THREAT_MODEL.md](THREAT_MODEL.md)
 
@@ -137,13 +137,11 @@ A: There is always room for improvement. The biggest one that comes to mind outs
 
 However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
 
-Another idea that comes to mind would be improving the privacy of the onchain footprint with tools like tapscript or FROST. Presently the wallet script yeti-2.0 uses gets revealed on chain when you spend coins from the multisig wallet. Our script is unique enough that it does mean casual observers can track how much money moves out of yeti-2.0 wallets on chain. 
+## Q: Does using a 3-of-7 hurt your on chain privacy?
 
-We use what is called a wrapped script hash, each address has its own unique script hash, and a single spend only publishes the child keys at that one index. Nobody can derive other addresses for your wallet from one revealed script. In plain english that means someone can only see that you were using yeti scripts onchain after you spend. 
+A: No, it does not hurt your on chain privacy. If you want on chain privacy with any Bitcoin wallet you must use a reputable Coin Join implementation for every transaction in and out of the wallet and never reuse Bitcoin addresses. If you use a reputable Coin Join implementation with Yeti-2.0, you will have good on chain privacy.
 
-The first and most important step to protect your privacy under these constraints is to never re-use a Bitcoin address.
-
-Considering yeti-2.0 does not and can not collect any information about its users, unlike hardware vendors and collaborative-custody services that take shipping, billing, or identity data, there is no trusted third party here to receive it and associate you as a Yeti user. We believe these are acceptable tradeoffs in their present form for the security model this guide was built around.
+Yeti-2.0 does not and can not collect any information about its users, unlike hardware vendors and collaborative-custody services that take shipping, billing, or identity data, here there is no trusted third party here to receive your information and associate you as a Yeti user.
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
