@@ -73,6 +73,8 @@ A: All of the backups created with yeti-2.0 are written to archival grade DVDs, 
 
 You should still check your backups periodically and refresh the backups at least once every 7-10 years to be safe, this would be a good strategy with any key management stack. If the storage conditions for some of your backups are less ideal (heat or direct sunlight or moisture) you should check those backups more frequently.
 
+See [this NIST research](https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8387.pdf) for more information on the use of Optical Media as an archival storage format.
+
 ## Q: If you don't write down seed words, how can you ensure key backups are safe?
 
 A: This is one of the main reasons why we use multisig. Multisig provides all of the benefits of having multiple backups of a single sig seed phrase. If an attacker gets a hold of a single copy of your seed phrase backup, they will be able to steal all of your Bitcoin, but with multisig this is not the case. All key backups created with this guide are backed up on DVDs, which are sufficient given the inherent redundancy of a proper multisig vault. 
@@ -137,9 +139,16 @@ However, this adds logistical complexity to the user experience because it requi
 
 ## Q: Does using a 3-of-7 hurt your on-chain privacy?
 
-A: No, it does not hurt your on-chain privacy. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. If you want on-chain privacy and unlinkability use a reputable CoinJoin implementation on the way in and out, and do not reuse Bitcoin addresses. This is true of every Bitcoin wallet, not just this one. 
+A: A 3-of-7 spend shows a 3-of-7 script. That is true of any wallet with that quorum and is not unique to yeti, this includes using seven hardware wallets. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. If you want on-chain privacy (i.e. unlinkability) use a reputable CoinJoin implementation on the way in and out, and do not reuse Bitcoin addresses. This is true of every Bitcoin wallet.
 
 Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. That is off-chain identity, not the script type. 
+
+## Q: Does using a 3-of-7 hurt your on-chain privacy?
+
+This guide does not take a name, an email, a shipping address,
+or billing information. Hardware vendors and collaborative-
+custody firms often do. That is off-chain identity, not the
+script type.
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
