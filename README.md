@@ -352,11 +352,11 @@ start Bitcoin Core again
 ```
 
 
-## C2. [online computer] Create a Receive Address
+## C2. [\*offline computer\*] Create a Receive Address
 
-Note: You can generate addresses on either your online machine or your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder.
+Note: You can generate addresses on your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder.
 
-Note: In order to check balances and generate new addresses the "multisig_watch_wallet" must be loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" and generate a receive address for a QR code.
+Note: In order to generate new addresses the "multisig_watch_wallet" must be loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-QT" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" and generate a receive address for a QR code.
 
 To use the cli, load the wallet like in step B5. 
 
