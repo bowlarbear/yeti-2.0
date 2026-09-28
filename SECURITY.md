@@ -1,6 +1,6 @@
 # Security Policy
 
-Yeti 2.0 is an opinionated key management tutorial, not an application. This repository
+Yeti 2.0 is a written key-management guide , not an application. This repository
 contains documentation and shell commands for building an air-gapped
 Bitcoin Core multisig vault. It does not ship software to install.
 
@@ -11,7 +11,7 @@ Security for users of this guide depends on:
   (primarily Bitcoin Core and Ubuntu)
 - the operator following the guide, including verification steps
 
-See [THREAT_MODEL.md](THREAT_MODEL.md) for the canonical write up.
+See [THREAT_MODEL.md](THREAT_MODEL.md) for the canonical write-up.
 
 ## In scope for this repository
 
