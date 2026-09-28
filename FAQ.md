@@ -139,16 +139,9 @@ However, this adds logistical complexity to the user experience because it requi
 
 ## Q: Does using a 3-of-7 hurt your on-chain privacy?
 
-A: A 3-of-7 spend shows a 3-of-7 script. That is true of any wallet with that quorum and is not unique to yeti, this includes using seven hardware wallets. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. If you want on-chain privacy (i.e. unlinkability) use a reputable CoinJoin implementation on the way in and out, and do not reuse Bitcoin addresses. This is true of every Bitcoin wallet.
+A: A 3-of-7 spend shows a 3-of-7 script. That is true of any wallet with that quorum and is not unique to Yeti-2.0, this includes using seven hardware wallets. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. Unlinkability (i.e. this deposit is not obviously that withdrawal) takes a reputable CoinJoin implementation on the way in and out, and no address reuse. This is true of every Bitcoin wallet.
 
 Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. That is off-chain identity, not the script type. 
-
-## Q: Does using a 3-of-7 hurt your on-chain privacy?
-
-This guide does not take a name, an email, a shipping address,
-or billing information. Hardware vendors and collaborative-
-custody firms often do. That is off-chain identity, not the
-script type.
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
