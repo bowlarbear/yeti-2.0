@@ -137,9 +137,9 @@ However, this adds logistical complexity to the user experience because it requi
 
 ## Q: Does using a 3-of-7 hurt your on chain privacy?
 
-A: No, it does not hurt your on chain privacy. If you want on chain privacy with any Bitcoin wallet you must use a reputable Coin Join implementation for every transaction in and out of the wallet and never reuse Bitcoin addresses. If you use a reputable Coin Join implementation with Yeti-2.0, you will have good on chain privacy.
+A: No, it does not hurt your on chain privacy. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. If you want on chain privacy and unlinkability use a reputable Coin Join implementation on the way in and out, and do not reuse Bitcoin addresses. This is true of every Bitcoin wallet, not just this one. 
 
-Yeti-2.0 does not and can not collect any information about its users, unlike hardware vendors and collaborative-custody services that take shipping, billing, or identity data, here there is no trusted third party here to receive your information and associate you as a Yeti user.
+Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. That is off-chain identity, not the script type. 
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
