@@ -183,19 +183,17 @@ A: You certainly could do these things. For the sake of keeping the main guide t
 
 These would be potential subguide ideas if you are interested in contributing. Obviously any recommendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
 
-## Q: Why not keep the offline signer permanently offline? 
+## Q: Why destroy the offline signer, and recreate it again from scratch after each use? 
 
-A: You can do this, you could keep a copy of the Bitcoin software on a USB stick and import it to your offline computer each time you boot it so as to avoid temporarily connecting to a network to redownload Bitcoin Core.
+A: There are several reasons we opted to do this. The first reason is because it is better for user security and privacy to keep the offline signer stateless, this ensures that the offline computer is not a privacy or a security leak and does not need to be kept secure when not in use. Key material never touches the device while it is network enabled. Creating your offline signer from scratch each time instead of keeping it for later reduces attack surface by ensuring key material never persists. It also reduces complexity by reducing the amount of materials users need to secure in between uses.
 
-There are several reasons we opted not to do this. The first reason is because it's good practice to always use the latest version of the software. If a user has an older version of the software stored on a USB stick, they may not update the software before using their signer. 
+The second reason is because it's good practice to always use the latest version of the Bitcoin software. If a user has an older version of the software in persistent storage, they may not update the software before using their signer. 
 
-The second reason is related to the first, in that the scripts provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-31.1 on their USB stick and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why. 
+The third reason is related to the first, in that the terminal commands provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-31.1 in their persistent storage and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why. 
 
-The third reason is because permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly, accounting for these potential permissions conflicts was deemed undesirable.
+The fourth reason is because permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly, accounting for these potential permissions conflicts was deemed undesirable.
 
-We believe these tradeoffs are acceptable. Key material never touches the device while it is network enabled. Creating your offline signer from scratch each time instead of keeping it for later reduces attack surface by ensuring key material never persists. It also reduces complexity by reducing the amount of materials users need to track in between uses. 
-
-However, if you prefer to keep your offline signer always offline after initial keygen and backup, this would not require much additional work. Keep a copy of Bitcoin Core on a USB stick and import it to your offline machine, be prepared to troubleshoot any issues that might arise with scripts or permissions from doing so, these issues are not insurmountable, and a complete process for doing so could be added as a subguide.
+You could avoid destroying and recreating your offline signer after each use by keeping a copy of Bitcoin Core and this guide on a USB stick or in a persistent storage partition, and import it to your offline machine after booting into the Live session. Be prepared to troubleshoot any issues that might arise with terminal command compatibility, file & directory permissions, or accidental persisting of key material.
 
 ## Q: Can I use assumeutxo to speed up the IBD on the full node?
 
