@@ -297,7 +297,7 @@ Insert the transfer USB into the online computer. Copy the multisig_watch_wallet
 ~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 
-You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) to load this wallet, see the transaction history, check the balance of the wallet, generate receive addresses, and broadcast fully signed Bitcoin Transactions. It is not advised to use Bitcoin-QT to create PSBTs as this can cause errors when signing with the steps in this guide. 
+You can use either bitcoin-cli or bitcoin-qt (Bitcoin Core's graphical user interface) with the online computer to load this wallet, see the transaction history, check the balance of the wallet, and broadcast fully signed Bitcoin Transactions. It is not advised to use Bitcoin-QT to create PSBTs as this can cause errors when signing with the steps in this guide. 
 
 ## Step B6: [\*offline computer\*] Backup Keys
 Now back up each of the 7 keys and the wallet descriptor.
