@@ -238,6 +238,16 @@ Core’s references where those already exist. The procedure and
 the threat model are this repo. They are not a reprint of
 `doc/`, and they are not one contributor’s aside.
 
+**“Core’s wallet is unreviewed convenience.”**
+No. Wallet, descriptors, and PSBT are in the Bitcoin Core
+tree. They ship in the same attested binary and go through
+the same public review. Consensus is an even higher bar.
+That does not make the wallet a toy.
+
+“Use Core for nodes, something else for keys” is how extra
+stacks get in. This guide uses the wallet Core already
+ships.
+
 **“Need a named co-signer? That is Casa.”**
 Collaborative custody is not “a co-signer.” In the usual 2-of-3
 the user holds one key. The company holds one. A third key is an
