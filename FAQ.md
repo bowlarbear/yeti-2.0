@@ -144,7 +144,7 @@ A 27 Sep 2026 [ChainQuery snapshot](https://chainquery.com/reports/utxo-repartit
 
 Unlinkability (i.e. this receive is not obviously that spend) takes a reputable CoinJoin implementation on the way in and out, and no address reuse. This is true of every Bitcoin wallet.
 
-Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. That is off-chain identity, not the script type. 
+Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. So do exchanges when they KYC a withdrawal. That is off-chain identity. It is different from the script type, and it is the one that attaches metadata to a balance.
 
 ## Q: What should I do if one of my backups gets lost/broken/stolen/tampered with?
 
