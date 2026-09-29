@@ -182,11 +182,18 @@ extra libraries, and extra firmware. Each of those is more attack
 surface.
 
 You cannot run multi-vendor hardware multisig on Bitcoin Core without
-adding extra libraries and a non-Core coordinator. The coordinator
-can serve a malicious descriptor. It can bias nonces or other signing
-input and exfiltrate key material. It can conspire with a vendor.
+adding extra libraries and a non-Core coordinator. A coordinator can serve
+a malicious descriptor. It can bias nonces or other signing input and 
+exfiltrate key material. It can conspire with a vendor.
+
+A coordinator that also holds a hot key is a signer. USB
+hardware on that computer can extract that key and the
+descriptor. In a 2-of-3, vendor firmware plus the hot key is
+enough to spend. This guide does not put a key in the online
+coordinator.
+
 A device can lie about its firmware. A reproducible app can still
-depend on an uncheckable blob. Independent attestation of that full
+depend on an uncheck-able blob. Independent attestation of that full
 build chain is missing.
 
 The common line is that generating keys across several vendors makes
