@@ -341,11 +341,23 @@ Core box is how the keys are born. More Core boxes would be
 stronger than one Core box. Several vendor RNGs are not that
 upgrade.
 
-Naming the $10k–$5M band is honesty. Vendor products do not
-publish a ceiling. Do not score that silence as “no limit,”
-and do not score the band as a win for brands. In this model
-an unverifiable vendor stack is not appropriate for the same
+**"$5M is too low a ceiling"**
+Naming the $10k–$5M band is honesty. Above that, add more Core boxes.
+Vendor products do not publish a ceiling. Do not score that silence 
+as “no limit,” and do not score the band as a win for brands. 
+In this model an unverifiable vendor stack is not appropriate for the same
 savings band.
+
+**“This will never scale to a billion users.”**
+Bitcoin Core and the base chain are not a consumer wallet for
+a billion daily spenders. This guide is a savings vault in a
+stated amount band. It does not claim to be the onboarding
+app.
+
+Sound key management is not an artificial cap on adoption.
+Stacks that steal or lock coins are. A firmware bug that
+empties vaults teaches people not to hold bitcoin. That is
+the inhibitor. This README is not.
 
 **“ThinkPads have ME/PSP, so the supply-chain argument is a wash.”**
 Vendors build and sign on machines with the same class of
