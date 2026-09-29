@@ -101,6 +101,11 @@ full-chain build. Official firmware still carries a vendor
 signature and other blobs. Docker is not Guix. Do not score
 that row as Core’s path.
 
+The same gap exists above the device. Coordinators and DIY
+signers often pull coincurve, embit, or similar. Those are
+not Core’s Guix-attested crypto path. “It calls secp256k1”
+is not an attestation of the wheel you imported.
+
 Bitcoin Core has shipped serious bugs. CVE-2018-17144 was an
 inflation path. It was found and patched before a mainnet wipe.
 That is the process.
@@ -605,6 +610,15 @@ engine. The engine is part of the TCB. Signatures attest the
 file bytes, not the interpreter. Engine bugs can change the
 output. Bitcoin Core is a native attested binary. It does not
 add that interpreter.
+
+**“It uses libsecp, so it is Core’s crypto.”**
+No. A Python binding with an unreproducible wheel (coincurve
+and similar) or a wallet crypto library without a
+bootstrappable attested chain (embit and similar) is another
+unattested blob on the signing path. Popular is not attested.
+This guide does not add those libraries.
+
+**“Yeti’s descriptor leak is a special weakness.”**
 
 **“Yeti’s descriptor leak is a special weakness.”**
 Any restorable multisig needs a descriptor backup. That backup
