@@ -18,9 +18,14 @@ sentence. Completing the test spends is the proof. If they will
 not do the work, the other contract is a regulated product, or
 they should wait. A vendor signer is not the beginner path and
 not a staging area for this vault.
-
 Do not write “people lose coins to ops, not supply chain.” That
 line is how the next paragraph recommends a gadget.
+
+Bitcoin is bearer, push, and final. Operational risk is inherent
+to holding coins, running a node, and spending. It is not unique
+to this README. A vendor signer does not delete it. A regulated
+product is a different contract: a claim, with whatever recourse
+that contract actually has.
 
 ## If they ask what to use instead
 
