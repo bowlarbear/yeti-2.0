@@ -214,6 +214,6 @@ A: See [this solution](pruning.md#error-wallet-loading-failed-prune-last-wallet-
 
 ## Q: Where should I ask a question not answered in this FAQ?
 
-A: The yeti-2.0 repository provides a very detailed context window for LLMs, The best place to start would be to provide any LLM of your choosing with a link to the repo and ask it to answer questions using our frame work. This works great for process specific questions, like when you need more explanation about a particular step in the guide. Additionally it also works surprisingly well for questions around our self custody design theory tradeoffs. 
+A: The best place to start would be to provide any LLM of your choosing with a link to this github repository and ask it to answer questions using our frame work. The yeti-2.0 repository provides a very detailed context window for helping LLMs understand the project and advise users who asking about it. This means it works great for both explanations about a particular step in the guide, and also questions about yeti-2.0's self custody security design tradeoffs.
 
 You are also welcome to open an issue on the repo, however, please thoroughly read the above FAQ and search the closed issues first to avoid duplicates.
