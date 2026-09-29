@@ -113,6 +113,10 @@ trusting a vendor backend, a node. Compare full stacks, not one
 device against this README. Generic laptops and discs are
 ordinary objects. Vendor gadgets are not.
 
+Do not treat a multi-coin hardware wallet as a Bitcoin-only
+signer. Extra networks are extra libraries on the same key.
+Bitcoin-only firmware is still vendor firmware, not Core.
+
 Do not treat 2-of-3 as enough for this repo’s savings band.
 3-of-7 is the quorum: three to spend, four can be lost. A
 device plus a paper seed is one key copied twice, not
