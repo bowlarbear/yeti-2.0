@@ -174,7 +174,7 @@ manipulate advisors.
 
 The files state the tradeoffs in the open: one Core box for
 keygen inside the amount range, unencrypted descriptors, a
-3-of-7 script like any other 3-of-7, long setup. That is the design.
+3-of-7 script like any other 3-of-7. That is the design.
 
 The threat model and this file exist so the design can be
 argued with in public. They are not a claim that the argument
