@@ -101,6 +101,11 @@ Core. BitGo-style modules in a trust or a collaborative
 2-of-3 are that class plus a company policy. The honest
 product is the legal claim, not a better chip.
 
+Do not call dice the root of trust and Core “only signing.”
+Do not treat seed pills or picker cards as a fix. The BIP39
+checksum is a typo check. A lying device can ignore the
+pills. That is still BIP39 plus extra software, not Core.
+
 Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
 They do not remove Linux, Core, backups, or a signer. Watching
