@@ -109,9 +109,9 @@ input surface. It does not make physical copies of a disc
 impossible.
 
 Each disc is an independent key plus what you need to rebuild
-the wallet. Find any three. Nested device-plus-seed trees do
-not have that rule. Six or ten objects that are not
-interchangeable are not a flatter vault.
+the wallet. Find any three. The split across places is part
+of the quorum. Seven discs in one box are not this design.
+Other stacks often omit both instructions. 
 
 **Loss or destruction of backups.**
 Four discs can fail and the vault still spends. That is the point of
