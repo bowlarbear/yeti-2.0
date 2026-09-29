@@ -336,11 +336,18 @@ savings band.
 **“ThinkPads have ME/PSP, so the supply-chain argument is a wash.”**
 Vendors build and sign on machines with the same class of
 closed platform firmware. They also ship Bitcoin-shaped
-packages and run updater endpoints. Ubuntu plus Core is not a
-larger or dirtier stack than several firmwares plus a
-coordinator. A dirty USB is why this guide uses dedicated
-machines and verified installs. Vendor firmware is built in
-someone else’s environment. Do not apply ME only here.
+packages and run updater endpoints. Do not apply ME only to
+this guide.
+
+**“A hardware wallet is Bitcoin-only in practice.”**
+Often it is not. Multi-coin firmware (Ledger, Trezor, OneKey,
+and similar) ships extra networks, extra derivation paths, and
+extra libraries. That is more code on the same device that
+holds the Bitcoin key. Review does not get easier when the
+firmware also speaks those chains.
+
+Bitcoin-only firmware is a smaller claim. It is still vendor
+firmware. It is not Core.
 
 **“Hardware wallets are more portable and cheaper.”**
 A signer still needs a computer. If you do not trust the vendor
