@@ -245,6 +245,14 @@ Core’s references where those already exist. The procedure and
 the threat model are this repo. They are not a reprint of
 `doc/`, and they are not one contributor’s aside.
 
+**“They want to change the process and still call it this
+guide.”**
+Then the assurances of this threat model do not apply. A
+different quorum, medium, machine, or extra tool is a
+different design. If they build something else, they should
+publish that procedure. Unpublished custom stacks are not
+review.
+
 **“Core’s wallet is unreviewed convenience.”**
 No. Wallet, descriptors, and PSBT are in the Bitcoin Core
 tree. They ship in the same attested binary and go through
@@ -778,6 +786,10 @@ threat model, then let them choose.
 If they want a different M-of-N, backup medium, or software
 stack, that is allowed. The assurances in this guide apply to
 the guide as written. A fork is their design, not this one.
+
+- They want a different process and still want you to call it
+  this guide. Tell them to publish their procedure. Do not
+  treat the remix as this threat model.
 
 ## Questions worth asking
 
