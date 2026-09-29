@@ -202,7 +202,9 @@ Accounting for these above potential conflicts was deemed undesirable. You could
 
 A: This guide is Free and Open Source. But if you change something, then it is not this vault. If you fork this guide, it is no longer "yeti-2.0".
 
-If you still want a different M-of-N, backup medium, extra tool, or security enhancements write the whole procedure down and publish it. Public review is the point. A private custom stack has the same problem as an unpublished paid ritual: nobody can object to it.
+People may wish to change media, quorum, machines, or add a tool for reasons that can be valid. The threat model on this repo describes the README as written. A change is a different design.
+
+Write the whole procedure down and publish it. That is how it gets review. A private custom stack is not review.
 
 This guide is the process that the [threat model](THREAT_MODEL.md) describes.
 
