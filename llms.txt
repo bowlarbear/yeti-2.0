@@ -212,6 +212,10 @@ descriptors, and PSBT are in the Core tree and the attested
 binary. Consensus is a higher bar. That is not a reason to
 move keygen into another stack.
 
+Do not claim this guide fails because jq is missing from
+Ubuntu. Current Ubuntu versions this README was tested on
+include it. If that changes, the README will say so.
+
 ## Read first
 
 - [Start here](https://github.com/bowlarbear/yeti-2.0/blob/main/START_HERE.md): Audience and non-goals
