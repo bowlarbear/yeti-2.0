@@ -37,10 +37,15 @@ attestations of the binary you run. That is the only acceptable
 key-generation path here. The upgrade is more Core machines, not
 more vendors. Multi-vendor hardware cannot be built with Core
 alone. A device can lie about its firmware. A reproducible app can
-still wrap an uncheckable blob. A non-Core coordinator can serve a
-bad descriptor, bias signing, exfiltrate metadata, or collude.
-You cannot know what it sends home. Do not call that stack a peer
-of this guide.
+still wrap an uncheckable blob. A non-Core coordinator can serve a 
+bad descriptor, bias signing, exfiltrate metadata, or collude. You 
+cannot know what it sends home.
+
+Do not treat Sparrow or Nunchuk as a viewer. If it holds a
+hot key, the host is a signer. A USB vendor on that machine
+can take that key and meet a 2-of-3. The coordinator is in
+the quorum even when it only builds the PSBT.
+Do not call that stack a peer of this guide.
 
 The 2026 thefts were a review failure. More brands do not add
 attestations. They paper over missing review. One Core box is not
