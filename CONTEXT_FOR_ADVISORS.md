@@ -291,6 +291,15 @@ public signatures. Discs and an air gap do not stop that.
 Silent insertion is what volume of review is for. Core’s
 change control is that process. A small firmware tree is not.
 
+The question is what makes each signing stack hard to
+backdoor, not how many logos are on the desk. Three small
+firmware trees do not become Core. Open source is not enough.
+Linux still needed an unrelated observer to catch XZ. A vendor
+repo generally does not have that crowd.
+
+A backdoor is not only weak RNG. It can leak from signatures
+or hand you an address you do not own.
+
 **“Yeti needs years of exceptional maintenance.”**
 There is no set-and-forget self-custody. Media dies. Good
 practice in any stack is a periodic check and a refresh. This
@@ -329,15 +338,13 @@ Seven unverifiable generators are not an upgrade on one
 Guix-attested Core box.
 
 **“People will not operate Yeti, so use Liana decay.”**
-There is no reason in this repo to assume the user will not
-finish the README. Completing the test spends is the proof.
+Miniscript and timelocks are already in Core. Liana is not
+required for this stack. Decay schedules the theft/loss
+tradeoff. It does not erase it.
 
-This vault already has recovery: any 3 of 7 discs. Miniscript
-and timelocks exist in Bitcoin Core. They are out of scope
-here. That is not a reason to add Liana. A decaying path gets
-easier to spend as time passes. If anything in the extra stack
-is hostile, that clock is a race. Decay is not a fix for vendor
-lockout on unverifiable software.
+After decay, the attacker’s threshold falls too. The script
+cannot tell three honest keys from three compromised
+implementations. More vendors do not fix that.
 
 **“More vendor keys are safer than one Core box.”**
 They are not. One machine running verified Ubuntu and
