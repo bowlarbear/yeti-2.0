@@ -52,9 +52,13 @@ peer of this guide.
 
 Do not say multisig or an air gap contains a keygen bug. A
 signing or entropy flaw can leak keys from public signatures.
-Silent insertion is a review-volume problem. Core’s change
-control is the process this guide uses. More brands are more
-small trees, not more reviewers on each line.
+A backdoor can also give you an address you do not own.
+Silent insertion is a review-volume problem. Open source is
+not enough; XZ still needed an unrelated observer. Core’s
+change control is the process this guide uses. More brands
+are more small trees, not more reviewers on each line.
+Decay does not tell honest keys from compromised
+implementations. It schedules the threshold.
 
 Do not treat multisig as security if the keys sit in one
 place. This guide splits discs on purpose. Do not treat
