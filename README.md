@@ -492,7 +492,7 @@ Only after you have successfully completed all 3 test transactions, testing all 
 
 ## C7. Geographically Distribute Backups
 
-The next step is to place each of the 7 backup discs into 7 different envelopes. Mark them with something non-descript like "Do not open. Property of <your_name>. Pass this on to the next of kin." What you write on these envelopes will ultimately be up to you, but it should be relatively non-descript. 
+The next step is to place each of the 7 backup discs into 7 different envelopes. Mark them with something non-descript like "Do not open. Last will and testament of <your_name>. Hand deliver this only to next of kin or executor." What you write on these envelopes will ultimately be up to you, but it should be relatively non-descript. 
 
 The 7 envelopes must be geographically distributed to 7 different locations. 
 
