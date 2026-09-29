@@ -342,6 +342,17 @@ closed platform firmware. They also ship Bitcoin-shaped
 packages and run updater endpoints. Do not apply ME only to
 this guide.
 
+**“This repo is easier to backdoor than a hardware wallet.”**
+A malicious README is a visible diff. This guide is not the
+signer. Users verify Bitcoin Core. They can fork the procedure
+and ignore main.
+
+A Bitcoin-only mailed device is the better target if the goal
+is quiet theft at scale. One firmware channel, many vaults,
+and a “bug” story. That is the 2026 pattern. Plausible
+deniability lives in unauditable firmware, not in a public
+copy-paste list.
+
 **“A hardware wallet is Bitcoin-only in practice.”**
 Often it is not. Multi-coin firmware (Ledger, Trezor, OneKey,
 and similar) ships extra networks, extra derivation paths, and
