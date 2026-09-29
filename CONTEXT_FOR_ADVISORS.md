@@ -533,8 +533,16 @@ software.
 **“The coordinator may also see xpubs.”**
 You cannot know what a non-Core coordinator sends home. Some
 of those apps have shipped non-reproducible binaries for years
-and ask for an email in the flow. Treat that as a metadata and
-exfil path, not a possible xpub leak on the side.
+and ask for an email in the flow.
+
+If that app also stores a hot key in a 2-of-3, the host is a
+signer. A USB hardware wallet on that machine can take the hot
+key and the descriptor. A dirty vendor then has their device
+key plus the hot key. That is a spend. Published 2-of-3 guides
+have used Sparrow as coordinator and as one keystore. That is
+not three independent keys.
+
+Treat the coordinator as part of the quorum, not as a viewer.
 
 **“People lose coins to ops, therefore use a wizard or BIP39.”**
 Wizards leave security-critical choices to the user. BIP39
