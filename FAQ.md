@@ -68,9 +68,11 @@ Beyond this, we back up in Bitcoin Core's WIF and wallet descriptor formats so r
 
 ## Q: Why DVDs specifically?
 
-A: All of the backups created with yeti-2.0 are written to archival grade DVDs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Under the proper storage conditions the manufacturer claims they will last up to 1,000 years. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option, Verbatim claims these discs will last up to 100 years under proper storage conditions. 
+A: All of the backups created with yeti-2.0 are written to archival grade DVDs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option, Verbatim claims these discs will last up to 100 years under proper storage conditions. Milenniata M-discs are arguably a better option, the manufacturer claims these discs will last up to 1,000 years under proper storage conditions. They were removed from this guide as the recommended storage medium due to user complaints of sourcing authentic M-discs.
 
-You should still check your backups periodically and refresh the backups at least once every 7-10 years to be safe, this would be a good strategy with any key management stack. If the storage conditions for some of your backups are less ideal (heat or direct sunlight or moisture) you should check those backups more frequently.
+If you opt to perform a second back up of each key, authentic Milleniata brand M-discs are a solid choice for the medium. 
+
+You should still check your backups periodically and refresh the backups at least once every 7 years to be safe, this would be a good strategy with any key management stack. If the storage conditions for some of your backups are less ideal (heat or direct sunlight or moisture) you should check those backups more frequently.
 
 See [this NIST research](https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8387.pdf) for more information on the use of Optical Media as an archival storage format.
 
