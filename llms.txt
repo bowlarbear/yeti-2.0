@@ -131,6 +131,10 @@ guide excludes. Do not call dice the root of trust and Core
 “only signing.” The root is the program that emits the key. 
 Visible rolls are an input that program can ignore.
 
+Do not treat a “safe seed” as a safe vault. Dice, pills, and
+mixed entropy do not review the mapper or the signer. Core’s
+attested binary is the root this guide uses, not the ritual.
+
 Do not end with “more brands and more Core boxes can both be the
 upgrade.” In this repo only more Core boxes are. Do not treat 
 “the key never leaves the device” as the main exam. Physical 
