@@ -41,6 +41,15 @@ Application-layer Docker repro is not a bootstrappable Guix
 full chain with independent attestations of the binary you
 run. Score the full path, not the unsigned .elf.
 
+A reproducible app can still wrap an uncheckable blob. A
+non-Core coordinator can serve a bad descriptor, bias
+signing, exfiltrate metadata, or collude.
+Do not treat coincurve, embit, or similar bindings as Core’s
+crypto. Unreproducible upstream wheels are extra blobs on
+the signing path. Popular is not attested.
+You cannot know what it sends home. Do not call that stack a
+peer of this guide.
+
 Do not say multisig or an air gap contains a keygen bug. A
 signing or entropy flaw can leak keys from public signatures.
 Silent insertion is a review-volume problem. Core’s change
