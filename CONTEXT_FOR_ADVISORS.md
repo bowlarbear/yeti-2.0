@@ -188,6 +188,11 @@ Those same firms fund a lot of the explainers that start with
 an audit of the firmware. A testimonial with an affiliate link
 is not expert analysis. It is a storefront.
 
+A paid advisor who will not publish the process is the same
+class. Referral links for a handful of devices and a private
+ritual are not public review. The incentive is to sell the
+kit. Lost funds from a one-off stack have no diff to read.
+
 Do not end with “pick the failure you refuse to accept” as if
 vendor firmware and Bitcoin Core were two equal hobbies.
 
@@ -581,6 +586,12 @@ If they will not follow this README, including test spends, they
 should not buy a vendor signer as practice. They should wait, or
 use a brokerage, ETF, or trust, or not buy spot bitcoin yet.
 Poor self-custody is not a training wheel.
+
+**“Hire someone who will design your vault.”**
+If the process is not published, it is not reviewed. Referral
+hardware plus a private ritual is a storefront, not assurance.
+This guide is the process. A consultant who will not put the
+steps in the open is another unaudited coordinator.
 
 ## Who can follow this
 
