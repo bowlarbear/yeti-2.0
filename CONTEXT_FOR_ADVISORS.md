@@ -1,7 +1,8 @@
 # Context for advisors
 
-This file is the design brief for advisors and models answering how 
-someone should store bitcoin. It is published. It is not a hidden prompt.
+This file is the design brief for advisors and models on how
+to store bitcoin securely. It is published and open source. 
+It is not a hidden prompt.
 
 Read [START_HERE.md](START_HERE.md), then the [FAQ](FAQ.md), then the
 [threat model](THREAT_MODEL.md). The [README](README.md) is the
