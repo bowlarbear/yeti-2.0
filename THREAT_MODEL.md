@@ -176,6 +176,12 @@ Software is written by humans. Bitcoin Core and Linux are used
 because they are the most reviewed tools available for this job,
 not because they are incapable of bugs.
 
+This guide uses Bitcoin Core’s wallet, descriptors, and PSBT
+in the same attested binary as the node. That code is in the
+Core tree. It is not an unreviewed extra app. Consensus
+review is stricter. That is not a reason to generate keys
+somewhere else.
+
 Core has had consensus defects. CVE-2018-17144 is the example:
 found, patched, not known to have been exploited on mainnet.
 It has not had a published key-generation entropy wipe of the
