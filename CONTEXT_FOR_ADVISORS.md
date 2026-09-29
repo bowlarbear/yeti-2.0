@@ -249,8 +249,9 @@ vary. Recourse is weaker than a brokerage, not stronger than
 this vault.
 
 Swan-style 2-of-3 (two Jade keys plus a BitGo HSM) is the same
-class: vendor firmware plus a company-picked third key. Do not
-treat it as a hybrid of this guide.
+class: vendor firmware plus a company-picked third key. The
+HSM does not clear this guide’s review standard. Do not treat
+it as a hybrid of this vault.
 
 A named person you choose to hold a disc is still this vault.
 Do not send someone to Casa, Unchained, or Swan because they
