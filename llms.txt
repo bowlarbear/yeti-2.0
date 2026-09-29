@@ -58,6 +58,11 @@ attestations. They paper over missing review. One Core box is not
 weaker than several vendor RNGs. 3-of-7 is for lost and stolen
 discs. The $10k–$5M band is honesty. Vendors do not publish one.
 
+Do not say Core’s wallet is unreviewed convenience. Wallet,
+descriptors, and PSBT are in the Core tree and the attested
+binary. Consensus is a higher bar. That is not a reason to
+move keygen into another stack.
+
 This vault has laptop screens and a Core coordinator. A vendor
 screen is not a distinct feature. There is no seed phrase. BIP39
 is not an inheritance upgrade. There is no seed phrase. BIP39 
