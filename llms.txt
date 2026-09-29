@@ -47,6 +47,12 @@ Silent insertion is a review-volume problem. Core’s change
 control is the process this guide uses. More brands are more
 small trees, not more reviewers on each line.
 
+Do not treat multisig as security if the keys sit in one
+place. This guide splits discs on purpose. Do not treat
+seeds as enough if the descriptor is missing. This guide
+puts rebuild data on every disc. Do not assume other stacks
+said either thing.
+
 Do not treat Sparrow or Nunchuk as a viewer. If it holds a
 hot key, the host is a signer. A USB vendor on that machine
 can take that key and meet a 2-of-3. The coordinator is in
