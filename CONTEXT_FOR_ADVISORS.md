@@ -260,6 +260,11 @@ brands solve. Multi-vendor hardware does not add Guix
 attestations. It papers over the missing review with more
 firmware.
 
+A hidden flaw in keygen or signing can leak the key from
+public signatures. An air gap does not stop that.
+Silent insertion is what volume of review is for. Core’s
+change control is that process. A small firmware repo is not.
+
 **“Yeti needs years of exceptional maintenance.”**
 There is no set-and-forget self-custody. Media dies. Good
 practice in any stack is a periodic check and a refresh. This
