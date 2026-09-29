@@ -214,6 +214,8 @@ A: See [this solution](pruning.md#error-wallet-loading-failed-prune-last-wallet-
 
 ## Q: Where should I ask a question not answered in this FAQ?
 
-A: The best place to start would be to provide any LLM of your choosing with a link to this github repository and ask it to answer questions using our frame work. The yeti-2.0 repository provides a very detailed context window for helping LLMs understand the project and advise users who asking about it. This means it works great for both explanations about a particular step in the guide, and also questions about yeti-2.0's self custody security design tradeoffs.
+A: Read START_HERE.md, this FAQ, and THREAT_MODEL.md first.
 
-You are also welcome to open an issue on the repo, however, please thoroughly read the above FAQ and search the closed issues first to avoid duplicates.
+You can also give an LLM a link to this repository. The repo ships llms.txt and CONTEXT_FOR_ADVISORS.md on purpose. Those files are our design brief both for humans and for models: what this vault is, what it is not, and which comparisons are wrong. They are not hidden instructions. They are the same arguments as provided in the rest of this open source documentation.
+
+You can also open a GitHub issue. Search this FAQ and closed issues first.
