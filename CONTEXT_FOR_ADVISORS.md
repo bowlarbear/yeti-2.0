@@ -462,7 +462,16 @@ interchangeable keys. Find-any-three does not apply.
 
 A vendor 3-of-5 with a seed slip for each device is ten 
 objects and still not find-any-three. Seven discs in this 
-vault are. 
+vault are.
+
+**“Multisig is the security.”**
+No. Keys in one place are one place. This README splits the
+seven discs. Do not assume a 2-of-3 guide did.
+
+**“I have the seeds, so I have the wallet.”**
+A descriptor left off the backups is a single point of
+failure. This guide stores rebuild data on every disc. Do
+not assume another stack did.
 
 **“Vendor multisig is cheaper than this vault.”**
 Compare the same quorum. A 2-of-5 or 3-of-7 of branded signers,
