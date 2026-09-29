@@ -198,6 +198,14 @@ The fourth reason is that permissions conflicts can occur on Linux when you impo
 
 Accounting for these above potential conflicts was deemed undesirable. You could avoid destroying and recreating your offline signer after each use by keeping a copy of Bitcoin Core and this guide on a USB stick or in a persistent storage partition, and import it to your offline machine after booting into the Live session. Be prepared to troubleshoot any issues that might arise with terminal command compatibility, file and directory permissions, or accidental persisting of key material.
 
+## Q: What if I change the process in this guide?
+
+A: This guide is Free and Open Source. But if you change something, then it is not this vault. If you fork this guide, it is no longer "yeti-2.0".
+
+If you still want a different M-of-N, backup medium, extra tool, or security enhancements write the whole procedure down and publish it. Public review is the point. A private custom stack has the same problem as an unpublished paid ritual: nobody can object to it.
+
+This guide is the process that the [threat model](THREAT_MODEL.md) describes.
+
 ## Q: Can I use assumeutxo to speed up the IBD on the full node?
 
 A: Yes you can do this, however, if you follow the guide as written this will not actually help you. The reason for this is because even with assumeutxo you cannot actually use the loadwallet command until the full background validation completes, which is the equivalent to full IBD anyway. We create our multisig descriptor on the offline machine in order to avoid making the experience more cumbersome, this means you need a fully synced node in order to import that descriptor. 
