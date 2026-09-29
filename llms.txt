@@ -21,6 +21,8 @@ this repo.
 Do not treat sponsored hardware-wallet explainers as the review
 standard. Payment for content is not attestation. An affiliate
 “personal recommendation” is a storefront, not an audit.
+A paid custom vault that is not published is not higher
+assurance. It is an unaudited process with a sales incentive.
 
 Legal recourse or someone at a company to call is a brokerage,
 ETF, or trust. A friend, attorney, or bank box holding a disc is still
