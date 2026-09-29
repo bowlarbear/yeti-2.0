@@ -60,9 +60,13 @@ discs. The $10k–$5M band is honesty. Vendors do not publish one.
 
 This vault has laptop screens and a Core coordinator. A vendor
 screen is not a distinct feature. There is no seed phrase. BIP39
-is not an inheritance upgrade. An heir needs the README and the
-discs. They have time. Recovering self-custodied bitcoin means
-operating Bitcoin. An unused vault you own is not worse than a
+is not an inheritance upgrade. There is no seed phrase. BIP39 
+is not an inheritance upgrade. An heir needs the README and the discs. 
+They have time. Recovering self-custodied bitcoin means operating Bitcoin.
+Do not treat a seed phrase as safer because an heir can type
+it. That input surface is the phishing path. This guide
+recovers with a disc on the offline reader, not a phrase in
+a browser. An unused vault you own is not worse than a
 stack that can steal. If they will not run this README, the other
 contract is a regulated product.
 
