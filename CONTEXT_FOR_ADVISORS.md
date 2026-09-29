@@ -418,6 +418,11 @@ A seed and a passphrase stored apart are a 2-of-2: you need
 both, and you have one copy of each. Lose either and you are
 locked. That is not 3-of-7.
 
+A seed phrase is also an input surface: websites, email,
+fake support, screenshots. This guide’s recovery is a disc
+in the offline reader. That is a narrower path. It is not
+proof nobody can photograph a disc.
+
 **“A 2-of-3 with a backup of each seed is six-key strong.”**
 No. Each device-or-paper pair is two copies of one key. The
 script is still 2-of-3. Six objects exist. Arbitrary threes do
