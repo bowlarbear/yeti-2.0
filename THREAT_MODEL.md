@@ -102,6 +102,12 @@ A hardware wallet plus the paper slip is one key copied twice,
 not a quorum. A seed plus a separately stored passphrase is a
 2-of-2 with no spare.
 
+A mnemonic is designed to be typed. That invites phishing and
+insecure copies. This vault recovers by reading a disc on the
+offline machine. That is the accepted path. It shrinks that
+input surface. It does not make physical copies of a disc
+impossible.
+
 Each disc is an independent key plus what you need to rebuild
 the wallet. Find any three. Nested device-plus-seed trees do
 not have that rule. Six or ten objects that are not
