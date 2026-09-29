@@ -226,10 +226,12 @@ to accept for key generation.
 
 ## What this does not try to hide
 
-Bitcoin amounts onchain are public. A spend from this vault can be
-recognized as this kind of script. An unencrypted disc that includes
-the descriptor lets whoever holds it watch the wallet if they know
-what they are looking at.
+Bitcoin amounts on chain are public. When you spend, the
+network can see the script type. That is true of every wallet,
+not only a 3-of-7 and not only this guide.
+An unencrypted disc that includes the descriptor lets whoever
+holds it watch the wallet if they know what they are looking
+at.
 
 That leak is not unique to this guide. Any multisig that can be
 restored needs a descriptor backup. Encrypting it recreates a key
