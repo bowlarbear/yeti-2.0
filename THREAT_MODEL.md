@@ -52,6 +52,13 @@ reviewed. The owner has no recourse. “It was a bug” is enough cover
 whether the failure was sloppy or not. Shipping and support databases
 leak. Do not reserve this class of failure for rare attackers.
 
+A bug in the generator or the signer can leak keys from
+signatures on the public chain. Physical split and an air gap
+do not contain that. The defense is review volume and change
+control on the binary that created the keys. That is why this
+guide is Core, not a small firmware tree. Insertion is not
+impossible. It is expensive here.
+
 This vault creates and uses keys on a dedicated offline computer
 running a clean Ubuntu install and Bitcoin Core. Keys are not stored
 on the online node. Extra wallet apps and vendor firmware are out of
