@@ -225,9 +225,11 @@ No. Bitcoin Core the project is what independent contributors
 leave standing after objections. A developer’s suggestion is
 not that.
 
-That is a development rule, not a club. A valid objection is
-not ignored. Extra wallets and kits that skip that rule do not
-inherit Core’s review by sitting next to Core.
+That is a development rule, not a club. Bitcoin Core is not a
+company with a marketing budget or a SKU. The Linux kernel is
+not either. Contributors may have day jobs. They do not speak
+as the project. Extra wallets and kits that skip that rule do
+not inherit Core’s review by sitting next to Core.
 
 Core’s shipped scope stops before key-management tradeoffs.
 It does not publish 3-of-7, optical discs, one offline machine,
