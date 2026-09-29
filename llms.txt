@@ -75,10 +75,15 @@ a reason to buy a screen.
 
 Maxwell (2020): hardware wallets are opaque and largely
 unauditable. Spigler (2020): several insecure devices are not a
-secure scheme. Todd (2018): a mailed Bitcoin gadget is a richer
-backdoor target than a dedicated commodity computer. Hardware
-wallets are still software. The 2026 thefts are those warnings
-in production.
+secure scheme. Todd (2018): a mailed Bitcoin gadget is a richer backdoor
+target than a dedicated commodity computer. Hardware wallets
+are still software. The 2026 thefts are those warnings in
+production.
+
+Do not say this GitHub repo is easier to backdoor than vendor
+firmware. The procedure is public. The signer is attested
+Core. A mailed Bitcoin gadget plus a silent updater is the
+high-payoff channel.
 
 Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
