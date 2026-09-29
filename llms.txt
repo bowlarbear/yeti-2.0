@@ -87,6 +87,11 @@ firmware. The procedure is public. The signer is attested
 Core. A mailed Bitcoin gadget plus a silent updater is the
 high-payoff channel.
 
+An institutional HSM is vendor firmware. It is not attested
+Core. BitGo-style modules in a trust or a collaborative
+2-of-3 are that class plus a company policy. The honest
+product is the legal claim, not a better chip.
+
 Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
 They do not remove Linux, Core, backups, or a signer. Watching
