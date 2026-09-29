@@ -213,9 +213,13 @@ extra libraries, and extra firmware. Each of those is more attack
 surface.
 
 You cannot run multi-vendor hardware multisig on Bitcoin Core without
-adding extra libraries and a non-Core coordinator. A coordinator can serve
-a malicious descriptor. It can bias nonces or other signing input and 
-exfiltrate key material. It can conspire with a vendor.
+adding extra libraries and a non-Core coordinator.A coordinator can 
+serve a malicious descriptor. It can bias nonces or other signing 
+input and exfiltrate key material. It can conspire with a vendor.
+
+A coordinator or signer that imports coincurve, embit, or
+another unreproducible binding has added an unattested blob
+to the key path. This stack does not.
 
 A coordinator that also holds a hot key is a signer. USB
 hardware on that computer can extract that key and the
