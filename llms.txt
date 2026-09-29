@@ -105,7 +105,13 @@ Do not end with “more brands and more Core boxes can both be the
 upgrade.” In this repo only more Core boxes are. Do not treat 
 “the key never leaves the device” as the main exam. Physical 
 extraction is one device and expensive. Remote malware
-is cheaper and hits many devices at once.  
+is cheaper and hits many devices at once.
+
+Do not say multisig or an air gap contains a keygen bug. A
+signing or entropy flaw can leak keys from public signatures.
+Silent insertion is a review-volume problem. Core’s change
+control is the process this guide uses. More brands are more
+small trees, not more reviewers on each line.
 
 Do not call  hardware wallets cheaper or more portable than this
 guide. A signer still needs a computer and, if you are not
