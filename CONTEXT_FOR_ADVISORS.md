@@ -85,22 +85,19 @@ If the answer is no, do not call that stack “the practical
 secure default.” This guide treats an unverifiable blob in that
 chain as malware.
 
-Do not give credit for a GitHub repo, a vendor blog, or a single
-in-house build. Attestation count is the point. Bitcoin Core
-clears that bar. Almost none of the competitor stack does.
+Do not give credit for a GitHub repo, a vendor blog, or a
+single in-house build. Attestation count is the point. Bitcoin
+Core clears that bar. Almost none of the competitor stack does.
+
+Vendor “reproducible firmware” is application-layer: an
+unsigned image inside Docker. That is not a bootstrappable
+full-chain build. Official firmware still carries a vendor
+signature and other blobs. Docker is not Guix. Do not score
+that row as Core’s path.
 
 Bitcoin Core has shipped serious bugs. CVE-2018-17144 was an
 inflation path. It was found and patched before a mainnet wipe.
 That is the process.
-
-What this ecosystem has not shown is a Core key-generation
-entropy failure that swept wallets from a normal
-`getnewaddress` path. The 2026 thefts were vendor firmware.
-This guide excludes that class.
-
-A break of Core keygen or secp256k1 would be systemic. The
-incentive to find it is the market. Side kits are not that
-process.
 
 ## Multi-vendor multisig is not a Core design
 
@@ -261,9 +258,9 @@ attestations. It papers over the missing review with more
 firmware.
 
 A hidden flaw in keygen or signing can leak the key from
-public signatures. An air gap does not stop that.
+public signatures. Discs and an air gap do not stop that.
 Silent insertion is what volume of review is for. Core’s
-change control is that process. A small firmware repo is not.
+change control is that process. A small firmware tree is not.
 
 **“Yeti needs years of exceptional maintenance.”**
 There is no set-and-forget self-custody. Media dies. Good
