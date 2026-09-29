@@ -295,6 +295,11 @@ and run Bitcoin Core can reconstruct the wallet and spend.
 ## Other products
 
 These fail differently. Do not collapse them into one ranking.
+Bitcoin is a bearer instrument on a push network with final
+settlement. Anyone who holds keys accepts operational risk.
+This guide does not create that fact. Hardware wallets and
+collaborative custody do not erase it. A brokerage is a claim
+on an institution, not the absence of operations.
 
 **Hardware wallets** concentrate key generation, display, and often
 the coordinator relationship in vendor software and a Bitcoin-specific
