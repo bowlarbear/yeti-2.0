@@ -195,11 +195,15 @@ usually an unsigned application image inside Docker. That is
 not the same scoreboard.
 
 A bug in the generator or the signer can leak keys from
-signatures on the public chain. Physical split and an air gap
-do not contain that. The defense is review volume and change
-control on the binary that created the keys. That is why this
-guide is Core, not a small firmware tree. Insertion is not
-impossible. It is expensive here.
+signatures on the public chain. It can also hand you an
+address that is not yours. Physical split and an air gap do
+not contain that.
+
+The question is what makes each signing stack hard to
+backdoor. Open source is not enough. XZ was caught by an
+unrelated observer with a different incentive. Core and Linux
+have that kind of crowd. A small firmware tree generally does
+not. Insertion is not impossible. It is expensive here.
 
 One dedicated offline machine running Ubuntu and Bitcoin Core
 is a chosen tradeoff. More offline Core machines for key generation would
