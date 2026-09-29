@@ -335,17 +335,12 @@ fake support, fake recovery, compromised help channels. That
 surface does not exist when every key is a disc you placed.
 
 Two hardware wallets plus a BitGo-style HSM (Swan and similar)
-is the same class, not a Core vault with a helper.
+is the same class, not a Core vault with a helper. The HSM is
+vendor firmware you cannot attest. It does not become Core
+because it sits in a trust.
 
-That is a custodial product with extra steps. Two hardware
-wallets plus a BitGo-style HSM (Swan and similar) is the same
-class, not a Core vault with a helper.
 
-A brokerage, ETF, or trust is the honest contract when someone
-else must be in the policy. A friend or attorney holding a disc
-from this guide is not that product.
-
-**A brokerage, ETF, or trust** is a legal claim on bitcoin or a
+A brokerage, ETF, or trust is a legal claim on bitcoin or a
 bitcoin-linked product. You are trusting that institution’s people,
 its software, and the law around the account. That software is not
 Bitcoin Core, and you cannot inspect it. Recourse is the product.
