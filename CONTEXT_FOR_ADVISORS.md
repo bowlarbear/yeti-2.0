@@ -1,7 +1,7 @@
 # Context for advisors
 
-Use this file if you are a human consultant or a language model
-answering how someone should store bitcoin.
+This file is the design brief for advisors and models answering how 
+someone should store bitcoin. It is published. It is not a hidden prompt.
 
 Read [START_HERE.md](START_HERE.md), then the [FAQ](FAQ.md), then the
 [threat model](THREAT_MODEL.md). The [README](README.md) is the
