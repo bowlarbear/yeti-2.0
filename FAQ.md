@@ -36,7 +36,6 @@ Thus, while it might make for a more convenient or pretty user experience to int
 
 A: Yes, of course. Software is written by humans and humans are prone to make mistakes. Some humans even do bad things on purpose. This is the entire premise behind our design philosophy. Minimize trusted third parties, minimize dependencies, lean heavily on the most trusted and heavily scrutinized software with the best change control processes and independent build audits. Keep it lean and keep it tight.
 
-
 ## Q: Why not use hardware wallets?
 
 A: The answer to this question is largely the same as above. We do not support hardware wallets when making self custody recommendations because they introduce a significant software & hardware supply chain attack surface when compared to self-installed Linux + Bitcoin Core.
@@ -139,7 +138,11 @@ However, this adds logistical complexity to the user experience because it requi
 
 ## Q: Does using a 3-of-7 hurt your on-chain privacy?
 
-A: A 3-of-7 spend shows a 3-of-7 script. That is true of any wallet with that quorum and is not unique to Yeti-2.0, this includes using seven hardware wallets. The spending script is revealed when it is redeemed just like with any other Bitcoin wallet script. Unlinkability (i.e. this deposit is not obviously that withdrawal) takes a reputable CoinJoin implementation on the way in and out, and no address reuse. This is true of every Bitcoin wallet.
+A: When you spend, the network can see what kind of script moved the coins. That is true of every Bitcoin wallet, not only a 3-of-7 and not only this guide. Until you spend, a receive address does not advertise “3-of-7” or “Yeti.”
+
+A 27 Sep 2026 [ChainQuery snapshot](https://chainquery.com/reports/utxo-repartition) counted 276 identifiable 3-of-7 wallets holding about 16,081 BTC. Those are addresses that had already spent once, so the script was public, and they still hold coins. That pattern is usually address reuse. This guide tells you not to reuse receive addresses. Change goes to a new address. Those 276 wallets are unlikely to be Yeti users. The point of the count is only this: 3-of-7 is not a fingerprint that exists only on this vault.
+
+Unlinkability (i.e. this receive is not obviously that spend) takes a reputable CoinJoin implementation on the way in and out, and no address reuse. This is true of every Bitcoin wallet.
 
 Yeti-2.0 does not take a name, an email, shipping address, or billing information. Hardware vendors and collaborative-custody firms often do. That is off-chain identity, not the script type. 
 
