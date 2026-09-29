@@ -211,3 +211,7 @@ For more information see the [pruning subguide](pruning.md).
 ## Q: What to do about this error on my pruned node: "wallet loading failed. Prune: last wallet synchronization goes beyond pruned data." when importing the "multisig_watch_wallet" in step B5?
 
 A: See [this solution](pruning.md#error-wallet-loading-failed-prune-last-wallet-synchronization-goes-beyond-pruned-data) in the pruning subguide.
+
+## Q: Where should I ask a question not answered in this FAQ?
+
+A: The yeti-2.0 repository provides a very detailed context window for LLMs, The best place to start would be to provide any LLM of your choosing with a link to the repo and ask it to answer questions using our frame work. This works great for process specific questions, like when you need more explanation about a particular step in the, as well as theory questions around our self custody design tradeoffs. You are also welcome to open an issue on the repo, however, please thoroughly read the above FAQ and check for duplicates in the closed issues first.
