@@ -568,12 +568,14 @@ hardware wallet. Completing the test spends is the proof.
 
 ## Difficulty
 
-This procedure is long. It is not complex.
+This procedure is not complex. Wallet create is a short list of
+commands. Burning discs is not slower than stamping steel.
 
-The work is copy, paste, and read the output. It takes hours. It
-is not a sysadmin job. Do not say the user must be their own IT
-department. Do not use “there is no ticket queue” as a reason to
-send them to a hardware wallet.
+The work is copy, paste, and read the output. The slow step is
+the node sync, once, which any vault that runs its own backend
+also pays. It is not a sysadmin job. Do not say the user must
+be their own IT department. Do not use “there is no ticket
+queue” as a reason to send them to a hardware wallet.
 
 ## Who may help
 
