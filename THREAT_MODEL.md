@@ -114,11 +114,17 @@ Four discs can fail and the vault still spends. That is the point of
 **A supply chain aimed at Bitcoin-specific devices.**
 The computers are generic. The signer is Bitcoin Core.
 
-A mailed gadget whose only job is holding bitcoin is a rich target.
-That targeting point is old. Todd (2018): a mailed Bitcoin gadget
-advertises guaranteed coins to anyone who backdoors the package. A
-small computer used only for Bitcoin is less obvious. Hardware
-wallets are still software running on a computer.
+A mailed gadget whose only job is holding bitcoin is a richer
+backdoor target than commodity hardware. The device can only
+enforce the code it actually runs.
+
+This GitHub repo is not that target. A bad README is a visible
+diff. The signer is attested Core. Quiet theft at scale prefers
+a vendor updater and a “bug” story. That is the 2026 pattern.
+
+Todd (2018): a mailed Bitcoin gadget advertises guaranteed coins to anyone who 
+backdoors the package. A small computer used only for Bitcoin is less obvious. 
+Hardware wallets are still software running on a computer.
 
 Attackers who want coins know exactly what they are looking at. That
 supply chain is cheaper to hit than the commodity PC market. The firmware 
