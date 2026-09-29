@@ -494,6 +494,16 @@ ordinary self-defense. The larger exam is remote compromise of
 the software that created or used the keys. The 2026 thefts
 did not need the device in hand.
 
+**“A safely generated seed means the funds are safe.”**
+No. Key birth is one step. Signing code, backups, coordinators,
+phishing, and a lying display can still empty the vault. A
+good roll or a seed card does not review the program that
+maps it or the program that later signs.
+
+Physical objects taped onto seed gen are not a substitute for
+Core’s review. This guide treats the attested binary as the
+root, not the ritual that fed it.
+
 **“Roll dice or flip coins to build or check the entropy.”**
 No. A person cannot be the whole entropy pool, and they cannot
 verify Core’s RNG with a calculator or a helper page. That
