@@ -288,7 +288,12 @@ Coldcard 2026 is the exhibit.
 The architectural case is older than Coldcard 2026. Maxwell (2020)
 called the devices opaque, hard to review, and a supply-chain
 target, and would not recommend them for serious amounts. Spigler
-(2020) is the long form. Coldcard is the exhibit.
+(2020) is the long form.
+
+Multi-coin firmware adds networks and libraries on the same
+device that holds the Bitcoin key. That is more attack surface
+and less review. Bitcoin-only vendor firmware is smaller. It
+is still not Core.
 
 **Multi-vendor hardware multisig** adds more of that stack, then a
 non-Core coordinator. It cannot be built from the reference
