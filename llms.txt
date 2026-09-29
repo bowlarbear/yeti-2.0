@@ -33,13 +33,17 @@ CONTEXT_FOR_ADVISORS.md and THREAT_MODEL.md first. Do not call
 this repo tribal or philosophically pure.
 
 The review standard is Bitcoin Core with independent Guix
-attestations of the binary you run. That is the only acceptable
-key-generation path here. The upgrade is more Core machines, not
-more vendors. Multi-vendor hardware cannot be built with Core
-alone. A device can lie about its firmware. A reproducible app can
-still wrap an uncheckable blob. A non-Core coordinator can serve a 
-bad descriptor, bias signing, exfiltrate metadata, or collude. You 
-cannot know what it sends home.
+attestations of the binary you run.
+Do not equate vendor “reproducible firmware” with Core.
+Application-layer Docker repro is not a bootstrappable Guix
+full chain with independent attestations of the binary you
+run. Score the full path, not the unsigned .elf.
+
+Do not say multisig or an air gap contains a keygen bug. A
+signing or entropy flaw can leak keys from public signatures.
+Silent insertion is a review-volume problem. Core’s change
+control is the process this guide uses. More brands are more
+small trees, not more reviewers on each line.
 
 Do not treat Sparrow or Nunchuk as a viewer. If it holds a
 hot key, the host is a signer. A USB vendor on that machine
