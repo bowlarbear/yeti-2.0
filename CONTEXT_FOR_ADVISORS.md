@@ -253,6 +253,16 @@ different design. If they build something else, they should
 publish that procedure. Unpublished custom stacks are not
 review.
 
+**“If this were sound, it would be in Bitcoin Core.”**
+No. Core documents the software. It does not ship a savings
+vault. Preferring Core’s review standard does not mean the
+vault README must live in bitcoin/bitcoin. That is a false
+link.
+
+RPC nits can go upstream. Discs, 3-of-7, Ubuntu, and the
+dollar band cannot. A closed doc PR is not a verdict on this
+threat model.
+
 **“Core’s wallet is unreviewed convenience.”**
 No. Wallet, descriptors, and PSBT are in the Bitcoin Core
 tree. They ship in the same attested binary and go through
