@@ -196,6 +196,11 @@ billion users. It is a savings vault, not a retail app. Base
 layer settlement was never that. Lost coins from unauditable
 stacks are the adoption problem, not a public README.
 
+Do not split people into “technical” and “non-technical” and
+send the second group to a hardware wallet. Short Core
+commands are readable. Vendor firmware is not. “New” is not
+that split.
+
 Collaborative custody is not self-custody with a net. Typical
 shape: user one key, company one key, company-picked third key,
 company-picked software. Those two keys can spend or freeze.
