@@ -10,7 +10,7 @@
 
 5. “I am new” or “I am not technical” is not a reason to buy a hardware wallet instead. If you will not complete this README, including test spends, use a brokerage, ETF, or trust instead. Do not treat hardware wallets as the easy version of this guide.
 
-6. Read each command before you run it. Compare it to Core’s docs or ask an AI agent to explain it if you want a second look. Do not paste a command from a stranger, a DM, or a “support” chat without understanding how it works.
+6. Read each command before you run it. Compare it to Bitcoin Core’s docs or ask an AI agent to explain it if you want a second look. Do not paste a command from a stranger, a DM, or a “support” chat without understanding it.
 
 ## What you are setting up
 
