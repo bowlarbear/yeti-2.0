@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.28
+Guide Version: 1.29
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -326,10 +326,10 @@ Note: You will not be able to complete section C until your online computer has 
 You can query the status of your node sync by running the following command in the terminal within your online computer.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli getblockchaininfo
+~/bitcoin-31.1/bin/bitcoin-cli getinfo
 ```
 
-Look for the line that says `verificationprogress`, this will be at `1` and `initialblockdownload` will be `false` when your node is finished syncing.
+Look for the line that says `verificationprogress`, when this value is at 100% your node is finished syncing.
 
 # C. Test Wallet Backups
 
