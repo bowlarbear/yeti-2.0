@@ -26,6 +26,10 @@ A: Bitcoin Core is the reference implementation for Bitcoin. It is one of the mo
 
 By relying on highly trusted, highly scrutinized, & highly audited software like Bitcoin Core to perform all security critical functions, we can avoid introducing bugs (or attacks) that might slip through less conservative change review processes for software that rewrites critical core functions of a Bitcoin wallet or potentially brings in other unvetted 3rd party libraries and dependencies. 
 
+## Q: Why isn’t this guide in Bitcoin Core?
+
+A: Key management is outside of Bitcoin Core’s shipped scope. Core can grow a generic air-gapped multisig tutorial, but this guide and all that it entails is the Yeti vault: dedicated machines, Ubuntu, a start-to-finish workflow, optical media backups, 3-of-7 multisig, test spends. Those features of the guide will never become official Bitcoin Core policy, and they do not need to.
+
 ## Q: Why not use electrum or `<insert software stack>`
 
 A: This guide strives to minimize outside dependencies wherever possible. It is in the professional opinion of the authors that every new outside dependency introduced to a Bitcoin self custody stack significantly increases the attack surface of that solution. 
