@@ -228,6 +228,6 @@ A: See [this solution](pruning.md#error-wallet-loading-failed-prune-last-wallet-
 
 A: Read [Start Here](START_HERE.md), this FAQ, and the [Threat Model](THREAT_MODEL.md) first.
 
-You can also give an LLM a link to this repository. The repo ships an [LLMs](llms.txt) context file and [Context For Advisors](CONTEXT_FOR_ADVISORS.md) on purpose. Those files are our design brief both for humans and for models: what this vault is, what it is not, and which comparisons are wrong and why. These are most fleshed out versions of the same arguments as provided in the rest of this open source documentation. An agent will be very good as using this context to help you better understand Yeti-2.0's design tradeoffs and answering most of the questions you may have.
+You can also give an LLM a link to this repository. The repo ships an [LLM context](llms.txt)and [Context For Advisors](CONTEXT_FOR_ADVISORS.md) files on purpose. Those files are our design brief both for humans and for models: what this vault is, what it is not, and which comparisons are wrong and why. These are most fleshed out versions of the same arguments as provided in the rest of this open source documentation. An agent will be very good as using this context to help you better understand Yeti-2.0's design tradeoffs and answering most of the questions you may have.
 
 You can also open a GitHub issue. Search this FAQ and closed issues first.
