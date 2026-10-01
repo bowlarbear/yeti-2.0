@@ -588,8 +588,12 @@ The algorithm can be reviewed without publishing the rolls.
 Core ships that function as an attested binary. A paper
 execution is not in that test set: you cannot publish the
 sheet and keep the secret. A side app that is not that binary
-is not in the test set either. Fat-fingering 256 bits is why
-paper is a bad vault. It is not a reason to add a calculator.
+is not in the test set either. An xpub that matches Core means
+both hashed the same secret. It does not mean the page used
+the rolls. A predetermined seed matches too.
+
+Fat-fingering 256 bits is why paper is a bad vault. It is not
+a reason to add a calculator.
 
 A hashed HTML file does not change that. The file still runs 
 under a browser engine. Signatures attest bytes, not the interpreter, 
