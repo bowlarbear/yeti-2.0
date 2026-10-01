@@ -118,9 +118,18 @@ After you've removed all internal storage drives, put the computer back together
 
 A: As the amount of value you are securing in a Bitcoin multisig vault grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
 
-## Q: What is the biggest weakness of Yeti-2.0?
+An upgrade path for a yeti style vault that enhances privacy and security for use cases that exceed $5M might include the following (in no particular order):
+-Encrypted descriptors sharded with shamir secret sharing
+-Keys seperately generated on multiple Bitcoin Core computers
+-only loading 1 key per session when signing PSBTs
+-laptop firmware/bootloader optimizations
+-Multiple vaults with different security parameters
+-Decaying spend thresholds with resets based on vault activity (a kind of deadman's switch)
+-Timelocked vaul
+-other wallet script enhancements
+-CoinJoin in and out
 
-A: We believe the biggest weakness of this guide is that the wallet descriptors are not encrypted. This means that anyone who gets access to one of your wallet backups and knows how to load a descriptor, will be able to see your wallet balance. There are ways to mitigate this risk, but it is outside the scope of this guide. The privacy & security that you get from this setup is still considerably better than stacks that add Bitcoin-specific vendor hardware and extra wallet software.
+There are multiple reasons why we don't just implement all of these things into Yeti-2.0 today, but the primary reasons are twofold. It would require introducing more code to make it user friendly which is better suited to a standalone application, and because much of it is overkill for this guide's recommended value band. 
 
 ## Q: Why not encrypt the backup discs?
 
@@ -136,9 +145,9 @@ This guide does not require it. The assumption is that one dedicated offline com
 
 See [THREAT_MODEL.md](THREAT_MODEL.md) for why one inspected Core box is preferred to several vendor RNGs.
 
-## Q: Are there any other ways to improve this that are out of scope?
+## Q: Why not only load 1 key per session when signing?
 
-A: There is always room for improvement. The biggest one that comes to mind outside of the two optimizations discussed above would be, when signing a PSBT, only loading 1 key per boot session, and transferring the PSBT to a new boot session after signing with 1 key. This would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. 
+A: Similar to the previous question, this guide does not require it. Loading only 1 key per boot session, and transferring the PSBT to a new boot session after signing with 1 key would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. 
 
 However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
 
