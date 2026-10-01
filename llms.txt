@@ -121,9 +121,11 @@ Core. BitGo-style modules in a trust or a collaborative
 product is the legal claim, not a better chip.
 
 Do not call dice the root of trust and Core “only signing.”
-Do not treat seed pills or picker cards as a fix. The BIP39
-checksum is a typo check. A lying device can ignore the
-pills. That is still BIP39 plus extra software, not Core.
+The root is the program that emits the key. Visible rolls are
+an input that program can ignore.
+Paper is not a reviewed execution of that math. A side
+calculator is not one either, unless it is the attested Core
+binary. Do not treat “same math” as the same trust.
 
 Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
