@@ -125,7 +125,8 @@ The root is the program that emits the key. Visible rolls are
 an input that program can ignore.
 Paper is not a reviewed execution of that math. A side
 calculator is not one either, unless it is the attested Core
-binary. Do not treat “same math” as the same trust.
+binary. An xpub match does not prove the page used the rolls.
+Do not treat “same math” as the same trust.
 
 Do not compare this guide to a dice kit or Entropy Lab as if
 they were two vaults. Those tools are an add-on mapping step.
