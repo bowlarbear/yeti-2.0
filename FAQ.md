@@ -120,16 +120,19 @@ A: As the amount of value you are securing in a Bitcoin multisig vault grows, it
 
 An upgrade path for a yeti style vault that enhances privacy and security for use cases that exceed $5M might include the following (in no particular order):
 -Encrypted descriptors sharded with shamir secret sharing
--Keys seperately generated on multiple Bitcoin Core computers
+-Keys separately generated on multiple Bitcoin Core computers
 -only loading 1 key per session when signing PSBTs
--laptop firmware/bootloader optimizations
 -Multiple vaults with different security parameters
 -Decaying spend thresholds with resets based on vault activity (a kind of deadman's switch)
--Timelocked vaul
+-Timelocked vault
 -other wallet script enhancements
 -CoinJoin in and out
+-A smaller or more restrictive host operating system
+-laptop firmware/bootloader optimizations
 
-There are multiple reasons why we don't just implement all of these things into Yeti-2.0 today, but the primary reasons are twofold. It would require introducing more code to make it user friendly which is better suited to a standalone application, and because much of it is overkill for this guide's recommended value band. 
+All of these improvements would arguably make for a more feature rich vault that potentially results in greater security and privacy, but there is no such thing as a free lunch. Adding these types of features would add user friction if it didn't also ship inside of application code to abstract away complexity or automate more difficult tasks. With application code comes a whole new set of problems around reproducibility and code review. 
+
+If would be great for that application to exist, but this guide is not it. Overall, while these upgrades would be nice to have, they are overkill for this guide's targeted scope. 
 
 ## Q: Why not encrypt the backup discs?
 
