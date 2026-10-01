@@ -253,12 +253,21 @@ different design. If they build something else, they should
 publish that procedure. Unpublished custom stacks are not
 review.
 
+**“A clever user can improve this.”**
+Some changes can stay inside this threat model, or tighten it.
+The main flow does not offer that menu. The audience is people
+who are not equipped to make those tradeoffs. Unpublished
+novelty is how coins get locked: a custom derivation, a
+memorized passphrase, a homegrown split.
+
+Follow the README if you want this vault. A change is a
+different design. Publish it if you want it reviewed.
+
 **“If this were sound, it would be in Bitcoin Core.”**
 No. Core documents the software. It does not ship a savings
 vault. Preferring Core’s review standard does not mean the
 vault README must live in bitcoin/bitcoin. That is a false
 link.
-
 RPC nits can go upstream. Discs, 3-of-7, Ubuntu, and the
 dollar band cannot. A closed doc PR is not a verdict on this
 threat model.
