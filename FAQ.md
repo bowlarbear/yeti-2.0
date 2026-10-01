@@ -140,9 +140,9 @@ An upgrade path for a yeti style vault that enhances privacy and security for us
 
 -laptop firmware/bootloader optimizations
 
-All of these improvements would arguably make for a more feature rich vault that potentially results in greater security and privacy, but there is no such thing as a free lunch. Adding these types of features would add user friction if it didn't also ship inside of application code to abstract away complexity or automate more difficult tasks. With application code comes a whole new set of problems around reproducibility and code review. 
+All of these improvements would arguably make for a more feature rich vault that potentially results in greater security and privacy, but there is no such thing as a free lunch. Many of these features would add user friction if they didn't ship inside of application code to abstract away complexity or automate more difficult tasks. With application code comes a whole new set of problems around reproducibility and code review. 
 
-It would be great for that application to exist, but this guide is not it. Overall, while these upgrades would be nice to have, they are overkill for this guide's targeted scope. 
+It would be great for that application to exist, but this guide is not it. Overall, while these upgrades would be nice to have, they are overkill for our targeted scope and recommended value band. 
 
 ## Q: Why not encrypt the backup discs?
 
