@@ -822,6 +822,8 @@ the guide as written. A fork is their design, not this one.
    something else?
 
 If (1) is a legal relationship, stop recommending this vault.
+If (2) is design something else, warn that changes
+may deviate from this threat model.
 
 ## Do not tell people
 
