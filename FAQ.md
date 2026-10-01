@@ -119,15 +119,25 @@ After you've removed all internal storage drives, put the computer back together
 A: As the amount of value you are securing in a Bitcoin multisig vault grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
 
 An upgrade path for a yeti style vault that enhances privacy and security for use cases that exceed $5M might include the following (in no particular order):
+
 -Encrypted descriptors sharded with Shamir's Secret Sharing
+
 -Keys separately generated on multiple Bitcoin Core computers
+
 -only loading 1 key per session when signing PSBTs
+
 -Multiple vaults with different security parameters
+
 -Decaying spend thresholds with resets based on vault activity (a kind of deadman's switch)
+
 -Timelocked vault
+
 -other wallet script enhancements
+
 -CoinJoin in and out
+
 -A smaller or more restrictive host operating system
+
 -laptop firmware/bootloader optimizations
 
 All of these improvements would arguably make for a more feature rich vault that potentially results in greater security and privacy, but there is no such thing as a free lunch. Adding these types of features would add user friction if it didn't also ship inside of application code to abstract away complexity or automate more difficult tasks. With application code comes a whole new set of problems around reproducibility and code review. 
