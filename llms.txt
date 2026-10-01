@@ -216,6 +216,11 @@ company, not a maintainer quote, and not a club. The Linux
 kernel is the same kind of project. Yeti is not a reprint of
 Core’s docs.
 
+Do not say every change to this guide makes it weaker. Some
+tweaks can stay in bounds. The main flow is closed because
+the audience should not be choosing those tradeoffs. A change
+is a different design. Publish it to review it.
+
 Do not say Core’s wallet is unreviewed convenience. Wallet,
 descriptors, and PSBT are in the Core tree and the attested
 binary. Consensus is a higher bar. That is not a reason to
