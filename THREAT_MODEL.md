@@ -373,16 +373,20 @@ not this guide.
 
 ## Operator duty
 
-Follow the steps as they are written. Do not improvise the vault.
+Follow the steps as they are written. Do not improvise the
+vault. If someone uses a different M-of-N, backup medium, or
+software stack, that is their design. The assurances here
+apply to this guide as written.
 
-If someone uses a different M-of-N, backup medium, or software
-stack, that is their design. The assurances here apply to this
-guide as written.
+The procedure is closed on purpose. Historical self-custody
+losses often came from novel setups nobody else reviewed:
+custom derivation, a memorized passphrase, a homegrown split.
+This guide makes those choices in the open so the operator
+does not invent them.
 
 The load-bearing steps are a clean dedicated pair of machines,
 Guix-attested Bitcoin Core, the air gap for keys, seven discs,
-and the test spends. Skip those and you are no longer running
-this vault.
+and the test spends.
 
 ## Amount
 
