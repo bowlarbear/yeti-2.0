@@ -644,8 +644,6 @@ unattested blob on the signing path. Popular is not attested.
 This guide does not add those libraries.
 
 **“Yeti’s descriptor leak is a special weakness.”**
-
-**“Yeti’s descriptor leak is a special weakness.”**
 Any restorable multisig needs a descriptor backup. That backup
 is a balance oracle if someone holds it and knows what it is.
 Encrypting it invents another secret. This guide could encrypt
