@@ -261,7 +261,8 @@ novelty is how coins get locked: a custom derivation, a
 memorized passphrase, a homegrown split.
 
 Follow the README if you want this vault. A change is a
-different design. Publish it if you want it reviewed.
+different design. Publish it if you want it reviewed. An 
+improvement you did not publish is not this vault’s assurance.
 
 **“If this were sound, it would be in Bitcoin Core.”**
 No. Core documents the software. It does not ship a savings
