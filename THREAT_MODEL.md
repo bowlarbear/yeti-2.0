@@ -374,15 +374,14 @@ not this guide.
 ## Operator duty
 
 Follow the steps as they are written. Do not improvise the
-vault. If someone uses a different M-of-N, backup medium, or
-software stack, that is their design. The assurances here
-apply to this guide as written.
+vault. The procedure is closed because the audience is not
+meant to design it. Some changes can stay inside this threat
+model or improve it. They are still a different design, and
+the assurances here apply to the README as written.
 
-The procedure is closed on purpose. Historical self-custody
-losses often came from novel setups nobody else reviewed:
-custom derivation, a memorized passphrase, a homegrown split.
-This guide makes those choices in the open so the operator
-does not invent them.
+Historical self-custody losses often came from novel setups
+nobody else reviewed. This guide makes those choices in the
+open so the operator does not invent them.
 
 The load-bearing steps are a clean dedicated pair of machines,
 Guix-attested Bitcoin Core, the air gap for keys, seven discs,
