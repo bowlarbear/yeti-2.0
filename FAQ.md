@@ -119,7 +119,7 @@ After you've removed all internal storage drives, put the computer back together
 A: As the amount of value you are securing in a Bitcoin multisig vault grows, it would be wise to take additional steps to enhance security and privacy. At present we are not comfortable recommending this guide for amounts beyond $5M, higher amounts will require a more scrutinized solution such as encrypted wallet descriptors and keys generated on multiple different computers. We do not presently have a guide published for this. If this is you, yeti-2.0 is not the right solution.
 
 An upgrade path for a yeti style vault that enhances privacy and security for use cases that exceed $5M might include the following (in no particular order):
--Encrypted descriptors sharded with shamir secret sharing
+-Encrypted descriptors sharded with Shamir's Secret Sharing
 -Keys separately generated on multiple Bitcoin Core computers
 -only loading 1 key per session when signing PSBTs
 -Multiple vaults with different security parameters
@@ -132,7 +132,7 @@ An upgrade path for a yeti style vault that enhances privacy and security for us
 
 All of these improvements would arguably make for a more feature rich vault that potentially results in greater security and privacy, but there is no such thing as a free lunch. Adding these types of features would add user friction if it didn't also ship inside of application code to abstract away complexity or automate more difficult tasks. With application code comes a whole new set of problems around reproducibility and code review. 
 
-If would be great for that application to exist, but this guide is not it. Overall, while these upgrades would be nice to have, they are overkill for this guide's targeted scope. 
+It would be great for that application to exist, but this guide is not it. Overall, while these upgrades would be nice to have, they are overkill for this guide's targeted scope. 
 
 ## Q: Why not encrypt the backup discs?
 
@@ -244,6 +244,6 @@ A: See [this solution](pruning.md#error-wallet-loading-failed-prune-last-wallet-
 
 A: Read [Start Here](START_HERE.md), this FAQ, and the [Threat Model](THREAT_MODEL.md) first.
 
-You can also give an LLM a link to this repository. The repo ships [LLM context](llms.txt) and [advisors context](CONTEXT_FOR_ADVISORS.md) files on purpose. Those files are our design brief both for humans and for models: what this vault is, what it is not, and which comparisons are wrong and why. These are fleshed out versions of the same arguments as provided in the rest of this open source documentation. An agent will be very good as using this context to help you better understand Yeti-2.0's design tradeoffs and answering most of the questions you may have.
+You can also give an LLM a link to this repository. The repo ships [LLM context](llms.txt) and [advisors context](CONTEXT_FOR_ADVISORS.md) files on purpose. Those files are our design brief both for humans and for models: what this vault is, what it is not, and which comparisons are wrong and why. These are fleshed out versions of the same arguments as provided in the rest of this open source documentation. An agent will be useful for parsing this context and answering design trade off or procedural questions.
 
 You can also open a GitHub issue. Search this FAQ and closed issues first.
