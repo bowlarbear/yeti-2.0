@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.32
+Guide Version: 1.33
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -501,6 +501,48 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 
 # D. How to use the Wallet Normally
+
+## Receiving to the vault
+
+Receiving larger amounts to the vault requires more precaution than our test spends. To generate a receive address first load your `multisig_watch_wallet` in the online computer if it is not already loaded. Then generate a new address with the following command.
+
+```
+~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
+```
+
+Copy and paste this address into a text file and save the file on your transfer USB.
+
+Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `Try Ubuntu`
+
+Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
+
+### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
+
+### [\*offline computer\*] Disable Networking
+
+```
+nmcli networking off
+rfkill block all
+```
+### [\*offline computer\*] Disable Swap Space
+
+```
+sudo swapoff -a
+```
+
+Load the `multisig_watch_wallet`.
+
+Copy the address from the address text file on your transfer USB into the following command, replacing `$address` with your actual address, and run it in the terminal.
+
+```
+~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$address"
+```
+
+In the result of this command you need to look for "ismine": true, this second check confirms that the address belongs to your wallet. You can now send funds to the vault with this address. See the [Verifying Outputs section](https://github.com/bowlarbear/yeti-2.0/blob/main/verify_psbt.md#verifying-outputs) of the verify PSBT subguide for a visual example of how this looks.
+
+Warning: You should never re-use a Bitcoin address.
+
+## Spending from the vault
 
 By this point you should already have a good understanding of how this works. The \*offline computer\* does not have any persistence. This is for your security, so no keys are ever written to the computer's storage, they can never be recovered without the backup discs. Each time you wish to sign a PSBT with the \*offline computer\* follow these steps carefully...
 
