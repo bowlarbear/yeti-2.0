@@ -516,7 +516,7 @@ Copy and paste this address into a text file and save the file on your transfer 
 
 Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `Try Ubuntu`
 
-Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
+Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to install Brasero.
 
 ### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
 
@@ -555,7 +555,7 @@ You should already have a good understanding of how this works from the test spe
 
 Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `Try Ubuntu`
 
-Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to reinstall Brasero.
+Temporarily connect to your home network, download and verify Bitcoin Core. Download this guide if needed (see steps A6 & A7). You do not need to install Brasero.
 
 ### IMPORTANT: [\*offline computer\*] Before Inserting any Key Material
 
@@ -572,7 +572,7 @@ rfkill block all
 sudo swapoff -a
 ```
 
-From here the process for spending from the multisig is the same as above.
+From here the process for spending from the multisig is the same as the test spends.
 
 Next time you want to spend Bitcoin from the multisig:
 1. [online computer] Create the unsigned PSBT on the online computer, drag the unsigned PSBT into the transfer USB (step C4)
@@ -587,7 +587,7 @@ Next time you want to spend Bitcoin from the multisig:
 10. [online computer] broadcast the signed PSBT (step C6)
 
 
-For security you should always turn off the \*offline computer\* after you finish signing and exporting a PSBT.
+For security you should always turn off the \*offline computer\* after you finish signing and exporting a PSBT. This ensures the deletion of any key material from the computer.
 
 # Vault maintenance
 
