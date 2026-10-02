@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.33
+Guide Version: 1.34
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -356,9 +356,9 @@ start Bitcoin Core again
 ```
 
 
-## C2. [\*offline computer\*] Create a Receive Address
+## C2. [online computer] Create a Receive Address
 
-Next you will generate a receive address for your wallet on your offline machine.
+Next you will generate a receive address for your wallet on your online machine.
 
 Run this command to generate a new receive address:
 
@@ -368,7 +368,7 @@ Run this command to generate a new receive address:
 
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). 
 
-Note: You can also generate a receive address with Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" if its not already loaded, and generate a receive address for a QR code.
+Note: You can also generate a receive address with Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-31.1/bin` in the file explorer, if the Bitcoin daemon is already running you must stop it before starting Bitcoin-QT. Then load "multisig_watch_wallet" in the GUI if its not already loaded, and generate a receive address for a QR code.
 
 ## C3. [online computer] Check the Balance of the Wallet
 
