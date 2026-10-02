@@ -372,12 +372,14 @@ Note: You can also generate a receive address with Bitcoin-QT, which is Bitcoin 
 
 ## C3. [online computer] Check the Balance of the Wallet
 
-Note: You can only check the balance of your wallet from the online computer, with the wallet properly loaded as shown in step B5.
+You can only check the balance of your wallet from the online computer, with the wallet properly loaded as shown in step B5.
 
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
 
 ```
+
+Note: Fully settled, spendable funds will appear in the `trusted` field of the `getbalances` command. 
 
 
 ## C4. [online computer] Create a Transaction 
