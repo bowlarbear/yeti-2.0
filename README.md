@@ -502,7 +502,7 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 # D. How to use the Wallet Normally
 
-## Receiving to the vault
+## D1. Receiving to the vault
 
 Receiving larger amounts to the vault requires more precaution than our test spends. To generate a receive address first load your `multisig_watch_wallet` in the online computer if it is not already loaded. Then generate a new address with the following command.
 
@@ -542,9 +542,9 @@ In the result of this command you need to look for "ismine": true, this second c
 
 Warning: You should never re-use a Bitcoin address.
 
-## Spending from the vault
+## D2. Spending from the vault
 
-By this point you should already have a good understanding of how this works. The \*offline computer\* does not have any persistence. This is for your security, so no keys are ever written to the computer's storage, they can never be recovered without the backup discs. Each time you wish to sign a PSBT with the \*offline computer\* follow these steps carefully...
+You should already have a good understanding of how this works from the test spends. The \*offline computer\* does not have any persistence. This is for your security, so no keys are ever written to the computer's storage, they can never be recovered without the backup discs. Each time you wish to sign a PSBT with the \*offline computer\* follow these steps carefully...
 
 Insert Linux USB into the powered off, \*offline computer\*, turn the computer on, after the Ubuntu splash screen select `Try Ubuntu`
 
