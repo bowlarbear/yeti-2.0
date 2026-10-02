@@ -506,6 +506,8 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 Receiving larger amounts to the vault requires more precaution than our test spends. To generate a receive address first load your `multisig_watch_wallet` in the online computer if it is not already loaded. Then generate a new address with the following command.
 
+### [online computer] Create a New Address
+
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
@@ -530,7 +532,12 @@ rfkill block all
 sudo swapoff -a
 ```
 
-Load the `multisig_watch_wallet`.
+### [\*offline computer\*] Load the `multisig_watch_wallet`
+
+```
+~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+```
+### [\*offline computer\*] Verify the Address
 
 Copy the address from the address text file on your transfer USB into the following command, replacing `$address` with your actual address, and run it in the terminal.
 
@@ -582,9 +589,11 @@ Next time you want to spend Bitcoin from the multisig:
 
 For security you should always turn off the \*offline computer\* after you finish signing and exporting a PSBT.
 
+# Vault maintenance
+
 Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
 
 Remember: [Keep your software up to date](update_software.md).
 
-Remember: You should check your key backups periodically and refresh the backups approximately once every 7 years. Archival grade DVDs are rated to last for 100 years, but this refresh routine is a good practice to ensure that none of the keys in your vault have been lost. This would mean copying the contents of a backup disc onto a fresh archival grade DVD, then adding it to the envelope to be stored beside the original. If at any point one of your keys becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
+Remember: You should check your key backups periodically and refresh the backups approximately once every 7 years. Archival grade DVDs are rated to last for 100 years, but this refresh routine is a good practice to ensure that none of the keys in your vault have been lost. This would mean copying the contents of a backup disc onto a fresh archival grade DVD, then adding it to the envelope to be stored beside the original. This should only be done on the *\offline computer\* and requires reinstalling Brasero. If at any point one of your keys becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
 
