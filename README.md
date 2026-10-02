@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.31
+Guide Version: 1.32
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -343,10 +343,10 @@ Stop Bitcoin Core
 
 wait a moment for the daemon to finish shutting down
 
-Delete the entire `~/.bitcoin/wallets` folder
+Delete all of the keys from the `.bitcoin/wallets` folder
 
 ```
-rm -rf ~/.bitcoin/wallets
+rm -rf ~/.bitcoin/wallets/key_*
 ```
 
 start Bitcoin Core again
@@ -358,13 +358,9 @@ start Bitcoin Core again
 
 ## C2. [\*offline computer\*] Create a Receive Address
 
-Note: You can generate addresses on your offline machine, provided that you have the "multisig_watch_wallet" in the `~/.bitcoin/wallets` folder.
+Next you will generate a receive address for your wallet on your offline machine.
 
-Note: In order to generate new addresses the "multisig_watch_wallet" must be loaded with either Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI) or with the Bitcoin-cli (see step B5). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" and generate a receive address for a QR code.
-
-To use the cli, load the wallet like in step B5. 
-
-After loading the wallet, run this command to generate a new address:
+Run this command to generate a new receive address:
 
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
@@ -372,8 +368,7 @@ After loading the wallet, run this command to generate a new address:
 
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). 
 
-Note: Alternatively, you can also generate a QR code for this address if you use Bitcoin-Qt.
-
+Note: You can also generate a receive address with Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-31.1/bin` in the file explorer, then load "multisig_watch_wallet" if its not already loaded, and generate a receive address for a QR code.
 
 ## C3. [online computer] Check the Balance of the Wallet
 
