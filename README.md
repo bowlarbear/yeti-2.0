@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.30
+Guide Version: 1.31
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -168,7 +168,7 @@ Insert the Linux USB (the one with tape) and turn the computer on. Remember if y
 
 Within the Ubuntu installer wizard, choose the option to connect to either Wi-Fi or LAN, this will be temporary.
 
-At the end of the Ubuntu installer wizard select `Try Ubuntu`.
+During Ubuntu installer wizard select `Try Ubuntu`.
 
 ## Step A6: [\*offline computer\*] Install Updates and Software
 
@@ -184,7 +184,7 @@ wget -O README.md https://raw.githubusercontent.com/bowlarbear/yeti-2.0/main/REA
 
 You should now have this guide in the Home directory.
 
-You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.
+You can run `less README.md` inside the home directory to open this guide in a terminal window on the offline machine.  You can also copy and paste guide commands from nano, vim, firefox, or Ubuntu's text editor program. Do not try to download the guide as a pdf or to open it with document viewer. 
 
 ### [\*offline computer\*] Install Bitcoin Core
 
@@ -304,19 +304,19 @@ Now back up each of the 7 keys and the wallet descriptor.
 
 Use Brasero to create 7 DVD backups. These files can be found in the `~/.bitcoin/wallets` folder. Take an DVD and write the number 1 on it with a permanent marker, insert disc 1 into the USB connected disc drive. Then use Brasero to create an ISO of key_1 & the multisig_watch_wallet from `~/.bitcoin/wallets` along with README.md which is a copy of this guide. Burn this ISO to disc 1. Repeat for all 7 keys.
 
-1 = key_1 & multisig_watch_wallet
+1 = key_1 & multisig_watch_wallet & README.md
 
-2 = key_2 & multisig_watch_wallet
+2 = key_2 & multisig_watch_wallet & README.md
 
-3 = key_3 & multisig_watch_wallet
+3 = key_3 & multisig_watch_wallet & README.md
 
-4 = key_4 & multisig_watch_wallet
+4 = key_4 & multisig_watch_wallet & README.md
 
-5 = key_5 & multisig_watch_wallet
+5 = key_5 & multisig_watch_wallet & README.md
 
-6 = key_6 & multisig_watch_wallet
+6 = key_6 & multisig_watch_wallet & README.md
 
-7 = key_7 & multisig_watch_wallet
+7 = key_7 & multisig_watch_wallet & README.md
 
 
 Note: You will not be able to complete section C until your online computer has finished syncing the Bitcoin Blockchain.
@@ -344,6 +344,10 @@ Stop Bitcoin Core
 wait a moment for the daemon to finish shutting down
 
 Delete the entire `~/.bitcoin/wallets` folder
+
+```
+rm -rf ~/.bitcoin/wallets
+```
 
 start Bitcoin Core again
 
