@@ -136,6 +136,8 @@ An upgrade path for a yeti style vault that enhances privacy and security for us
 
 -CoinJoin in and out
 
+-stateful signers
+
 -A smaller or more restrictive host operating system
 
 -laptop firmware/bootloader optimizations
@@ -160,9 +162,29 @@ See [THREAT_MODEL.md](THREAT_MODEL.md) for why one inspected Core box is preferr
 
 ## Q: Why not only load 1 key per session when signing?
 
-A: Similar to the previous question, this guide does not require it. Loading only 1 key per boot session, and transferring the PSBT to a new boot session after signing with 1 key would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. 
+A: Similar to the previous question, this guide does not require it. Loading only 1 key per boot session, and transferring the PSBT to a new boot session after signing with 1 key would ensure that after key creation, a signing threshold of keys would never exist all at once on a single signing device's boot session. This would also ensure that a signing threshold of keys was never gathered together in the same geographic location.
 
-However, this adds logistical complexity to the user experience because it requires more boot sessions and more data transfers when spending from the vault. Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands in the guide slightly.
+However, this adds logistical complexity to the user experience. It requires more boot sessions and more data transfers when spending from the vault. It requires you to reconstruct the signing device multiple times and in multiple locations. Yeti-2.0 does not have an application layer that can track the current state of the PSBT (unsigned, signed with 1 key, signed with 2 keys, completely signed).
+
+Nothing is stopping you from doing this but it would require deviating from the instructions and terminal commands provided in the guide. For most users, in most situations, and for this guide's recommended target value band this is overkill.
+
+## Q: Why destroy the offline signer, and recreate it again from scratch after each use? 
+
+A: There are several reasons we opted to do this. The first reason is that it is better for user security and privacy to keep the offline signer stateless. This ensures that the offline computer is not a privacy or a security leak and does not need to be kept secure when not in use. Key material never touches the device while it is network enabled. Creating your offline signer from scratch each time instead of keeping it for later reduces attack surface by ensuring key material never persists. It also reduces complexity by reducing the amount of materials users need to secure in between uses.
+
+The second reason is that it's good practice to always use the latest version of the Bitcoin software. If a user has an older version of the software in persistent storage, they may not update the software before using their signer. 
+
+The third reason is related to the first, in that the terminal commands provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-31.1 in their persistent storage and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why or how to properly upgrade. 
+
+The fourth reason is that permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly.
+
+Accounting for these above potential conflicts was deemed undesirable. You could avoid destroying and recreating your offline signer after each use by keeping a copy of Bitcoin Core and this guide on a USB stick or in a persistent storage partition, and import it to your offline machine after booting into the Live session. This adds another variable of complexity to your vault and it is another thing you must keep secure. Be prepared to troubleshoot any issues that might arise with terminal command compatibility, file and directory permissions, or accidental persisting of key material.
+
+## Q: Why not use time decaying spend thresholds?
+
+Decaying spend thresholds are useful because they allow heirs to recover a vault with potentially only 1 key. They also provide a failsafe in scenarios where a spend threshold of keys is unrecoverable. This does not come without tradeoffs.
+
+Yeti-2.0 does not have an application layer to keep track of and display the current state of a decaying spend threshold. Adding decaying spend thresholds to the wallet script would require users to track & reset these decays manually. This operational burden would not be appropriate for our format. Additionally, you could conceive of scenarios where a decaying spend threshold creates a race conditions between you and an attacker moving the Bitcoin. 
 
 ## Q: Does using a 3-of-7 hurt your on-chain privacy?
 
@@ -211,18 +233,6 @@ It's still a good idea to keep a copy of the README on each key backup disc for 
 A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include Tor as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an Ubuntu live system which meets our needs sufficiently. 
 
 These would be potential subguide ideas if you are interested in contributing. Obviously any recommendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
-
-## Q: Why destroy the offline signer, and recreate it again from scratch after each use? 
-
-A: There are several reasons we opted to do this. The first reason is that it is better for user security and privacy to keep the offline signer stateless. This ensures that the offline computer is not a privacy or a security leak and does not need to be kept secure when not in use. Key material never touches the device while it is network enabled. Creating your offline signer from scratch each time instead of keeping it for later reduces attack surface by ensuring key material never persists. It also reduces complexity by reducing the amount of materials users need to secure in between uses.
-
-The second reason is that it's good practice to always use the latest version of the Bitcoin software. If a user has an older version of the software in persistent storage, they may not update the software before using their signer. 
-
-The third reason is related to the first, in that the terminal commands provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-31.1 in their persistent storage and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why. 
-
-The fourth reason is that permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly.
-
-Accounting for these above potential conflicts was deemed undesirable. You could avoid destroying and recreating your offline signer after each use by keeping a copy of Bitcoin Core and this guide on a USB stick or in a persistent storage partition, and import it to your offline machine after booting into the Live session. Be prepared to troubleshoot any issues that might arise with terminal command compatibility, file and directory permissions, or accidental persisting of key material.
 
 ## Q: What if I change the process in this guide?
 
