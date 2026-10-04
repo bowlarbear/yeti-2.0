@@ -84,9 +84,12 @@ move keygen into another stack.
 
 This vault has laptop screens and a Core coordinator. A vendor
 screen is not a distinct feature. There is no seed phrase. BIP39
-is not an inheritance upgrade. There is no seed phrase. BIP39 
-is not an inheritance upgrade. An heir needs the README and the discs. 
-They have time. Recovering self-custodied bitcoin means operating Bitcoin.
+is not an inheritance upgrade. An heir needs the README and the 
+discs.  They have time. Recovering self-custodied bitcoin means 
+operating Bitcoin. Each disc carries the README. A found disc 
+explains the 3-of-7 and the restore. The only irreplaceable objects 
+are three discs. A seed phrase or a bare share does not explain
+itself. Do not score inheritance by step count alone.
 Do not treat a seed phrase as safer because an heir can type
 it. That input surface is the phishing path. This guide
 recovers with a disc on the offline reader, not a phrase in
