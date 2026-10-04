@@ -30,8 +30,12 @@ design by three rules, in order:
 
    Do not invent a dollar price for a Core zero-day. Do not
    present a targeted or irreducible path as if it were the
-   commodity path. Vendor firmware loses the commodity path.
-   It does not win by sharing the irreducible one.
+   commodity path.
+
+   A missing extra is not a finding. Name the path, what it
+   costs to run, and what the added step closes. If it does not
+   close the commodity path, it is a peace of mind ritual. A
+   longer checklist is not a higher standard.
 
 3. Scope-bound. This is a $10k–$5M savings vault, not a spending
    wallet. Friction on a spend is accepted. It is not a reason
