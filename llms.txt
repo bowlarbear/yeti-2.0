@@ -117,6 +117,15 @@ object that has to stay honest between spends. It can be
 altered or swapped while it sits. The rebuilt session has
 nothing to alter. A previous boot is gone.
 
+A machine that never connects does not end the trust.
+Someone built the image, the ISO, and the hardware. That
+build used a network, a pipe to a network, or a third party
+who used one. That is trusting trust. It is irreducible.
+Hiding the connection does not make it smaller. This guide
+puts the connection on a hash-checked Core download, then
+turns the network off before a disc is read. That closes
+the low path. It is not a claim the turtle ends.
+
 Every signer still needs a transfer channel to a networked
 node. That channel is the cheaper exfil path. A radio exploit
 needs a payload already on the signer. The way onto an
