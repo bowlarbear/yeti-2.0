@@ -116,9 +116,11 @@ input surface. It does not make physical copies of a disc
 impossible.
 
 Each disc is an independent key plus what you need to rebuild
-the wallet. Find any three. The split across places is part
-of the quorum. Seven discs in one box are not this design.
-Other stacks often omit both instructions. 
+the wallet, including a copy of the procedure. An heir who
+finds one disc can read the threshold and the restore steps.
+The only objects with no substitute are any three discs. A
+mnemonic or a share that does not carry its own instructions
+does not have that property.
 
 **Loss or destruction of backups.**
 Four discs can fail and the vault still spends. That is the point of
