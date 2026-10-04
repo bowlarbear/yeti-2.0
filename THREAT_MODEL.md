@@ -8,12 +8,12 @@ of a single backup.
 It is not a hardware-wallet product. It is not a regulated custodian.
 It is Bitcoin Core on dedicated computers, with keys on archival discs.
 
-Advisors: the risks this vault is for are in “What the design is
-trying to stop.” Operator effort is not one of those risks. See
-[CONTEXT_FOR_ADVISORS.md](CONTEXT_FOR_ADVISORS.md).
+The risks this vault is for are in “What the design is trying to
+stop.” Operator effort is not one of those risks. Advisor context
+is in [CONTEXT_FOR_ADVISORS.md](CONTEXT_FOR_ADVISORS.md).
 
 Read this with the [FAQ](FAQ.md). The [README](README.md) is the
-procedure. Follow the README as written.
+procedure. The assurances below apply to that procedure as written.
 
 ## Assets
 
@@ -36,7 +36,7 @@ in practice. Any one of those binaries can steal. A coordinator can
 build a bad PSBT or serve a malicious descriptor. It can bias nonces
 or other signing input and exfiltrate key material. A single bad
 crypto library can steal on its own. Vendors and coordinators already
-ship as pairs. Assume they can act as a pair.
+ship as pairs. The model assumes they can act as a pair.
 
 Any Bitcoin-specific signer can ship that class of failure. The 2026
 Coldcard default-seed incident is the public case, not a unique one:
@@ -50,7 +50,7 @@ This is not a nation-state story. It is what happens when a product
 built to hold bearer bitcoin ships software nobody sufficiently
 reviewed. The owner has no recourse. “It was a bug” is enough cover
 whether the failure was sloppy or not. Shipping and support databases
-leak. Do not reserve this class of failure for rare attackers.
+leak. This class of failure is not reserved for rare attackers.
 
 This vault creates and uses keys on a dedicated offline computer
 running a clean Ubuntu install and Bitcoin Core. Keys are not stored
@@ -63,8 +63,8 @@ extraction barrier. Remote malware is cheaper and scales across
 many devices at once. The 2026 sweeps did not need the device.
 
 Dice kits and offline entropy pages are not a competing vault.
-They sit on top of some other stack. You still need a machine,
-an import path, backups, and a signer. The mapping code is
+They sit on top of some other stack. The operator still needs a
+machine, an import path, backups, and a signer. The mapping code is
 extra software with less review than Core. Watching rolls does
 not attest that program. Dice-first is not a smaller key-birth
 surface than Guix-attested Core. It is Core’s surface plus the
@@ -73,7 +73,7 @@ audit Core’s generator with a calculator.
 
 Roll-your-own entropy makes the operator the single point of
 failure for that execution. Paper is not in Core’s test set.
-You cannot publish the sheet and keep the secret. Libsecp and
+The sheet cannot be published and the secret kept. Libsecp and
 Core’s generator are the reviewed function, shipped as an
 attested binary. A side calculator is not that function. An
 xpub match against Core does not bind the rolls.
@@ -92,7 +92,7 @@ Signatures do not attest that engine.
 This guide does not treat Core’s generator as a hole for a kit
 to close.
 
-The root of trust is the software you run, not the dice. A kit
+The root of trust is the software that runs, not the dice. A kit
 that maps rolls is an unauditable root unless it clears Core’s
 review. Watching rolls does not make it one.
 
@@ -102,15 +102,15 @@ stolen disc cannot spend. It can reveal the watch-only
 descriptor. That is a balance oracle, not a spend.
 
 A spend gathers a threshold in one place. Theft of those three
-discs is not an instant loss. Four discs remain. Sweep with any three 
-of those before the thief spends. A stranger who does not know what 
-the discs are has to learn the scheme and spend before you sweep. An 
-attacker who already knows the scheme and is waiting for the trip can.
-That race is why the quorum is 3-of-7 and not 2-of-3. A sweep after 
-theft of the signing set exists only if the remainder is still a 
-threshold. A 2-of-3 or a 3-of-5 robbed of its signing set has nothing 
-left. A 2-of-5 or a 3-of-6 still has a sweep. 3-of-7 still has a sweep 
-and a spare.
+discs is not an instant loss. Four discs remain. Sweep with any three
+of those before the thief spends. A stranger who does not know what
+the discs are has to learn the scheme and spend before the owner
+sweeps. An attacker who already knows the scheme and is waiting for
+the trip can. That race is why the quorum is 3-of-7 and not 2-of-3.
+A sweep after theft of the signing set exists only if the remainder
+is still a threshold. A 2-of-3 or a 3-of-5 robbed of its signing set
+has nothing left. A 2-of-5 or a 3-of-6 still has a sweep. 3-of-7
+still has a sweep and a spare.
 
 3-of-7 is the savings quorum: three discs to spend, four can be
 lost. 2-of-3 fails if two keys are gone, and an attacker with
@@ -126,7 +126,7 @@ offline machine. That is the accepted path. It shrinks that
 input surface. It does not make physical copies of a disc
 impossible.
 
-Each disc is an independent key plus what you need to rebuild
+Each disc is an independent key plus what is needed to rebuild
 the wallet, including a copy of the procedure. An heir who
 finds one disc can read the threshold and the restore steps.
 The only objects with no substitute are any three discs. A
@@ -148,12 +148,12 @@ This GitHub repo is not that target. A bad README is a visible
 diff. The signer is attested Core. Quiet theft at scale prefers
 a vendor updater and a “bug” story. That is the 2026 pattern.
 
-Todd (2018): a mailed Bitcoin gadget advertises guaranteed coins to anyone who 
-backdoors the package. A small computer used only for Bitcoin is less obvious. 
+Todd (2018): a mailed Bitcoin gadget advertises guaranteed coins to anyone who
+backdoors the package. A small computer used only for Bitcoin is less obvious.
 Hardware wallets are still software running on a computer.
 
 Attackers who want coins know exactly what they are looking at. That
-supply chain is cheaper to hit than the commodity PC market. The firmware 
+supply chain is cheaper to hit than the commodity PC market. The firmware
 on those devices is usually shipped by a small team.
 
 **The security standard is Bitcoin Core with independent Guix
@@ -189,7 +189,7 @@ The device can only enforce the code it actually runs.
 
 - Ubuntu and Bitcoin Core, installed and verified as the README says
 - One offline machine as the key-generation environment
-- Your handling of the seven discs after setup
+- Handling of the seven discs after setup
 - The public Bitcoin ledger
 
 Software is written by humans. Bitcoin Core and Linux are used
@@ -215,8 +215,8 @@ usually an unsigned application image inside Docker. That is
 not the same scoreboard.
 
 A bug in the generator or the signer can leak keys from
-signatures on the public chain. It can also hand you an
-address that is not yours. Physical split and an air gap do
+signatures on the public chain. It can also hand the operator an
+address that is not the operator’s. Physical split and an air gap do
 not contain that.
 
 The question is what makes each signing stack hard to
@@ -236,9 +236,9 @@ Each extra vendor in the stack usually means an extra coordinator,
 extra libraries, and extra firmware. Each of those is more attack
 surface.
 
-You cannot run multi-vendor hardware multisig on Bitcoin Core without
-adding extra libraries and a non-Core coordinator.A coordinator can 
-serve a malicious descriptor. It can bias nonces or other signing 
+Multi-vendor hardware multisig cannot run on Bitcoin Core without
+extra libraries and a non-Core coordinator. A coordinator can
+serve a malicious descriptor. It can bias nonces or other signing
 input and exfiltrate key material. It can conspire with a vendor.
 
 A coordinator or signer that imports coincurve, embit, or
@@ -252,7 +252,7 @@ enough to spend. This guide does not put a key in the online
 coordinator.
 
 A device can lie about its firmware. A reproducible app can still
-depend on an uncheck-able blob. Independent attestation of that full
+depend on an uncheckable blob. Independent attestation of that full
 build chain is missing.
 
 The common line is that generating keys across several vendors makes
@@ -292,7 +292,7 @@ to accept for key generation.
 
 ## What this does not try to hide
 
-Bitcoin amounts on chain are public. When you spend, the
+Bitcoin amounts on chain are public. When a spend happens, the
 network can see the script type. That is true of every wallet,
 not only a 3-of-7 and not only this guide.
 An unencrypted disc that includes the descriptor lets whoever
@@ -302,7 +302,7 @@ at.
 That leak is not unique to this guide. Any multisig that can be
 restored needs a descriptor backup. Encrypting it recreates a key
 to manage. Encrypting it with the same 3-of-7 is the coherent fix
-and needs software Core does not ship yet. See the FAQ.
+and needs software Core does not ship yet. The FAQ covers that.
 
 None of those, by themselves, move coins. They are accepted in scope
 for this design.
@@ -319,18 +319,18 @@ The online machine is a dedicated clean box. It is trusted as part
 of this stack. It is not the signer. Keys are not stored on it.
 
 The signer and the node are both trusted, but not equally. The signer
-earns more trust because its job is narrower: it never runs a networked 
-daemon, it only operates offline, it holds no keys at rest, and each 
+earns more trust because its job is narrower: it never runs a networked
+daemon, it only operates offline, it holds no keys at rest, and each
 session is amnesic. The node carries the broader surface, a networked
-daemon, downloads, the PSBT it builds, so the design leans on the signer, 
+daemon, downloads, the PSBT it builds, so the design leans on the signer,
 not the node for anything key touching.
 
 Decoding the PSBT and checking `"ismine": true` on change is an
 extra check on the node's output, not the foundation. The foundation
 is that keys only ever exist on the narrower-surface, offline signer.
-Do not treat the ismine check as the load bearing control and then 
-conclude the vault fails if it is bypassed - the control is the air
-gap plus this trust gradient; the ismine check sits on top of it.
+The ismine check is not the load-bearing control. Bypassing it does
+not make the vault fail. The control is the air gap plus this trust
+gradient. The ismine check sits on top of it.
 
 The offline signer is rebuilt each spend so it does not have
 to be kept secure between uses. A stored machine holds no
@@ -351,7 +351,7 @@ the longer path.
 
 Pulling the radio is a peace of mind ritual. It does not
 hurt. It also does not close the transfer channel. A step
-you can see is not the control.
+that can be seen is not the control.
 
 This guide's channel is USB mass storage, which is already in
 the OS. An animated QR decoder is not in this stack. Adding
@@ -365,106 +365,61 @@ Animated QR does not close that arrival. A SeedSigner-style
 pipe is not this stack with a tighter channel. It is other
 firmware plus that decoder.
 
+Throughput and frames on a screen are not the residual. A key
+is small. The payload that reads it and puts it on the return
+transfer is small. KB/s versus MB/s is not two costs of that
+exploit. The operator already watches the spend, and the
+animation is the normal path. Ownership of the host or the
+signer removes the intended rate and the intended visibility.
+A quantified gap between those rates is not a finding.
+Animated QR is not a mitigator of key exfil or of payload
+delivery.
+
 A missing extra is not a hole. There is no finite list of
 rituals a critic can demand: a pulled radio, a second decoder,
 a firmware disable, another machine, another brand.
 
-Name the path. Say what it costs to run, and what the added
-step actually closes. If the add does not close the commodity
-path, or costs more than the residual, it is a peace of mind
-ritual. This design does not owe one.
+The test is the path, the cost to run it, and what the added
+step closes. If the add does not close the commodity path, or
+costs more than the residual, it is a peace of mind ritual.
+This design does not owe one.
 
 ## Day-to-day vs catastrophe
 
-Normal spends use sneakernet between the two computers.
-Recovery does not depend on sneakernet, on a particular disc drive,
-or on this repository. Setup uses an optical drive. If that drive
-is lost or broken later, get another. Anyone who can read the discs
-and run Bitcoin Core can reconstruct the wallet and spend.
+Normal spends use sneakernet between the two computers. Recovery does not depend on sneakernet, on a particular disc drive, or on this repository. Setup uses an optical drive. If that drive is lost or broken later, another drive is enough. Anyone who can read the discs and run Bitcoin Core can reconstruct the wallet and spend.
 
 ## Other products
 
-These fail differently. Do not collapse them into one ranking.
-Bitcoin is a bearer instrument on a push network with final
-settlement. Anyone who holds keys accepts operational risk.
-This guide does not create that fact. Hardware wallets and
-collaborative custody do not erase it. A brokerage is a claim
-on an institution, not the absence of operations.
+These fail differently. They are not one ranking. Bitcoin is a bearer instrument on a push network with final settlement. Anyone who holds keys accepts operational risk. This guide does not create that fact. Hardware wallets and collaborative custody do not erase it. A brokerage is a claim on an institution, not the absence of operations.
 
-**Hardware wallets** concentrate key generation, display, and often
-the coordinator relationship in vendor software and a Bitcoin-specific
-supply chain. Users who followed default setup instructions have lost
-funds when that software was wrong. A screen does not help if the 
-generator that created the seed was weak, and it does not help if 
-another binary in the stack is the thief. The failure is the model. 
-Coldcard 2026 is the exhibit. The weak path entered through a 
-dependency committed under the pseudonym switck. Those commits were 
-signed with the Coinkite CTO’s GPG key. The company called it an
-integration accident. The class is not unique to that brand.
+**Hardware wallets** concentrate key generation, display, and often the coordinator relationship in vendor software and a Bitcoin-specific supply chain. Users who followed default setup instructions have lost funds when that software was wrong. A screen does not help if the generator that created the seed was weak, and it does not help if another binary in the stack is the thief. The failure is the model. Coldcard 2026 is the exhibit. The weak path entered through a dependency committed under the pseudonym switck. Those commits were signed with the Coinkite CTO’s GPG key. The company called it an integration accident. The class is not unique to that brand.
 
-The architectural case is older than Coldcard 2026. Maxwell
-(2020) called the devices opaque, hard to review, and a
-supply-chain target, and would not recommend them for serious
-amounts. Spigler (2020) is the long form.
+The architectural case is older than Coldcard 2026. Maxwell (2020) called the devices opaque, hard to review, and a supply-chain target, and would not recommend them for serious amounts. Spigler (2020) is the long form.
 
-Multi-coin firmware adds networks and libraries on the same
-device that holds the Bitcoin key. That is more attack surface
-and less review. Bitcoin-only vendor firmware is smaller. It
-is still not Core.
+Multi-coin firmware adds networks and libraries on the same device that holds the Bitcoin key. That is more attack surface and less review. Bitcoin-only vendor firmware is smaller. It is still not Core.
 
-**Multi-vendor hardware multisig** adds more of that stack, then a
-non-Core coordinator. It cannot be built from the reference
-implementation. Vendor diversity does not create Guix attestations
-and does not stop a device from lying about its firmware.
+**Multi-vendor hardware multisig** adds more of that stack, then a non-Core coordinator. It cannot be built from the reference implementation. Vendor diversity does not create Guix attestations and does not stop a device from lying about its firmware.
 
-**Collaborative custody** is usually a 2-of-3 sold as self-custody.
-The user holds one key. The company holds one. A third key is
-picked by the company. The company picks the software. Those two 
-keys can move or freeze coins. A terms-of-use page is not a map 
-of that relationship.
+**Collaborative custody** is usually a 2-of-3 sold as self-custody. The user holds one key. The company holds one. A third key is picked by the company. The company picks the software. Those two keys can move or freeze coins. A terms-of-use page is not a map of that relationship.
 
-A company in the policy is also a name attackers can impersonate:
-fake support, fake recovery, compromised help channels. That
-surface does not exist when every key is a disc you placed.
+A company in the policy is also a name attackers can impersonate: fake support, fake recovery, compromised help channels. That surface does not exist when every key is a disc the operator placed.
 
-Two hardware wallets plus a BitGo-style HSM (Swan and similar)
-is the same class, not a Core vault with a helper. The HSM is
-vendor firmware you cannot attest. It does not become Core
-because it sits in a trust.
+Two hardware wallets plus a BitGo-style HSM (Swan and similar) is the same class, not a Core vault with a helper. The HSM is vendor firmware that cannot be attested. It does not become Core because it sits in a trust.
 
+A brokerage, ETF, or trust is a legal claim on bitcoin or a bitcoin-linked product. The account holder is trusting that institution’s people, its software, and the law around the account. That software is not Bitcoin Core, and the account holder cannot inspect it. Recourse is the product. It does not give the account holder bearer coins, and it does not remove operational risk. It relocates the risk into a named custodian.
 
-A brokerage, ETF, or trust is a legal claim on bitcoin or a
-bitcoin-linked product. You are trusting that institution’s people,
-its software, and the law around the account. That software is not
-Bitcoin Core, and you cannot inspect it. Recourse is the product.
-It does not give you bearer coins, and it does not remove operational
-risk. It relocates the risk into a named custodian.
-
-Use it when the person wants that contract: someone to call, a
-regulator, an estate process. That is not self-custody, and it is
-not this guide.
+That contract fits a person who wants someone to call, a regulator, an estate process. That is not self-custody, and it is not this guide.
 
 ## Operator duty
 
-Follow the steps as they are written. Do not improvise the
-vault. The procedure is closed because the audience is not
-meant to design it. Some changes can stay inside this threat
-model or improve it. They are still a different design, and
-the assurances here apply to the README as written.
+The steps are the procedure. Improvising the vault is outside this model. The procedure is closed because the audience is not meant to design it. Some changes can stay inside this threat model or improve it. They are still a different design, and the assurances here apply to the README as written.
 
-Historical self-custody losses often came from novel setups
-nobody else reviewed. This guide makes those choices in the
-open so the operator does not invent them.
+Historical self-custody losses often came from novel setups nobody else reviewed. This guide makes those choices in the open so the operator does not invent them.
 
-The load-bearing steps are a clean dedicated pair of machines,
-Guix-attested Bitcoin Core, the air gap for keys, seven discs,
-and the test spends.
+The load-bearing steps are a clean dedicated pair of machines, Guix-attested Bitcoin Core, the air gap for keys, seven discs, and the test spends.
 
 ## Amount
 
-The README’s $10k–$5M range is a design comfort zone, not a law.
-Vendor products do not publish an equivalent ceiling. Naming the
-band is not a concession that brands are stronger inside it.
+The README’s $10k–$5M range is a design comfort zone, not a law. Vendor products do not publish an equivalent ceiling. Naming the band is not a concession that brands are stronger inside it.
 
-Design disagreements belong in the FAQ or a public issue, not in a
-private vulnerability report. See [SECURITY.md](SECURITY.md).
+Design disagreements belong in the FAQ or a public issue, not in a private vulnerability report. See [SECURITY.md](SECURITY.md).
