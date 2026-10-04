@@ -228,6 +228,12 @@ A: Nothing would happen to your Bitcoin. The advantage of Yeti-2.0 is that you d
 
 It's still a good idea to keep a copy of the README on each key backup disc for reference, but this guide is not a single point of failure. A reasonably competent person could spend a few hours reading the Bitcoin Core API documentation and figure out how to send and receive Bitcoin from the multisig wallet configured with this guide all on their own.
 
+## Q: Would an heir be able to recover the Bitcoin if something happened to me?
+
+A: Each backup is burned with a key, the watch-only descriptor, and a copy of this README. An heir who can read the disc can see that this is a 3-of-7 Bitcoin Core vault, that any three discs can spend, and what the restore steps are.
+
+A seed phrase or a share string does not does not include a written process. Those are secrets without context. They do not say “this is Bitcoin,” which software restores them, or how many pieces are required, unless someone left a separate letter. This guide puts the letter on the backup itself.
+
 ## Q: Can I use Tor for this? Can I use TAILS for the offline signer OS?
 
 A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include Tor as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an Ubuntu live system which meets our needs sufficiently. 
