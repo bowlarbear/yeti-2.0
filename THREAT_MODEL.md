@@ -320,12 +320,12 @@ sanity check. It is not the load-bearing control. An air gap
 would not stop a motivated attacker who already owned that
 path. Malware in the software you run is the larger concern.
 
-The offline signer is rebuilt each spend so keys do not persist
-on a machine that was online. The network is used to install
-verified Bitcoin Core, then disabled before a disc is loaded.
-The session is amnesic. A payload that missed the install
-window has to exfiltrate with no network, before power-off,
-or it is gone.
+The offline signer is rebuilt each spend so it does not have
+to be kept secure between uses. A stored machine holds no
+keys. The network is used to install verified Bitcoin Core,
+then disabled before a disc is loaded. The session is amnesic.
+A payload that missed the install window has to exfiltrate
+with no network, before power-off, or it is gone.
 
 ## Day-to-day vs catastrophe
 
