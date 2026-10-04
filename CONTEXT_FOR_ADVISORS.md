@@ -550,6 +550,22 @@ ordinary self-defense. The larger exam is remote compromise of
 the software that created or used the keys. The 2026 thefts
 did not need the device in hand.
 
+**“Rebuilding the signer each time is the insecure step.”**
+No. The signer is rebuilt so it does not have to be kept
+secure between uses. A previous session is gone. An attack
+on the stored machine has nothing to find.
+
+The online step is the install, before any key is loaded.
+The instructed download is Bitcoin Core, verified. Keys are
+loaded only after the network is off. The session is amnesic.
+Power-off drops it.
+
+A payload has to arrive in the install window, survive the
+disconnect, and exfiltrate the keys with no network before
+the machine is powered off. That is a narrower path than a
+firmware update on a device whose job is to accept the
+vendor’s next image.
+
 **“A safely generated seed means the funds are safe.”**
 No. Key birth is one step. Signing code, backups, coordinators,
 phishing, and a lying display can still empty the vault. A
@@ -682,18 +698,6 @@ does not escape this. It just does not name it.
 This vault already splits backups across places. That is the
 3-of-7. Adding brands is not more distribution. It is more
 software.
-
-**“Rebuilding the signer each time is the insecure step.”**
-No. The online step is the install, before any key is loaded.
-The instructed download is Bitcoin Core, verified. Keys are
-loaded only after the network is off. The session is amnesic.
-Power-off drops it.
-
-A payload has to arrive in the install window, survive the
-disconnect, and exfiltrate the keys with no network before
-the machine is powered off. That is a narrower path than a
-firmware update on a device whose job is to accept the
-vendor’s next image.
 
 **“The coordinator may also see xpubs.”**
 You cannot know what a non-Core coordinator sends home. Some
