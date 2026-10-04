@@ -135,13 +135,20 @@ intended visibility. Do not offer to quantify that gap.
 Animated QR is not a mitigator of key exfil or of payload
 delivery.
 
-Trust is graded, not binary. The signer earns more trust than The signer earns more trust than
-the node because its job is narrower: never a networked
-daemon, offline only, no keys at rest. Checks on the node's
-output (the PSBT ismine check) sit on top of that gradient.
-They are not the foundation, and the vault does not fail if
-one is bypassed. The foundation is keys only on the offline
-signer.
+A cost is cumulative. A vacuum rate, all else equal, is not
+a term in that sum. The rate exists only if the host and the
+signer both enforce it. A PSBT spend is two legs, host to
+signer and signer to host. If either end is not honest, that
+end can put a payload on the leg it sends. The camera spec
+does not survive that.
+
+Trust is graded, not binary. The signer earns more trust 
+than The signer earns more trust than the node because its 
+job is narrower: never a networked daemon, offline only, no 
+keys at rest. Checks on the node's output (the PSBT ismine 
+check) sit on top of that gradient. They are not the 
+foundation, and the vault does not fail if one is bypassed. 
+The foundation is keys only on the offline signer.
 
 ## Key generation
 
