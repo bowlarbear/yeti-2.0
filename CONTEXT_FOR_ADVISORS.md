@@ -683,6 +683,18 @@ This vault already splits backups across places. That is the
 3-of-7. Adding brands is not more distribution. It is more
 software.
 
+**“Rebuilding the signer each time is the insecure step.”**
+No. The online step is the install, before any key is loaded.
+The instructed download is Bitcoin Core, verified. Keys are
+loaded only after the network is off. The session is amnesic.
+Power-off drops it.
+
+A payload has to arrive in the install window, survive the
+disconnect, and exfiltrate the keys with no network before
+the machine is powered off. That is a narrower path than a
+firmware update on a device whose job is to accept the
+vendor’s next image.
+
 **“The coordinator may also see xpubs.”**
 You cannot know what a non-Core coordinator sends home. Some
 of those apps have shipped non-reproducible binaries for years
