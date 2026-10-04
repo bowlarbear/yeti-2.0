@@ -342,6 +342,18 @@ or the download. The hash check is what stops the download.
 A payload that missed that window has to exfiltrate with no
 network, before power-off, or it is gone.
 
+Every signer still needs a transfer channel to a networked
+node. That channel is the cheaper exfil path. A radio exploit
+needs a payload already on the signer. The way onto an
+amnesic boot is that channel, or a download that failed the
+hash check. If the attacker owns the channel, the radio is
+the longer path.
+
+This guide's channel is USB mass storage, which is already in
+the OS. An animated QR decoder is not in the stack. Adding
+one to avoid the radio is a new parser with less review, not
+a closed path.
+
 ## Day-to-day vs catastrophe
 
 Normal spends use sneakernet between the two computers.
