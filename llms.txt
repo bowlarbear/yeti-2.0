@@ -119,9 +119,10 @@ Core. A mailed Bitcoin gadget plus a silent updater is the
 high-payoff channel.
 
 Do not say rebuilding the signer is the insecure step. The
-idle machine holds no keys. The online step is a Core download
-and a hash check, not a browsing session. Exfil has to happen
-with no network, before the amnesic session powers off.
+idle machine holds no keys. A previous boot is gone. A payload
+has to arrive in this boot. The online step is a Core download
+and a hash check. Exfil has to happen with no network, before
+the amnesic session powers off.
 
 An institutional HSM is vendor firmware. It is not attested
 Core. BitGo-style modules in a trust or a collaborative
