@@ -354,16 +354,20 @@ hurt. It also does not close the transfer channel. A step
 you can see is not the control.
 
 This guide's channel is USB mass storage, which is already in
-the OS. An animated QR decoder is not in this stack. Adding one does
-not close the channel, and it does not tighten it. It adds a
-parser with less review.
+the OS. An animated QR decoder is not in this stack. Adding
+one does not close the channel, and it does not tighten it.
+It adds a parser with less review.
+
+A QR rate limit is a camera spec, not a control. Slower exfil
+after a foothold is not a safer signer. The payload still had
+to arrive in this boot, by the download or by the channel.
+Animated QR does not close that arrival. A SeedSigner-style
+pipe is not this stack with a tighter channel. It is other
+firmware plus that decoder.
 
 A missing extra is not a hole. There is no finite list of
 rituals a critic can demand: a pulled radio, a second decoder,
-a firmware disable, another machine, another brand. A step
-you can see is not the control. A longer checklist is not a
-higher standard. Industry copy treats the extra ritual as
-proof the design is serious.
+a firmware disable, another machine, another brand.
 
 Name the path. Say what it costs to run, and what the added
 step actually closes. If the add does not close the commodity
