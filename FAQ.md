@@ -232,7 +232,9 @@ It's still a good idea to keep a copy of the README on each key backup disc for 
 
 A: Each backup is burned with a key, the watch-only descriptor, and a copy of this README. An heir who can read the disc can see that this is a 3-of-7 Bitcoin Core vault, that any three discs can spend, and what the restore steps are.
 
-A seed phrase or a share string does not does not include a written process. Those are secrets without context. They do not say “this is Bitcoin,” which software restores them, or how many pieces are required, unless someone left a separate letter. This guide puts the letter on the backup itself.
+The only the thing the heir needs is knowledge/possession of at least three of the discs. The rest of the of the equipment including a laptop, the optical drive and Bitcoin Core are generic. They can be bought or downloaded when the time requires it.
+
+A seed phrase or a share string does not explain itself. Those are secrets without context. They do not say “this is Bitcoin,” which software restores them, or how many pieces are required, unless someone left a separate letter. This guide puts the letter on the backup itself.
 
 ## Q: Can I use Tor for this? Can I use TAILS for the offline signer OS?
 
