@@ -99,10 +99,12 @@ The signer holds no keys at rest and each boot is amnesic, so
 there is nothing on the idle machine to attack between uses.
 It does not have to be kept secure while stored. A payload
 must arrive in this boot to matter. A previous boot is gone.
-The online step before keys load is a Core download and a hash
-check. The guide does not tell the user to browse or open mail
-on that session. The network is then disabled before any disc
-is read. Exfil after that has to happen with no network, before
+The download happens before the signer exists. A Core
+download and a hash check, then the network is disabled,
+then a disc is read. The guide does not tell the user to
+browse or open mail on that session. The signer does not
+come online. It is built for this spend and gone at power-off. 
+Exfil after that has to happen with no network, before
 power-off. Rebuilding the signer is so keys do not persist.
 It is not the insecure step.
 
