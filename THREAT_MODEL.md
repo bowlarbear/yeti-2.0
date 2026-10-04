@@ -331,10 +331,16 @@ loaded. The session is amnesic. A payload that missed that
 window has to exfiltrate with no network, before power-off,
 or it is gone.
 
+The network is disabled in software before a disc is loaded.
+That is not a radio pulled from the board. The session is
+amnesic, so a previous boot is gone. A payload would have to
+arrive in this boot, in the live image or the download, and
+turn the interface back on before power-off. The hash check
+is what stops the download.
+
 ## Day-to-day vs catastrophe
 
 Normal spends use sneakernet between the two computers.
-
 Recovery does not depend on sneakernet, on a particular disc drive,
 or on this repository. Setup uses an optical drive. If that drive
 is lost or broken later, get another. Anyone who can read the discs
