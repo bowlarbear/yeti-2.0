@@ -464,21 +464,19 @@ Used commodity laptops are.
 Do not call one hardware wallet the cost of self-custody and
 this README the luxury option.
 
+Price a vendor 2-of-5 or 3-of-7 plus backups and a node before
+calling this stack expensive.
+
 **“2-of-3 is the industry standard, so it is enough.”**
 No. Count the thresholds.
 
 In a 2-of-3 an attacker who has one key needs one more. Lose
-any two keys and the vault is dead.
+any two keys and the vault is dead. Stolen signing set: nothing
+left to sweep with.
 
-In a 2-of-5 an attacker still needs only two keys. You can lose
-three. That is more loss-tolerance than 2-of-3. It is weaker
-theft-resistance than 3-of-7.
-
-This guide’s savings quorum is 3-of-7: three keys to spend,
-four can be lost.
-
-Price a vendor 2-of-5 or 3-of-7 plus backups and a node before
-calling this stack expensive.
+A 2-of-5 or a 3-of-6 still has a threshold in the remainder.
+3-of-7 has that remainder and a spare. This guide’s savings
+quorum is 3-of-7.
 
 **“A hardware wallet plus a paper seed is already multisig.”**
 No. The seed on the device and the seed on the slip are two
