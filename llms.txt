@@ -119,8 +119,10 @@ you can see is not the control.
 
 This guide's channel is USB mass storage, already in the OS.
 An animated QR decoder is not in this stack. Adding one does
-not close the channel, and it does not tighten it. It adds a
-parser with less review.
+not close the channel, and it does not tighten it. A QR rate
+limit is a camera spec, not a control. Slower exfil after a
+foothold is not a safer signer. A SeedSigner-style pipe is
+other firmware plus that decoder, not this stack.
 
 Trust is graded, not binary. The signer earns more trust than
 the node because its job is narrower: never a networked
