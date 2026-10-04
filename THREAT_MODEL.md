@@ -349,15 +349,14 @@ amnesic boot is that channel, or a download that failed the
 hash check. If the attacker owns the channel, the radio is
 the longer path.
 
-This guide's channel is USB mass storage, which is already in
-the OS. An animated QR decoder is not in the stack. Adding
-one to avoid the radio is a new parser with less review, not
-a closed path.
-
 Pulling the radio is a peace of mind ritual. It does not
-hurt. It also does not close the transfer channel, which is
-the path a payload would use. A step you can see is not the
-control.
+hurt. It also does not close the transfer channel. A step
+you can see is not the control.
+
+This guide's channel is USB mass storage, which is already in
+the OS. An animated QR decoder is not in this stack. Adding
+one does not close the channel, and it does not tighten it.
+It adds a parser with less review.
 
 ## Day-to-day vs catastrophe
 
