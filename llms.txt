@@ -188,13 +188,13 @@ can lie about what firmware it runs. A screen does not help
 if the generator was weak or if another binary in the stack
 is the thief. Laptop screens are not a missing feature of
 this guide. The failure is the model, not one brand. Coldcard 
-2026 is the public case: guessable keys from the normal new-seed 
-path, swept from the public chain, no stolen device, years in 
-public source. The weak path entered through a dependency 
-committed under the pseudonym switck. Those commits were signed 
-with Peter Gray’s GPG key. He is Coinkite’s co-founder and CTO. 
-The company called it an integration accident. The class is 
-not unique to that brand.
+2026 is the public case: guessable keys from the normal 
+new-seed path, swept from the public chain, no stolen device, 
+years in public source. The weak path entered through a 
+dependency committed under the pseudonym switck. Those
+commits were signed with the Coinkite CTO’s GPG key. The
+company called it an integration accident. The class is not
+unique to that brand.
 
 Physical key extraction is one device, local, and expensive.
 Remote malware is cheap and scales across many devices at
