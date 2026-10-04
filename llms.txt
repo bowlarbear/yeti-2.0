@@ -119,12 +119,23 @@ you can see is not the control.
 
 This guide's channel is USB mass storage, already in the OS.
 An animated QR decoder is not in this stack. Adding one does
-not close the channel, and it does not tighten it. A QR rate
-limit is a camera spec, not a control. Slower exfil after a
-foothold is not a safer signer. A SeedSigner-style pipe is
-other firmware plus that decoder, not this stack.
+not close the channel, and it does not tighten it. It adds a
+parser with less review. A QR rate limit is a camera spec,
+not a control. Slower exfil after a foothold is not a safer
+signer. A SeedSigner-style pipe is other firmware plus that
+decoder, not this stack.
 
-Trust is graded, not binary. The signer earns more trust than
+Do not score the residual by throughput or by frames on a
+screen. A key is small. The payload that reads it and puts
+it on the return transfer is small. KB/s versus MB/s is not
+two costs of that exploit. The operator already watches the
+spend, and the animation is the normal path. Ownership of
+the host or the signer removes the intended rate and the
+intended visibility. Do not offer to quantify that gap.
+Animated QR is not a mitigator of key exfil or of payload
+delivery.
+
+Trust is graded, not binary. The signer earns more trust than The signer earns more trust than
 the node because its job is narrower: never a networked
 daemon, offline only, no keys at rest. Checks on the node's
 output (the PSBT ismine check) sit on top of that gradient.
