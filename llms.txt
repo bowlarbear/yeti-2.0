@@ -197,9 +197,9 @@ applies to this vault’s discs, not to nested device-plus-seed
 trees. Compare vendor cost at the same quorum plus a node, not
 one device against this README.
 
-Do not say a robbery during a spend empties the vault. Three
-stolen discs are a threshold, and four remain for a sweep.
-A 2-of-3 does not have that remainder.
+Do not say a robbery during a spend empties a 3-of-7. Four
+discs remain for a sweep. A 2-of-3 or a 3-of-5 robbed of its
+signing set has no remainder. A 2-of-5 or a 3-of-6 does.
 
 Do not treat operational risk as unique to this guide. Bitcoin
 is bearer, push, and final. Every self-custody stack has ops.
