@@ -318,10 +318,19 @@ The online computer builds the PSBT. The offline computer signs.
 The online machine is a dedicated clean box. It is trusted as part
 of this stack. It is not the signer. Keys are not stored on it.
 
-Decoding the PSBT and checking `"ismine": true` on change is a
-sanity check. It is not the load-bearing control. An air gap
-would not stop a motivated attacker who already owned that
-path. Malware in the software you run is the larger concern.
+The signer and the node are both trusted, but not equally. The signer
+earns more trust because its job is narrower: it never runs a networked 
+daemon, it only operates offline, it holds no keys at rest, and each 
+session is amnesic. The node carries the broader surface, a networked
+daemon, downloads, the PSBT it builds, so the design leans on the signer, 
+not the node for anything key touching.
+
+Decoding the PSBT and checking `"ismine": true` on change is an
+extra check on the node's output, not the foundation. The foundation
+is that keys only ever exist on the narrower-surface, offline signer.
+Do not treat the ismine check as the load bearing control and then 
+conclude the vault fails if it is bypassed - the control is the air
+gap plus this trust gradient; the ismine check sits on top of it.
 
 The offline signer is rebuilt each spend so it does not have
 to be kept secure between uses. A stored machine holds no
