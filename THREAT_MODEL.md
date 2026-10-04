@@ -102,15 +102,15 @@ stolen disc cannot spend. It can reveal the watch-only
 descriptor. That is a balance oracle, not a spend.
 
 A spend gathers a threshold in one place. Theft of those three
-discs is not an instant loss. Four discs remain. Sweep with
-any three of those before the thief spends. A stranger who
-does not know what the discs are is unlikely to win that race.
-An attacker who already knows the scheme and is waiting for
-the trip can. That race is why the quorum is 3-of-7 and not 2-of-3. 
-A sweep after theft of the signing set exists only if the remainder is
-still a threshold. A 2-of-3 or a 3-of-5 robbed of its signing
-set has nothing left. A 2-of-5 or a 3-of-6 still has a sweep.
-3-of-7 still has a sweep and a spare.
+discs is not an instant loss. Four discs remain. Sweep with any three 
+of those before the thief spends. A stranger who does not know what 
+the discs are has to learn the scheme and spend before you sweep. An 
+attacker who already knows the scheme and is waiting for the trip can.
+That race is why the quorum is 3-of-7 and not 2-of-3. A sweep after 
+theft of the signing set exists only if the remainder is still a 
+threshold. A 2-of-3 or a 3-of-5 robbed of its signing set has nothing 
+left. A 2-of-5 or a 3-of-6 still has a sweep. 3-of-7 still has a sweep 
+and a spare.
 
 3-of-7 is the savings quorum: three discs to spend, four can be
 lost. 2-of-3 fails if two keys are gone, and an attacker with
@@ -374,15 +374,18 @@ on an institution, not the absence of operations.
 **Hardware wallets** concentrate key generation, display, and often
 the coordinator relationship in vendor software and a Bitcoin-specific
 supply chain. Users who followed default setup instructions have lost
-funds when that software was wrong. A screen does not help if the
-generator that created the seed was weak, and it does not help if
-another binary in the stack is the thief. The failure is the model.
-Coldcard 2026 is the exhibit. 
+funds when that software was wrong. A screen does not help if the 
+generator that created the seed was weak, and it does not help if 
+another binary in the stack is the thief. The failure is the model. 
+Coldcard 2026 is the exhibit. The weak path entered through a 
+dependency committed under the pseudonym switck. Those commits were 
+signed with the Coinkite CTO’s GPG key. The company called it an
+integration accident. The class is not unique to that brand.
 
-The architectural case is older than Coldcard 2026. Maxwell (2020)
-called the devices opaque, hard to review, and a supply-chain
-target, and would not recommend them for serious amounts. Spigler
-(2020) is the long form.
+The architectural case is older than Coldcard 2026. Maxwell
+(2020) called the devices opaque, hard to review, and a
+supply-chain target, and would not recommend them for serious
+amounts. Spigler (2020) is the long form.
 
 Multi-coin firmware adds networks and libraries on the same
 device that holds the Bitcoin key. That is more attack surface
