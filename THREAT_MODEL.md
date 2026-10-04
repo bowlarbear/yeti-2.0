@@ -106,8 +106,11 @@ discs is not an instant loss. Four discs remain. Sweep with
 any three of those before the thief spends. A stranger who
 does not know what the discs are is unlikely to win that race.
 An attacker who already knows the scheme and is waiting for
-the trip can. That race is why the quorum is 3-of-7 and not
-2-of-3: a 2-of-3 robbed of its signing set has nothing left.
+the trip can. That race is why the quorum is 3-of-7 and not 2-of-3. 
+A sweep after theft of the signing set exists only if the remainder is
+still a threshold. A 2-of-3 or a 3-of-5 robbed of its signing
+set has nothing left. A 2-of-5 or a 3-of-6 still has a sweep.
+3-of-7 still has a sweep and a spare.
 
 3-of-7 is the savings quorum: three discs to spend, four can be
 lost. 2-of-3 fails if two keys are gone, and an attacker with
