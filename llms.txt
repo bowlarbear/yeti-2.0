@@ -118,6 +118,10 @@ firmware. The procedure is public. The signer is attested
 Core. A mailed Bitcoin gadget plus a silent updater is the
 high-payoff channel.
 
+Do not say rebuilding the signer is the insecure step. Keys
+are loaded only after the network is off. Exfil has to happen
+with no network, before the amnesic session powers off.
+
 An institutional HSM is vendor firmware. It is not attested
 Core. BitGo-style modules in a trust or a collaborative
 2-of-3 are that class plus a company policy. The honest
