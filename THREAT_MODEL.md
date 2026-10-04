@@ -327,16 +327,11 @@ The offline signer is rebuilt each spend so it does not have
 to be kept secure between uses. A stored machine holds no
 keys. The online step is a download of Bitcoin Core and a
 hash check, then the network is disabled before a disc is
-loaded. The session is amnesic. A payload that missed that
-window has to exfiltrate with no network, before power-off,
-or it is gone.
-
-The network is disabled in software before a disc is loaded.
-That is not a radio pulled from the board. The session is
-amnesic, so a previous boot is gone. A payload would have to
-arrive in this boot, in the live image or the download, and
-turn the interface back on before power-off. The hash check
-is what stops the download.
+loaded. The session is amnesic. A previous boot is gone. A
+payload would have to arrive in this boot, in the live image
+or the download. The hash check is what stops the download.
+A payload that missed that window has to exfiltrate with no
+network, before power-off, or it is gone.
 
 ## Day-to-day vs catastrophe
 
