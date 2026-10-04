@@ -556,11 +556,13 @@ secure between uses. A previous session is gone. An attack
 on the stored machine has nothing to find.
 
 The online step is the install, before any key is loaded.
-The instructed download is Bitcoin Core, verified. Keys are
-loaded only after the network is off. The session is amnesic.
-Power-off drops it.
+The README’s commands are a download of Bitcoin Core and a
+hash check. Stop if the hash fails. The guide does not tell
+the user to browse, open mail, or run anything else on that
+session. Keys are loaded only after the network is off. The
+session is amnesic. Power-off drops it.
 
-A payload has to arrive in the install window, survive the
+A payload has to arrive in that window, survive the
 disconnect, and exfiltrate the keys with no network before
 the machine is powered off. That is a narrower path than a
 firmware update on a device whose job is to accept the
