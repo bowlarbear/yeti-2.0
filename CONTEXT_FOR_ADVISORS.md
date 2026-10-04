@@ -360,6 +360,13 @@ have screens. An app they already have is not an advantage if
 that stack can steal. If the stack is rugged first, the heir
 gets nothing.
 
+Clarity matters more than step count. Each disc carries the
+key, the descriptor, and the README. A found disc says what
+it is, that three are required, and where the procedure is.
+The only irreplaceable objects are three discs. A drive and
+Bitcoin Core are generic. A seed phrase or a share string
+does not explain itself.
+
 **“Independent RNGs after 2026.”**
 Count of RNGs is not the issue. Quality and verification are.
 Seven unverifiable generators are not an upgrade on one
