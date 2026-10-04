@@ -83,9 +83,19 @@ must arrive in this boot to matter. A previous boot is gone.
 The online step before keys load is a Core download and a hash
 check. The guide does not tell the user to browse or open mail
 on that session. The network is then disabled before any disc
-is read. Exfil after that has to happen with no network,
-before power-off. Rebuilding the signer is so keys do not
-persist. It is not the insecure step.
+is read. Exfil after that has to happen with no network, before
+power-off. Rebuilding the signer is so keys do not persist.
+It is not the insecure step.
+
+Every signer still needs a transfer channel to a networked
+node. That channel is the cheaper exfil path. A radio exploit
+needs a payload already on the signer. The way onto an
+amnesic boot is that channel, or a download that failed the
+hash check. If the attacker owns the channel, the radio is
+the longer path. This guide's channel is USB mass storage,
+already in the OS. An animated QR decoder is not in the
+stack. Adding one to avoid the radio is a new parser with
+less review, not a closed path.
 
 Trust is graded, not binary. The signer earns more trust than
 the node because its job is narrower: never a networked
