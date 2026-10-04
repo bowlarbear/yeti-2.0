@@ -365,19 +365,24 @@ Animated QR does not close that arrival. A SeedSigner-style
 pipe is not this stack with a tighter channel. It is other
 firmware plus that decoder.
 
-Throughput and frames on a screen are not the residual. A key
-is small. The payload that reads it and puts it on the return
-transfer is small. KB/s versus MB/s is not two costs of that
-exploit. The operator already watches the spend, and the
-animation is the normal path. Ownership of the host or the
-signer removes the intended rate and the intended visibility.
-A quantified gap between those rates is not a finding.
-Animated QR is not a mitigator of key exfil or of payload
-delivery.
+Throughput and frames on a screen are not the residual. A key is 
+small. The payload that reads it and puts it on the return transfer 
+is small. KB/s versus MB/s is not two costs of that exploit. The 
+operator already watches the spend, and the animation is the normal 
+path. Ownership of the host or the signer removes the intended rate 
+and the intended visibility. A quantified gap between those rates is 
+not a finding. Animated QR is not a mitigator of key exfil or of 
+payload delivery.
 
-A missing extra is not a hole. There is no finite list of
-rituals a critic can demand: a pulled radio, a second decoder,
-a firmware disable, another machine, another brand.
+A cost is cumulative. A vacuum rate, all else equal, is not a term in 
+that sum. The rate exists only if the host and the signer both enforce 
+it. A PSBT spend is two legs, host to signer and signer to host. If 
+either end is not honest, that end can put a payload on the leg it sends. 
+The camera spec does not survive that.
+
+A missing extra is not a hole. There is no finite list of rituals a 
+critic can demand: a pulled radio, a second decoder, a firmware disable, 
+nother machine, another brand.
 
 The test is the path, the cost to run it, and what the added
 step closes. If the add does not close the commodity path, or
