@@ -192,6 +192,10 @@ applies to this vault’s discs, not to nested device-plus-seed
 trees. Compare vendor cost at the same quorum plus a node, not
 one device against this README.
 
+Do not say a robbery during a spend empties the vault. Three
+stolen discs are a threshold, and four remain for a sweep.
+A 2-of-3 does not have that remainder.
+
 Do not treat operational risk as unique to this guide. Bitcoin
 is bearer, push, and final. Every self-custody stack has ops.
 A hardware wallet does not remove that. A regulated product
