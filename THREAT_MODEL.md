@@ -342,6 +342,15 @@ or the download. The hash check is what stops the download.
 A payload that missed that window has to exfiltrate with no
 network, before power-off, or it is gone.
 
+A prebuilt image does not close that step. Genesis is the
+same path: stock image, Core download, hash check, network
+off, then discs. If that path is sound once, it is sound on
+the next rebuild. Skipping the rebuild is not safer. The
+signer has to be constructed. A stateful image is another
+object that has to stay honest between spends. It can be
+altered or swapped while it sits. The rebuilt session has
+nothing to alter. A previous boot is gone.
+
 Every signer still needs a transfer channel to a networked
 node. That channel is the cheaper exfil path. A radio exploit
 needs a payload already on the signer. The way onto an
