@@ -70,6 +70,20 @@ Bitcoin native multisig on Bitcoin Core makes use of Bitcoin script embedded in 
 
 Beyond this, we back up in Bitcoin Core's WIF and wallet descriptor formats so recovery does not depend on a mnemonic standard Core does not implement. We use archival grade optical discs and refresh them every 7-10 years so the copy itself does not rot. We use the CD/DVD form factor because it is a long-stable spec and is readable with cheap, generic drives. This means recovery does not depend on Bitcoin-specific hardware devices.
 
+## Q: What would happen to my Bitcoin if this guide disappears tomorrow?
+
+A: Nothing would happen to your Bitcoin. The advantage of Yeti-2.0 is that you do not need this guide to spend or receive with the wallet. The only things you absolutely need to spend your Bitcoin are the official Bitcoin reference client software, Bitcoin Core, and an Optical Media drive capable of reading DVDs. 
+
+It's still a good idea to keep a copy of the README on each key backup disc for reference, but this guide is not a single point of failure. A reasonably competent person could spend a few hours reading the Bitcoin Core documentation and figure out how to send and receive Bitcoin from the multisig wallet configured with this guide all on their own.
+
+## Q: Would an heir be able to recover the Bitcoin if something happened to me?
+
+A: Each backup is burned with a key, the watch-only descriptor, and a copy of this README. An heir who can read the disc can see that this is a 3-of-7 Bitcoin Core vault, that any three discs can spend, and what the restore steps are.
+
+The only thing the heir needs is knowledge/possession of at least three of the discs. The rest of the equipment is generic. It can be bought or downloaded when the time requires it.
+
+A seed phrase or a share string does not explain itself to an heir, those are secrets without context. They do not say “this is Bitcoin,” which software restores them, or how many pieces are required, unless someone left a separate letter. This guide puts a letter that explains the entire process on the backup itself.
+
 ## Q: Why DVDs specifically?
 
 A: All of the backups created with yeti-2.0 are written to archival grade DVDs, which are carbon coated, resistant to oxidation, and heat resistant. These discs are specially designed for long term, archival data storage. Verbatim brand Ultralife Gold Archival grade DVDs 4.7GB are also a good option, Verbatim claims these discs will last up to 100 years under proper storage conditions. Milenniata M-discs are arguably a better option, the manufacturer claims these discs will last up to 1,000 years under proper storage conditions. They were removed from this guide as the recommended storage medium due to user complaints of sourcing authentic M-discs.
@@ -221,20 +235,6 @@ After you complete your test run, simply delete your "multisig_watch_wallet" fro
 A: This is not a problem with our setup. You can easily follow steps A1-A4 to set up a new node. You will find that your watch-only wallet descriptor is backed up on each of the 7 DVDs.
 
 To load this watch-only wallet descriptor back into your node, boot into your offline machine like you normally would, insert one of your key backup DVDs and copy the "multisig_watch_wallet" onto your transfer USB, then transfer this wallet onto your node and load it into Bitcoin Core as explained in step B5. 
-
-## Q: What would happen to my Bitcoin if this guide disappears tomorrow?
-
-A: Nothing would happen to your Bitcoin. The advantage of Yeti-2.0 is that you do not need this guide to spend or receive with the wallet. The only things you absolutely need to spend your Bitcoin are the official Bitcoin reference client software, Bitcoin Core, and an Optical Media drive capable of reading DVDs. 
-
-It's still a good idea to keep a copy of the README on each key backup disc for reference, but this guide is not a single point of failure. A reasonably competent person could spend a few hours reading the Bitcoin Core API documentation and figure out how to send and receive Bitcoin from the multisig wallet configured with this guide all on their own.
-
-## Q: Would an heir be able to recover the Bitcoin if something happened to me?
-
-A: Each backup is burned with a key, the watch-only descriptor, and a copy of this README. An heir who can read the disc can see that this is a 3-of-7 Bitcoin Core vault, that any three discs can spend, and what the restore steps are.
-
-The only the thing the heir needs is knowledge/possession of at least three of the discs. The rest of the of the equipment including a laptop, the optical drive and Bitcoin Core are generic. They can be bought or downloaded when the time requires it.
-
-A seed phrase or a share string does not explain itself. Those are secrets without context. They do not say “this is Bitcoin,” which software restores them, or how many pieces are required, unless someone left a separate letter. This guide puts the letter on the backup itself.
 
 ## Q: Can I use Tor for this? Can I use TAILS for the offline signer OS?
 
