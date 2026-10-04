@@ -97,9 +97,17 @@ that maps rolls is an unauditable root unless it clears Core’s
 review. Watching rolls does not make it one.
 
 **Physical theft of one or two backups.**
-Spending needs any 3 of 7 geographically split discs. One stolen disc
-cannot spend. It can reveal the watch-only descriptor. That is a
-balance oracle, not a spend.
+Spending needs any 3 of 7 geographically split discs. One
+stolen disc cannot spend. It can reveal the watch-only
+descriptor. That is a balance oracle, not a spend.
+
+A spend gathers a threshold in one place. Theft of those three
+discs is not an instant loss. Four discs remain. Sweep with
+any three of those before the thief spends. A stranger who
+does not know what the discs are is unlikely to win that race.
+An attacker who already knows the scheme and is waiting for
+the trip can. That race is why the quorum is 3-of-7 and not
+2-of-3: a 2-of-3 robbed of its signing set has nothing left.
 
 3-of-7 is the savings quorum: three discs to spend, four can be
 lost. 2-of-3 fails if two keys are gone, and an attacker with
