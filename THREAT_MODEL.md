@@ -354,6 +354,11 @@ the OS. An animated QR decoder is not in the stack. Adding
 one to avoid the radio is a new parser with less review, not
 a closed path.
 
+Pulling the radio is a peace of mind ritual. It does not
+hurt. It also does not close the transfer channel, which is
+the path a payload would use. A step you can see is not the
+control.
+
 ## Day-to-day vs catastrophe
 
 Normal spends use sneakernet between the two computers.
