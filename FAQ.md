@@ -54,7 +54,7 @@ This does not mean there can never be firmware or hardware bugs in generic compu
 
 The metadata collection in the vendor distribution of specialty hardware is also a privacy & security risk. If your email or name and address end up in a database leak associated with specialty Bitcoin hardware, you make yourself a desirable target. 
 
-## Q: What happens if I mess something up while following this guide?
+## Q: What happens if I mess something up while setting up this vault?
 
 A: If you follow this guide from start to finish, setup mistakes will not cost your real funds. An error usually means you stop, go back a few steps and retry. The worst case during setup is lost time, a few wasted discs, or a small test deposit stuck in an unfinished vault. That is why this guide has you test end to end with a small amount before moving anything that matters into it. 
 
