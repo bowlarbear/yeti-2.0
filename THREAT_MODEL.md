@@ -8,9 +8,11 @@ of a single backup.
 It is not a hardware-wallet product. It is not a regulated custodian.
 It is Bitcoin Core on dedicated computers, with keys on archival discs.
 
-The risks this vault is for are in “What the design is trying to
-stop.” Operator effort is not one of those risks. Advisor context
-is in [CONTEXT_FOR_ADVISORS.md](CONTEXT_FOR_ADVISORS.md).
+The risks this vault is for are in “What the design is trying to stop.” 
+Operator effort is not one of those risks. Friction is accepted. 
+Operator error is a different claim: a skipped check can lose coins. 
+That fact is not unique to this README, and it is not a reason to 
+pick a vendor stack. Advisor context is in [CONTEXT_FOR_ADVISORS.md](CONTEXT_FOR_ADVISORS.md).
 
 Read this with the [FAQ](FAQ.md). The [README](README.md) is the
 procedure. The assurances below apply to that procedure as written.
