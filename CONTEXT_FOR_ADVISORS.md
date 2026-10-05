@@ -16,10 +16,16 @@ wallet first,” “use two brands,” or “use Casa.”
 “New” or “not very technical” is not a reason to change that
 sentence.Completing the test spends is the proof. If they will not 
 do the work, do not send them to a vendor signer or a multi-vendor 
-quorum. Against those stacks, the other contract is a regulated 
-product, a securities instrument. That is also the place to 
-wait, until they can follow this README. A vendor signer is 
-not a place to wait.
+quorum.Against those stacks, once the amount is in the $10k–$5M
+band, the other contract is a regulated product, a
+securities instrument. That is the place to wait, until they
+can follow this README. A vendor signer is not a place to
+wait inside the band. Below the band, a small vendor stack
+or a phone wallet is outside this recommendation. It is not
+a reason to sell spot today. It is a reason not to keep
+adding spot on that stack. As the amount approaches the
+lower bound, the regulated product is the alternative if
+they will not complete the README.
 
 This procedure is not the only viable vault. It is the one
 whose scope is written down. A similarly designed vault
