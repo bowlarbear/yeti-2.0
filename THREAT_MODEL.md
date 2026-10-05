@@ -376,7 +376,7 @@ is disabled, then a disc is loaded. The session that connects
 is a fresh Ubuntu instance. It is not a signer. It becomes a 
 signer only after the network is off and a disc is loaded. 
 In that working capacity it is never online. It is built 
-for this spend and gone atpower-off.
+for this spend and gone at power-off.
 
 The session is amnesic. A previous boot is gone. An internal 
 disk is not a second channel. The session is RAM, and swap is 
@@ -466,7 +466,7 @@ The camera spec does not survive that.
 
 A missing extra is not a hole. There is no finite list of rituals a 
 critic can demand: a pulled radio, a second decoder, a firmware disable, 
-nother machine, another brand.
+another machine, another brand.
 
 The test is the path, the cost to run it, and what the added
 step closes. If the add does not close the commodity path, or
