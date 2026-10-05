@@ -941,5 +941,7 @@ The README’s $10k–$5M range is a design comfort zone, not a
 law. Above that range the FAQ already says this guide is not
 the whole answer. Extra offline Core machines for key
 generation are an example of what sits outside that zone.
-Vendor products do not publish an equivalent ceiling. Naming
-the band is not a concession that brands are stronger inside it.
+Vendor products do not publish an equivalent ceiling. Naming 
+the band is not a concession that brands are stronger
+inside it, and especially not above it. Above the band the
+upgrade this guide names is more Core boxes, not more logos.
