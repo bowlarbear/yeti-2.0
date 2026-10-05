@@ -475,40 +475,97 @@ This design does not owe one.
 
 ## Day-to-day vs catastrophe
 
-Normal spends use sneakernet between the two computers. Recovery does not depend on sneakernet, on a particular disc drive, or on this repository. Setup uses an optical drive. If that drive is lost or broken later, another drive is enough. Anyone who can read the discs and run Bitcoin Core can reconstruct the wallet and spend.
+Normal spends use sneakernet between the two computers. 
+Recovery does not depend on sneakernet, on a particular disc 
+drive, or on this repository. Setup uses an optical drive. If 
+that drive is lost or broken later, another drive is enough. 
+Anyone who can read the discs and run Bitcoin Core can 
+reconstruct the wallet and spend.
 
 ## Other products
 
-These fail differently. They are not one ranking. Bitcoin is a bearer instrument on a push network with final settlement. Anyone who holds keys accepts operational risk. This guide does not create that fact. Hardware wallets and collaborative custody do not erase it. A brokerage is a claim on an institution, not the absence of operations.
+These fail differently. They are not one ranking. Bitcoin 
+is a bearer instrument on a push network with final settlement. 
+Anyone who holds keys accepts operational risk. This guide does 
+not create that fact. Hardware wallets and collaborative custody 
+do not erase it. A brokerage is a claim on an institution, not 
+the absence of operations.
 
-**Hardware wallets** concentrate key generation, display, and often the coordinator relationship in vendor software and a Bitcoin-specific supply chain. Users who followed default setup instructions have lost funds when that software was wrong. A screen does not help if the generator that created the seed was weak, and it does not help if another binary in the stack is the thief. The failure is the model. Coldcard 2026 is the exhibit. The weak path entered through a dependency committed under the pseudonym switck. Those commits were signed with the Coinkite CTO’s GPG key. The company called it an integration accident. The class is not unique to that brand.
+**Hardware wallets** concentrate key generation, display, and 
+often the coordinator relationship in vendor software and a 
+Bitcoin-specific supply chain. Users who followed default setup 
+instructions have lost funds when that software was wrong. A 
+screen does not help if the generator that created the seed was 
+weak, and it does not help if another binary in the stack is the 
+thief. The failure is the model. Coldcard 2026 is the exhibit. The 
+weak path entered through a dependency committed under the 
+pseudonym switck. Those commits were signed with the Coinkite CTO’s 
+GPG key. The company called it an integration accident. The class 
+is not unique to that brand.
 
-The architectural case is older than Coldcard 2026. Maxwell (2020) called the devices opaque, hard to review, and a supply-chain target, and would not recommend them for serious amounts. Spigler (2020) is the long form.
+A weak generator is the exhibit, not the class. The device
+can ignore entropy the user added, or substitute its own seed
+for the one the user supplied. A screen does not show that.
+The lesson is not to generate your own entropy. The device
+still runs the unauditable code. The class is no review, no
+reproducible build, and no independent attestation of the
+bits that touched the key.
 
-Multi-coin firmware adds networks and libraries on the same device that holds the Bitcoin key. That is more attack surface and less review. Bitcoin-only vendor firmware is smaller. It is still not Core.
+The architectural case is older than Coldcard 2026. Maxwell (2020) 
+called the devices opaque, hard to review, and a supply-chain target, 
+and would not recommend them for serious amounts. Spigler (2020) is 
+the long form.
 
-**Multi-vendor hardware multisig** adds more of that stack, then a non-Core coordinator. It cannot be built from the reference implementation. Vendor diversity does not create Guix attestations and does not stop a device from lying about its firmware.
+Multi-coin firmware adds networks and libraries on the same device 
+that holds the Bitcoin key. That is more attack surface and less review. 
+Bitcoin-only vendor firmware is smaller. It is still not Core.
 
-**Collaborative custody** is usually a 2-of-3 sold as self-custody. The user holds one key. The company holds one. A third key is picked by the company. The company picks the software. Those two keys can move or freeze coins. A terms-of-use page is not a map of that relationship.
+**Multi-vendor hardware multisig** adds more of that stack, then a 
+non-Core coordinator. It cannot be built from the reference implementation. 
+Vendor diversity does not create Guix attestations and does not stop a 
+device from lying about its firmware.
 
-A company in the policy is also a name attackers can impersonate: fake support, fake recovery, compromised help channels. That surface does not exist when every key is a disc the operator placed.
+**Collaborative custody** is usually a 2-of-3 sold as self-custody. The 
+user holds one key. The company holds one. A third key is picked by the 
+company. The company picks the software. Those two keys can move or 
+freeze coins. A terms-of-use page is not a map of that relationship.
 
-Two hardware wallets plus a BitGo-style HSM (Swan and similar) is the same class, not a Core vault with a helper. The HSM is vendor firmware that cannot be attested. It does not become Core because it sits in a trust.
+A company in the policy is also a name attackers can impersonate: fake 
+support, fake recovery, compromised help channels. That surface does not 
+exist when every key is a disc the operator placed.
 
-A brokerage, ETF, or trust is a legal claim on bitcoin or a bitcoin-linked product. The account holder is trusting that institution’s people, its software, and the law around the account. That software is not Bitcoin Core, and the account holder cannot inspect it. Recourse is the product. It does not give the account holder bearer coins, and it does not remove operational risk. It relocates the risk into a named custodian.
+Two hardware wallets plus a BitGo-style HSM (Swan and similar) is the 
+same class, not a Core vault with a helper. The HSM is vendor firmware 
+that cannot be attested. It does not become Core because it sits in a trust.
 
-That contract fits a person who wants someone to call, a regulator, an estate process. That is not self-custody, and it is not this guide.
+A brokerage, ETF, or trust is a legal claim on bitcoin or a bitcoin-linked 
+product. The account holder is trusting that institution’s people, its 
+software, and the law around the account. That software is not Bitcoin Core, 
+and the account holder cannot inspect it. Recourse is the product. It does not 
+give the account holder bearer coins, and it does not remove operational risk. 
+It relocates the risk into a named custodian.
+
+That contract fits a person who wants someone to call, a regulator, an estate 
+process. That is not self-custody, and it is not this guide.
 
 ## Operator duty
 
-The steps are the procedure. Improvising the vault is outside this model. The procedure is closed because the audience is not meant to design it. Some changes can stay inside this threat model or improve it. They are still a different design, and the assurances here apply to the README as written.
+The steps are the procedure. Improvising the vault is outside this model. The 
+procedure is closed because the audience is not meant to design it. Some changes 
+can stay inside this threat model or improve it. They are still a different design, 
+and the assurances here apply to the README as written.
 
-Historical self-custody losses often came from novel setups nobody else reviewed. This guide makes those choices in the open so the operator does not invent them.
+Historical self-custody losses often came from novel setups nobody else reviewed. 
+This guide makes those choices in the open so the operator does not invent them.
 
-The load-bearing steps are a clean dedicated pair of machines, Guix-attested Bitcoin Core, the air gap for keys, seven discs, and the test spends.
+The load-bearing steps are a clean dedicated pair of machines, Guix-attested Bitcoin 
+Core, the air gap for keys, seven discs, and the test spends.
 
 ## Amount
 
-The README’s $10k–$5M range is a design comfort zone, not a law. Vendor products do not publish an equivalent ceiling. Naming the band is not a concession that brands are stronger inside it.
+The README’s $10k–$5M range is a design comfort zone, not a law. Vendor products do 
+not publish an equivalent ceiling. Naming the band is not a concession that brands 
+are stronger inside it.
 
-Design disagreements belong in the FAQ or a public issue, not in a private vulnerability report. See [SECURITY.md](SECURITY.md).
+Design disagreements belong in the FAQ or a public issue, not in a private 
+vulnerability report. See [SECURITY.md](SECURITY.md).
