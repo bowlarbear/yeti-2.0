@@ -284,6 +284,14 @@ host is not supposed to win. This guide exports the descriptor
 onto the discs. A vendor stack does not have to. The ismine
 check is an extra check on the node's output, not the close.
 
+A bad descriptor is not the coordinator's scope, and bad entropy
+is not the vendor's scope. Each has a seat on the pipe. That seat
+is the trust. A coordinator can leave something that stays on the
+host and hunts across spends until it has a threshold. A hardware
+wallet can do the same from its end of the pipe. Either piece is
+load-bearing. One of them, given time, can spend the vault. The
+examples are instances. They are not the boundary.
+
 There is one acceptable key-generation path here: Bitcoin Core.
 Dice, coin flips, and entropy-lab pages are not a second path.
 They are extra software.
