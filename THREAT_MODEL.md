@@ -352,7 +352,8 @@ stack can have been sound at genesis and still ship a later
 update that takes the coins. That is trust in the vendor's
 change control, not a claim about a zero-day. That process
 is not Core's, and it is not Linux's. Dice on the device is
-the same sample. The device can ignore the rolls. This
+the same sample. The device can ignore the rolls. A vendor 
+advisory that dice survived the bug is not a control. This
 model does not score a stack by who has not been hit yet.
 
 ## What this does not try to hide
