@@ -426,7 +426,7 @@ After copying a key run the following command, replace `key_#` with the name of 
 ~/bitcoin-31.1/bin/bitcoin-cli loadwallet "key_#"
 ```
 
-Repeat this step for each of the 3 keys you have placed in the wallets folder.
+Repeat this step for each of the 3 keys you are using to sign.
 
 ### [\*offline computer\*] Sign the PSBT
 
