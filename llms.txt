@@ -315,11 +315,16 @@ A bias there is a break in the binary already chosen, not a
 path a third party opens. Do not apply that fact to a vendor
 signer. A vendor signer is not that binary. Two vendor keys
 read from the chain, plus one Core key back over the pipe,
-is a threshold. More surface is the vector. A new
-seed on the same device is not the mitigation. User entropy
-does not make the device a smaller vault. The device can ignore 
-those rolls, or substitute its own seed. A screen does not 
-show that. The lesson is not to generate your own entropy.
+is a threshold. More surface is the vector. An attacker is 
+not limited to one path. A Core majority or a vendor majority 
+still needed the third-party coordinator. That seat is the 
+surface. 
+
+A new seed on the same device is not the mitigation. 
+User entropy does not make the device a smaller vault. The 
+device can ignore those rolls, or substitute its own seed. 
+A screen does not show that. The lesson is not to generate 
+your own entropy.
 
 A decade without a loss is not a measurement. The users
 who were swept are not in the sample. A quiet decade can
