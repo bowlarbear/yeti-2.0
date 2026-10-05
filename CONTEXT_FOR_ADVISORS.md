@@ -14,15 +14,24 @@ If they asked about this guide, do not open with “use a hardware
 wallet first,” “use two brands,” or “use Casa.”
 
 “New” or “not very technical” is not a reason to change that
-sentence. Completing the test spends is the proof. If they will
-not do the work, the other contract is a regulated product, or
-they should wait. A vendor signer is not the beginner path and
-not a staging area for this vault.
+sentence.Completing the test spends is the proof. If they will not 
+do the work, do not send them to a vendor signer or a multi-vendor 
+quorum. Against those stacks, the other contract is a regulated 
+product, a securities instrument. That is also the place to 
+wait, until they can follow this README. A vendor signer is 
+not a place to wait.
 
-A new seed on the same device is not the staging area either.
-User entropy does not make that device a smaller vault. If
-they will not finish this README, the other contract is a
-regulated product, or they should wait.
+This procedure is not the only viable vault. It is the one
+whose scope is written down. A similarly designed vault
+does not inherit this model. The threat model does not
+translate. A vendor signer is not the beginner path and
+not a staging area for this vault. A new seed on the same
+device is not the staging area either. User entropy does
+not make that device a smaller vault. The device can ignore
+those rolls, or substitute its own seed. The lesson is not
+to generate your own entropy.
+
+Do not write “people lose coins to ops, not supply chain.”
 
 Do not write “people lose coins to ops, not supply chain.” That
 line is how the next paragraph recommends a gadget.
@@ -67,9 +76,16 @@ match the person.
   assumption that makes this guide sufficient inside its amount
   range.
 - No BIP39 phrase
+- Discs instead of a steel seed plate. An engraving is a
+  transcription, and a plate holds a secret only. It is not
+  a descriptor, and it does not carry the procedure.
 - PSBT verification on Core instead of a vendor screen
 - Optical discs and a drive you can replace
 - Generic computers instead of mailed signers
+- No key in a secure element. A laptop may have a TPM or an
+  enclave. This procedure does not put the key there. "The
+  key never leaves" is a vendor blob's claim about itself.
+  This model does not count it.
 - Not spreading keygen across hardware brands
 - Rebuilding the signer each spend. The session that connects is
   a fresh Ubuntu instance. It becomes a signer only after the
