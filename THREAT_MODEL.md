@@ -328,6 +328,20 @@ for cold storage. A widely recommended device still ran the wrong
 code for years. That is the review standard this guide is unwilling
 to accept for key generation.
 
+A decade without a loss is not a measurement of the
+residual. The users who were swept are not in the sample.
+The network is a richer target as it grows, and the profit
+for an attacker grows with it. A quiet decade can be the
+wait. An attacker who has a flaw, or a vendor who can ship
+one, is paid to hold it until the pool is larger. Silence
+is not soundness. A stack can have been sound at genesis
+and still ship a later update that takes the coins. That
+is trust in the vendor's change control, not a claim about
+a zero-day. That process is not Core's, and it is not
+Linux's. Dice on the device is the same sample. The device
+can ignore the rolls. This model does not score a stack by
+who has not been hit yet.
+
 ## What this does not try to hide
 
 Bitcoin amounts on chain are public. When a spend happens, the
