@@ -336,8 +336,12 @@ The offline signer is rebuilt each spend so it does not have
 to be kept secure between uses. A stored machine holds no
 keys. The download happens before the signer exists. It is a
 download of Bitcoin Core and a hash check, then the network
-is disabled, then a disc is loaded. The signer does not come
-online. It is built for this spend and gone at power-off.
+is disabled, then a disc is loaded. The session that connects 
+is a fresh Ubuntu instance. It is not a signer. It becomes a 
+signer only after the network is off and a disc is loaded. 
+In that working capacity it is never online. It is built 
+for this spend and gone atpower-off.
+
 The session is amnesic. A previous boot is gone. A
 payload would have to arrive in this boot, in the live image
 or the download. The hash check is what stops the download.
