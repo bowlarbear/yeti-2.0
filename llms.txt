@@ -309,7 +309,13 @@ second vendor. It already has a pipe to the networked host.
 It can return data on that pipe across sessions until the
 leak is enough to spend, or bias nonces so the chain leaks
 the key. The other devices do not inspect its firmware. A
-bad descriptor is one use of that pipe, not the class. A new
+bad descriptor is one use of that pipe, not the class. This 
+guide's coordinator is Core, and the nonce is Core's.
+A bias there is a break in the binary already chosen, not a
+path a third party opens. Do not apply that fact to a vendor
+signer. A vendor signer is not that binary. Two vendor keys
+read from the chain, plus one Core key back over the pipe,
+is a threshold. More surface is the vector. A new
 seed on the same device is not the mitigation. User entropy
 does not make the device a smaller vault. The device can ignore 
 those rolls, or substitute its own seed. A screen does not 
