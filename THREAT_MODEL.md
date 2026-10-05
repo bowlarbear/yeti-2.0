@@ -42,8 +42,13 @@ opens. A vendor signer is not that binary. A third-party coordinator
 is not that coordinator. Adding either one is more surface. On that
 surface a coordinator can bias the nonce a vendor device uses and read 
 the key from the chain. Two vendor keys by that path, and one Core key 
-back over the pipe, is a 3-of-7. The pipe is not hardened against that 
-return. The Core key still needs code on the signer. The vendor keys do not.
+back over the pipe, is a 3-of-7. An attacker is not limited to one path. 
+Owning the coordinator is the seat. Given time, the cheaper keys are
+combined until the count is three. A Core majority makes the pipe the 
+cheap Core key. A vendor majority makes the vendor key the cheap one. 
+Neither choice removes the coordinator that made the mix possible. 
+More surface is the vector. The pipe is not hardened against that return. 
+The Core key still needs code on the signer. The vendor keys do not.
 Applying the Core nonce fact to that stack is a category error. A single bad
 crypto library can steal on its own. Vendors and coordinators already
 ship as pairs. The model assumes they can act as a pair.
