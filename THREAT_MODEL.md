@@ -35,8 +35,16 @@ This guide treats an unverifiable blob in the key-generation or
 signing chain as malware. That includes vendor firmware, vendor
 apps, coordinators, and libraries the owner cannot inspect or rebuild
 in practice. Any one of those binaries can steal. A coordinator can
-build a bad PSBT or serve a malicious descriptor. It can bias nonces
-or other signing input and exfiltrate key material. A single bad
+build a bad PSBT or serve a malicious descriptor. This guide's 
+coordinator is Core, and the nonce is Core's. A bias in that nonce 
+is a break in the binary already chosen. It is not a path a third party 
+opens. A vendor signer is not that binary. A third-party coordinator 
+is not that coordinator. Adding either one is more surface. On that
+surface a coordinator can bias the nonce a vendor device uses and read 
+the key from the chain. Two vendor keys by that path, and one Core key 
+back over the pipe, is a 3-of-7. The pipe is not hardened against that 
+return. The Core key still needs code on the signer. The vendor keys do not.
+Applying the Core nonce fact to that stack is a category error. A single bad
 crypto library can steal on its own. Vendors and coordinators already
 ship as pairs. The model assumes they can act as a pair.
 
