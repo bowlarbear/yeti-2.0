@@ -275,6 +275,15 @@ leak the key. The other devices do not inspect its firmware.
 The coordinator and the extra libraries are how that pipe
 exists. A bad descriptor is one use of the pipe, not the class.
 
+A secure element is not a wall around that pipe. It is an
+unauditable blob, and not every signer has one. "The key never
+leaves" is the blob's claim about itself. This model does not
+count it. A key used on the host in a mixed stack can cross the
+pipe. A vendor's exfil defense is not a control because the
+host is not supposed to win. This guide exports the descriptor
+onto the discs. A vendor stack does not have to. The ismine
+check is an extra check on the node's output, not the close.
+
 There is one acceptable key-generation path here: Bitcoin Core.
 Dice, coin flips, and entropy-lab pages are not a second path.
 They are extra software.
