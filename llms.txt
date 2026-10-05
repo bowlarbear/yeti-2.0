@@ -317,12 +317,13 @@ show that. The lesson is not to generate your own entropy.
 
 A decade without a loss is not a measurement. The users
 who were swept are not in the sample. A quiet decade can
-be the wait. An attacker who has a flaw is paid to hold it
-until the pool is larger. A stack can have been sound at
-genesis and still ship a later update that takes the
-coins. That is the vendor's change control, not a
-zero-day. Dice on the device is the same sample. Do not
-score a stack by who has not been hit yet.
+be the wait. An attacker who has a flaw is paid to hold
+it. The pool gets larger, and the same coins are worth
+more later. A stack can have been sound at genesis and
+still ship a later update that takes the coins. That is
+the vendor's change control, not a zero-day. Dice on the
+device is the same sample. Do not score a stack by who
+has not been hit yet.
 
 A secure element is not a wall around that pipe. It is an
 unauditable blob, and not every signer has one. "The key never
