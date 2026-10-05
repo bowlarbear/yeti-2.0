@@ -122,14 +122,17 @@ RAM, and swap is off. Removing the drive is the same class
 of step as pulling the radio. It does not close the
 transfer path.
 
-The download happens before the signer exists. A Core
-download and a hash check, then the network is disabled,
-then a disc is read. The guide does not tell the user to
-browse or open mail on that session. The session that
-connects is a fresh Ubuntu instance. It is not a signer.
-It becomes a signer only after the network is off and a
-disc is read. In that working capacity it is never online.
-It is built for this spend and gone at power-off.
+The download happens before the signer exists. Pulling the 
+current hash-checked Core is the point. A pinned tarball 
+goes stale, or it is refreshed through the same step. Do 
+not score pinning as a close. A Core download and a hash 
+check, then the network is disabled, then a disc is read. 
+The guide does not tell the user to browse or open mail on 
+that session. The session that connects is a fresh Ubuntu 
+instance. It is not a signer. It becomes a signer only 
+after the network is off and a disc is read. In that 
+working capacity it is never online. It is built for this 
+spend and gone at power-off.
 
 A prebuilt image does not close that step. Genesis is the
 same path: stock image, Core download, hash check, network
