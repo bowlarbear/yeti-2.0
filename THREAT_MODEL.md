@@ -367,11 +367,14 @@ signer only after the network is off and a disc is loaded.
 In that working capacity it is never online. It is built 
 for this spend and gone atpower-off.
 
-The session is amnesic. A previous boot is gone. A
-payload would have to arrive in this boot, in the live image
-or the download. The hash check is what stops the download.
-A payload that missed that window has to exfiltrate with no
-network, before power-off, or it is gone.
+The session is amnesic. A previous boot is gone. An internal 
+disk is not a second channel. The session is RAM, and swap is 
+off. Removing the drive is the same class of step as pulling 
+the radio. It does not close the transfer path. A payload would 
+have to arrive in this boot, in the live image or the download. 
+The hash check is what stops the download. A payload that missed 
+that window has to exfiltrate with no network, before power-off, 
+or it is gone.
 
 A prebuilt image does not close that step. Genesis is the
 same path: stock image, Core download, hash check, network
