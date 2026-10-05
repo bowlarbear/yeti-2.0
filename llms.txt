@@ -117,6 +117,25 @@ object that has to stay honest between spends. It can be
 altered or swapped while it sits. The rebuilt session has
 nothing to alter. A previous boot is gone.
 
+The boot stick is not that image. It is stock Ubuntu
+media. It holds no Core and no keys. The hash check is in
+the connected session, then the network goes off. An evil
+maid can swap the stick, and a swapped image can lie about
+that check. Recreate it from a verified ISO if that is
+plausible. A safe is not the control. Tamper at rest is
+not special to this stick. Any signer that persists can
+be altered while it sits, including a hardware wallet's
+firmware or hardware. A hardware wallet at rest also holds
+a key, and that key can be extracted. This signer holds no
+key at rest. There is no exfil from it while it sits.
+This guide recreates the signer from scratch each use. A
+previous boot is gone. Guarding the stick is not the same
+job as guarding a stateful laptop that is the signer, and
+it is not the same threat model with a storage edge. The
+stick is a generic object in a box. The laptop, and a
+hardware wallet, are Bitcoin-specific objects at rest,
+and the hardware wallet is a key at rest.
+
 A machine that never connects does not end the trust.
 Someone built the image, the ISO, and the hardware. That
 build used a network, a pipe to a network, or a third party
