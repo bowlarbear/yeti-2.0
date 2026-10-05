@@ -99,6 +99,11 @@ The signer holds no keys at rest and each boot is amnesic, so
 there is nothing on the idle machine to attack between uses.
 It does not have to be kept secure while stored. A payload
 must arrive in this boot to matter. A previous boot is gone.
+An internal disk is not a second channel. The session is
+RAM, and swap is off. Removing the drive is the same class
+of step as pulling the radio. It does not close the
+transfer path.
+
 The download happens before the signer exists. A Core
 download and a hash check, then the network is disabled,
 then a disc is read. The guide does not tell the user to
