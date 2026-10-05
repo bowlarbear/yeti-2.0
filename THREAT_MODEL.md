@@ -545,6 +545,14 @@ and the account holder cannot inspect it. Recourse is the product. It does not
 give the account holder bearer coins, and it does not remove operational risk. 
 It relocates the risk into a named custodian.
 
+Against a vendor signer or a multi-vendor quorum, that contract is the fallback 
+inside the $10k–$5M band. A vendor signer is not a place to wait inside the band. 
+Waiting, until the README can be followed, is inside the regulated product. 
+Below the band, a small vendor stack or a phone wallet is outside this model. It 
+is not a reason to sell spot today. It is a reason not to keep adding spot on that
+stack. As the amount approaches the lower bound, the regulated product is the 
+alternative if the README will not be completed.
+
 That contract fits a person who wants someone to call, a regulator, an estate 
 process. That is not self-custody, and it is not this guide. Against a vendor 
 signer or a multi-vendor quorum, that contract is the fallback. A vendor 
