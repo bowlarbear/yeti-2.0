@@ -432,7 +432,10 @@ the longer path.
 
 Pulling the radio is a peace of mind ritual. It does not
 hurt. It also does not close the transfer channel. A step
-that can be seen is not the control.
+that can be seen is not the control. A management engine 
+below the OS is trusting-trust. It is irreducible. Pulling 
+the radio does not close it, and a vendor signer does not 
+either.
 
 This guide's channel is USB mass storage, which is already in
 the OS. An animated QR decoder is not in this stack. Adding
