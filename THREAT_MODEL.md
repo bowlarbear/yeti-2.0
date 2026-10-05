@@ -546,7 +546,10 @@ give the account holder bearer coins, and it does not remove operational risk.
 It relocates the risk into a named custodian.
 
 That contract fits a person who wants someone to call, a regulator, an estate 
-process. That is not self-custody, and it is not this guide.
+process. That is not self-custody, and it is not this guide. Against a vendor 
+signer or a multi-vendor quorum, that contract is the fallback. A vendor 
+signer is not a place to wait. Waiting, until the README can be followed, 
+is inside the regulated product.
 
 ## Operator duty
 
