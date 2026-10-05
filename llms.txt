@@ -280,6 +280,15 @@ commits were signed with the Coinkite CTO’s GPG key. The
 company called it an integration accident. The class is not
 unique to that brand.
 
+A device is not a silo. One malicious signer does not need a
+second vendor. It already has a pipe to the networked host.
+It can return data on that pipe across sessions until the
+leak is enough to spend, or bias nonces so the chain leaks
+the key. The other devices do not inspect its firmware. A
+bad descriptor is one use of that pipe, not the class. A new
+seed on the same device is not the mitigation. User entropy
+does not make the device a smaller vault.
+
 Physical key extraction is one device, local, and expensive.
 Remote malware is cheap and scales across many devices at
 once. "The key never leaves the device" weights the narrow
