@@ -412,9 +412,12 @@ disk is not a second channel. The session is RAM, and swap is
 off. Removing the drive is the same class of step as pulling 
 the radio. It does not close the transfer path. A payload would 
 have to arrive in this boot, in the live image or the download. 
-The hash check is what stops the download. A payload that missed 
-that window has to exfiltrate with no network, before power-off, 
-or it is gone.
+The hash check is what stops the download. Pulling the current 
+hash-checked Core on each spend is the point. A pinned tarball 
+goes stale, or it is refreshed through the same online step. 
+Pinning it does not remove a link from the trust chain. A payload 
+that missed that window has to exfiltrate with no network, before 
+power-off, or it is gone.
 
 A prebuilt image does not close that step. Genesis is the
 same path: stock image, Core download, hash check, network
