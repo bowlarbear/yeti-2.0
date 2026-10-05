@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.34
+Guide Version: 1.35
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -386,6 +386,8 @@ Note: Fully settled, spendable funds will appear in the `trusted` field of the `
 
 Note: You can only create a transaction from the online computer with the wallet properly loaded as shown in step B5.
 
+Note: If you receive an error that fee estimation has failed, you must wait a few minutes after starting Bitcoin Core for the mempool to populate in order to estimate fees.
+
 ### Important: Replace $amount and $destination_address with the right values, make sure these are correct before running
 
 Note: The `amount` field is denominated in `0.00000000` BTC
@@ -423,6 +425,8 @@ After copying a key run the following command, replace `key_#` with the name of 
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli loadwallet "key_#"
 ```
+
+Repeat this step for each of the 3 keys you have placed in the wallets folder.
 
 ### [\*offline computer\*] Sign the PSBT
 
