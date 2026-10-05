@@ -18,6 +18,12 @@ sentence. Completing the test spends is the proof. If they will
 not do the work, the other contract is a regulated product, or
 they should wait. A vendor signer is not the beginner path and
 not a staging area for this vault.
+
+A new seed on the same device is not the staging area either.
+User entropy does not make that device a smaller vault. If
+they will not finish this README, the other contract is a
+regulated product, or they should wait.
+
 Do not write “people lose coins to ops, not supply chain.” That
 line is how the next paragraph recommends a gadget.
 
@@ -65,6 +71,15 @@ match the person.
 - Optical discs and a drive you can replace
 - Generic computers instead of mailed signers
 - Not spreading keygen across hardware brands
+- Rebuilding the signer each spend. The session that connects is
+  a fresh Ubuntu instance. It becomes a signer only after the
+  network is off and a disc is read. A prebuilt image does not
+  close that step.
+- A stock boot stick with no Core and no keys. A safe is not the
+  control. A hardware wallet at rest holds a key. This signer
+  does not.
+- USB mass storage instead of an animated QR pipe. A camera rate
+  is not a control this guide lacks.
 
 If they want keys and high security, and they will follow the README,
 this guide is in scope. Walk them through it if they want help.
@@ -145,6 +160,13 @@ honest and independent. This guide does not assume that. A person
 at one vendor can work with a person at another vendor, at the
 coordinator, or anywhere else in the stack. Adding brands adds
 meeting points.
+
+Do not say the devices check each other. A device is not a silo.
+One malicious signer does not need a second vendor. It already
+has a pipe to the networked host, and it can return data on that
+pipe across sessions until the leak is enough to spend. The other
+devices do not inspect its firmware. A bad descriptor is one use
+of that pipe, not the class. The path is in the threat model.
 
 There is one acceptable key-generation path here: Bitcoin Core.
 The upgrade is another Core box, not another manufacturer.
