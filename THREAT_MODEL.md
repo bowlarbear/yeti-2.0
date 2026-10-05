@@ -267,6 +267,14 @@ slogan. It fails as soon as a second vendor, a coordinator, or a
 shared library is in on it. Collusion across the stack is in
 scope here. Vendor count is not a substitute for that.
 
+A device is not a silo. One malicious signer does not need a
+second vendor. It already has a pipe to the networked host.
+It can return data on that pipe across sessions until the leak
+is enough to spend, or bias nonces so signatures on the chain
+leak the key. The other devices do not inspect its firmware.
+The coordinator and the extra libraries are how that pipe
+exists. A bad descriptor is one use of the pipe, not the class.
+
 There is one acceptable key-generation path here: Bitcoin Core.
 Dice, coin flips, and entropy-lab pages are not a second path.
 They are extra software.
