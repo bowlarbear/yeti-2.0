@@ -372,6 +372,19 @@ repo generally does not have that crowd.
 A backdoor is not only weak RNG. It can leak from signatures
 or hand you an address you do not own.
 
+**“It has worked for years, so it is sound.”**
+A stack that has not lost coins yet is not a measurement
+of the residual. The users who were swept are not in the
+sample. The network is a richer target as it grows, and
+the profit for an attacker grows with it. A decade on a
+vendor stack does not attest the binary. The stack can
+have been sound at genesis and still ship a later update
+that takes the coins. That is trust in the vendor's change
+control, not a claim about a zero-day. That process is not
+Core's, and it is not Linux's. Dice on that device is the
+same sample. The device can ignore the rolls. This model
+does not score a stack by who has not been hit yet.
+
 **“Yeti needs years of exceptional maintenance.”**
 There is no set-and-forget self-custody. Media dies. Good
 practice in any stack is a periodic check and a refresh. This
