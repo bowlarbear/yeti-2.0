@@ -133,6 +133,17 @@ The only objects with no substitute are any three discs. A
 mnemonic or a share that does not carry its own instructions
 does not have that property.
 
+Steel is not the more robust backup. An engraving is a
+transcription. A mistake is silent unless the plate is read
+back after the full engraving. A vendor stack does not have
+to require that check. These stacks do not ship a
+start-to-finish procedure that would. A seed phrase in steel
+is a secret only. It is not a descriptor, and it does not
+carry the procedure. Analog encoding and the plate's surface
+are the limit. A disc is a byte copy. The machine can read
+it back. Programmable money is digital. It does not fit an
+analog inscription.
+
 **Loss or destruction of backups.**
 Four discs can fail and the vault still spends. That is the point of
 3-of-7.
