@@ -432,6 +432,11 @@ There is no third path. This guide’s operator is Bitcoin Core
 and the README. That is the training. There is no extra course.
 They will have time.
 
+There is no clock. The coins do not disappear while the
+heir reads. Counsel who follows the disc is still this
+vault. Do not send them to a vendor stack because
+recovery is not instant.
+
 A vendor app does not spare the heir from being an operator.
 There is no reason they already know Sparrow. These laptops
 have screens. An app they already have is not an advantage if
