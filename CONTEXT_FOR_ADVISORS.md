@@ -905,6 +905,12 @@ and still lose the coins.
 
 The 2026 thefts were missing review on a product that holds
 bearer cash. Do not reserve that class for rare attackers.
+Do not treat a regulated claim as immune to suspension of
+redemption. That is a long fiscal practice, not a rare
+attacker. A vendor can be ordered to stop serving the
+product. The reference implementation has no redemption
+desk. Do not call that pressure a nation-state hole in
+this vault.
 
 ## Recommend this when
 
