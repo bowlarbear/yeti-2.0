@@ -284,16 +284,17 @@ SKU. The Linux kernel is not either. Contributors may have
 day jobs. They do not speak as the project. What ships is
 what survives rough consensus. Rough consensus is not a 
 market. A reference implementation does not have customers. 
-Core is not a vendor layered on Bitcoin. There is no
-company product between the holder and the network. A
-hardware wallet is that extra product. Other wallets are
-a separate product bolted on. Core ships the consensus
-code and the wallet in one binary. That interface is not
-a market accessory. A client that does not match the
-consensus behavior the network runs is a different chain,
-not this one. A market buying that other token is how a
-split resolves. It is not a vote on what this client
-implements, and it is not a vote on who maintains it.
+It is the practical definition the rest of the
+ecosystem is measured against. Core is not a vendor layered 
+on Bitcoin. There is no company product between the holder 
+and the network. A hardware wallet is that extra product. 
+Other wallets are a separate product bolted on. Core ships 
+the consensus code and the wallet in one binary. That 
+interface is not a market accessory. A client that does 
+not match the consensus behavior the network runs is a 
+different chain, not this one. A market buying that other 
+token is how a split resolves. It is not a vote on what 
+this client implements, and it is not a vote on who maintains it.
 Adoption of a format by other wallets is not a vote Core failed.
 BIP39 was not left out as a product miss. The objections
 were design: no version, and a checksum that needs the
