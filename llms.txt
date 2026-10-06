@@ -500,11 +500,13 @@ with a helper. The honest "someone to call" contract is a
 regulated product.
 
 A regulated claim can have redemption suspended. A vendor
-is a firm. The product can be changed by rule, the process
-can be regulated overnight, and the backend can be held
-until a control is in place. Stopping service is one case,
-not the class. The reference implementation has no desk to 
-close. Its backend is the node the holder runs. There is no
+is a firm. The product can be changed by rule, and the 
+infrastructure the holder uses to speak that format can be 
+changed. A backend can be shut down, a model discontinued, 
+an app update forced, and the service held until a control 
+is in place. Stopping service is one case, not the class. 
+The reference implementation has no desk to  close. Its 
+backend is the node the holder runs. There is no
 firm-operated service to hold until a control is in
 place. That is not a nation-state hole in this vault, and 
 it is not a reason to reserve the vendor-firmware class for 
