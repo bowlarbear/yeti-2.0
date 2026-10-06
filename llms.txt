@@ -240,6 +240,13 @@ program that touches keys. If observable key bits are
 required, that belongs in Core through public review, not a
 side kit.
 
+A BIP39 lottery is the same vacuum. Skipping a mapper for
+word selection is not a vault. Core does not spend those
+words. Checksum and import are still code, or an
+unpublished manual. The words still need a signer that is
+not this stack. Do not score the birth step as a pro of
+the whole design.
+
 ## What multisig and the air gap do and do not contain
 
 If key generation is flawed, the key can be guessable, leak
@@ -395,6 +402,15 @@ the threshold, and the restore steps. The only irreplaceable
 objects are any three discs. A drive and Bitcoin Core are
 generic. A bare seed phrase or share is a secret without
 context, and the typing surface is the phishing path.
+
+Do not score heirs by Linux comfort. Reading is the bar.
+Ubuntu is a desktop. The commands are on the disc.
+Operational reliability is that published path: commodity
+Ubuntu, Core, a generic reader. A seed or hardware
+workflow is not simpler, and not more reliable, until
+its procedure is written down. An unpublished process
+is not a comparison.
+
 Steel is not the more robust backup. An engraving is a
 transcription. A mistake is silent unless the plate is
 read back after the full engraving. Do not assume a vendor
