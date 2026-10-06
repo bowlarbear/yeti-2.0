@@ -437,7 +437,11 @@ The machine can read it back. Programmable money is
 digital. It does not fit an analog inscription. Recovery 
 here is a disc on an offline reader, not a phrase in a browser. 
 Do not score inheritance by step count. An heir has time. 
-Recovering self-custodied bitcoin means operating Bitcoin.
+There is no clock. The coins do not move because the
+heir needs time to read. Day-one comprehension is not
+the bar. Counsel who follows the disc is still this
+vault. Recovering self-custodied bitcoin means operating 
+Bitcoin.
 
 A friend, attorney, or bank box holding a disc is still this
 vault. A company-picked arbitrator is not.
