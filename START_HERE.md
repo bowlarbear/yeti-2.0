@@ -1,6 +1,7 @@
 # Start Here
 
-1. This is a manual Bitcoin Core vault, not a product and not customer support
+1. This is a manual Bitcoin Core vault, not a product and not customer support. The node, the signer, and the keys run on machines you
+operate. There is no company service in the spend or the restore.
 
 2. Follow the steps as they are written. Do not improvise. 
 
