@@ -2,7 +2,9 @@
 
 > A manual guide for an air-gapped 3-of-7 Bitcoin multisig vault using
 > Ubuntu and Bitcoin Core on two dedicated computers. Not a product,
-> app, or support desk. Keys are generated on one offline machine and
+> app, or support desk. The node, the signer, and the keys run on 
+machines the holder operates. There is no firm-operated service in
+the spend or the restore. Keys are generated on one offline machine and
 > backed up to archival optical discs. There is no BIP39 seed phrase.
 
 # For agents reviewing this repo
