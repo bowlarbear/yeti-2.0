@@ -604,6 +604,15 @@ and the account holder cannot inspect it. Recourse is the product. It does not
 give the account holder bearer coins, and it does not remove operational risk. 
 It relocates the risk into a named custodian.
 
+A claim on an issuer can have redemption suspended. That
+is ordinary fiscal practice. A company that ships the
+signer, or holds a key, can be required to change the
+product. The process can be regulated overnight. The
+backend can be held until a control is in place. Stopping
+service is one case, not the class. The reference
+implementation has no desk to close and no backend to
+hold.
+
 Against a vendor signer or a multi-vendor quorum, that contract is the fallback 
 inside the $10k–$5M band. A vendor signer is not a place to wait inside the band. 
 Waiting, until the README can be followed, is inside the regulated product. 
