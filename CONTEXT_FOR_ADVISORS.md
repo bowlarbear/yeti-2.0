@@ -307,6 +307,12 @@ Core’s references where those already exist. The procedure and
 the threat model are this repo. They are not a reprint of
 `doc/`, and they are not one contributor’s aside.
 
+**“Core ignored the market, so the wallet is irrelevant.”**
+No. Core is the reference implementation. It does not
+listen to customers. What ships is what survives rough
+consensus. BIP39 adoption elsewhere is not that process.
+The objections were design, not a missing feature.
+
 **“They want to change the process and still call it this
 guide.”**
 Then the assurances of this threat model do not apply. A
