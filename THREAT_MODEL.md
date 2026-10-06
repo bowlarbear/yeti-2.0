@@ -614,11 +614,17 @@ class, and it does not make the 2026 class rare.
 A claim on an issuer can have redemption suspended. That
 is ordinary fiscal practice. A company that ships the
 signer, or holds a key, can be required to change the
-product. The process can be regulated overnight. The
-backend can be held until a control is in place. Stopping
-service is one case, not the class. The reference
-implementation has no desk to close and no backend to
-hold.
+product. Disappearance and collusion are the same class 
+as the order. A format the reference client does not speak
+leaves the holder depending on that layer to re-enter.
+Soundness under the layer's own spec does not close
+that. BIP39 is one case. The infrastructure the holder 
+uses to speak that product can be changed overnight. 
+A backend can be shut down, a model discontinued, an app 
+update forced. The backend can be held until a control 
+is in place. Stopping service is one case, not the class. 
+The reference implementation has no desk to close and no 
+backend to hold.
 
 Against a vendor signer or a multi-vendor quorum, that contract is the fallback 
 inside the $10k–$5M band. A vendor signer is not a place to wait inside the band. 
