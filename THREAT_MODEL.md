@@ -185,7 +185,12 @@ is a secret only. It is not a descriptor, and it does not
 carry the procedure. Analog encoding and the plate's surface
 are the limit. A disc is a byte copy. The machine can read
 it back. Programmable money is digital. It does not fit an
-analog inscription.
+analog inscription. A plate that outlasts a disc is still 
+one secret. Survival of the medium is not a threshold. One 
+plate does not spend a 3-of-7, and a plate that is the 
+only backup is the loss the quorum was built to absorb. 
+The disc refresh every 7–10 years is a media cycle. It is 
+not a second key-management problem.
 
 **Loss or destruction of backups.**
 Four discs can fail and the vault still spends. That is the point of
