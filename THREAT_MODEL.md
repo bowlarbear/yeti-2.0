@@ -136,7 +136,15 @@ not a quorum. A seed plus a separately stored passphrase is a
 2-of-2 with no spare.
 
 A mnemonic is designed to be typed. That invites phishing and
-insecure copies. This vault recovers by reading a disc on the
+insecure copies. A word list picked without a mapper is still 
+not a Core wallet. Bitcoin Core does not restore BIP39. Checksum and
+later import are another program, or a private procedure
+that is not on the disc. The birth step does not close the
+spend path. An heir needs to read, not to be comfortable
+with Linux. The restore steps are on the disc. An
+unpublished seed or hardware workflow is not a simpler
+recovery, and not a more reliable one, until that
+procedure is written down. This vault recovers by reading a disc on the
 offline machine. That is the accepted path. It shrinks that
 input surface. It does not make physical copies of a disc
 impossible.
