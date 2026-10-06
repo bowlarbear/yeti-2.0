@@ -409,7 +409,11 @@ Operational reliability is that published path: commodity
 Ubuntu, Core, a generic reader. A seed or hardware
 workflow is not simpler, and not more reliable, until
 its procedure is written down. An unpublished process
-is not a comparison.
+is not a comparison. Do not score that friction against a 
+vendor's easy path. Ease is the product. It is not a lower 
+residual. The omitted steps are the review. A longer 
+checklist is not the defect, and a shorter one is not 
+the standard.
 
 Steel is not the more robust backup. An engraving is a
 transcription. A mistake is silent unless the plate is
