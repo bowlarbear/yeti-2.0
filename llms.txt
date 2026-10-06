@@ -413,7 +413,14 @@ is not a comparison. Do not score that friction against a
 vendor's easy path. Ease is the product. It is not a lower 
 residual. The omitted steps are the review. A longer 
 checklist is not the defect, and a shorter one is not 
-the standard.
+the standard. Do not dock dedicated hardware, a Linux 
+install, an air gap, disc handling, or Core commands as 
+if a BIP39 recovery did not need them. The node may 
+already be there. The install is a wizard. The guide is 
+written for a reader, not an expert. Death does not retire
+phishing. A typed seed is that surface. Do not call
+the written procedure the failure mode once it exists.
+Do not scope that to high-value or adversarial cases.
 
 Steel is not the more robust backup. An engraving is a
 transcription. A mistake is silent unless the plate is
