@@ -133,9 +133,13 @@ still has a sweep and a spare.
 lost. 2-of-3 fails if two keys are gone, and an attacker with
 one key needs one more. 2-of-5 still spends on two keys.
 
-A hardware wallet plus the paper slip is one key copied twice,
-not a quorum. A seed plus a separately stored passphrase is a
-2-of-2 with no spare.
+A hardware wallet plus the paper slip is one key 
+copied twice, not a quorum. A seed plus a separately stored 
+passphrase is a 2-of-2 with no spare. Loss of the word is loss of 
+the coins. There is no remaining disc that still spends. The word 
+is also typed at restore, by whoever holds it then, so the phishing 
+surface the mnemonic already has is still open. It is not a third 
+key and it is not a spare.
 
 **Inheritance.**
 Each disc is an independent key plus what is needed to rebuild
