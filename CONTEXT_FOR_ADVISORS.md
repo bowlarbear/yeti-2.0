@@ -915,11 +915,10 @@ instead of a financial institution in the payment. A vendor
 is that party. The product can be changed by rule, the
 process can be regulated overnight, and the backend can be
 held until a control is in place. Stopping service is one
-case, not the class. The reference implementation has no
-redemption desk and no backend to hold. Suspension of
-redemption is ordinary fiscal practice against a claim on
-an issuer. It is not a plot, and it is not a hole in the
-disc.
+case, not the class. The reference implementation has no 
+redemption desk. Its backend is the node the holder runs. 
+There is no firm-operated service to hold until a control 
+is in place.
 
 Do not treat a regulated claim as immune to suspension of
 redemption. That is a long fiscal practice, not a rare
