@@ -331,7 +331,7 @@ coordinator relationship in Bitcoin-specific firmware and a
 supply chain the user cannot independently attest. The device
 can lie about what firmware it runs. A screen does not help
 if the generator was weak or if another binary in the stack
-is the thief. Laptop screens are not a missing feature of
+is the thief. Screens are not a missing feature of
 this guide. The failure is the model, not one brand. Coldcard 
 2026 is the public case: guessable keys from the normal 
 new-seed path, swept from the public chain, no stolen device, 
@@ -340,6 +340,17 @@ dependency committed under the pseudonym switck. Those
 commits were signed with the Coinkite CTO’s GPG key. The
 company called it an integration accident. The class is not
 unique to that brand.
+
+The screen renders what that firmware decides to render.
+Address, amount, fee, and change are in that set. A match
+between the device and the host is a match between two
+displays. It does not read the generator, and it does not
+read a second binary that already has a pipe to the host.
+Coldcard 2026 showed addresses for the normal new-seed
+path. Those addresses belonged to guessable keys, and the
+coins were swept from the chain. A displayed field is the
+device's claim about a session. It is not an attestation
+of the bits that touched the key.
 
 A device is not a silo. One malicious signer does not need a
 second vendor. It already has a pipe to the networked host.
@@ -411,8 +422,11 @@ sweep before the thief if the remainder is still a threshold.
 A 2-of-3 or a 3-of-5 robbed of its signing set has no
 remainder. A 2-of-4 has a bare sweep and no spare. A 2-of-5
 or a 3-of-6 still has a sweep. 3-of-7 has a sweep and a spare.
-A device plus a paper seed is one key copied twice. A seed
-plus a stored-apart passphrase is a 2-of-2. Nested
+A device plus a paper seed is one key copied twice. A seed 
+plus a stored-apart passphrase is a 2-of-2. Loss of the word 
+is loss of the coins. Nothing remains that still spends. The 
+word is typed at restore, so the phishing surface is still open. 
+It is not a third key and it is not a spare. Nested 
 device-plus-seed trees are not interchangeable keys. Compare
 vendor cost at the same quorum plus a node, not one device
 against this README.
