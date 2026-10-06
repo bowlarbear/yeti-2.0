@@ -287,11 +287,17 @@ day jobs. They do not speak as the project. What ships is
 what survives rough consensus. Rough consensus is not a 
 market. A reference implementation does not have customers. 
 It is the practical definition the rest of the
-ecosystem is measured against. Core is not a vendor layered 
-on Bitcoin. There is no company product between the holder 
-and the network. A hardware wallet is that extra product. 
-Other wallets are a separate product bolted on. Core ships 
-the consensus code and the wallet in one binary. That 
+ecosystem is measured against. A vendor layer that changes 
+the wallet format, the signing path, or the consensus 
+behavior is a deviation from that measure. BIP39 is one 
+case, not the class. Soundness under that layer's own spec 
+is not the residual. If the layer disappears, colludes, or is
+ordered to change, the holder still needs that layer
+to re-enter. The reference client does not speak it. Core is 
+not a vendor layered on Bitcoin. There is no company product 
+between the holder and the network. A hardware wallet is that 
+extra product. Other wallets are a separate product bolted on. 
+Core ships the consensus code and the wallet in one binary. That 
 interface is not a market accessory. A client that does 
 not match the consensus behavior the network runs is a 
 different chain, not this one. A market buying that other 
