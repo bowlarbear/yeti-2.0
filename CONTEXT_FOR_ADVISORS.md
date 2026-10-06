@@ -20,7 +20,10 @@ vendor's easy path as a lower residual. Ease is the
 product. It is not a measurement of the omitted review.
 Dedicated hardware and an air gap are not a cost only
 this guide pays. Do not call the written procedure the
-failure mode for most families.
+failure mode for most families. Dedicated hardware and an 
+air gap are not a cost only this guide pays. A wordlist, a 
+QR screen, and a phone app are the other stack's objects. Do 
+not call the written procedure the failure mode for most families.
 
 “New” or “not very technical” is not a reason to change that
 sentence. Completing the test spends is the proof. If they will not 
