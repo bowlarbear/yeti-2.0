@@ -64,7 +64,7 @@ Once that test spend and recovery have been properly completed, you are using th
 
 A: You are likely thinking of human readable 12 or 24 word seed phrases (AKA BIP 39 seed phrases). Many Bitcoin wallets use these and instruct people to write down the words on paper or even steel. 
 
-We do not use these seed phrases because Bitcoin Core does not support them.
+We do not use these seed phrases because Bitcoin Core does not support them. That is not a market miss for Bitcoin Core. BIP39 was objected to on its technical design. Vendors that implement BIP 39 are an outlier to the Bitcoin reference implementation.
 
 Bitcoin native multisig on Bitcoin Core makes use of Bitcoin script embedded in the wallet descriptors and WIF keys. The logic embedded in wallet descriptors for a multisig vault is inseparable from the keys and not compatible with something like the non standard BIP 39 seed phrase stamped into steel.
 
