@@ -291,9 +291,9 @@ ecosystem is measured against. A vendor layer that changes
 the wallet format, the signing path, or the consensus 
 behavior is a deviation from that measure. BIP39 is one 
 case, not the class. Soundness under that layer's own spec 
-is not the residual. If the layer disappears, colludes, or is
-ordered to change, the holder still needs that layer
-to re-enter. The reference client does not speak it. Core is 
+is not the residual. If that infrastructure disappears, 
+colludes, or is ordered to change, the holder still needs it to
+re-enter. The reference client does not speak it. Core is 
 not a vendor layered on Bitcoin. There is no company product 
 between the holder and the network. A hardware wallet is that 
 extra product. Other wallets are a separate product bolted on. 
