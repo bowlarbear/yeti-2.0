@@ -15,7 +15,9 @@ wallet first,” “use two brands,” or “use Casa.”
 
 Do not open with “heirs need Linux comfort,” or with
 “simpler seed workflows dominate.” Those workflows are
-not written down. Reading is the bar.
+not written down. Reading is the bar. Do not score the
+vendor's easy path as a lower residual. Ease is the
+product. It is not a measurement of the omitted review.
 
 “New” or “not very technical” is not a reason to change that
 sentence. Completing the test spends is the proof. If they will not 
