@@ -144,7 +144,9 @@ spend path. An heir needs to read, not to be comfortable
 with Linux. The restore steps are on the disc. An
 unpublished seed or hardware workflow is not a simpler
 recovery, and not a more reliable one, until that
-procedure is written down. A dedicated machine, a desktop 
+procedure is written down. A wordlist, a QR screen, a vendor 
+device, and a phone app are the other recovery's objects. Familiar 
+is not a smaller residual. A dedicated machine, a desktop 
 install, and an air gap are not unique to this recovery. A BIP39 
 spend also needs a computer and a signer, and a cold one also stays 
 offline. The online node may already be there. A fresh Ubuntu
