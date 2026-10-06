@@ -477,12 +477,17 @@ plate's surface are the limit. A disc is a byte copy.
 The machine can read it back. Programmable money is
 digital. It does not fit an analog inscription. Recovery 
 here is a disc on an offline reader, not a phrase in a browser. 
-Do not score inheritance by step count. An heir has time. 
-There is no clock. The coins do not move because the
-heir needs time to read. Day-one comprehension is not
-the bar. Counsel who follows the disc is still this
-vault. Recovering self-custodied bitcoin means operating 
-Bitcoin.
+A plate that outlasts a disc is still one secret. Survival
+of the medium is not a threshold. One plate does not spend
+a 3-of-7, and a plate that is the only backup is the loss
+the quorum was built to absorb. The disc refresh every
+7–10 years is a media cycle. It is not a second
+key-management problem. Do not score inheritance by step 
+count. An heir has time. There is no clock. The coins do 
+not move because the heir needs time to read. Day-one 
+comprehension is not the bar. Counsel who follows the 
+disc is still this vault. Recovering self-custodied 
+bitcoin means operating Bitcoin.
 
 A friend, attorney, or bank box holding a disc is still this
 vault. A company-picked arbitrator is not.
