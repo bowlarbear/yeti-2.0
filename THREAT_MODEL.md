@@ -544,7 +544,11 @@ is a bearer instrument on a push network with final settlement.
 Anyone who holds keys accepts operational risk. This guide does 
 not create that fact. Hardware wallets and collaborative custody 
 do not erase it. A brokerage is a claim on an institution, not 
-the absence of operations.
+the absence of operations. A claim on an issuer can have redemption 
+suspended. That is ordinary fiscal practice. A company that ships the
+signer, or holds a key, can be ordered to stop. The
+reference implementation has no desk to close and no
+customer list to serve.
 
 **Hardware wallets** concentrate key generation, display, and 
 often the coordinator relationship in vendor software and a 
