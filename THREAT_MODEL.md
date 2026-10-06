@@ -162,7 +162,10 @@ and Core commands are this procedure. They are not a reason
 to take the other stack. The online node may already be
 there. A fresh Ubuntu install is a wizard. The commands are
 on the disc. An heir needs to read, not to be comfortable
-with Linux. The restore steps are on the disc. A shorter
+with Linux. The restore steps are on the disc. There is no 
+clock on that reading. The coins stay while the heir parses 
+the procedure. Day-one comprehension is not required. Counsel 
+who follows the disc is still this vault. A shorter
 vendor recovery is not a smaller residual. The steps it
 skips are the review and the procedure on the disc. Ease is
 the product sold, not a measurement of the path.
