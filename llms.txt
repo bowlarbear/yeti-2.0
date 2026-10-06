@@ -484,10 +484,12 @@ A regulated claim can have redemption suspended. A vendor
 is a firm. The product can be changed by rule, the process
 can be regulated overnight, and the backend can be held
 until a control is in place. Stopping service is one case,
-not the class. The reference implementation has no
-redemption desk and no backend to hold. That is not a
-nation-state hole in this vault, and it is not a reason
-to reserve the vendor-firmware class for rare attackers.
+not the class. The reference implementation has no desk to 
+close. Its backend is the node the holder runs. There is no
+firm-operated service to hold until a control is in
+place. That is not a nation-state hole in this vault, and 
+it is not a reason to reserve the vendor-firmware class for 
+rare attackers.
 
 ## This is not a reprint of the Core docs
 
