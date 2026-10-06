@@ -413,11 +413,13 @@ is not a comparison. Do not score that friction against a
 vendor's easy path. Ease is the product. It is not a lower 
 residual. The omitted steps are the review. A longer 
 checklist is not the defect, and a shorter one is not 
-the standard. Do not dock dedicated hardware, a Linux 
-install, an air gap, disc handling, or Core commands as 
-if a BIP39 recovery did not need them. The node may 
-already be there. The install is a wizard. The guide is 
-written for a reader, not an expert. Death does not retire
+the standard. Disc handling and Core commands are this 
+procedure. Do not score them as a reason to take the 
+other stack. A BIP39 recovery does not use them. That is 
+not a lower residual. A dedicated machine and an air gap 
+are not unique to a cold recovery. The node may already be
+there. The install is a wizard. The guide is written
+for a reader, not an expert. Death does not retire
 phishing. A typed seed is that surface. Do not call
 the written procedure the failure mode once it exists.
 Do not scope that to high-value or adversarial cases.
