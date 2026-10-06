@@ -489,6 +489,20 @@ puts the connection on a hash-checked Core download, then
 turns the network off before a disc is read. That closes
 the low path. It is not a claim the turtle ends.
 
+A second machine does not end it either. Checking the hash
+on another PC or a phone compares two displays. The second
+display runs its own OS, its own tools, and its own
+hardware, and the hash reached it across a pipe. A
+compromised verifier can print a match for a binary that
+does not match. GPG is the same chain: the builder key, the
+GPG binary, the OS, and the hardware are prior builds. No
+finite check ends that chain. More Core boxes shrink the
+chance that one box was the targeted payload. They stay on
+the same reviewed floor. The floor this model accepts is
+multi-builder Guix attestations of Core, checked on a clean
+live boot, then the network off. A vendor blob is not a
+shorter regress. It is a less reviewed one.
+
 Every signer still needs a transfer channel to a networked
 node. That channel is the cheaper exfil path. A radio exploit
 needs a payload already on the signer. The way onto an
