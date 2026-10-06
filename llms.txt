@@ -480,6 +480,12 @@ is a custodial product sold as self-custody, not this guide
 with a helper. The honest "someone to call" contract is a
 regulated product.
 
+A regulated claim can have redemption suspended. A vendor
+can be ordered to stop serving the product. The reference
+implementation has no redemption desk. That is not a
+nation-state hole in this vault, and it is not a reason
+to reserve the vendor-firmware class for rare attackers.
+
 ## This is not a reprint of the Core docs
 
 Core's shipped scope stops before key-management tradeoffs:
