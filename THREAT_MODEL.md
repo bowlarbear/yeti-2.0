@@ -576,6 +576,14 @@ still runs the unauditable code. The class is no review, no
 reproducible build, and no independent attestation of the
 bits that touched the key.
 
+The screen renders what that firmware decides to render.
+Address, amount, fee, and change are in that set. A match
+between the device and the host is a match between two
+displays. It does not read the generator, and it does not
+read a second binary on the pipe. The 2026 path showed
+addresses for keys the chain could sweep. A displayed
+field is the device's claim about a session.
+
 The architectural case is older than Coldcard 2026. Maxwell (2020) 
 called the devices opaque, hard to review, and a supply-chain target, 
 and would not recommend them for serious amounts. Spigler (2020) is 
