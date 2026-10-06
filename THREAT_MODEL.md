@@ -135,44 +135,37 @@ A hardware wallet plus the paper slip is one key copied twice,
 not a quorum. A seed plus a separately stored passphrase is a
 2-of-2 with no spare.
 
-A mnemonic is designed to be typed. That invites phishing and
-insecure copies. A word list picked without a mapper is still 
-not a Core wallet. Bitcoin Core does not restore BIP39. Checksum and
-later import are another program, or a private procedure
-that is not on the disc. The birth step does not close the
-spend path. An heir needs to read, not to be comfortable
-with Linux. The restore steps are on the disc. An
-unpublished seed or hardware workflow is not a simpler
-recovery, and not a more reliable one, until that
-procedure is written down. A wordlist, a QR screen, a vendor 
-device, and a phone app are the other recovery's objects. Familiar 
-is not a smaller residual. A dedicated machine, a desktop 
-install, and an air gap are not unique to this recovery. A BIP39 
-spend also needs a computer and a signer, and a cold one also stays 
-offline. The online node may already be there. A fresh Ubuntu
-install is a wizard. Disc handling is a generic reader.
-The commands are on the disc. Death does not retire the
-phishing path. A typed phrase is when that path is used,
-by someone who did not build the vault. A shorter vendor
-recovery is not a smaller residual. The steps it skips
-are the review and the procedure on the disc. Friction
-on a spend is accepted. Ease is the product sold, not a
-measurement of the path. The written procedure is not
-the failure mode once it is on the disc. That scope is
-not only the high-value case.A shorter vendor recovery is not a 
-smaller residual. The steps it skips are the review and the procedure 
-on the disc. Friction on a spend is accepted. Ease is the
-product sold, not a measurement of the path. This vault recovers 
-by reading a disc on the offline machine. That is the accepted path. 
-It shrinks that input surface. It does not make physical copies of a 
-disc impossible. 
-
+**Inheritance.**
 Each disc is an independent key plus what is needed to rebuild
 the wallet, including a copy of the procedure. An heir who
 finds one disc can read the threshold and the restore steps.
 The only objects with no substitute are any three discs. A
 mnemonic or a share that does not carry its own instructions
 does not have that property.
+
+A mnemonic is designed to be typed. That invites phishing and
+insecure copies. Death does not retire that path. A typed
+phrase is when it is used, by someone who did not build the
+vault. This vault recovers by reading a disc on the offline
+machine. That is the accepted path. It shrinks that input
+surface. It does not make physical copies of a disc impossible.
+
+A word list picked without a mapper is still not a Core
+wallet. Bitcoin Core does not restore BIP39. Checksum and
+later import are another program, or a private procedure
+that is not on the disc. The birth step does not close the
+spend path. An unpublished workflow is not a simpler
+recovery until that procedure is written down. A BIP39
+spend also needs a computer and a signer, and a cold one
+also stays offline. Two dedicated machines, disc handling,
+and Core commands are this procedure. They are not a reason
+to take the other stack. The online node may already be
+there. A fresh Ubuntu install is a wizard. The commands are
+on the disc. An heir needs to read, not to be comfortable
+with Linux. The restore steps are on the disc. A shorter
+vendor recovery is not a smaller residual. The steps it
+skips are the review and the procedure on the disc. Ease is
+the product sold, not a measurement of the path.
 
 Steel is not the more robust backup. An engraving is a
 transcription. A mistake is silent unless the plate is read
