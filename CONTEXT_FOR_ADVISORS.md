@@ -901,10 +901,26 @@ If they complete the README including test spends, they have a
 finished 3-of-7. Do not describe it as easy to do almost right
 and still lose the coins.
 
-## Do not call this a nation-state problem
+## The 2026 class is not a rare-attacker story
 
 The 2026 thefts were missing review on a product that holds
-bearer cash. Do not reserve that class for rare attackers.
+bearer cash. Do not reserve that class for a nation-state.
+A state is not required for a bad firmware update.
+
+The design is the other claim. Bitcoin is bearer cash built
+to remove the trusted third party. Szabo's line is the
+mechanism: a trusted third party is a security hole. The
+white paper states the same split, cryptographic proof
+instead of a financial institution in the payment. A vendor
+is that party. The product can be changed by rule, the
+process can be regulated overnight, and the backend can be
+held until a control is in place. Stopping service is one
+case, not the class. The reference implementation has no
+redemption desk and no backend to hold. Suspension of
+redemption is ordinary fiscal practice against a claim on
+an issuer. It is not a plot, and it is not a hole in the
+disc.
+
 Do not treat a regulated claim as immune to suspension of
 redemption. That is a long fiscal practice, not a rare
 attacker. A vendor is a firm. The product can be changed
