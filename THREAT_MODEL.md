@@ -546,9 +546,9 @@ not create that fact. Hardware wallets and collaborative custody
 do not erase it. A brokerage is a claim on an institution, not 
 the absence of operations. A claim on an issuer can have redemption 
 suspended. That is ordinary fiscal practice. A company that ships the
-signer, or holds a key, can be ordered to stop. The
-reference implementation has no desk to close and no
-customer list to serve.
+signer, or holds a key, can be ordered to stop. The reference 
+implementation has no desk. Its backend is the node the holder runs. 
+There is no firm-operated service to hold.
 
 **Hardware wallets** concentrate key generation, display, and 
 often the coordinator relationship in vendor software and a 
