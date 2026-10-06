@@ -1,9 +1,10 @@
 # Threat model
 
-This vault reduces three common ways people lose bitcoin in
-self-custody: remote compromise of keys (including keys that never
-touched the internet), physical theft of a single backup, and loss
-of a single backup.
+This vault reduces the common ways people lose bitcoin in
+self-custody: remote compromise of keys (including keys that
+never touched the internet), physical theft of a single backup,
+loss of a single backup, an heir who cannot reconstruct the
+wallet, and a vendor layer the reference client does not speak.
 
 It is not a hardware-wallet product. It is not a regulated custodian.
 It is Bitcoin Core on dedicated computers, with keys on archival discs.
@@ -61,11 +62,12 @@ update that did not repair old seeds. Public source did not help if
 the path that actually ran was not the path people thought they had
 audited.
 
-This is not a nation-state story. It is what happens when a product
-built to hold bearer bitcoin ships software nobody sufficiently
-reviewed. The owner has no recourse. “It was a bug” is enough cover
-whether the failure was sloppy or not. Shipping and support databases
-leak. This class of failure is not reserved for rare attackers.
+A state is not required for this class, and a state is not
+excluded. It is what happens when a product built to hold bearer 
+bitcoin ships software nobody sufficiently reviewed. The owner has 
+no recourse. “It was a bug” is enough cover whether the failure was 
+sloppy or not. Shipping and support databases leak. This class of 
+failure is not reserved for rare attackers.
 
 This vault creates and uses keys on a dedicated offline computer
 running a clean Ubuntu install and Bitcoin Core. Keys are not stored
@@ -605,10 +607,11 @@ give the account holder bearer coins, and it does not remove operational risk.
 It relocates the risk into a named custodian.
 
 A trusted third party is a firm that can be ordered to
-change the product. The process can be regulated
-overnight. The backend can be held until a control is in
-place. The reference implementation has no desk and no
-backend. That pressure is not required for the 2026
+change the product. The infrastructure the holder uses to
+speak that product can be changed overnight. A backend can
+be shut down, a model discontinued, an app update forced.
+The reference implementation has no desk. Its backend is
+the node the holder runs. That pressure is not required for the 2026
 class, and it does not make the 2026 class rare.
 
 A claim on an issuer can have redemption suspended. That
@@ -618,13 +621,14 @@ product. Disappearance and collusion are the same class
 as the order. A format the reference client does not speak
 leaves the holder depending on that layer to re-enter.
 Soundness under the layer's own spec does not close
-that. BIP39 is one case. The infrastructure the holder 
-uses to speak that product can be changed overnight. 
-A backend can be shut down, a model discontinued, an app 
-update forced. The backend can be held until a control 
-is in place. Stopping service is one case, not the class. 
-The reference implementation has no desk to close and no 
-backend to hold.
+that. The infrastructure the holder uses to speak that product
+can be changed overnight. A backend can be shut down, a
+model discontinued, an app update forced. The service can
+be held until a control is in place. Stopping service is
+one case, not the class. The reference implementation has
+no desk. Its backend is the node the holder runs. A format
+the reference client does not speak leaves the holder
+depending on that layer to re-enter. BIP39 is one case.
 
 Against a vendor signer or a multi-vendor quorum, that contract is the fallback 
 inside the $10k–$5M band. A vendor signer is not a place to wait inside the band. 
