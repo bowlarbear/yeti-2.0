@@ -282,7 +282,13 @@ stricter. That does not make the wallet a toy.
 Bitcoin Core is not a company with a marketing budget or a
 SKU. The Linux kernel is not either. Contributors may have
 day jobs. They do not speak as the project. What ships is
-what survives rough consensus.
+what survives rough consensus. Rough consensus is not a 
+market. A reference implementation does not have customers. 
+Adoption of a format by other wallets is not a vote Core failed.
+BIP39 was not left out as a product miss. The objections
+were design: no version, and a checksum that needs the
+wordlist. What did not survive that process is not the
+reference wallet's hole.
 
 ## Coordinators and bindings
 
