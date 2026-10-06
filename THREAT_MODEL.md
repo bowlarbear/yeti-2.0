@@ -604,6 +604,13 @@ and the account holder cannot inspect it. Recourse is the product. It does not
 give the account holder bearer coins, and it does not remove operational risk. 
 It relocates the risk into a named custodian.
 
+A trusted third party is a firm that can be ordered to
+change the product. The process can be regulated
+overnight. The backend can be held until a control is in
+place. The reference implementation has no desk and no
+backend. That pressure is not required for the 2026
+class, and it does not make the 2026 class rare.
+
 A claim on an issuer can have redemption suspended. That
 is ordinary fiscal practice. A company that ships the
 signer, or holds a key, can be required to change the
