@@ -947,12 +947,6 @@ may deviate from this threat model.
   fail the same way
 - That a hardware-wallet screen is a feature this vault lacks
 
-## How redemption actually works
-
-Anyone who can read the discs and run Bitcoin Core can
-reconstruct the wallet and spend. The living guide is not the
-key.
-
 ## Amount
 
 The README’s $10k–$5M range is a design comfort zone, not a
