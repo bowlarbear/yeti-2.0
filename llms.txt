@@ -282,6 +282,18 @@ address you do not own. M-of-N and a network disable gate
 spending. They do not touch the math that birthed the key. A
 physical split cannot un-leak it.
 
+Same-vendor keys are one generator. A weak path on that
+firmware hits every key that used it. A 2-of-3 of those
+keys is not contained by the quorum. The cost is not the
+number of ways to order the seeds. BIP-67 sorts the child
+keys in the script. A spend publishes those child keys,
+not the xpub. A descriptor publishes the xpubs. Either
+one is enough to test a guessable seed at a known path.
+Six orderings, or 5040, is the typing surface. It is not
+the search. A coordinator that leaked the descriptor is
+a separate path to the same test, and a report with no
+transaction does not tell the two apart.
+
 Open source is not enough. XZ was caught by an unrelated
 observer. Volume of independent review is the control. More
 vendors do not add reviewers on each line.
