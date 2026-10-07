@@ -106,8 +106,15 @@ A pinned page still computes after the last roll. That is a
 second hidden draw, not a smaller one.
 A hashed HTML or WASM file still runs under a browser engine.
 Signatures do not attest that engine.
-This guide does not treat Core’s generator as a hole for a kit
-to close.
+"One HTML file" is the delivery format. Compiled code
+embedded in that file is still a binary. A hash of the
+file hashes the wrapper and the blob together. It does
+not review the blob, and it does not attest the browser
+that runs it. No network call at use does not remove
+the engine, or the build that produced the embedded
+binary. A signature on the container is not an
+attestation of the bits that touch the key. This guide does 
+not treat Core’s generator as a hole for a kit to close.
 
 The root of trust is the software that runs, not the dice. A kit
 that maps rolls is an unauditable root unless it clears Core’s
