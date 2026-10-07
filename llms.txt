@@ -327,6 +327,20 @@ not a claim of perfection. Wallet, descriptors, and PSBT are
 in that same tree and that same binary. Consensus review is
 stricter. That does not make the wallet a toy.
 
+Less review than consensus is not less review than a
+vendor wallet. The wallet, the descriptors, and the PSBT
+code ship in the same attested binary. The alternative
+being sold is a different binary, with no equivalent
+attestations. A bug in Core is a finding about that
+binary. It is not a reason to move key birth onto the
+other one. The v30 migration bug deleted files in a
+wallet directory when an unnamed legacy wallet.dat failed
+to migrate under pruning, and no external backup existed.
+This procedure does not run that path. It creates fresh
+descriptor wallets and writes the keys to discs before
+funds move. A bug that does not run is not caution in
+favor of a vendor stack.
+
 Bitcoin Core is not a company with a marketing budget or a
 SKU. The Linux kernel is not either. Contributors may have
 day jobs. They do not speak as the project. What ships is
