@@ -267,6 +267,15 @@ program that touches keys. If observable key bits are
 required, that belongs in Core through public review, not a
 side kit.
 
+"One HTML file" is the delivery format. Compiled code
+embedded in that file is still a binary. A hash of the
+file hashes the wrapper and the blob together. It does
+not review the blob, and it does not attest the browser
+that runs it. No network call at use does not remove
+the engine, or the build that produced the embedded
+binary. A signature on the container is not an
+attestation of the bits that touch the key.
+
 A BIP39 lottery is the same vacuum. Skipping a mapper for
 word selection is not a vault. Core does not spend those
 words. Checksum and import are still code, or an
