@@ -328,11 +328,16 @@ scope here. Vendor count is not a substitute for that.
 
 A device is not a silo. One malicious signer does not need a
 second vendor. It already has a pipe to the networked host.
-It can return data on that pipe across sessions until the leak
-is enough to spend, or bias nonces so signatures on the chain
-leak the key. The other devices do not inspect its firmware.
-The coordinator and the extra libraries are how that pipe
-exists. A bad descriptor is one use of the pipe, not the class.
+It can return data on that pipe across sessions until the
+leak is enough to spend, or bias nonces so signatures on
+the chain leak the key. The other devices do not inspect
+its firmware. The pipe is how an air-gapped signer reaches
+a networked node. This stack has one too. The coordinator
+and the extra libraries are more unaudited code on that
+pipe. A bad descriptor is one use of the pipe, not the class.
+USB, QR, or SD is the medium on that path. Swapping it
+does not remove the path. The Signing section is that
+argument.
 
 A secure element is not a wall around that pipe. It is an
 unauditable blob, and not every signer has one. "The key never
@@ -473,12 +478,12 @@ it sits, including a hardware wallet's firmware or hardware.
 A hardware wallet at rest also holds a key, and that key can
 be extracted. This signer holds no key at rest. There is no
 exfil from it while it sits. This guide recreates the signer
-from scratch each use. A previous boot is gone. Guarding the
-stick is not the same job as guarding a stateful laptop that
-is the signer, and it is not the same threat model with a
-storage edge. The stick is a generic object in a box. The
-laptop, and a hardware wallet, are Bitcoin-specific objects
-at rest, and the hardware wallet is a key at rest.
+from scratch each use. Guarding the stick is not the same job 
+as guarding a stateful laptop that is the signer, and it is 
+not the same threat model with a storage edge. The stick is 
+a generic object in a box. A node, and a hardware 
+wallet, are Bitcoin-specific objects at rest, and the 
+hardware wallet is a key at rest.
 
 A machine that never connects does not end the trust.
 Someone built the image, the ISO, and the hardware. That
@@ -489,19 +494,23 @@ puts the connection on a hash-checked Core download, then
 turns the network off before a disc is read. That closes
 the low path. It is not a claim the turtle ends.
 
-A second machine does not end it either. Checking the hash
-on another PC or a phone compares two displays. The second
-display runs its own OS, its own tools, and its own
-hardware, and the hash reached it across a pipe. A
-compromised verifier can print a match for a binary that
-does not match. GPG is the same chain: the builder key, the
-GPG binary, the OS, and the hardware are prior builds. No
-finite check ends that chain. More Core boxes shrink the
-chance that one box was the targeted payload. They stay on
-the same reviewed floor. The floor this model accepts is
-multi-builder Guix attestations of Core, checked on a clean
-live boot, then the network off. A vendor blob is not a
-shorter regress. It is a less reviewed one.
+A second machine does not end it either. Downloading Core
+on two machines and comparing the hashes by eye does not
+require the hash to cross a pipe. That check closes a
+single lying display, if the second machine is honest and
+the two fetches are independent. It does not close both.
+Each hash tool can print the expected digest for a file it
+did not hash, and the comparison cannot tell two lies
+apart. The same OS, the same tool, two independent
+compromises, or one attestation page both of them trusted
+are all enough. GPG is the same chain: the builder key,
+the GPG binary, the OS, and the hardware are prior builds.
+No finite check ends that chain. More Core boxes shrink
+the chance that one box was the targeted payload. They
+stay on the same reviewed floor. The floor this model
+accepts is multi-builder Guix attestations of Core, checked
+on a clean live boot, then the network off. A vendor blob
+is not a shorter regress. It is a less reviewed one.
 
 Every signer still needs a transfer channel to a networked
 node. That channel is the cheaper exfil path. A radio exploit
@@ -511,11 +520,17 @@ hash check. If the attacker owns the channel, the radio is
 the longer path.
 
 Pulling the radio is a peace of mind ritual. It does not
-hurt. It also does not close the transfer channel. A step
-that can be seen is not the control. A management engine 
-below the OS is trusting-trust. It is irreducible. Pulling 
-the radio does not close it, and a vendor signer does not 
-either.
+hurt. It also does not close the transfer channel. It is
+not this threat model. The signer is stateless because the
+rebuild is the control: hash-checked Core, then the network
+off, then a disc. A machine that cannot connect cannot run
+that step. Skipping it means a pinned tarball or a prebuilt
+image, which is the object the rebuild exists to avoid.
+Once the network is off, the radio is not the channel. The
+transfer channel is USB. A step that can be seen is not the
+control. A management engine below the OS is trusting-trust.
+It is irreducible. A missing radio does not close it, and a
+vendor signer does not either.
 
 This guide's channel is USB mass storage, which is already in
 the OS. An animated QR decoder is not in this stack. Adding
