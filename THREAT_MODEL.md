@@ -268,6 +268,20 @@ Core tree. It is not an unreviewed extra app. Consensus
 review is stricter. That is not a reason to generate keys
 somewhere else.
 
+Less review than consensus is not less review than a
+vendor wallet. The wallet, the descriptors, and the PSBT
+code ship in the same attested binary. The alternative
+being sold is a different binary, with no equivalent
+attestations. A bug in Core is a finding about that
+binary. It is not a reason to move key birth onto the
+other one. The v30 migration bug deleted files in a
+wallet directory when an unnamed legacy wallet.dat failed
+to migrate under pruning, and no external backup existed.
+This procedure does not run that path. It creates fresh
+descriptor wallets and writes the keys to discs before
+funds move. A bug that does not run is not caution in
+favor of a vendor stack.
+
 Core has had consensus defects. CVE-2018-17144 is the example:
 found, patched, not known to have been exploited on mainnet.
 It has not had a published key-generation entropy wipe of the
