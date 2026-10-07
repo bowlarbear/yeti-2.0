@@ -405,6 +405,20 @@ not limited to one path. A Core majority or a vendor majority
 still needed the third-party coordinator. That seat is the 
 surface. 
 
+The hardware floor is not shared. Commodity silicon, the
+ISO, and boot integrity are the irreducible both stacks
+hit. Both devices are manufactured and shipped. The
+Bitcoin-specific path is aimed at the coins: the buyer
+set is the holder set. A generic laptop's path is not.
+One vendor compromise does not fail the threshold. That
+signer already has the pipe, and the coordinator is the
+seat that mixed the vendors. The layers this model
+refuses are the unattested firmware, the secure element,
+and that coordinator. The live boot, the air gap, and
+the 3-of-7 are the design. They are not a cost stack
+that wins the layers in between. The pipe remains. A
+skipped check remains.
+
 A new seed on the same device is not the mitigation. 
 User entropy does not make the device a smaller vault. The 
 device can ignore those rolls, or substitute its own seed. 
