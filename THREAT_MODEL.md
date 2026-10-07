@@ -639,11 +639,12 @@ non-Core coordinator. It cannot be built from the reference implementation.
 Vendor diversity does not create Guix attestations and does not stop a 
 device from lying about its firmware.
 
-The hardware floor is not shared. Commodity silicon, the
-ISO, and boot integrity are the irreducible both stacks
-hit. Both devices are manufactured and shipped. The
-Bitcoin-specific path is aimed at the coins: the buyer
-set is the holder set. A generic laptop's path is not.
+Both stacks end at silicon and a boot path. No further
+check ends that, and that regress is shared. The device
+is not. This design's object is a generic laptop. The
+other stack's object is a Bitcoin-specific device, bought
+because it will hold keys. The buyer set is the holder
+set. A generic laptop's path is not aimed at the coins.
 One vendor compromise does not fail the threshold. That
 signer already has the pipe, and the coordinator is the
 seat that mixed the vendors. The layers this model
