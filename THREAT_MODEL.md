@@ -62,7 +62,7 @@ update that did not repair old seeds. Public source did not help if
 the path that actually ran was not the path people thought they had
 audited.
 
-A state is not required for this class, and a state is not
+A nation-state is not required for this class, and a state is not
 excluded. It is what happens when a product built to hold bearer 
 bitcoin ships software nobody sufficiently reviewed. The owner has 
 no recourse. “It was a bug” is enough cover whether the failure was 
