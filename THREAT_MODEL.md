@@ -526,10 +526,12 @@ daemon, downloads, the PSBT it builds, so the design leans on the signer,
 not the node for anything key touching.
 
 The online machine can propose a bad PSBT. It cannot meet the
-threshold. For a spend that matters, the offline session checks
-destination, amount, fee, and change, including `"ismine": true` on
-change, before signing. Skipping that check is outside the procedure.
-The README makes the check optional only for the small test
+threshold. In this procedure, fee and input selection are Core's. The
+operator is not given a fee criterion to check. For a spend that
+matters, the offline session checks the destination and amount the
+operator supplied, and `"ismine": true` on change, before signing.
+That is the check in verify_psbt.md. Skipping it is outside the
+procedure. The README makes it optional only for the small test
 configuration spends. The air gap keeps keys off the node. It does
 not tell the signer what the operator meant to pay.
 
