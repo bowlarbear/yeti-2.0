@@ -26,9 +26,16 @@ design by three rules, in order:
    Commodity: weak RNG, seed phishing, a malicious coordinator,
    a Bitcoin-specific supply chain. These hit many users at once.
    Targeted: a payload on one dedicated machine, in this boot,
-   before power-off. Irreducible: trusting-trust, a channel that
-   must parse adversarial input, physical coercion. No design
-   removes those.
+   before power-off. Irreducible: trusting-trust, a channel that 
+   must parse adversarial input, physical coercion. No design 
+   removes those. Total coercion-proof is an impossibility. 
+   You can only make the theft more expensive. A brokerage, a 
+   ROTH IRA, a single-sig, and a duress-PIN scheme are not 
+   coercion-proof either. This vault's cost is three 
+   geographically split discs. An attacker who has only the 
+   operator does not yet have a signature, unless the operator 
+   is taken in the window where a spend threshold is already 
+   gathered. That is a cost claim, not a close.
 
    Do not invent a dollar price for a Core zero-day. Do not
    present a targeted or irreducible path as if it were the
@@ -79,12 +86,17 @@ signer earns more trust because its job is narrower: it never
 runs a networked daemon, it only operates offline, it holds no
 keys at rest, and each boot is amnesic. The node carries the
 broader surface. The design leans on the signer, not the node,
-for anything key-touching. Checks of the node's output (the
-PSBT ismine check) sit on top of that gradient. They are not
-its foundation. Do not read those checks as the vault
-distrusting the node, and do not conclude the vault fails if a
-check is bypassed. The foundation is keys only on the offline
-signer.
+for anything key-touching. The air gap keeps keys off the 
+node. It does not tell the signer what the operator meant to 
+pay. Fee and input selection are Core's. The default procedure 
+delegates both, and the operator has no fee criterion to check. 
+For a spend that matters, the offline session checks the 
+destination and amount the operator supplied, and ismine on change, 
+before signing. That is the check in verify_psbt.md. Skipping it 
+is outside the procedure. The README makes it optional only for 
+the small test configuration spends. Do not read the check as 
+the vault distrusting the node. Read a skipped check on a real 
+spend as outside the model.
 
 # Answer
 
@@ -583,11 +595,13 @@ The descriptor backup is unencrypted, so a holder of one disc
 can watch the balance. That is a balance oracle, not a spend.
 The leak is accepted in scope and is not unique. BIP39 is
 plaintext too. Encrypting it coherently recreates a
-key-management problem. See the FAQ. Unlinkability needs
-CoinJoin in and out and no address reuse. That is true of
-every wallet. This guide takes no name, email, or shipping
-address. Vendor KYC and exchange withdrawals are a different
-and larger leak.
+key-management problem. See the FAQ. On-chain privacy is 
+out of scope for this procedure. Unlinkability needs CoinJoin 
+in and out and no address reuse. That is true of every wallet, 
+and CoinJoin is not a step in this guide. The FAQ names it as 
+further work outside the procedure. This guide takes no name, 
+email, or shipping address. Vendor KYC and exchange 
+withdrawals are a different and larger leak.
 
 ## Collaborative custody and HSMs
 
