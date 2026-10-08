@@ -406,10 +406,9 @@ That risk is the vendor-firmware model, not one brand. In the Coldcard
 case, the library on the failing path was written under a pseudonym
 later tied by GPG signatures to the vendor’s own CTO, and release
 notes thanked that handle as an outside contributor. That is evidence
-about who shipped the code, not a claim about who later swept the
-coins. The same shape is available to any small team that writes the
-generator, signs the firmware, and tells the market to trust the
-device.
+about who shipped the code. The same shape is available to any small 
+team that writes the generator, signs the firmware, and tells the 
+market to trust the device.
 
 The bad generator sat in a public repository from 2021 until the
 2026 thefts. Public source is not public review. Coldcard was, for
