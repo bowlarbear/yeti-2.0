@@ -388,16 +388,19 @@ low on the trust chain. The OS CSPRNG feeds Core. It does
 not replace it. Another library can implement a known scheme 
 and still be a second root.
 
-Shamir secret sharing is the case. A split of the
-descriptor would remove the balance oracle on one disc.
+Shamir secret sharing is the case. Encrypting the descriptor
+alone leaves the key material in the clear. The coherent
+addition encrypts the secrets on the disc, the key and the
+descriptor, and leaves the procedure. A found disc still
+names the scheme. Opening the secrets takes the same 3-of-7
+the spend takes. That is a second vault around this one.
 Shipped Core has no Shamir split and no encryption of a
 descriptor that follows the spend policy. SLIP-39 and
-descriptor-encrypt are other software. Codex32 is a
-proposal, not this binary. Wallet encryption in Core is a
-passphrase on the wallet file. That recreates the secret
-this guide already refuses. The privacy gain is real.
-The model does not inherit the split until that path is
-Core.
+descriptor-encrypt are other software. Codex32 is a proposal,
+not this binary. Wallet encryption in Core is a passphrase on
+the wallet file. That recreates the secret this guide already
+refuses. The privacy gain is real. The model does not inherit
+the layer until that path is Core.
 
 Multi-vendor multisig is not the reference implementation with more
 brands. It is a different program.
@@ -442,9 +445,19 @@ holds it watch the wallet if they know what they are looking
 at.
 
 That leak is not unique to this guide. Any multisig that can be
-restored needs a descriptor backup. Encrypting it recreates a key
-to manage. Encrypting it with the same 3-of-7 is the coherent fix
-and needs software Core does not ship yet. The FAQ covers that.
+restored needs a descriptor backup. Encrypting the descriptor
+alone leaves the key material in the clear. The coherent fix
+encrypts the secrets on the disc, the key and the descriptor,
+and leaves the procedure. A found disc still names the scheme,
+the threshold, and the restore steps. Opening the secrets takes
+the same 3-of-7 the spend takes. That is a second vault around
+this one. Shipped Core has no Shamir split and no encryption of
+a descriptor that follows the spend policy. SLIP-39 and
+descriptor-encrypt are other software. Codex32 is a proposal,
+not this binary. Wallet encryption in Core is a passphrase on
+the wallet file, which recreates a secret this guide already
+refuses. The privacy gain is real. The model does not inherit
+the layer until that path is Core. The FAQ covers it.
 
 None of those, by themselves, move coins. They are accepted in scope
 for this design.
