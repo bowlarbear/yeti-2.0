@@ -148,6 +148,10 @@ is still a threshold. A 2-of-3 or a 3-of-5 robbed of its signing set
 has nothing left. A 2-of-5 or a 3-of-6 still has a sweep. 3-of-7
 still has a sweep and a spare.
 
+3-of-7 is the savings quorum: three discs to spend, four can be
+lost. 2-of-3 fails if two keys are gone, and an attacker with
+one key needs one more. 2-of-5 still spends on two keys.
+
 Nothing in this design is coercion-proof. A brokerage account and a
 ROTH IRA are not either. Duress that ends in a theft is considerably
 more expensive here than in most other models. No firm holds a key,
