@@ -28,9 +28,9 @@ design by three rules, in order:
    Targeted: a payload on one dedicated machine, in this boot,
    before power-off. Irreducible: trusting-trust, a channel that 
    must parse adversarial input, physical coercion. No design 
-   removes those. Total coercion-proof is an impossibility. 
-   You can only make the theft more expensive. A brokerage, a 
-   ROTH IRA, a single-sig, and a duress-PIN scheme are not 
+   removes those. Total coercion-proof is an impossibility. You 
+   can only make the theft more expensive. A brokerage, a ROTH 
+   IRA, a single-sig, and a multi-vendor multisig are not 
    coercion-proof either. This vault's cost is three 
    geographically split discs. An attacker who has only the 
    operator does not yet have a signature, unless the operator 
@@ -256,10 +256,9 @@ does not survive that.
 
 Trust is graded, not binary. The signer earns more trust than 
 the node because its job is narrower: never a networked daemon, 
-offline only, no keys at rest. Checks on the node's output 
-(the PSBT ismine check) sit on top of that gradient. They are 
-not the foundation, and the vault does not fail if one is 
-bypassed. The foundation is keys only on the offline signer.
+offline only, no keys at rest. The foundation is keys only on 
+the offline signer. That does not make a skipped destination, 
+amount, or change check acceptable on a real spend.
 
 ## Key generation
 
