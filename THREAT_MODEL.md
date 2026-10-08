@@ -638,10 +638,10 @@ off, then a disc. A machine that cannot connect cannot run
 that step. Skipping it means a pinned tarball or a prebuilt
 image, which is the object the rebuild exists to avoid.
 Once the network is off, the radio is not the channel. The 
-transfer channel is USB. A step that can be seen is not the
-control. A management engine below the OS is trusting-trust. It is
-irreducible. A missing radio does not close it, and a vendor signer
-does not either.
+transfer channel is USB. A step that can be seen is not the 
+control. A management engine below the OS is trusting-trust. 
+It is irreducible. A missing radio does not close it, and a 
+vendor signer does not either.
 
 Both stacks end at a chip the operator cannot read. This design stops
 at that chip and puts Guix-attested Bitcoin Core on a generic machine.
@@ -652,11 +652,9 @@ shared floor is the unreadable chip. The layers above it are the
 difference.
 
 This guide's channel is USB mass storage, which is already in the OS.
-
-This guide's channel is USB mass storage, which is already in
-the OS. An animated QR decoder is not in this stack. Adding
-one does not close the channel, and it does not tighten it.
-It adds a parser with less review.
+An animated QR decoder is not in this stack. Adding one does not close
+the channel, and it does not tighten it. It adds a parser with less
+review.
 
 A QR rate limit is a camera spec, not a control. Slower exfil
 after a foothold is not a safer signer. The payload still had
