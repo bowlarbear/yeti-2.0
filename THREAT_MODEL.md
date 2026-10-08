@@ -125,6 +125,18 @@ Spending needs any 3 of 7 geographically split discs. One
 stolen disc cannot spend. It can reveal the watch-only
 descriptor. That is a balance oracle, not a spend.
 
+Tamper-evident stickers and envelopes are not a control. They can be
+copied and replaced. A disc can also be swapped for a copy that carries
+malware, and a swap good enough to do that is good enough to replace
+the seal. Tamper evidence does not catch the undetectable case, so this
+design does not rely on it. A copied disc with no payload still cannot
+spend below the threshold. A disc that carries a payload is not yet a
+loss. The session that loads it is built with the network off, and it
+holds no keys at rest. Funds leave only if that payload gets out. A
+kernel exploit on the radio is the long path. Exfil on the return stick,
+then ownership of the node, is the short one. That ordering is already
+the transfer-channel residual. A seal does not change it.
+
 A spend gathers a threshold in one place. Theft of those three
 discs is not an instant loss. Four discs remain. Sweep with any three
 of those before the thief spends. A stranger who does not know what
@@ -136,9 +148,21 @@ is still a threshold. A 2-of-3 or a 3-of-5 robbed of its signing set
 has nothing left. A 2-of-5 or a 3-of-6 still has a sweep. 3-of-7
 still has a sweep and a spare.
 
-3-of-7 is the savings quorum: three discs to spend, four can be
-lost. 2-of-3 fails if two keys are gone, and an attacker with
-one key needs one more. 2-of-5 still spends on two keys.
+Nothing in this design is coercion-proof. A brokerage account and a
+ROTH IRA are not either. Duress that ends in a theft is considerably
+more expensive here than in most other models. No firm holds a key,
+ships the signer, or runs a support desk that can be ordered to move
+or freeze the coins. A physical attacker who has only the operator
+does not yet have a signature. Spending still takes three geographically
+split discs. The operator has to be moved to those sites, or the
+locations have to be extracted and then reached, before a quorum
+exists. The cheaper physical path is to take the operator at the moment
+a spend threshold is already gathered. That window is the spend itself.
+A single-sig, a co-located set, a phone wallet, or a scheme with fewer
+than three distinct recovery points spends as soon as the operator, or
+one place, is under control. This one does not, except inside that
+window. That is a cost claim, not a claim that duress cannot collect a
+quorum.
 
 A hardware wallet plus the paper slip is one key 
 copied twice, not a quorum. A seed plus a separately stored 
@@ -297,7 +321,12 @@ not the same scoreboard.
 A bug in the generator or the signer can leak keys from
 signatures on the public chain. It can also hand the operator an
 address that is not the operator’s. Physical split and an air gap do
-not contain that.
+not contain that. A wrong Core binary is total compromise of every
+key loaded into that session. Nonce bias, a bad address, or key
+material on the return stick are results of that break, not separate
+channels. Guix attestation is the control on the binary. It is not a
+per-signature proof. External nonce randomness is not part of this
+procedure. Adding it would be a different design.
 
 The question is what makes each signing stack hard to
 backdoor. Open source is not enough. XZ was caught by an
@@ -440,6 +469,16 @@ model does not score a stack by who has not been hit yet.
 Bitcoin amounts on chain are public. When a spend happens, the
 network can see the script type. That is true of every wallet,
 not only a 3-of-7 and not only this guide.
+
+On-chain privacy is out of scope for this procedure. Amounts, the
+script type, and the full 3-of-7 witness are visible once a coin is
+spent. Address reuse is discouraged because it links receipts. It is
+not a privacy scheme. CoinJoin and payjoin are not steps in this
+guide. The FAQ names them as further work outside the procedure, not
+as part of the vault this model describes. What this design does claim
+is the absence of a vendor or custody firm that holds identity, xpubs,
+or a support channel.
+
 An unencrypted disc that includes the descriptor lets whoever
 holds it watch the wallet if they know what they are looking
 at.
@@ -480,12 +519,13 @@ session is amnesic. The node carries the broader surface, a networked
 daemon, downloads, the PSBT it builds, so the design leans on the signer,
 not the node for anything key touching.
 
-Decoding the PSBT and checking `"ismine": true` on change is an
-extra check on the node's output, not the foundation. The foundation
-is that keys only ever exist on the narrower-surface, offline signer.
-The ismine check is not the load-bearing control. Bypassing it does
-not make the vault fail. The control is the air gap plus this trust
-gradient. The ismine check sits on top of it.
+The online machine can propose a bad PSBT. It cannot meet the
+threshold. For a spend that matters, the offline session checks
+destination, amount, fee, and change, including `"ismine": true` on
+change, before signing. Skipping that check is outside the procedure.
+The README makes the check optional only for the small test
+configuration spends. The air gap keeps keys off the node. It does
+not tell the signer what the operator meant to pay.
 
 The offline signer is rebuilt each spend so it does not have
 to be kept secure between uses. A stored machine holds no
@@ -627,6 +667,14 @@ drive, or on this repository. Setup uses an optical drive. If
 that drive is lost or broken later, another drive is enough. 
 Anyone who can read the discs and run Bitcoin Core can 
 reconstruct the wallet and spend.
+
+This vault has no timelock, no presigned package, and no competing
+recovery path. Fee estimation, RBF, CPFP, package relay, pinning, and
+reorg reassessment are ordinary confirmation risks, the same as a
+holder-controlled Core single-sig. A stuck transaction can be remade
+with any three discs. The online node is the usual broadcast path.
+Any other relay that accepts a valid transaction works. Confirmation
+depth is an operator choice, not a custody-policy parameter.
 
 ## Other products
 
