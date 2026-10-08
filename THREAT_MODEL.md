@@ -721,10 +721,7 @@ stack. As the amount approaches the lower bound, the regulated product is the
 alternative if the README will not be completed.
 
 That contract fits a person who wants someone to call, a regulator, an estate 
-process. That is not self-custody, and it is not this guide. Against a vendor 
-signer or a multi-vendor quorum, that contract is the fallback. A vendor 
-signer is not a place to wait. Waiting, until the README can be followed, 
-is inside the regulated product.
+process. That is not self-custody, and it is not this guide.
 
 ## Operator duty
 
