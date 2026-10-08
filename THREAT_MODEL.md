@@ -379,7 +379,23 @@ examples are instances. They are not the boundary.
 
 There is one acceptable key-generation path here: Bitcoin Core.
 Dice, coin flips, and entropy-lab pages are not a second path.
-They are extra software.
+They are extra software. Cryptographic functions that touch 
+keys, the descriptor, or signing stay inside Bitcoin Core. 
+That binary is the one with independent Guix attestations 
+low on the trust chain. The OS CSPRNG feeds Core. It does 
+not replace it. Another library can implement a known scheme 
+and still be a second root.
+
+Shamir secret sharing is the case. A split of the
+descriptor would remove the balance oracle on one disc.
+Shipped Core has no Shamir split and no encryption of a
+descriptor that follows the spend policy. SLIP-39 and
+descriptor-encrypt are other software. Codex32 is a
+proposal, not this binary. Wallet encryption in Core is a
+passphrase on the wallet file. That recreates the secret
+this guide already refuses. The privacy gain is real.
+The model does not inherit the split until that path is
+Core.
 
 Multi-vendor multisig is not the reference implementation with more
 brands. It is a different program.
