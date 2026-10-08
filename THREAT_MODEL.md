@@ -170,13 +170,18 @@ operator, or one place, is under control. This one does not, except
 inside that window. That is a cost claim, not a claim that duress
 cannot collect a quorum.
 
-A hardware wallet plus the paper slip is one key 
-copied twice, not a quorum. A seed plus a separately stored 
-passphrase is a 2-of-2 with no spare. Loss of the word is loss of 
-the coins. There is no remaining disc that still spends. The word 
-is also typed at restore, by whoever holds it then, so the phishing 
-surface the mnemonic already has is still open. It is not a third 
-key and it is not a spare.
+A hardware wallet plus the paper slip is one key copied twice, not a
+quorum. A seed plus a separately stored passphrase is a 2-of-2 with no
+spare. Loss of the word is loss of the coins. There is no remaining disc
+that still spends. The word is also typed at restore, by whoever holds
+it then, so the phishing surface the mnemonic already has is still open.
+It is not a third key and it is not a spare.
+
+A paper wallet is that single secret on paper. A brain wallet is a
+memorable string passed through a hash. The string is a small search
+space, and the paper is a transcription. Neither carries a descriptor
+or the procedure. One object spends. Loss of that object is loss of the
+coins.
 
 **Inheritance.**
 Each disc is an independent key plus what is needed to rebuild
@@ -351,10 +356,16 @@ Each extra vendor in the stack usually means an extra coordinator,
 extra libraries, and extra firmware. Each of those is more attack
 surface.
 
-Multi-vendor hardware multisig cannot run on Bitcoin Core without
-extra libraries and a non-Core coordinator. A coordinator can
-serve a malicious descriptor. It can bias nonces or other signing
-input and exfiltrate key material. It can conspire with a vendor.
+Multi-vendor hardware multisig cannot run on Bitcoin Core without extra
+libraries and a non-Core coordinator. A coordinator can serve a
+malicious descriptor. It can bias nonces or other signing input and
+exfiltrate key material. It can conspire with a vendor.
+
+A Core node used as a block source is not that coordinator. The
+coordinator is the program that builds the descriptor and the PSBT and
+speaks to the signer. Sparrow and Specter are that program. They use
+Core as a blocks database. The wallet, the descriptor, and the vendor
+integration are theirs.
 
 A coordinator or signer that imports coincurve, embit, or
 another unreproducible binding has added an unattested blob
@@ -476,14 +487,15 @@ Bitcoin amounts on chain are public. When a spend happens, the
 network can see the script type. That is true of every wallet,
 not only a 3-of-7 and not only this guide.
 
-On-chain privacy is out of scope for this procedure. Amounts, the
-script type, and the full 3-of-7 witness are visible once a coin is
-spent. Address reuse is discouraged because it links receipts. It is
-not a privacy scheme. CoinJoin and payjoin are not steps in this
-guide. The FAQ names them as further work outside the procedure, not
-as part of the vault this model describes. What this design does claim
-is the absence of a vendor or custody firm that holds identity, xpubs,
-or a support channel.
+On-chain privacy is out of scope for this procedure. Amounts, the 
+script type, and the full 3-of-7 witness are visible once a coin is 
+spent. Address reuse is discouraged because it links receipts. It is 
+not a privacy scheme. CoinJoin and payjoin are not steps in this guide. 
+MuSig2 is not in the Core multisig tutorial this procedure follows, so 
+it is not this vault. The FAQ names CoinJoin and payjoin as further work
+outside the procedure, not as part of the vault this model describes. 
+What this design does claim is the absence of a vendor or custody 
+firm that holds identity, xpubs, or a support channel.
 
 An unencrypted disc that includes the descriptor lets whoever
 holds it watch the wallet if they know what they are looking
@@ -625,11 +637,21 @@ rebuild is the control: hash-checked Core, then the network
 off, then a disc. A machine that cannot connect cannot run
 that step. Skipping it means a pinned tarball or a prebuilt
 image, which is the object the rebuild exists to avoid.
-Once the network is off, the radio is not the channel. The
+Once the network is off, the radio is not the channel. The 
 transfer channel is USB. A step that can be seen is not the
-control. A management engine below the OS is trusting-trust.
-It is irreducible. A missing radio does not close it, and a
-vendor signer does not either.
+control. A management engine below the OS is trusting-trust. It is
+irreducible. A missing radio does not close it, and a vendor signer
+does not either.
+
+Both stacks end at a chip the operator cannot read. This design stops
+at that chip and puts Guix-attested Bitcoin Core on a generic machine.
+The other stack is a chip in a device bought to hold bitcoin, plus
+firmware that is not Core, plus the libraries and the application that
+speak to the protocol because Core does not speak that device. The
+shared floor is the unreadable chip. The layers above it are the
+difference.
+
+This guide's channel is USB mass storage, which is already in the OS.
 
 This guide's channel is USB mass storage, which is already in
 the OS. An animated QR decoder is not in this stack. Adding
