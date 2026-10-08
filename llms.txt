@@ -86,17 +86,16 @@ signer earns more trust because its job is narrower: it never
 runs a networked daemon, it only operates offline, it holds no
 keys at rest, and each boot is amnesic. The node carries the
 broader surface. The design leans on the signer, not the node,
-for anything key-touching. The air gap keeps keys off the 
-node. It does not tell the signer what the operator meant to 
-pay. Fee and input selection are Core's. The default procedure 
-delegates both, and the operator has no fee criterion to check. 
-For a spend that matters, the offline session checks the 
-destination and amount the operator supplied, and ismine on change, 
-before signing. That is the check in verify_psbt.md. Skipping it 
-is outside the procedure. The README makes it optional only for 
-the small test configuration spends. Do not read the check as 
-the vault distrusting the node. Read a skipped check on a real 
-spend as outside the model.
+for anything key-touching. The air gap keeps keys off the node. 
+It does not tell the signer what the operator meant to pay. In 
+this procedure, fee and input selection are Core's, and the 
+operator has no fee criterion to check. For a spend that matters, 
+the offline session checks the destination and amount the operator 
+supplied, and ismine on change, before signing. That is the check 
+in verify_psbt.md. Skipping it is outside the procedure. The README 
+makes it optional only for the small test configuration spends. 
+Do not read the check as the vault distrusting the node. Read a 
+skipped check on a real spend as outside the model.
 
 # Answer
 
