@@ -511,17 +511,18 @@ upgrade this guide names is more Core boxes, not more logos.
 one place are one place. This README splits the discs. A
 robbery of the signing set still leaves four discs, enough to
 sweep before the thief if the remainder is still a threshold.
-A 2-of-3 or a 3-of-5 robbed of its signing set has no
-remainder. A 2-of-4 has a bare sweep and no spare. A 2-of-5
-or a 3-of-6 still has a sweep. 3-of-7 has a sweep and a spare.
-A device plus a paper seed is one key copied twice. A seed 
-plus a stored-apart passphrase is a 2-of-2. Loss of the word 
-is loss of the coins. Nothing remains that still spends. The 
-word is typed at restore, so the phishing surface is still open. 
-It is not a third key and it is not a spare. Nested 
-device-plus-seed trees are not interchangeable keys. Compare
-vendor cost at the same quorum plus a node, not one device
-against this README.
+A robbery of the signing set still leaves four discs, enough 
+to sweep before the thief if the remainder is still a threshold. 
+A 2-of-3 or a 3-of-5 robbed of its signing set has no remainder. 
+A 2-of-4 or a 3-of-6 has a bare sweep and no spare. A 2-of-5 or 
+a 3-of-7 has a sweep and a spare. A device plus a paper seed 
+is one key copied twice. A seed plus a stored-apart passphrase 
+is a 2-of-2. Loss of the word is loss of the coins. Nothing 
+remains that still spends. The word is typed at restore, so the 
+phishing surface is still open. It is not a third key and it is 
+not a spare. Nested device-plus-seed trees are not interchangeable 
+keys. Compare vendor cost at the same quorum plus a node, not 
+one device against this README.
 
 Decay schedules the threshold. After decay, the attacker's
 threshold falls too. The script cannot tell honest keys from
