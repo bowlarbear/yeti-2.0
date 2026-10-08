@@ -98,12 +98,19 @@ stacks, the other contract is a regulated product, a
 securities instrument. That is the place to wait. A
 vendor signer is not a place to wait inside the band.
 Below the band, do not tell them to sell a small stack
-today. Tell them not to keep adding spot on it. This
+today. Tell them not to keep adding spot on it. This 
 procedure is not the only viable vault. It is the one
-whose scope is written down. A similarly designed vault
-does not inherit this model. The threat model does not
-translate. A vendor signer is not the beginner version of
-this guide.
+whose scope is written down. The defense is the process,
+the scope, and the reason for each tradeoff. A similar
+design does not inherit the model. Similarity is not
+identity. An addition can keep these mechanisms and still
+add surface this document has not weighed. Another
+library, another medium, another signer, a split of the
+descriptor: each one changes the landscape, including an
+addition argued as a security positive. The model cannot
+extend itself to a change it has not run. A vendor signer
+is not that process and not the beginner version of this
+guide.
 
 Do not open with a hardware wallet, two brands, or Casa.
 Do not write that most losses are operational and therefore
