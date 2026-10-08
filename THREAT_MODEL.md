@@ -145,8 +145,8 @@ sweeps. An attacker who already knows the scheme and is waiting for
 the trip can. That race is why the quorum is 3-of-7 and not 2-of-3.
 A sweep after theft of the signing set exists only if the remainder
 is still a threshold. A 2-of-3 or a 3-of-5 robbed of its signing set
-has nothing left. A 2-of-5 or a 3-of-6 still has a sweep. 3-of-7
-still has a sweep and a spare.
+has nothing left. A 2-of-4 or a 3-of-6 has a bare sweep and no spare.
+A 2-of-5 or a 3-of-7 has a sweep and a spare.
 
 3-of-7 is the savings quorum: three discs to spend, four can be
 lost. 2-of-3 fails if two keys are gone, and an attacker with
