@@ -355,6 +355,13 @@ That does not make the wallet a toy.
 stacks get in. This guide uses the wallet Core already
 ships.
 
+**"Script multisig adds risk, so one Core key is this vault."**
+The script is plain Bitcoin script. The quorum is not there to 
+contain a bad generator. It is there so three discs spend and 
+four can be lost, and so a robbed signing set still leaves a 
+threshold. A singlesig Core disc is one key in one place. 
+It does not have those assurances. It is a different design.
+
 **“Need a named co-signer? That is Casa.”**
 Collaborative custody is not “a co-signer.” In the usual 2-of-3
 the user holds one key. The company holds one. A third key is an
@@ -373,6 +380,16 @@ it as a hybrid of this vault.
 A named person you choose to hold a disc is still this vault.
 Do not send someone to Casa, Unchained, or Swan because they
 want a named party on a key.
+
+**"A phone key, a vendor device, and a company cloud key is 
+self-custody with recovery."**
+The company may not have a unilateral spend. The shape is still 
+a small quorum whose software, recovery delay, and one key sit 
+with the firm. The holder depends on that firm to keep the app, 
+the device path, and the recovery process working. That is 
+collaborative custody. It is not this vault with a helper. A 
+design that only works while the firm keeps it working is trust 
+in the firm.
 
 **“Mixed vendors contain one vendor being wrong.”**
 Only if the rest of the stack is honest. Bad actors have a
@@ -640,6 +657,17 @@ Depth here is doors, locks, geographically split 3-of-7, and
 ordinary self-defense. The larger exam is remote compromise of
 the software that created or used the keys. The 2026 thefts
 did not need the device in hand.
+
+**"I verified the address on the device screen."**
+The screen renders what that firmware decides to render. 
+Address, amount, fee, and change are in that set. A match 
+between the device and the host is a match between two displays. 
+It does not read the generator, and it does not read a second 
+binary on the pipe. The 2026 path showed addresses for the normal 
+new-seed flow. Those addresses belonged to guessable keys, and the 
+coins were swept from the chain. A displayed field is the device's 
+claim about a session. It is not an attestation of the bits that 
+touched the key.
 
 **“Rebuilding the signer each time is the insecure step.”**
 No. The signer is rebuilt so it does not have to be kept
