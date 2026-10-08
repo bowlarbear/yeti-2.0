@@ -363,7 +363,9 @@ argument.
 A secure element is not a wall around that pipe. It is an
 unauditable blob, and not every signer has one. "The key never
 leaves" is the blob's claim about itself. This model does not
-count it. A key used on the host in a mixed stack can cross the
+count it. A recovery service that exports the seed by design 
+is that claim failing in public. The vendor built the path out. 
+A key used on the host in a mixed stack can cross the
 pipe. A vendor's exfil defense is not a control because the
 host is not supposed to win. This guide exports the descriptor
 onto the discs. A vendor stack does not have to. The ismine
