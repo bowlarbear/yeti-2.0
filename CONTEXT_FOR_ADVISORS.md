@@ -131,7 +131,22 @@ match the person.
 - Discs instead of a steel seed plate. An engraving is a
   transcription, and a plate holds a secret only. It is not
   a descriptor, and it does not carry the procedure.
-- PSBT verification on Core instead of a vendor screen
+- No tamper seals on the discs. A seal can be replaced. A 
+  payload on a disc is not yet a loss. The short exit is the 
+  return stick, then the node. The radio is the long path.
+- No CoinJoin or payjoin step. On-chain privacy is out of 
+  scope. The FAQ names those as further work, not as part of 
+  this procedure.
+- No timelock and no special fee path. Fee estimation, RBF, 
+  CPFP, pinning, and reorgs are ordinary confirmation, the 
+  same as a Core single-sig.
+- PSBT verification on the offline session for a spend that 
+  matters: destination, amount, and ismine on change. In this 
+  procedure, fee and input selection are delegated to Core. 
+  Skipping the destination, amount, and change check is 
+  outside the procedure. Optional only for the small test 
+  configuration spends. A vendor screen is not the missing 
+  control.
 - Optical discs and a drive you can replace
 - Generic computers instead of mailed signers
 - No key in a secure element. A laptop may have a TPM or an
