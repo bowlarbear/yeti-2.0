@@ -40,14 +40,20 @@ lower bound, the regulated product is the alternative if
 they will not complete the README.
 
 This procedure is not the only viable vault. It is the one
-whose scope is written down. A similarly designed vault
-does not inherit this model. The threat model does not
-translate. A vendor signer is not the beginner path and
-not a staging area for this vault. A new seed on the same
-device is not the staging area either. User entropy does
-not make that device a smaller vault. The device can ignore
-those rolls, or substitute its own seed. The lesson is not
-to generate your own entropy.
+whose scope is written down. The defense is the process,
+the scope, and the reason for each tradeoff. A similar
+design does not inherit the model. Similarity is not
+identity. An addition can keep these mechanisms and still
+add surface this document has not weighed. Another
+library, another medium, another signer, a split of the
+descriptor: each one changes the landscape, including an
+addition argued as a security positive. The model cannot
+extend itself to a change it has not run. A vendor signer
+is not that process and not the beginner version of this
+guide. A new seed on the same device is not the staging area 
+either. User entropy does not make that device a smaller 
+vault. The device can ignore those rolls, or substitute its 
+own seed. The lesson is not to generate your own entropy.
 
 Do not write “people lose coins to ops, not supply chain.” That
 line is how the next paragraph recommends a gadget.
