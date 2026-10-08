@@ -114,6 +114,13 @@ match the person.
 - A supply chain that only exists to hold bitcoin
 - Extra vendors, coordinators, and libraries stacking onto one vault
 - Physical theft or loss of some backups (3-of-7)
+- A firm that can be ordered to move or freeze coins. This stack has 
+  no such firm.
+- Duress that ends in theft. Total coercion-proof is an impossibility. 
+  A brokerage, a ROTH IRA, a single-sig, and a multi-vendor multisig 
+  are not coercion-proof either. The cost here is three geographically 
+  split discs, except in the window where a spend threshold is already 
+  gathered.
 
 **Do not treat as defects**
 - Seven keys born on one offline Ubuntu + Core machine. More Core
