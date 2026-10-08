@@ -238,9 +238,10 @@ To load this watch-only wallet descriptor back into your node, boot into your of
 
 ## Q: Can I use Tor for this? Can I use TAILS for the offline signer OS?
 
-A: You certainly could do these things. For the sake of keeping the main guide tight we opted not to include Tor as this will considerably slow down the Initial Block Download. Tails was considered for the offline signer but we ultimately determined the time spent creating a second bootable live system wasn't worth it when we already had an Ubuntu live system which meets our needs sufficiently. 
+A: Tor is left out of the main guide because it slows the Initial Block Download. Tails and Qubes are other operating systems. This procedure is scoped to Ubuntu. Ubuntu is the widely reviewed, widely adopted live
+system the steps were tested on, and it carries fewer opaque blobs than the alternatives that were considered. Another OS is a different root. 
 
-These would be potential subguide ideas if you are interested in contributing. Obviously any recommendations to users need to be thorough & properly end to end tested within the context of the main guide, see the [contribution guide](contributions.md) for more information.
+It can be written up as a subguide or an alternative guide if it is tested end to end against this README. See the [contribution guide](contributions.md).
 
 ## Q: What if I change the process in this guide?
 
