@@ -152,21 +152,23 @@ still has a sweep and a spare.
 lost. 2-of-3 fails if two keys are gone, and an attacker with
 one key needs one more. 2-of-5 still spends on two keys.
 
-Nothing in this design is coercion-proof. A brokerage account and a
-ROTH IRA are not either. Duress that ends in a theft is considerably
-more expensive here than in most other models. No firm holds a key,
-ships the signer, or runs a support desk that can be ordered to move
-or freeze the coins. A physical attacker who has only the operator
-does not yet have a signature. Spending still takes three geographically
-split discs. The operator has to be moved to those sites, or the
-locations have to be extracted and then reached, before a quorum
-exists. The cheaper physical path is to take the operator at the moment
-a spend threshold is already gathered. That window is the spend itself.
-A single-sig, a co-located set, a phone wallet, or a scheme with fewer
-than three distinct recovery points spends as soon as the operator, or
-one place, is under control. This one does not, except inside that
-window. That is a cost claim, not a claim that duress cannot collect a
-quorum.
+Total coercion-proof is an impossibility. You can only make the theft
+more expensive. A brokerage account, a ROTH IRA, a single-sig, and a
+multi-vendor multisig are not coercion-proof either. Duress that ends
+in a theft is considerably more expensive here than in most other
+models. No firm holds a key, ships the signer, or runs a support desk
+that can be ordered to move or freeze the coins. A physical attacker
+who has only the operator does not yet have a signature. Spending still
+takes three geographically split discs. The operator has to be moved to
+those sites, or the locations have to be extracted and then reached,
+before a quorum exists. The cheaper physical path is to take the
+operator at the moment a spend threshold is already gathered. That
+window is the spend itself. A single-sig, a co-located set, a phone
+wallet, a multi-vendor multisig whose keys sit together, or a scheme
+with fewer than three distinct recovery points spends as soon as the
+operator, or one place, is under control. This one does not, except
+inside that window. That is a cost claim, not a claim that duress
+cannot collect a quorum.
 
 A hardware wallet plus the paper slip is one key 
 copied twice, not a quorum. A seed plus a separately stored 
