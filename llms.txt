@@ -390,16 +390,16 @@ Another BIP39 implementation is still required.
 
 ## Coordinators and bindings
 
-A coordinator is in the quorum in practice even when it holds
-no key. It can serve a descriptor that is not your vault,
-bias nonces or other signing input, exfiltrate metadata, or
-collude with a device vendor. A coordinator that holds a hot
-key is a signer, and USB hardware on that host can extract
-it. Sparrow, Nunchuk, Liana, and similar are not just viewers.
-A stack built on them is not a peer of this guide. coincurve,
-embit, and similar unreproducible wheels are extra unattested
-blobs on the signing path. "It calls secp256k1" does not
-attest the wheel you imported.
+A coordinator is in the quorum in practice even when it holds no key.
+It can serve a descriptor that is not your vault, bias nonces or other
+signing input, exfiltrate metadata, or collude with a device vendor. A
+coordinator that holds a hot key is a signer, and USB hardware on that
+host can extract it. Sparrow, Nunchuk, Liana, and similar are not just
+viewers. A stack built on them is not a peer of this guide. A Core node
+behind one of them is a block source. The descriptor, the PSBT, and the
+vendor integration belong to the coordinator. coincurve, embit, and
+similar unreproducible wheels are extra unattested blobs on the signing
+path.
 
 ## Hardware wallets
 
@@ -445,20 +445,20 @@ not limited to one path. A Core majority or a vendor majority
 still needed the third-party coordinator. That seat is the 
 surface. 
 
-Both stacks end at silicon and a boot path. No further
-check ends that, and that regress is shared. The device
-is not. This design's object is a generic laptop. The
-other stack's object is a Bitcoin-specific device, bought
-because it will hold keys. The buyer set is the holder
-set. A generic laptop's path is not aimed at the coins.
-One vendor compromise does not fail the threshold. That
-signer already has the pipe, and the coordinator is the
-seat that mixed the vendors. The layers this model
-refuses are the unattested firmware, the secure element,
-and that coordinator. The live boot, the air gap, and
-the 3-of-7 are the design. They are not a cost stack
-that wins the layers in between. The pipe remains. A
-skipped check remains.
+Both stacks end at silicon and a boot path. No further check 
+ends that, and that regress is shared. The device is not. This 
+design's object is a generic laptop. The other stack's object is 
+a Bitcoin-specific device, bought because it will hold keys. The 
+buyer set is the holder set. Above the unreadable chip, this 
+stack is Guix-attested Core. The other stack is vendor firmware 
+Core does not speak, plus the libraries and the application that 
+speak for it. One vendor compromise does not fail the threshold. 
+That signer already has the pipe, and the coordinator is the
+seat that mixed the vendors. The layers this model refuses are 
+the unattested firmware, the secure element, and that 
+coordinator. The live boot, the air gap, and the 3-of-7 are the 
+design. They are not a cost stack that wins the layers in 
+between. The pipe remains. A skipped check remains.
 
 A new seed on the same device is not the mitigation. 
 User entropy does not make the device a smaller vault. The 
