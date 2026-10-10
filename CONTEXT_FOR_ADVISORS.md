@@ -500,8 +500,18 @@ Clarity matters more than step count. Each disc carries the
 key, the descriptor, and the README. A found disc says what
 it is, that three are required, and where the procedure is.
 The only irreplaceable objects are three discs. A drive and
-Bitcoin Core are generic. A seed phrase or a share string
-does not explain itself.
+Bitcoin Core are generic. A collaborative recovery path is 
+not a shorter version of that. The heir still operates 
+software the firm chose. The firm holds one key and the 
+recovery delay. Refusal to sign, a support-channel 
+impersonation, or an app/backend change freezes the coins 
+until the firm decides otherwise. A timelock only bounds the 
+freeze if the heir already holds the recovery keys and the 
+script matches what was shown. That is trust in the firm’s 
+continued operation, not a disc that explains itself and a 
+generic Core install. The coins do not disappear while the 
+heir reads the procedure on the disc. A seed phrase or a 
+share string does not explain itself.
 
 **“Independent RNGs after 2026.”**
 Count of RNGs is not the issue. Quality and verification are.
