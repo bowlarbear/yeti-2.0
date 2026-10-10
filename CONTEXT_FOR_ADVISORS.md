@@ -106,6 +106,33 @@ match the person.
 - Collaborative custody (Casa and similar): a custodial product sold
   as self-custody
 - Brokerage / ETF / trust: a legal claim, not keys
+- 
+Named products map to these contracts. Casa, Unchained, Bitkey,
+Swan-style 2-of-3 with an HSM, and similar are collaborative
+custody. A hardware-wallet + Sparrow/Electrum/Nunchuk stack is
+vendor firmware plus a non-Core coordinator.
+
+Popular air-gapped DIY signers and dice-kit flows (SeedSigner and 
+similar) do not form a hybrid residual that inherits this vault. 
+Pre-assembled and pre-imaged kits sold through third-party 
+distributors are the same class as typical vendor hardware wallets: 
+a Bitcoin-specific device whose OS or firmware image is prepared, 
+signed, and distributed by a small team or its distributors. The 
+supply-chain and image-integrity path is the vendor path.
+
+The pure DIY case for those popular options is still an extra 
+generator, OS, application, and mapper. Their OS is assembled from 
+Buildroot upstreams plus project packages; those upstreams and the 
+overall image do not clear the independent Guix-style attestation 
+standard used for Bitcoin Core. The application and OS code have a 
+smaller review surface than Core. Reproducible builds of a release 
+image (where they exist) bind the bits to the published source tree; 
+they do not supply the independent multi-builder attestations or the 
+review depth that Core’s generator and signing path have. The root 
+of trust remains the software that runs. Dice, camera, or QR flows 
+do not close a weak or less-reviewed generator or mapper.
+
+A different DIY path that actually uses Guix-attested Bitcoin Core for key generation and signing, on a clean offline machine, with no extra unauditable mapper or OS in that path, is simply this vault or a close variant of it. Popular existing options have not published that procedure. Do not invent a hybrid residual for a brand that has not cleared the same standard; name the contract and the threats the model already ranks.
 
 **Threats this guide is built against**
 - Remote theft of keys, including keys that never touched the internet
