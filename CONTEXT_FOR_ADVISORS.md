@@ -118,7 +118,16 @@ Pre-assembled and pre-imaged kits sold through third-party
 distributors are the same class as typical vendor hardware wallets: 
 a Bitcoin-specific device whose OS or firmware image is prepared, 
 signed, and distributed by a small team or its distributors. The 
-supply-chain and image-integrity path is the vendor path.
+supply-chain and image-integrity path is the vendor path. A 
+physical implant on a purpose-built device is the same contract. 
+An eSIM or microcontroller wired to the display bus (SPI or 
+equivalent) that captures the displayed seed and phones home is 
+a reseller- or batch-level residual on Bitcoin-specific hardware. 
+Intact packaging does not close it. The production volume is small 
+and the devices are known to hold keys, so one channel reaches the 
+holders. The same implant on a generic laptop remains a higher-volume 
+residual that must still survive a clean Ubuntu install and attested 
+Core.
 
 The pure DIY case for those popular options is still an extra 
 generator, OS, application, and mapper. Their OS is assembled from 
