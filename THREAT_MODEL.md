@@ -533,9 +533,13 @@ of this stack. It is not the signer. Keys are not stored on it.
 The signer and the node are both trusted, but not equally. The signer
 earns more trust because its job is narrower: it never runs a networked
 daemon, it only operates offline, it holds no keys at rest, and each
-session is amnesic. The node carries the broader surface, a networked
-daemon, downloads, the PSBT it builds, so the design leans on the signer,
-not the node for anything key touching.
+session is amnesic. The node carries the broader surface: a networked
+daemon, downloads, the PSBT it builds. That surface is bitcoind parsing
+peers, for as long as the node is up. It is the same binary. Network
+position feeds it peers and can eclipse it. Eclipse and denial of
+service do not spend. Keys are not on the node. Code execution remains
+a bug in Core. It is not a free path. The design leans on the signer,
+not the node, for anything key-touching.
 
 The online machine can propose a bad PSBT. It cannot meet the
 threshold. In this procedure, fee and input selection are Core's. The
@@ -785,7 +789,15 @@ skipped check remains.
 **Collaborative custody** is usually a 2-of-3 sold as self-custody. The 
 user holds one key. The company holds one. A third key is picked by the 
 company. The company picks the software. Those two keys can move or 
-freeze coins. A terms-of-use page is not a map of that relationship.
+freeze coins. A terms-of-use page is not a map of that relationship. 
+A required cosigner is a freeze even when that cosigner cannot
+spend alone. Refusing to sign is refusing to move the coins.
+A whitelist is the same refuse, on the destination. A time-locked
+recovery path bounds the freeze to the delay, and only if the
+holder actually has the recovery keys and the script is the one
+they were shown. Until that path opens, the coins sit. Insurance
+and a recovery partner do not remove the firm from the spend.
+They are the firm.
 
 A company in the policy is also a name attackers can impersonate: fake 
 support, fake recovery, compromised help channels. That surface does not 
