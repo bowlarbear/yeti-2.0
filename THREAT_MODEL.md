@@ -573,13 +573,23 @@ is not the endpoint that fetch talks to. The residual is
 a parser bug in a join daemon, the same class the node
 already accepts, on a machine that does less networked
 work than the node. A stick that never reconnects is the
-prebuilt image. It does not close the step. The hash check is 
-what stops the download. Pulling the current hash-checked Core 
-on each spend is the point. A pinned tarball goes stale, or 
-it is refreshed through the same online step. Pinning it 
-does not remove a link from the trust chain. A payload that 
-missed that window has to exfiltrate with no network, before 
-power-off, or it is gone.
+prebuilt image. It does not close the step.
+
+Following the procedure, a fully controlled network does not
+spend. The instructed fetches are a signed apt upgrade and a
+client fetch of Core that the hash check binds. A MITM does not
+inject either. The residual on apt is a freeze or a downgrade to
+a signed older version. That is downtime or a delayed patch.
+The node can be eclipsed. Eclipse lies about confirmations and
+can stall a broadcast. It does not forge proof of work, and it
+does not hold a key. Theft from this position requires code on a
+host. That is a bug, not a property of owning the network. The 
+hash check is what stops the download. Pulling the current 
+hash-checked Core on each spend is the point. A pinned tarball 
+goes stale, or it is refreshed through the same online step. 
+Pinning it does not remove a link from the trust chain. A 
+payload that missed that window has to exfiltrate with no 
+network, before power-off, or it is gone.
 
 A prebuilt image does not close that step. Genesis is the
 same path: stock image, Core download, hash check, network
