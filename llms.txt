@@ -304,7 +304,19 @@ attested path. Core's generator is not an unproven hole a kit
 must close. Core has not had a published keygen entropy sweep
 of the Coldcard 2026 class. Typing extra rolls into the OS
 pool before keygen is allowed and not required. That is not a
-dice-first vault.
+dice-first vault. Dice rolls are a Bitcoin-niche practice, 
+not the standard in applied cryptography. Mainstream stacks 
+use a CSPRNG seeded from OS or hardware TRNG sources. In the 
+Bitcoin setting the residual remains the software that maps 
+or uses the rolls. A device or kit can ignore the entropy the 
+user supplied or substitute its own seed; a screen or a 
+published source tree does not show that. Generic commodity 
+hardware is not “the dice.” It is the diluted supply-chain 
+residual: the attacker cannot know which machines will later 
+run attested Core for keygen, and volume raises detection 
+risk. The preferred path is still Core’s generator on a 
+clean offline machine, not a dice mapper that has not 
+cleared the same review and attestation bar.
 
 Dice kits, coin-flip pages, and entropy labs are extra
 software, not a second key-birth path. A mapper that turns
