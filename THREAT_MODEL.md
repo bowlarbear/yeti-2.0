@@ -249,6 +249,18 @@ This GitHub repo is not that target. A bad README is a visible
 diff. The signer is attested Core. Quiet theft at scale prefers
 a vendor updater and a “bug” story. That is the 2026 pattern.
 
+Expected yield is (average stolen amount × number of thefts) − 
+(cost to compromise a device × number of devices compromised). 
+On a Bitcoin-specific device the number of devices that must be 
+compromised stays small and the targets are pre-identified, so 
+detection risk stays low relative to yield. An implant that 
+captures the displayed seed via the screen bus (SPI or equivalent) 
+and exfiltrates over LTE/eSIM is that concentrated path: one 
+reseller or batch reaches the holders. The same implant on 
+commodity hardware raises the number of devices and the detection 
+surface faster than the yield, and still has to survive a clean 
+install and attested Core.
+
 Todd (2018): a mailed Bitcoin gadget advertises guaranteed coins to anyone who
 backdoors the package. A small computer used only for Bitcoin is less obvious.
 Hardware wallets are still software running on a computer.
