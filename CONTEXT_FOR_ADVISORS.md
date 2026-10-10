@@ -709,6 +709,18 @@ the machine is powered off. That is a narrower path than a
 firmware update on a device whose job is to accept the
 vendor’s next image.
 
+**"The signer joins a network before every spend, so a 
+stick that never reconnects is safer."**
+The session that connects is not a signer. The instructed 
+work is a join and a client fetch of Core over https, then 
+a hash check, then the network off, then a disc. Owning 
+that network is path control. It does not feed the fetch. 
+The residual is a parser bug in a join daemon, and that 
+foothold dies at power-off. A stick that never reconnects 
+still had a genesis, or it carries a binary that sits and 
+can be swapped. That is the prebuilt image. Persistence is 
+the object the rebuild exists to avoid.
+
 **“A safely generated seed means the funds are safe.”**
 No. Key birth is one step. Signing code, backups, coordinators,
 phishing, and a lying display can still empty the vault. A
