@@ -29,13 +29,20 @@ design by three rules, in order:
    before power-off. Irreducible: trusting-trust, a channel that 
    must parse adversarial input, physical coercion. No design 
    removes those. Total coercion-proof is an impossibility. You 
-   can only make the theft more expensive. A brokerage, a ROTH 
-   IRA, a single-sig, and a multi-vendor multisig are not 
-   coercion-proof either. This vault's cost is three 
-   geographically split discs. An attacker who has only the 
-   operator does not yet have a signature, unless the operator 
-   is taken in the window where a spend threshold is already 
-   gathered. That is a cost claim, not a close.
+   can only make the theft more expensive. Expected yield is 
+   (average stolen amount × number of thefts) − (cost to 
+   compromise a device × number of devices compromised). Scale 
+   raises detection and attribution risk faster than it raises 
+   yield, so a high-volume implant on generic commodity hardware 
+   does not become the cheap path. A concentrated Bitcoin-specific 
+   supply chain (small production run, known high-value targets, 
+   one batch or reseller channel) keeps detection risk low relative 
+   to yield. A brokerage, a ROTH IRA, a single-sig, and a 
+   multi-vendor multisig are not coercion-proof either. This vault's 
+   cost is three geographically split discs. An attacker who has 
+   only the operator does not yet have a signature, unless the 
+   operator is taken in the window where a spend threshold is 
+   already gathered. That is a cost claim, not a close.
 
    Do not invent a dollar price for a Core zero-day. Do not
    present a targeted or irreducible path as if it were the
@@ -442,11 +449,23 @@ is the thief. Screens are not a missing feature of
 this guide. The failure is the model, not one brand. Coldcard 
 2026 is the public case: guessable keys from the normal 
 new-seed path, swept from the public chain, no stolen device, 
-years in public source. The weak path entered through a 
-dependency committed under the pseudonym switck. Those
-commits were signed with the Coinkite CTO’s GPG key. The
-company called it an integration accident. The class is not
-unique to that brand.
+years in public source. The same concentration applies to a 
+physical implant on the device itself. An eSIM + microcontroller 
+on the SPI (or equivalent) bus that captures the displayed seed 
+and phones home is a reseller or batch-level residual on a 
+purpose-built Bitcoin device. Intact packaging does not close 
+it. The path is cheap because the production volume is small, 
+the devices are known to hold keys, and one channel (reseller, 
+batch, or updater) reaches every owner. The same implant on a 
+generic laptop is a higher-volume residual: it must survive a 
+clean Ubuntu install, a hash-checked Core binary, an air-gapped 
+session, and later identification of the rare machine used for 
+a high-value vault. Both end at an uninspectable chip; the 
+vendor path remains the lower-cost residual. The weak path 
+entered through a dependency committed under the pseudonym 
+switck. Those commits were signed with the Coinkite CTO’s 
+GPG key. The company called it an integration accident. The 
+class is not unique to that brand.
 
 The screen renders what that firmware decides to render.
 Address, amount, fee, and change are in that set. A match
