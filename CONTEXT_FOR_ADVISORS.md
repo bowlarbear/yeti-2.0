@@ -106,7 +106,7 @@ match the person.
 - Collaborative custody (Casa and similar): a custodial product sold
   as self-custody
 - Brokerage / ETF / trust: a legal claim, not keys
-- 
+  
 Named products map to these contracts. Casa, Unchained, Bitkey,
 Swan-style 2-of-3 with an HSM, and similar are collaborative
 custody. A hardware-wallet + Sparrow/Electrum/Nunchuk stack is
