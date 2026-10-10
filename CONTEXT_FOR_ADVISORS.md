@@ -388,7 +388,11 @@ It does not have those assurances. It is a different design.
 Collaborative custody is not “a co-signer.” In the usual 2-of-3
 the user holds one key. The company holds one. A third key is an
 “arbitrator” the company chooses. The company also picks the
-software. Those two keys can spend or freeze without you.
+software. Those two keys can spend or freeze without you. A 
+design where the company cannot spend alone is not the exception. 
+If their signature is required, they can withhold. A timelock is 
+a delay, not an exit, until it opens. Whitelist and compliance 
+review are the same withhold.
 
 A contract will not reliably disclose that relationship. Terms
 vary. Recourse is weaker than a brokerage, not stronger than
