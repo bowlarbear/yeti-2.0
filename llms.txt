@@ -154,6 +154,31 @@ after the network is off and a disc is read. In that
 working capacity it is never online. It is built for this 
 spend and gone at power-off.
 
+The network work in that window is a join and a client
+fetch. Owning the network is path control. It is not code
+on the box. The fetch is wget to an https URL. The TLS
+tunnel carries the body. Certificate validation is on.
+A network attacker is not that endpoint, so the payload
+bytes do not reach a parser the attacker controls. The
+hash check binds the bytes to the attested release. A
+MITM certificate fails closed.
+
+The residual is a bug in a daemon that parses
+unauthenticated input on join: DHCP, resolved, avahi, or
+a listener in that class. That is a parser bug, not a
+property of the rebuild. On a current desktop the DHCP
+client is NetworkManager's internal client, not the
+dhclient script path. The foothold still has to arrive
+in this boot, and the session is gone at power-off. The
+node has the broader networked surface. An attacker who
+can own this window can own the node and the USB pipe.
+The construction fetch is not the cheap path.
+
+A stick that never reconnects is the prebuilt case. Its
+genesis used a network, or it carries a binary that sits.
+Persistence of Core on that stick is the object the
+rebuild exists to avoid.
+
 A prebuilt image does not close that step. Genesis is the
 same path: stock image, Core download, hash check, network
 off, then discs. If that path is sound once, it is sound on
