@@ -152,7 +152,12 @@ that session. The session that connects is a fresh Ubuntu
 instance. It is not a signer. It becomes a signer only 
 after the network is off and a disc is read. In that 
 working capacity it is never online. It is built for this 
-spend and gone at power-off.
+spend and gone at power-off. The USB pipe is an accepted 
+residual for the transfer of the PSBT and the signed 
+result; the rebuild, the network disable, the hash check, 
+and the amnesic power-off close the persistence and the 
+“idle machine holds keys” path that a long-lived signer 
+must defend.
 
 The network work in that window is a join and a client
 fetch. Owning the network is path control. It is not code
@@ -622,10 +627,20 @@ plaintext too. Encrypting it coherently recreates a
 key-management problem. See the FAQ. On-chain privacy is 
 out of scope for this procedure. Unlinkability needs CoinJoin 
 in and out and no address reuse. That is true of every wallet, 
-and CoinJoin is not a step in this guide. The FAQ names it as 
-further work outside the procedure. This guide takes no name, 
-email, or shipping address. Vendor KYC and exchange 
-withdrawals are a different and larger leak.
+and CoinJoin is not a step in this guide. Key birth and the 
+signing path are the commodity residuals this design ranks 
+first. On-chain unlinkability is a second-order property that 
+requires CoinJoin (or equivalent) in and out plus no address 
+reuse. That is true of every wallet. Adding a coordinator, 
+vendor wallet, or extra library to obtain privacy reintroduces 
+the unverifiable blobs the threat model treats as malware and 
+does not close the key-generation residual. The unencrypted 
+descriptor on a disc is a balance oracle for anyone who already 
+holds the disc; it is not a spend. Vendor KYC and exchange 
+withdrawal records are a larger, named leak. Privacy steps 
+that stay inside Core and the published procedure remain 
+available as further work; they do not change the ranking of 
+the key path.
 
 ## Collaborative custody and HSMs
 
@@ -650,6 +665,24 @@ firm-operated service to hold until a control is in
 place. That is not a nation-state hole in this vault, and 
 it is not a reason to reserve the vendor-firmware class for 
 rare attackers.
+
+A brokerage, ETF, or trust is a legal claim on an 
+institution, not the absence of operational risk. The 
+account holder trusts that firm’s people, its software, 
+and the law around the account. Redemption can be suspended. 
+That is ordinary practice for claims on issuers. A backend 
+can be shut down, a model discontinued, or an app update 
+forced overnight. The reference client has no desk and no 
+service that can be ordered to move or freeze the coins. Its 
+backend is the node the holder runs. After a commodity vendor 
+failure (weak generator, remote sweep of many seeds), the 
+residual of that vendor stack is the class that was just 
+demonstrated. Moving the same coins onto a claim on an 
+institution does not close the class; it relocates the 
+residual into a named counterparty that can be ordered or 
+impersonated. Waiting inside a regulated product until the 
+README can be followed is the other contract. A vendor signer 
+is not the place to wait inside the band.
 
 ## This is not a reprint of the Core docs
 
