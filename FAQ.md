@@ -150,7 +150,7 @@ An upgrade path for a yeti style vault that enhances privacy and security for us
 
 -CoinJoin in and out
 
--stateful signers
+-encrypted stateful signers
 
 -A smaller or more restrictive host operating system
 
