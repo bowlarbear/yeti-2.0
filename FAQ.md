@@ -100,7 +100,7 @@ A: This is one of the main reasons why we use multisig. Multisig provides all of
 
 You CAN write down your wallet descriptor and all of your xprivs and xpubs by hand if you really want to, but we don't recommend it in the guide because it's painful and prone to human error and entirely unnecessary if you follow the guide as written.
 
-A much better way to add redundancy rather than hand writing wallet descriptors would be to buy extra Verbatim gold DVDs. Then you could make two backups of each key and both would then be placed into the same envelope.
+A much better way to add redundancy rather than hand writing wallet descriptors would be to buy extra archival grade DVDs. Then you could make two backups of each key and both would then be placed into the same envelope.
 
 ## Q: Why can't I provide my own entropy with dice rolls or coin flips?
 
