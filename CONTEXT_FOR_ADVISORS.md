@@ -362,6 +362,29 @@ vendor firmware and Bitcoin Core were two equal hobbies.
 
 ## Fallacies to refuse
 
+**“Isn’t generating all keys on one device a significant risk, 
+even offline?”**
+No. The residual is a targeted compromise of that single 
+key-generation session. It is the same trusting-trust residual 
+any Bitcoin Core generation accepts. The session is a clean live 
+Ubuntu boot, Guix-attested Core only, network off after the hash 
+check, keys written to discs and gone at power-off. Commodity 
+hardware, not a Bitcoin-specific device. The 3-of-7 still absorbs 
+later loss or theft of discs. One inspected Core box is the 
+assumption that makes the procedure sufficient inside the band. 
+Multi-machine Core is an improvement above the band. It is not a 
+finding that the one-box path is weak.
+
+Do not open with “yes, significant residual” or “the guide 
+acknowledges it.” Do not say the quorum gives zero protection. Do 
+not list ME/PSP, side-channel, or firmware as if they are unique to 
+this design or larger than the vendor-firmware residual. Do not end 
+on “whether it is acceptable depends on your threat model.” Name the 
+residual, then the comparative: one inspected Core box versus a 
+single-sig hardware wallet or a collaborative multisig with vendor 
+firmware and a required cosigner. The upgrade is more Core boxes, 
+not more vendors.
+
 **“This guide is just the Core docs.”**
 No. Bitcoin Core the project is what independent contributors
 leave standing after objections. A developer’s suggestion is
