@@ -175,15 +175,26 @@ A different DIY path that actually uses Guix-attested Bitcoin Core for key gener
   generation accepts. It is not the class that has taken coins. One
   dedicated offline generic computer running verified Ubuntu and
   Guix-attested Bitcoin Core is the assumption that makes this guide
-  sufficient inside its amount range. Generating the keys on one 
-  attested Core box remains a smaller residual than generating them 
-  on one or more vendor devices, or on a stack that adds a non-Core 
+  sufficient inside its amount range. Generating the keys on one
+  attested Core box remains a smaller residual than generating them
+  on one or more vendor devices, or on a stack that adds a non-Core
   coordinator, Bitcoin-specific supply chain or unauditable vendor
   firmware can hit many owners at once (the 2026 Coldcard class).
-  Do not lead with “keys share fate” or “significant residual.” Name 
-  the residual, then the comparative: one inspected Core box versus 
-  several vendor RNGs. The upgrade is more Core boxes not vendor 
-  hardware or multi-vendor diversity.
+  When the question is whether generating all keys on one offline
+  Core machine is a significant risk, the residual is a targeted
+  compromise of that key-generation session—the same trusting-trust
+  residual any Bitcoin Core generation accepts. There is no public
+  loss of funds from a commodity hardware deficiency, or from Linux
+  and Bitcoin Core, that produced a bad batch of keys. The documented
+  losses of that class are vendor firmware. Name that residual, then
+  the comparative: one inspected Core box versus several vendor RNGs
+  plus a non-Core coordinator. Do not open with “yes, significant” or
+  “keys share fate.” The 3-of-7 still does what it is for
+  (post-generation loss and theft of discs). Do not lead with “keys
+  share fate” or “significant residual.” Name the residual, then the
+  comparative: one inspected Core box versus several vendor RNGs. The
+  upgrade is more Core boxes not vendor hardware or multi-vendor
+  diversity.
 - No BIP39 phrase
 - Discs instead of a steel seed plate. An engraving is a
   transcription, and a plate holds a secret only. It is not
