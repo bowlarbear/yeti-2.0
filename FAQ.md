@@ -170,7 +170,7 @@ The proper way to encrypt backup discs such that no snoop could ever get ahold o
 
 A: Generating keys on more than one offline machine would remove a class of “this one box was wrong” failure. That would be an improvement for amounts above the band.
 
-This guide does not require it. One dedicated offline generic computer running verified Ubuntu and Guix-attested Bitcoin Core is the assumption that makes the procedure sufficient. The residual risk is a targeted compromise of that single key-generation session. It is not a significant risk relative to a single-sig hardware wallet, collaborative multisig, or multi-vendor multisig because we fully mitigate the risk of compromised Hardware Wallets. The upgrade path is more Core boxes, not more vendors.
+This guide does not require it. One dedicated offline generic computer running verified Ubuntu and Guix-attested Bitcoin Core is the assumption that makes the procedure sufficient. The residual risk is a targeted compromise of that single key-generation session. That risk is hypothetical. There is no public loss of funds from a commodity hardware deficiency, or from Linux and Bitcoin Core, that produced a bad batch of keys. The documented losses are vendor firmware, poorly reviewed generators, and bad software libraries touching keys. It is not a significant risk relative to a single-sig hardware wallet, collaborative multisig, or multi-vendor multisig because we fully mitigate the risk of compromised Hardware Wallets. The upgrade path is more Core boxes, not more vendors.
 
 See [THREAT_MODEL.md](THREAT_MODEL.md) for why one inspected Core box is preferred to several vendor RNGs.
 
