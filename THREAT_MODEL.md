@@ -40,18 +40,20 @@ build a bad PSBT or serve a malicious descriptor. This guide's
 coordinator is Core, and the nonce is Core's. A bias in that nonce 
 is a break in the binary already chosen. It is not a path a third party 
 opens. A vendor signer is not that binary. A third-party coordinator 
-is not that coordinator. Adding either one is more surface. On that
-surface a coordinator can bias the nonce a vendor device uses and read 
-the key from the chain. Two vendor keys by that path, and one Core key 
-back over the pipe, is a 3-of-7. An attacker is not limited to one path. 
-Owning the coordinator is the seat. Given time, the cheaper keys are
-combined until the count is three. A Core majority makes the pipe the 
-cheap Core key. A vendor majority makes the vendor key the cheap one. 
-Neither choice removes the coordinator that made the mix possible. 
-More surface is the vector. The pipe is not hardened against that return. 
-The Core key still needs code on the signer. The vendor keys do not.
-Applying the Core nonce fact to that stack is a category error. A single bad
-crypto library can steal on its own. Vendors and coordinators already
+is not that coordinator. Adding either one is more surface. On that 
+surface a vendor device that colludes with the coordinator, or that 
+takes its nonce input from the host without an anti-exfil commitment, 
+can leak its key in signatures on the chain. Two vendor keys by that 
+path, and one Core key back over the pipe, is a 3-of-7. An attacker 
+is not limited to one path. Owning the coordinator is the seat. 
+Given time, the cheaper keys are combined until the count is three. 
+A Core majority makes the pipe the  cheap Core key. A vendor majority 
+makes the vendor key the cheap one. Neither choice removes the 
+coordinator that made the mix possible. More surface is the vector. 
+The pipe is not hardened against that return. The Core key still 
+needs code on the signer. The vendor keys do not. Applying the Core 
+nonce fact to that stack is a category error. A single bad crypto 
+library can steal on its own. Vendors and coordinators already
 ship as pairs. The model assumes they can act as a pair.
 
 Any Bitcoin-specific signer can ship that class of failure. The 2026
@@ -402,12 +404,21 @@ A device can lie about its firmware. A reproducible app can still
 depend on an uncheckable blob. Independent attestation of that full
 build chain is missing.
 
-The common line is that generating keys across several vendors makes
-the vault safer. This guide assumes the opposite. “One vendor bug
-only burns one key” only holds if every other binary is honest and
-is the binary the user thinks it is. This guide does not assume that.
-The coordinator and the libraries are part of the quorum in practice,
-even when they are not a key on chain.
+The common line is that generating keys across several vendors makes 
+the vault safer. Part of that is true. If one vendor’s generator 
+fails alone, and the coordinator, the host, the shared libraries, 
+and the other firmwares are honest, that failure reaches one key, 
+below threshold. Multisigs holding one Coldcard key in 2026 were that 
+case. The slogan stops there. It does not price what was added to get 
+that containment: a non-Core coordinator, host-side libraries, and 
+more firmware. Every key passes through those. Brand count does not 
+contain a failure there. It also does not compare against one 
+Guix-attested Core generator, which has no public key-generation 
+failure of the class the slogan was built to contain. The comparison 
+this guide makes is one attested Core session being targeted and wrong, 
+against two vendor generators failing, the shared layer failing, or one 
+vendor colluding with the coordinator. This guide ranks the first lower. 
+More Core boxes keep the containment without adding the shared layer.
 
 “Survives if the threshold is not met by that vendor” is the same
 slogan. It fails as soon as a second vendor, a coordinator, or a
