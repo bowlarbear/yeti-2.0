@@ -358,11 +358,16 @@ have that kind of crowd. A small firmware tree generally does
 not. Insertion is not impossible. It is expensive here.
 
 One dedicated offline machine running Ubuntu and Bitcoin Core
-is a chosen tradeoff. More offline Core machines for key generation would
-remove a “this one box was wrong” failure. That would be an
-improvement. This guide treats one inspected Core box as sufficient
-inside the README’s $10k–$5M comfort zone. The upgrade path is more
-Core boxes, not more vendors.
+is a chosen tradeoff. More offline Core machines for key generation
+would remove a “this one box was wrong” failure. That would be an
+improvement for amounts above the band. The residual on one box is
+a targeted compromise of that key-generation session. It is the same
+trusting-trust residual any Core generation accepts. One dedicated
+offline generic computer running verified Ubuntu and Guix-attested
+Bitcoin Core is the assumption that makes the procedure sufficient
+inside the band. This does not make the vault weaker relative to
+multi-vendor multisig. The upgrade path is more Core boxes, not
+more vendors.
 
 Each extra vendor in the stack usually means an extra coordinator,
 extra libraries, and extra firmware. Each of those is more attack
