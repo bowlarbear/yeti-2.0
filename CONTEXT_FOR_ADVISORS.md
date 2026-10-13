@@ -162,7 +162,17 @@ A different DIY path that actually uses Guix-attested Bitcoin Core for key gener
 - Seven keys born on one offline Ubuntu + Core machine. More Core
   boxes would be stronger. One trustworthy Core machine is the
   assumption that makes this guide sufficient inside its amount
-  range.
+  range. A compromised generation environment can affect all seven
+  keys. That residual is targeted: a payload on one dedicated
+  machine in this boot, before power-off. It is not the commodity
+  path. The commodity residual is a Bitcoin-specific supply chain
+  or unauditable vendor firmware that can hit many owners at once
+  (the 2026 Coldcard class). Generating the keys on one attested
+  Core box remains a smaller residual than generating them on one
+  or more vendor devices, or on a stack that adds a non-Core
+  coordinator. The upgrade path for amounts at the upper end of
+  the band is additional independent Core machines, not vendor
+  hardware or multi-vendor diversity.
 - No BIP39 phrase
 - Discs instead of a steel seed plate. An engraving is a
   transcription, and a plate holds a secret only. It is not
