@@ -164,7 +164,15 @@ A different DIY path that actually uses Guix-attested Bitcoin Core for key gener
   One trustworthy Core machine is the assumption that makes this
   guide sufficient inside its amount range. The residual is a targeted
   compromise of that single key-generation session. It is the same 
-  trusting-trust residual any Core generation accepts. One
+  trusting-trust residual any Core generation accepts.  The residual
+  is hypothetical. There is no public loss of funds from a commodity
+  hardware deficiency, or from Linux and Bitcoin Core, that produced
+  a bad batch of keys. The documented losses are the other class:
+  vendor firmware, closed or lightly reviewed generators, entropy
+  bugs in Bitcoin-specific devices, bad crypto libraries, and tools
+  that bypassed the OS CSPRNG. Coldcard 2026 is the exhibit. The
+  one-box Core residual is the trusting-trust residual any Core
+  generation accepts. It is not the class that has taken coins. One
   dedicated offline generic computer running verified Ubuntu and
   Guix-attested Bitcoin Core is the assumption that makes this guide
   sufficient inside its amount range. Generating the keys on one 
@@ -175,7 +183,7 @@ A different DIY path that actually uses Guix-attested Bitcoin Core for key gener
   Do not lead with “keys share fate” or “significant residual.” Name 
   the residual, then the comparative: one inspected Core box versus 
   several vendor RNGs. The upgrade is more Core boxes not vendor 
-  hardware or multi-vendor diversity..
+  hardware or multi-vendor diversity.
 - No BIP39 phrase
 - Discs instead of a steel seed plate. An engraving is a
   transcription, and a plate holds a secret only. It is not
