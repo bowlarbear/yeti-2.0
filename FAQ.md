@@ -168,9 +168,9 @@ The proper way to encrypt backup discs such that no snoop could ever get ahold o
 
 ## Q: Why not generate all of the keys on different computers?
 
-A: Generating keys on more than one offline machine would remove a class of “this one box was wrong” failure. That would be an improvement. 
+A: Generating keys on more than one offline machine would remove a class of “this one box was wrong” failure. That would be an improvement for amounts above the band.
 
-This guide does not require it. The assumption is that one dedicated offline computer, running verified Ubuntu and Bitcoin Core, is sufficient inside the README’s $10k–$5M comfort zone. Above that range, extra Core machines are the accepted upgrade path, which this guide does not cover in full detail. This does not make Yeti-2.0 weaker relative to multi-vendor multisig because we fully mitigate the risk of compromised Hardware Wallets.
+This guide does not require it. One dedicated offline generic computer running verified Ubuntu and Guix-attested Bitcoin Core is the assumption that makes the procedure sufficient. The residual risk is a targeted compromise of that single key-generation session. This does not make Yeti-2.0 weaker relative to a single sig hardware wallet or multi-vendor multisig because we fully mitigate the risk of compromised Hardware Wallets. The upgrade path is more Core boxes, not more vendors.
 
 See [THREAT_MODEL.md](THREAT_MODEL.md) for why one inspected Core box is preferred to several vendor RNGs.
 
