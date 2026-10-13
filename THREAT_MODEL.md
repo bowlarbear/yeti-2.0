@@ -420,6 +420,41 @@ against two vendor generators failing, the shared layer failing, or one
 vendor colluding with the coordinator. This guide ranks the first lower. 
 More Core boxes keep the containment without adding the shared layer.
 
+Two strategies follow from that ranking.
+
+Containment spreads keys across vendors so that one independent failure 
+stays below threshold. It works when failures are independent, detectable 
+before the next layer falls, the shared layer is not itself a silent key 
+source, and the per-device probability of a silent compromise stays low. 
+Multisigs that held one Coldcard key in 2026 met those conditions for 
+that particular failure.
+
+A patient attacker removes the conditions. One silently collected key 
+(a weak generator, a seed that passes through the host during a restore, 
+a stateless signer whose image is verified on the same host, or a leak 
+written into the pipe) turns a 2-of-3 into a 1-of-2 without the owner 
+learning. The coordinator and the host are shared surfaces that already 
+touch every device. Brand count does not contain a failure there. Time 
+works against the margin: firmware updates, device replacements, and 
+recovery events each give another chance at the second key.
+
+Prevention keeps the chance that malware exists on the key path low. 
+It uses few components, the most-reviewed and independently attested 
+binary, no Bitcoin-specific hardware, and amnesic sessions. The 
+descriptor is born on the offline signer and burned to disc, so a 
+compromised node cannot substitute it at setup. This design has no 
+Bitcoin-specific supply chain and no unattested code on the key path. 
+Its hardware is generic and cannot be aimed at holders. The supply chain 
+residual that remains is the one every computer shares.
+
+The concentrated residual on this side is a targeted compromise of the 
+single attested Core key-generation session, or a code-execution bug 
+in the rebuilt signer’s USB or PSBT path that wins once while three 
+keys are loaded. Both require a break of the reviewed, attested binaries 
+rather than of an unattested vendor firmware or a general-purpose host 
+that already handles seeds. More Core boxes shrink the first residual 
+without adding the shared layer containment relies on.
+
 “Survives if the threshold is not met by that vendor” is the same
 slogan. It fails as soon as a second vendor, a coordinator, or a
 shared library is in on it. Collusion across the stack is in
