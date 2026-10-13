@@ -286,7 +286,21 @@ alone. The reference implementation does not talk to Jade, BitBox,
 Coldcard, Trezor, or Ledger. To use those devices you add vendor
 firmware, extra libraries, and a coordinator that is not Core
 (Sparrow, Nunchuk, Liana, a hosted app). That added software is
-the product.
+the product. The claim “one vendor bug only burns one key” is 
+true only if the coordinator, the transfer pipe, every other 
+vendor firmware, and every shared library remain honest and are 
+the binaries the user thinks they are. The coordinator is the 
+program that builds the descriptor and the PSBT and speaks to the 
+signer; it can serve a malicious descriptor, bias nonces, or 
+leave a persistent hunter on the host. A device is not a silo—it 
+already has a pipe. Manufacturer diversity does not create 
+Guix-style independent attestations of the firmware that actually 
+runs, and it does not contain a shared-library defect. Multi-vendor 
+therefore substitutes a larger unattested surface for the single 
+attested Core residual; it does not limit it. The marketing compares 
+multi-vendor hardware to single-vendor hardware and stops. It does 
+not compare either to one Guix-attested Core generator for which no 
+equivalent public key-generation wipe exists.
 
 The problem is verification. A vendor can ship a device that lies
 about which firmware it is running. An application or firmware
