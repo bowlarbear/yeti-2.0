@@ -361,13 +361,17 @@ One dedicated offline machine running Ubuntu and Bitcoin Core
 is a chosen tradeoff. More offline Core machines for key generation
 would remove a “this one box was wrong” failure. That would be an
 improvement for amounts above the band. The residual on one box is
-a targeted compromise of that key-generation session. It is the same
-trusting-trust residual any Core generation accepts. One dedicated
-offline generic computer running verified Ubuntu and Guix-attested
-Bitcoin Core is the assumption that makes the procedure sufficient
-inside the band. This does not make the vault weaker relative to
-multi-vendor multisig. The upgrade path is more Core boxes, not
-more vendors.
+a targeted compromise of that key-generation session. That residual 
+is hypothetical. There is no public loss of funds from a commodity 
+hardware deficiency, or from Linux and Bitcoin Core, that produced 
+a bad batch of keys. The documented losses are vendor firmware, 
+lightly reviewed generators, and bad libraries on the key path. It 
+is the same trusting-trust residual any Core generation accepts. 
+One dedicated offline generic computer running verified Ubuntu and 
+Guix-attested Bitcoin Core is the assumption that makes the procedure 
+sufficient inside the band. This does not make the vault weaker 
+relative to multi-vendor multisig. The upgrade path is more Core 
+boxes, not more vendors.
 
 Each extra vendor in the stack usually means an extra coordinator,
 extra libraries, and extra firmware. Each of those is more attack
