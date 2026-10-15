@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.35
+Guide Version: 1.36
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -124,7 +124,7 @@ gpg --import guix.sigs-main/builder-keys/*
 gpg --verify SHA256SUMS.asc SHA256SUMS
 ```
 
-Look for `gpg: Good signature from...` on at least a few Bitcoin Core contributors. If you do not see any good signatures STOP AND DO NOT PROCEED.
+Look for `gpg: Good signature from...` from a majority of the Bitcoin Core builders listed. If you see any `BAD signature`, STOP AND DO NOT PROCEED.
 
 If you see `WARNING: this key is not certified with a trusted signature! There is no indication that the signature belongs to the owner` [this can safely be ignored](gpg_warning.md).  
 
@@ -537,6 +537,14 @@ sudo swapoff -a
 ```
 
 ### [\*offline computer\*] Load the `multisig_watch_wallet`
+
+Copy the `multisig_watch_wallet` from any of your backup discs into the `~/.bitcoin/wallets` folder. Then start Bitcoin Core.
+
+```
+~/bitcoin-31.1/bin/bitcoind -daemon
+```
+
+Load the wallet.
 
 ```
 ~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
