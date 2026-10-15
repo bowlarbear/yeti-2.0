@@ -876,6 +876,11 @@ they were shown. Until that path opens, the coins sit. Insurance
 and a recovery partner do not remove the firm from the spend.
 They are the firm.
 
+Client-majority versions, where the holder has enough keys to
+spend alone, remove the freeze. They do not remove the firm.
+The company still picks the coordinator and the supported
+signers, and the holder cannot attest to what that stack runs.
+
 A company in the policy is also a name attackers can impersonate: fake 
 support, fake recovery, compromised help channels. That surface does not 
 exist when every key is a disc the operator placed.
@@ -906,14 +911,10 @@ product. Disappearance and collusion are the same class
 as the order. A format the reference client does not speak
 leaves the holder depending on that layer to re-enter.
 Soundness under the layer's own spec does not close
-that. The infrastructure the holder uses to speak that product
-can be changed overnight. A backend can be shut down, a
-model discontinued, an app update forced. The service can
-be held until a control is in place. Stopping service is
-one case, not the class. The reference implementation has
-no desk. Its backend is the node the holder runs. A format
-the reference client does not speak leaves the holder
-depending on that layer to re-enter. BIP39 is one case.
+that. The service can be held until a control is in place.
+Stopping service is one case, not the class. A format the
+reference client does not speak leaves the holder depending
+on that layer to re-enter. BIP39 is one case.
 
 Against a vendor signer or a multi-vendor quorum, that contract is the fallback 
 inside the $10k–$5M band. A vendor signer is not a place to wait inside the band. 
