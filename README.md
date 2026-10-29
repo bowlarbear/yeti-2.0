@@ -506,7 +506,7 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 # D. How to use the Wallet Normally
 
-First, always [ensure your software up to date](update_software.md).
+Always ensure your [node software is kept up to date](update_software.md).
 
 ## D1. Receiving to the vault
 
@@ -606,8 +606,6 @@ For security you should always turn off the \*offline computer\* after you finis
 # Vault maintenance
 
 Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. DO NOT use these two dedicated laptops for any other purpose or software.
-
-Remember: [Keep your software up to date](update_software.md).
 
 Remember: You should check your key backups periodically and refresh the backups approximately once every 7 years. Archival grade DVDs are rated to last for 100 years, but this refresh routine is a good practice to ensure that none of the keys in your vault have been lost. This would mean copying the contents of a backup disc onto a fresh archival grade DVD, then adding it to the envelope to be stored beside the original. This should only be done on the *\offline computer\* and requires reinstalling Brasero. If at any point one of your keys becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
 
