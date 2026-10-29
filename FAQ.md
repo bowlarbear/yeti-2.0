@@ -188,7 +188,7 @@ A: There are several reasons we opted to do this. The first reason is that it is
 
 The second reason is that it's good practice to always use the latest version of the Bitcoin software. If a user has an older version of the software in persistent storage, they may not update the software before using their signer. 
 
-The third reason is related to the first, in that the terminal commands provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-31.1 in their persistent storage and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why or how to properly upgrade. 
+The third reason is related to the first, in that the terminal commands provided in this guide assume the user is running the latest release of Bitcoin Core. If the user has Bitcoin-32.1 in their persistent storage and the scripts in the guide are updated to Bitcoin-31.2, suddenly those scripts will no longer work for the user, and it may be unclear why or how to properly upgrade. 
 
 The fourth reason is that permissions conflicts can occur on Linux when you import software like Bitcoin Core rather than downloading it directly.
 
