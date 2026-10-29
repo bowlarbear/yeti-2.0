@@ -14,25 +14,25 @@ To verify the outputs of a PSBT, you must have the psbt file on the desktop of t
 Once you have the `multisig_watch_wallet` imported to the proper location, ensure Bitcoin Core has started by running this command in the terminal:
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon
+~/bitcoin-32.1/bin/bitcoind -daemon
 ```
 
 Then ensure you have the `multisig_watch_wallet` loaded by running this command:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+~/bitcoin-32.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 
 Now you can decode the unsigned PSBT contents with this command on the \*offline computer\*:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/unsigned.psbt)"
+~/bitcoin-32.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/unsigned.psbt)"
 ```
 
 Or decode the signed PSBT contents with this command on the online computer:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/signed.psbt)"
+~/bitcoin-32.1/bin/bitcoin-cli decodepsbt "$(cat ~/Desktop/signed.psbt)"
 ```
 
 
@@ -57,7 +57,7 @@ If the `address` and `value` do not match what you expect for the destination ou
 Once you have identified the change output, you should then run the following command in the terminal (replacing `$change_address` with the actual change address obtained from the output) to verify that it belongs to your wallet:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$change_address"
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$change_address"
 ```
 
 In the result of this command you need to look for `"ismine": true`, this confirms that the change address belongs to your wallet.
@@ -69,7 +69,7 @@ If `"ismine": false` appears on your change address **STOP! DO NOT PROCEED! Re-e
 There is no need to run `getaddressinfo` on the `destination_address`, however, for reference, if you were to run the address query on the `destination_address`, rather than the `change_address`, like so:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$destination_address"
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$destination_address"
 ```
 
 This is an example of what you would expect to see:
@@ -86,6 +86,6 @@ If you query both addresses in both of the outputs and neither of them return `i
 After you finish decoding and verifying your PSBT, on the \*offline computer\*, you should first unload the `multisig_watch_wallet` prior to signing the PSBT. This will prevent any potential errors from occurring with the signing script.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli unloadwallet multisig_watch_wallet
+~/bitcoin-32.1/bin/bitcoin-cli unloadwallet multisig_watch_wallet
 ```
 
