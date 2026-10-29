@@ -1,6 +1,6 @@
 # Pruning
 
-If you wish to use a pruned node you should first copy the `~/bitcoin-31.1/bitcoin.conf` into your `~/.bitcoin` folder on your online computer. Then you will want to open the `bitcoin.conf` file for editing (use Text Editor unless you know vim or nano).
+If you wish to use a pruned node you should first copy the `~/bitcoin-32.1/bitcoin.conf` into your `~/.bitcoin` folder on your online computer. Then you will want to open the `bitcoin.conf` file for editing (use Text Editor unless you know vim or nano).
 
 On a new line (any line that does not start with a `##`) add the following `prune=5500`. This number corresponds to the size of your prune cache. The number provided here is 5.5GB. It is not recommended that you exceed approximately 70% of your available storage space on your online computer for your prune cache, but a larger prune cache is better.
 
@@ -17,13 +17,13 @@ If you have 1TB of internal storage space use `prune=750000`.
 In order for these changes to take effect after changing this file, you must stop your node if it is already running:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli stop
+~/bitcoin-32.1/bin/bitcoin-cli stop
 ```
 
 Then start the daemon again to start pruning:
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon
+~/bitcoin-32.1/bin/bitcoind -daemon
 
 ```
 
@@ -33,7 +33,7 @@ Then start the daemon again to start pruning:
 If you encounter the above error after attempting to load your "multisig_watch_wallet" with:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+~/bitcoin-32.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 
 ...This is a common issue encountered when importing wallets to a pruned node, the reason this error occurs is because a pruned node does not keep the full blockchain history.
@@ -49,7 +49,7 @@ On the online computer...
 Stop the Node.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli stop
+~/bitcoin-32.1/bin/bitcoin-cli stop
 ```
 
 Wait about 10 seconds for the node to fully shut down.
@@ -57,7 +57,7 @@ Wait about 10 seconds for the node to fully shut down.
 Then, restart the node with this command:
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon -reindex -nowallet
+~/bitcoin-32.1/bin/bitcoind -daemon -reindex -nowallet
 ```
 
 The node is going to start reindexing, wait a couple of minutes for it to sync the headers.
@@ -65,7 +65,7 @@ The node is going to start reindexing, wait a couple of minutes for it to sync t
 Then load the watch-only wallet with this command:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+~/bitcoin-32.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 
 After this, you will need to wait for the wallet to finish re-syncing the blockchain and scanning your wallet's history.
