@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.36
+Guide Version: 1.37
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -99,9 +99,9 @@ Open a terminal, then copy and paste the following command into the terminal and
 
 
 ```
-wget -P ~/Downloads https://bitcoincore.org/bin/bitcoin-core-31.1/bitcoin-31.1-x86_64-linux-gnu.tar.gz
-wget -P ~/Downloads https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS
-wget -P ~/Downloads https://bitcoincore.org/bin/bitcoin-core-31.1/SHA256SUMS.asc
+wget -P ~/Downloads https://bitcoincore.org/bin/bitcoin-core-32.1/bitcoin-32.1-x86_64-linux-gnu.tar.gz
+wget -P ~/Downloads https://bitcoincore.org/bin/bitcoin-core-32.1/SHA256SUMS
+wget -P ~/Downloads https://bitcoincore.org/bin/bitcoin-core-32.1/SHA256SUMS.asc
 
 ```
 
@@ -133,10 +133,10 @@ If you see `WARNING: this key is not certified with a trusted signature! There i
 Again within the same terminal copy and paste the following command to unpack the Bitcoin Core tar.gz now that we have verified it is legitimate.
 
 ```
-cd ~/Downloads && tar -xzf bitcoin-31.1-x86_64-linux-gnu.tar.gz -C ~
+cd ~/Downloads && tar -xzf bitcoin-32.1-x86_64-linux-gnu.tar.gz -C ~
 ```
 
-Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1` folder.
+Bitcoin Core now exists within the home directory inside of the `~/bitcoin-32.1` folder.
 
 ## Step A4. [online computer] Start Bitcoin Core
 
@@ -145,7 +145,7 @@ Bitcoin Core now exists within the home directory inside of the `~/bitcoin-31.1`
 Within your terminal, copy and paste the following command:
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon
+~/bitcoin-32.1/bin/bitcoind -daemon
 ```
 
 Press enter, you should see a message that says "Bitcoin Core Starting"
@@ -155,7 +155,7 @@ This computer will now begin syncing the Bitcoin blockchain. This can take a whi
 Note: It is important to always properly shut down Bitcoin Core before turning off this computer, this prevents wasted time spent resyncing in the future. To do this run this command:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli stop
+~/bitcoin-32.1/bin/bitcoin-cli stop
 ```
 
 You should see a message that says "Bitcoin Core Stopping"
@@ -229,7 +229,7 @@ sudo swapoff -a
 Open a terminal and start the Bitcoin Daemon
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon
+~/bitcoin-32.1/bin/bitcoind -daemon
 ```
 
 You should see a message that says "Bitcoin Core Starting"
@@ -242,7 +242,7 @@ Within the terminal copy and paste the following...
 ```
 for ((n=1;n<=7;n++))
 do
- ~/bitcoin-31.1/bin/bitcoin-cli createwallet "key_${n}"
+ ~/bitcoin-32.1/bin/bitcoin-cli createwallet "key_${n}"
 done
 ```
 
@@ -256,7 +256,7 @@ declare -A xpubs
 
 for ((n=1;n<=7;n++))
 do
- xpubs["xpub_${n}"]=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="key_${n}" listdescriptors | jq '.descriptors | [.[] | select(.desc | startswith("wpkh") and contains("/0/*") )][0] | .desc' | grep -Po '(?<=\().*(?=\))' | sed 's /0/\* /<0;1>/* ')
+ xpubs["xpub_${n}"]=$(~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="key_${n}" listdescriptors | jq '.descriptors | [.[] | select(.desc | startswith("wpkh") and contains("/0/*") )][0] | .desc' | grep -Po '(?<=\().*(?=\))' | sed 's /0/\* /<0;1>/* ')
 done
 
 ```
@@ -268,17 +268,17 @@ Press Enter.
 ```
 desc="wsh(sortedmulti(3,${xpubs["xpub_1"]},${xpubs["xpub_2"]},${xpubs["xpub_3"]},${xpubs["xpub_4"]},${xpubs["xpub_5"]},${xpubs["xpub_6"]},${xpubs["xpub_7"]}))"
 
-checksum=$(~/bitcoin-31.1/bin/bitcoin-cli getdescriptorinfo $desc | jq -r '.checksum')
+checksum=$(~/bitcoin-32.1/bin/bitcoin-cli getdescriptorinfo $desc | jq -r '.checksum')
 
 time=$(date +%s)
 
 multisig_desc="[{\"desc\": \"${desc}#${checksum}\", \"active\": true, \"timestamp\": ${time}}]"
 
-~/bitcoin-31.1/bin/bitcoin-cli -named createwallet "multisig_watch_wallet" true true
+~/bitcoin-32.1/bin/bitcoin-cli -named createwallet "multisig_watch_wallet" true true
 
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" importdescriptors "$multisig_desc"
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" importdescriptors "$multisig_desc"
 
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getwalletinfo
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getwalletinfo
 ```
 
 Press Enter.
@@ -294,7 +294,7 @@ Note: It is wise to always run the `sync` command in the terminal and wait for i
 Insert the transfer USB into the online computer. Copy the multisig_watch_wallet into the `~/.bitcoin/wallets` folder, then run the following terminal command.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+~/bitcoin-32.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 
 You can use either bitcoin-cli or bitcoin-Qt (Bitcoin Core's graphical user interface) with the online computer to load this wallet, see the transaction history, check the balance of the wallet, and broadcast fully signed Bitcoin Transactions.
@@ -326,7 +326,7 @@ Note: You will not be able to complete section C until your online computer has 
 You can query the status of your node sync by running the following command in the terminal within your online computer.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -getinfo
+~/bitcoin-32.1/bin/bitcoin-cli -getinfo
 ```
 
 Look for the line that says `verificationprogress`, when this value is at 100% your node is finished syncing.
@@ -338,7 +338,7 @@ Look for the line that says `verificationprogress`, when this value is at 100% y
 Stop Bitcoin Core
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli stop
+~/bitcoin-32.1/bin/bitcoin-cli stop
 ```
 
 wait a moment for the daemon to finish shutting down
@@ -352,7 +352,7 @@ rm -rf ~/.bitcoin/wallets/key_*
 start Bitcoin Core again
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon
+~/bitcoin-32.1/bin/bitcoind -daemon
 ```
 
 
@@ -363,19 +363,19 @@ Next you will generate a receive address for your wallet on your online machine.
 Run this command to generate a new receive address:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
 
 Test the wallet by sending a very small amount of Bitcoin to this address (this should be less than $5). 
 
-Note: You can also generate a receive address with Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-31.1/bin` in the file explorer, if the Bitcoin daemon is already running you must stop it before starting Bitcoin-QT. Then load "multisig_watch_wallet" in the GUI if its not already loaded, and generate a receive address for a QR code.
+Note: You can also generate a receive address with Bitcoin-QT, which is Bitcoin Core's Graphical User Interface (GUI). To use the GUI, simply double click on "Bitcoin-Qt" inside of `~/bitcoin-32.1/bin` in the file explorer, if the Bitcoin daemon is already running you must stop it before starting Bitcoin-QT. Then load "multisig_watch_wallet" in the GUI if its not already loaded, and generate a receive address for a QR code.
 
 ## C3. [online computer] Check the Balance of the Wallet
 
 You can only check the balance of your wallet from the online computer, with the wallet properly loaded as shown in step B5.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getbalances
 
 ```
 
@@ -393,7 +393,7 @@ Note: If you receive an error that fee estimation has failed, you must wait a fe
 Note: The `amount` field is denominated in `0.00000000` BTC
 
 ```
-funded_psbt=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
+funded_psbt=$(~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" -named \
  walletcreatefundedpsbt \
  outputs="{\"$destination_address\": $amount}" \
  options='{"subtractFeeFromOutputs":[0]}' | jq -r '.psbt')
@@ -423,7 +423,7 @@ Choose 3 of the DVDs, insert them one at a time into the \*offline computer\*'s 
 After copying a key run the following command, replace `key_#` with the name of the key you copied into `~/.bitcoin/wallets`
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli loadwallet "key_#"
+~/bitcoin-32.1/bin/bitcoin-cli loadwallet "key_#"
 ```
 
 Repeat this step for each of the 3 keys you are using to sign.
@@ -435,13 +435,13 @@ After loading all 3 of the keys, sign the PSBT with this script in the terminal
 ```
 psbt=$(cat ~/Desktop/unsigned.psbt)
 
-wallet1=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets |jq -r '.[0]')
-wallet2=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets |jq -r '.[1]')
-wallet3=$(~/bitcoin-31.1/bin/bitcoin-cli listwallets |jq -r '.[2]')
+wallet1=$(~/bitcoin-32.1/bin/bitcoin-cli listwallets |jq -r '.[0]')
+wallet2=$(~/bitcoin-32.1/bin/bitcoin-cli listwallets |jq -r '.[1]')
+wallet3=$(~/bitcoin-32.1/bin/bitcoin-cli listwallets |jq -r '.[2]')
 
-psbt_1=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet1" walletprocesspsbt "$psbt" | jq -r '.psbt')
-psbt_2=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet2" walletprocesspsbt "$psbt_1" | jq -r '.psbt')
-psbt_3=$(~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="$wallet3" walletprocesspsbt "$psbt_2" | jq -r '.psbt')
+psbt_1=$(~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="$wallet1" walletprocesspsbt "$psbt" | jq -r '.psbt')
+psbt_2=$(~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="$wallet2" walletprocesspsbt "$psbt_1" | jq -r '.psbt')
+psbt_3=$(~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="$wallet3" walletprocesspsbt "$psbt_2" | jq -r '.psbt')
 
 echo "$psbt_3" > ~/Desktop/signed.psbt
 
@@ -450,13 +450,13 @@ echo "$psbt_3" > ~/Desktop/signed.psbt
 Note: There is a chance this process will fail if you attempt to run the signing script above with your "multisig_watch_wallet" loaded on the \*offline computer\*. To avoid this, only have 3 keys loaded when signing and nothing else. You can unload the watch wallet with the following command:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli unloadwallet multisig_watch_wallet
+~/bitcoin-32.1/bin/bitcoin-cli unloadwallet multisig_watch_wallet
 ```
 
 To check and see what wallets you currently have loaded run this command:
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli listwallets
+~/bitcoin-32.1/bin/bitcoin-cli listwallets
 ```
 
 ### [\*offline computer\*] Export Signed PSBT to Transfer USB
@@ -476,8 +476,8 @@ Note: Verifying the PSBT is not necessary for test transactions, but when moving
 
 ```
 psbt=$(cat ~/Desktop/signed.psbt)
-hex=$(~/bitcoin-31.1/bin/bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
-~/bitcoin-31.1/bin/bitcoin-cli sendrawtransaction "$hex"
+hex=$(~/bitcoin-32.1/bin/bitcoin-cli finalizepsbt "$psbt" | jq -r '.hex')
+~/bitcoin-32.1/bin/bitcoin-cli sendrawtransaction "$hex"
 
 ```
 
@@ -513,7 +513,7 @@ Receiving larger amounts to the vault requires more precaution than our test spe
 ### [online computer] Create a New Address
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getnewaddress
 ```
 
 Copy and paste this address into a text file and save the file on your transfer USB.
@@ -541,20 +541,20 @@ sudo swapoff -a
 Copy the `multisig_watch_wallet` from any of your backup discs into the `~/.bitcoin/wallets` folder. Then start Bitcoin Core.
 
 ```
-~/bitcoin-31.1/bin/bitcoind -daemon
+~/bitcoin-32.1/bin/bitcoind -daemon
 ```
 
 Load the wallet.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
+~/bitcoin-32.1/bin/bitcoin-cli loadwallet "multisig_watch_wallet"
 ```
 ### [\*offline computer\*] Verify the Address
 
 Copy the address from the address text file on your transfer USB into the following command, replacing `$address` with your actual address, and run it in the terminal.
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$address"
+~/bitcoin-32.1/bin/bitcoin-cli -rpcwallet="multisig_watch_wallet" getaddressinfo "$address"
 ```
 
 In the result of this command you need to look for "ismine": true, this second check confirms that the address belongs to your wallet. You can now send funds to the vault with this address. See the [Verifying Outputs section](https://github.com/bowlarbear/yeti-2.0/blob/main/verify_psbt.md#verifying-outputs) of the verify PSBT subguide for a visual example of how this looks.
