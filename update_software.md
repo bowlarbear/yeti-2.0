@@ -1,11 +1,11 @@
 ## Updating Bitcoin Core on the Full Node [online Computer]
 
-This guide will be updated to support the latest stable release of Bitcoin Core. That means the scripts provided in this guide will not work for you if you do not have the latest version installed. When this happens the version of Bitcoin on your computer `~/bitcoin-31.1` will look different than the number in the scripts in this guide. 
+This guide will be updated to support the latest stable release of Bitcoin Core. That means the scripts provided in this guide will not work for you if you do not have the latest version installed. When this happens the version of Bitcoin on your computer `~/bitcoin-32.1` will look different than the number in the scripts in this guide. 
 
-To upgrade the software on your node to the latest version, simply run this command in the terminal:
+To upgrade the software on your node to the latest version, simply run this command in the terminal to uninstall the old version (replace 'XX.X' with the current version you have installed on the computer):
 
 ```
-rm -r ~/bitcoin-31.1
+rm -r ~/bitcoin-XX.X
 ```
 
 Then repeat steps A2 through A4 on your online computer. You will NOT need to redownload the blockchain after updating the software to the latest version because the Bitcoin blockchain lives in `~/.bitcoin`
@@ -40,7 +40,7 @@ Once you've verified a good signature on the Ubuntu image, you need to insert yo
 Note: it is a good idea to stop your Bitcoin Node before doing this with
 
 ```
-~/bitcoin-31.1/bin/bitcoin-cli stop
+~/bitcoin-32.1/bin/bitcoin-cli stop
 ```
 
 1. Open Disks with this command in the terminal
