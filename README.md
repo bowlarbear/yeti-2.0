@@ -506,6 +506,8 @@ You now have a secure, Bitcoin multisig vault that can only be accessed by gathe
 
 # D. How to use the Wallet Normally
 
+First, always [ensure your software up to date](update_software.md).
+
 ## D1. Receiving to the vault
 
 Receiving larger amounts to the vault requires more precaution than our test spends. To generate a receive address first load your `multisig_watch_wallet` in the online computer if it is not already loaded. Then generate a new address with the following command.
