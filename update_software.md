@@ -1,8 +1,19 @@
+## Updating Ubuntu on the Full Node [online Computer]
+
+### Refresh package lists and upgrade
+```
+sudo apt update && sudo apt upgrade -y
+```
+### Reboot to load the new kernel
+```
+sudo reboot
+```
+
 ## Updating Bitcoin Core on the Full Node [online Computer]
 
 This guide will be updated to support the latest stable release of Bitcoin Core. That means the scripts provided in this guide will not work for you if you do not have the latest version installed. When this happens the version of Bitcoin on your computer `~/bitcoin-32.1` will look different than the number in the scripts in this guide. 
 
-To upgrade the software on your node to the latest version, simply run this command in the terminal to uninstall the old version (replace 'XX.X' with the current version you have installed on the computer):
+To upgrade the Bitcoin software on your node to the latest version, simply run this command in the terminal to uninstall the old version (replace 'XX.X' with the current version you have installed on the computer):
 
 ```
 rm -r ~/bitcoin-XX.X
