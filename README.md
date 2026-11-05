@@ -609,3 +609,5 @@ Remember: These two laptops should be dedicated for use with Bitcoin Core ONLY. 
 
 Remember: You should check your key backups periodically and refresh the backups approximately once every 7 years. Archival grade DVDs are rated to last for 100 years, but this refresh routine is a good practice to ensure that none of the keys in your vault have been lost. This would mean copying the contents of a backup disc onto a fresh archival grade DVD, then adding it to the envelope to be stored beside the original. This should only be done on the *\offline computer\* and requires reinstalling Brasero. If at any point one of your keys becomes lost or unusable, best practice would be to move all of your funds into a fresh multisig vault.
 
+Remember: Keep your [software up to date](update_software.md). 
+
