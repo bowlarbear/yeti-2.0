@@ -10,7 +10,7 @@ Design: [FAQ.md](FAQ.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
 
 The latest version of this guide lives at https://github.com/bowlarbear/yeti-2.0
 
-Guide Version: 1.37
+Guide Version: 1.38
 
 This guide was created using Bitcoin Core's [official multisig-tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md) and [offline signing tutorial](https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md) as a reference. 
 
@@ -192,10 +192,8 @@ Repeat Step A3 on the \*offline computer\*.
 
 ### [\*offline computer\*] Install Brasero
 
-Open a terminal and run the following command
-
 ```
-sudo apt update
+sudo apt update && sudo apt upgrade -y -o Acquire::Retries=0
 sudo apt -y install brasero
 ```
 
